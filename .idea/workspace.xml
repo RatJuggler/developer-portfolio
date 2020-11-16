@@ -1,7 +1,250 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4643d58c-37c5-4673-be62-c06fb30b9531" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="ProjectId" id="1kMqrySUIjixbvH6vU03aim3xgp" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4643d58c-37c5-4673-be62-c06fb30b9531" name="Default Changelist" comment="" />
+      <created>1605521011111</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605521011111</updated>
+      <workItem from="1605521012360" duration="8478000" />
+      <workItem from="1605544123346" duration="7594000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add HTML5 Boilerplate.">
+      <created>1605521967296</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605521967296</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add Bootstrap.">
+      <created>1605522094484</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605522094484</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Remove redundant HTML5 Boilerplate docs.">
+      <created>1605522570438</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605522570438</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Use gitignore in root.">
+      <created>1605523386843</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605523386843</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Use a src folder to keep things tidy.">
+      <created>1605523771366</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605523771366</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add some icons and flesh out site manifest.">
+      <created>1605523958658</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1605523958658</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Robots and humans.">
+      <created>1605523991318</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1605523991318</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Don't care about IE anymore.">
+      <created>1605524097787</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1605524097787</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Don't care about IE anymore.">
+      <created>1605524126642</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1605524126642</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Start to flesh out page meta data.">
+      <created>1605524731256</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1605524731256</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Flesh out package.json, we only need browser-sync to start with.">
+      <created>1605525510848</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1605525510848</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Ignore node_modules.">
+      <created>1605525827040</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1605525827040</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add HTML5 Boilerplate." />
+    <MESSAGE value="Add Bootstrap." />
+    <MESSAGE value="Remove redundant HTML5 Boilerplate docs." />
+    <MESSAGE value="Use gitignore in root." />
+    <MESSAGE value="Use a src folder to keep things tidy." />
+    <MESSAGE value="Add some icons and flesh out site manifest." />
+    <MESSAGE value="Robots and humans." />
+    <MESSAGE value="Don't care about IE anymore." />
+    <MESSAGE value="Start to flesh out page meta data." />
+    <MESSAGE value="Flesh out package.json, we only need browser-sync to start with." />
+    <MESSAGE value="Ignore node_modules." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ignore node_modules." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="693" y="303" width="526" height="500" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605524156420">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="693" y="303" width="526" height="500" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1605524156420" />
+    <state x="183" y="118" width="1538" height="869" key="DiffContextDialog" timestamp="1605546217674">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="183" y="118" width="1538" height="869" key="DiffContextDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1605546217674" />
+    <state width="1874" height="278" key="GridCell.Tab.0.bottom" timestamp="1605537956313">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="1874" height="278" key="GridCell.Tab.0.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1605537956313" />
+    <state width="1874" height="278" key="GridCell.Tab.0.center" timestamp="1605537956310">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="1874" height="278" key="GridCell.Tab.0.center/0.28.1920.1052@0.28.1920.1052" timestamp="1605537956310" />
+    <state width="1874" height="278" key="GridCell.Tab.0.left" timestamp="1605537956309">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="1874" height="278" key="GridCell.Tab.0.left/0.28.1920.1052@0.28.1920.1052" timestamp="1605537956309" />
+    <state width="1874" height="278" key="GridCell.Tab.0.right" timestamp="1605537956311">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state width="1874" height="278" key="GridCell.Tab.0.right/0.28.1920.1052@0.28.1920.1052" timestamp="1605537956311" />
+    <state x="691" y="238" width="530" height="631" key="RollbackChangesDialog" timestamp="1605546232994">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="691" y="238" width="530" height="631" key="RollbackChangesDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1605546232994" />
+    <state x="555" y="276" width="802" height="554" key="Vcs.Push.Dialog.v2" timestamp="1605524733112">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="555" y="276" width="802" height="554" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1605524733112" />
   </component>
 </project>
