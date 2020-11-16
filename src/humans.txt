@@ -1,15 +1,12 @@
 # humanstxt.org/
-# The humans responsible & technology colophon
+# Robots keep out!
 
 # TEAM
-
-    <name> -- <role> -- <twitter>
+  John Chase -- Bodger of Code -- @ratjuggler -- https://github.com/RatJuggler
 
 # THANKS
-
-    <name>
+  To everyone that knows me.
 
 # TECHNOLOGY COLOPHON
-
-    CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+  IDE: JetBrains WebStorm
+  Technology: HTML5, CSS3
