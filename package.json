@@ -1,17 +1,23 @@
 {
-  "name": " ",
+  "title": "Developer Portfolio website",
+  "name": "developer-portfolio",
   "version": "0.0.1",
-  "description": "",
-  "keywords": "",
-  "license": "",
-  "author": "",
+  "description": "Developer Portfolio website for John Chase.",
+  "license": "MIT",
+  "author": "John Chase",
   "scripts": {
-    "build": "parcel build src/index.html",
-    "dev": "parcel src/index.html --open",
-    "start": "npm run build && npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server \"src\" --files \"src\""
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RatJuggler/developer-portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RatJuggler/developer-portfolio/issues"
+  },
+  "dependencies": {},
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "browser-sync": "^2.26.13"
   }
 }
