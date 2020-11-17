@@ -17,12 +17,20 @@ html {
   line-height: 1.4;
 }
 
+/* Move content down to avoid navbar. */
 body {
   padding-top: 3.5rem;
 }
-
+/* Make navigation items more readable. */
 .nav-item {
   font-size: 1.1em;
+}
+/* Increase highlighting on navigation and menu items. */
+.nav-item:hover{
+  background-color: #eaeaea;
+}
+.dropdown-item:hover{
+  background-color: #eaeaea;
 }
 
 /*
