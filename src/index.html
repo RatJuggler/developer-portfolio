@@ -18,8 +18,7 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 
   <meta name="theme-color" content="#b833c0">
 </head>
@@ -27,8 +26,29 @@
 <body>
 
   <header>
-    <nav>
-      <span>(ratjuggler icon) Top navigation bar: Projects (?) | Settings (light/dark-mode) | Account (with logout)</span>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img src="img/Rat-Profile.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+          John Chase
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav">
+          <li>
+            <span>Projects (?)</span>
+          </li>
+          <li>
+            <a href="#" target="_blank" title="Open in new tab">Home</a>
+          </li>
+          <li>
+            <a href="#" title="Settings">Settings</a>
+          </li>
+          <li>
+            <a href="#" title="My account">My account</a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <section>
       <span>(photo circle) John Chase</span>
@@ -46,10 +66,24 @@
       <li>Career - Rough horizontal timeline graph (dinosaurs -> space)</li>
       <li>Interests - Card/photo carousel</li>
     </ol>
+    <p>Rhubarb...</p>
+    <p>Rhubarb...</p>
+    <p>Rhubarb...</p>
+    <p>Rhubarb...</p>
+    <p>Rhubarb...</p>
+    <p>Rhubarb...</p>
+    <p>Rhubarb...</p>
+    <p>Rhubarb...</p>
+    <p>Rhubarb...</p>
+    <p>Rhubarb...</p>
+    <p>Rhubarb...</p>
+    <p>Rhubarb...</p>
   </main>
 
   <footer>
-    <span>Sticky footer with Email/Linkedin/GitHub/Twitter link icons.</span>
+    <nav class="navbar fixed-bottom navbar-light bg-light">
+      <span>Sticky footer with Email/Linkedin/GitHub/Twitter link icons.</span>
+    </nav>
   </footer>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
