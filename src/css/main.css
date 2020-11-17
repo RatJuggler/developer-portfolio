@@ -21,6 +21,10 @@ body {
   padding-top: 3.5rem;
 }
 
+.nav-item {
+  font-size: 1.1em;
+}
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
