@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/RatJuggler/developer-portfolio/issues"
   },
+  "browserslist": [
+    "defaults"
+  ],
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.26.13"
