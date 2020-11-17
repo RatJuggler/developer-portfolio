@@ -36,11 +36,16 @@
       </div>
       <div class="collapse navbar-collapse" id="mainMenu">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#" title="Settings">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="projectMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="fas fa-file-code" aria-hidden="true"></span>
               <span>Projects</span>
             </a>
+            <div class="dropdown-menu" aria-labelledby="projectMenu">
+              <a class="dropdown-item" href="#">Project 1</a>
+              <a class="dropdown-item" href="#">Project 2</a>
+              <a class="dropdown-item" href="#">Project 2</a>
+            </div>
           </li>
         </ul>
         <ul class="navbar-nav">
@@ -56,11 +61,16 @@
               <span>Settings</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" title="My account">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="accountMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="fas fa-user" aria-hidden="true"></span>
               <span>My Account</span>
             </a>
+            <div class="dropdown-menu" aria-labelledby="accountMenu">
+              <span class="dropdown-header">John Chase</span>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Sign out</a>
+            </div>
           </li>
         </ul>
       </div>
@@ -104,6 +114,8 @@
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 </body>
 
