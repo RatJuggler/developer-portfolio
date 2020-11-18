@@ -32,6 +32,9 @@ body {
 .dropdown-item:hover{
   background-color: #eaeaea;
 }
+.carousel-caption {
+  color: black;
+}
 
 /*
  * Remove text-shadow in selection highlight:
