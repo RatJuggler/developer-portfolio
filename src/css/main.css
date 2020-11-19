@@ -17,13 +17,19 @@ html {
   line-height: 1.4;
 }
 
-/* Move content down to avoid navbar. */
+/* Pad content to avoid navbar and footer. */
 body {
   padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
 }
-/* Make navigation items more readable. */
-.nav-item {
-  font-size: 1.1em;
+/* Make navigation items more readable for larger screens. */
+@media (min-width: 768px) {
+  .nav-item {
+    font-size: 1.1em;
+  }
+  h1 {
+    font-size: 3.5em;
+  }
 }
 /* Increase highlighting on navigation and menu items. */
 .nav-item:hover {
