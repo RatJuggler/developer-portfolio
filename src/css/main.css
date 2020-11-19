@@ -22,7 +22,25 @@ body {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
 }
-/* Make navigation items more readable for larger screens. */
+/* Increase highlighting on navigation and menu items. */
+.nav-item:hover {
+  background-color: #eaeaea;
+}
+.dropdown-item:hover {
+  background-color: #eaeaea;
+}
+/* Photo */
+.spotlight {
+  padding: 0.65em;
+  margin-right: 1em;
+  border-radius: 100%;
+  border: solid 1px;
+}
+.spotlight img {
+  border-radius: 100%;
+  width: 6em;
+}
+/* Make some elements bigger for larger screens. */
 @media (min-width: 768px) {
   .nav-item {
     font-size: 1.1em;
@@ -30,13 +48,9 @@ body {
   h1 {
     font-size: 3.5em;
   }
-}
-/* Increase highlighting on navigation and menu items. */
-.nav-item:hover {
-  background-color: #eaeaea;
-}
-.dropdown-item:hover {
-  background-color: #eaeaea;
+  .spotlight img {
+    width: 10em;
+  }
 }
 /* Custom carousel showing cards. */
 @media (max-width: 768px) {
