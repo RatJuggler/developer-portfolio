@@ -1,7 +1,8 @@
 # developer-portfolio
 My developer portfolio website.
 
-Rather than copying a random template off the internet I'm trying to create something a bit different from scratch.
+Rather than copying a random template off the internet I'm trying to create something a bit different from scratch (or least only 
+adapting random bits off the internet that I can understand and modify, like all good projects do 😄).
 
 The idea is to build a number of different versions of the same site:
 
