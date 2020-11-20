@@ -23,6 +23,7 @@
   "dependencies": {},
   "devDependencies": {
     "bootstrap": "^4.5.3",
+    "bootstrap-table": "^1.18.0",
     "browser-sync": "^2.26.13",
     "jquery": "^3.5.1",
     "parcel-bundler": "^1.12.4",
