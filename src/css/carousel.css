@@ -1,6 +1,4 @@
-/* Custom carousel showing cards. */
-
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .carousel-inner .carousel-item > div {
     display: none;
   }
@@ -15,7 +13,7 @@
   display: flex;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .carousel-inner .carousel-item-right.active,
   .carousel-inner .carousel-item-next {
     transform: translateX(33.333%);
@@ -29,8 +27,4 @@
 .carousel-inner .carousel-item-right,
 .carousel-inner .carousel-item-left{
   transform: translateX(0);
-}
-
-.carousel-indicators {
-  position: relative;
 }
