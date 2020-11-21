@@ -1,16 +1,25 @@
-// import $ from "jquery";
+import $ from "jquery";
 
 $(document).ready(function() {
 
-    $('#interestsCarousel .carousel-item').each(function() {
-        const minPerSlide = 3;
-        let next;
-        while ($(this).children().length < minPerSlide) {
-            next = next ? next.next() : $(this).next();
-            if (!next.length) {
-                next = $(this).siblings(':first');
+    /*
+        CC 2.0 License Iatek LLC 2018 - Attribution required
+    */
+    $("#interestsCarousel").on("slide.bs.carousel", function(e) {
+        const itemsPerSlide = 4;
+        let $e = $(e.relatedTarget);
+        let idx = $e.index();
+        let totalItems = $(".carousel-item").length;
+
+        if (idx >= totalItems - (itemsPerSlide - 1)) {
+            let it = itemsPerSlide - (totalItems - idx);
+            for (let i = 0; i < it; i++) {
+                if (e.direction === "left") {
+                    $(".carousel-item").eq(i).appendTo(".carousel-inner");
+                } else {
+                    $(".carousel-item").eq(0).appendTo(".carousel-inner");
+                }
             }
-            next.children(':first-child').clone().appendTo($(this));
         }
     });
 
