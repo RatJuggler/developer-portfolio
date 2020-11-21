@@ -29,6 +29,11 @@ body {
 .dropdown-item:hover {
   background-color: #eaeaea;
 }
+/* Make Jumbotron smaller by default. */
+.jumbotron {
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+}
 /* Photo */
 .spotlight {
   padding: 0.65em;
@@ -38,18 +43,23 @@ body {
 }
 .spotlight img {
   border-radius: 100%;
-  width: 6em;
+  width: 6rem;
 }
 /* Make some elements bigger for larger screens. */
 @media (min-width: 768px) {
   .nav-item {
-    font-size: 1.1em;
+    font-size: 1.1rem;
   }
   h1 {
-    font-size: 3.5em;
+    font-size: 3.5rem;
   }
   .spotlight img {
-    width: 10em;
+    width: 10rem;
+  }
+}
+@media (min-width: 1200px) {
+  .jumbotron {
+    padding: 2rem 2rem;
   }
 }
 
