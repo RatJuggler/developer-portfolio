@@ -19,3 +19,8 @@ Content for the site will include:
 - Skills - Table highlighting my hard & soft skills with option to sort, filter and mark items.
 - Career - Rough horizontal timeline graph showing from when I started with the dinosaurs to the present day space age.
 - Interests - Card/photo carousel
+
+**Attributions:**
+
+- Timeline - Taken [from here](https://bootsnipp.com/snippets/Q0ppE). I don't believe this is the original but I can't find a definitive source.
+- Carousel - Original code from [this company](http://iatek.com/) via [this article](https://azmind.com/bootstrap-carousel-multiple-items/).
