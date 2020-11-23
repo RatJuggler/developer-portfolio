@@ -105,13 +105,21 @@
         </li>
       </ul>
       <h2 class="mt-4">Skills</h2>
-      <table data-toggle="table">
+      <div class="w-100 my-auto">
+      <table
+          id="skills"
+          data-toolbar="#toolbar"
+          data-search="true"
+          data-pagination="true"
+          data-page-list="[10, 25, 50, all]"
+          data-show-footer="true"
+          data-toggle="table">
         <thead>
           <tr>
-            <th>Type</th>
-            <th>Category</th>
-            <th>Skill</th>
-            <th>Description</th>
+            <th data-field="type" data-sortable="true">Type</th>
+            <th data-field="category" data-sortable="true">Category</th>
+            <th data-field="skill" data-sortable="true">Skill</th>
+            <th data-field="description" data-sortable="true">Description</th>
           </tr>
         </thead>
         <tbody>
@@ -222,6 +230,7 @@
           <tr><td>O</td><td>Tools                 </td><td>Postman              </td><td>Testing REST APIs                  </td></tr>
         </tbody>
       </table>
+      </div>
     </div>
   </main>
 
