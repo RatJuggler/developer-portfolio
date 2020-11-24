@@ -20,6 +20,7 @@
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-table.min.css">
+  <link rel="stylesheet" href="css/bootstrap-table-filter-control.min.css">
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/table.css">
@@ -114,6 +115,7 @@
           data-classes="table table-bordered table-hover table-striped"
           data-search="true"
           data-show-search-button="true"
+          data-filter-control="true"
           data-pagination="true"
           data-page-size="10"
           data-page-list="[10, 25, 50, all]"
@@ -121,10 +123,10 @@
           data-toggle="table">
         <thead>
           <tr>
-            <th data-field="type" data-sortable="true">Type</th>
-            <th data-field="category" data-sortable="true">Category</th>
-            <th data-field="skill" data-sortable="true">Skill</th>
-            <th data-field="description" data-sortable="true">Description</th>
+            <th data-field="type" data-sortable="true" data-filter-control="select">Type</th>
+            <th data-field="category" data-sortable="true" data-filter-control="select">Category</th>
+            <th data-field="skill" data-sortable="true" data-filter-control="input">Skill</th>
+            <th data-field="description" data-sortable="true" data-filter-control="input">Description</th>
           </tr>
         </thead>
         <tbody>
@@ -275,6 +277,7 @@
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootstrap-table.min.js"></script>
+  <script src="js/bootstrap-table-filter-control.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
