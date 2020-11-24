@@ -283,3 +283,22 @@
   .main-timeline .timeline-content:after,
   .main-timeline .timeline:nth-child(2n) .timeline-content:after { left: 65px; }
 }
+
+.scroll2 {
+  overflow: hidden;
+  z-index: 999;
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+  font-size: 64px;
+}
+#scroll2Bottom {
+}
+#scroll2Top {
+  display: none;
+  bottom: 50px;
+}
+.scroll2:hover {
+  background-color: #DDF;
+  text-decoration: none;
+}
