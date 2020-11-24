@@ -15,8 +15,8 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  scroll-behavior: smooth;
 }
-
 /* Pad content to avoid navbar and footer. */
 body {
   padding-top: 3.5rem;
