@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="css/bootstrap-table.min.css">
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/table.css">
 
   <meta name="theme-color" content="#b833c0">
 </head>
@@ -104,13 +105,17 @@
           <a class="nav-link" href="interests.html">Interests</a>
         </li>
       </ul>
-      <h2 class="mt-4">Skills</h2>
-      <div class="w-100 my-auto">
+      <div id="skillsToolbar" class="align-bottom">
+        <h2 class="mt-4">Skills</h2>
+      </div>
       <table
-          id="skills"
-          data-toolbar="#toolbar"
+          id="skillsTable"
+          data-toolbar="#skillsToolbar"
+          data-classes="table table-bordered table-hover table-striped"
           data-search="true"
+          data-show-search-button="true"
           data-pagination="true"
+          data-page-size="10"
           data-page-list="[10, 25, 50, all]"
           data-show-footer="true"
           data-toggle="table">
@@ -230,7 +235,6 @@
           <tr><td>O</td><td>Tools                 </td><td>Postman              </td><td>Testing REST APIs                  </td></tr>
         </tbody>
       </table>
-      </div>
     </div>
   </main>
 
