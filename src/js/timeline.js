@@ -10,6 +10,7 @@ $(window).scroll(function() {
 });
 
 $(document).ready(function() {
+
     $("#scroll2Bottom").click(function(event) {
         event.preventDefault();
         $("html, body").animate({ scrollTop: document.body.scrollHeight }, "slow");
@@ -20,4 +21,5 @@ $(document).ready(function() {
         $("html, body").animate({ scrollTop: 0 }, "slow");
         return false;
     });
+
 });

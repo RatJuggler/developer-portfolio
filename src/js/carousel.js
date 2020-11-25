@@ -1,5 +1,3 @@
-import $ from "jquery";
-
 $(document).ready(function() {
 
     /* Original: CC 2.0 License Iatek LLC 2018 - Attribution required */
