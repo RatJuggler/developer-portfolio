@@ -1,4 +1,5 @@
 # developer-portfolio
+
 My developer portfolio website.
 
 Rather than copying a random template off the internet I'm trying to create something a bit different from scratch (or at least 
@@ -26,5 +27,7 @@ Content for the site will include:
 - Boostrap - Front-end development toolkit [from here](https://getbootstrap.com/).
 - Table - Uses the Bootstrap table extension [from here](https://bootstrap-table.com/).
 - Timeline - Based on code [from here](https://bootsnipp.com/snippets/Q0ppE). I don't believe this is the original, but I can't find a definitive source.
-- Carousel - Original code from [this company](http://iatek.com/) via [this article](https://azmind.com/bootstrap-carousel-multiple-items/).
+- Carousel - Based on original code from [this company](http://iatek.com/) via [this article](https://azmind.com/bootstrap-carousel-multiple-items/).
 - Cookie Banner - Based on code [from here](https://github.com/kolappannathan/bootstrap-cookie-banner).
+
+Where the use is "based" on I have taken the initial code and rewritten it, removing jQuery and adding my own tweaks.
