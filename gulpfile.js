@@ -35,18 +35,18 @@ function cleanModules() {
 // Bring third party dependencies from node_modules into vendor directory
 function copyModules() {
     // Bootstrap JS
-    let bootstrapJS = gulp.src('./node_modules/bootstrap/dist/js/*')
+    let bootstrapJS = gulp.src(['./node_modules/bootstrap/dist/js/bootstrap.*', '!./node_modules/bootstrap/dist/js/bootstrap.bundle.*'])
         .pipe(gulp.dest('./src/vendor/bootstrap/js'));
     // Bootstrap CSS
-    let bootstrapSCSS = gulp.src('./node_modules/bootstrap/css/**/*')
+    let bootstrapSCSS = gulp.src('./node_modules/bootstrap/dist/css/bootstrap.*')
         .pipe(gulp.dest('./src/vendor/bootstrap/css'));
     // Font Awesome
-    let fontAwesomeCSS = gulp.src('./node_modules/@fortawesome/fontawesome-free/css/*.css')
+    let fontAwesomeCSS = gulp.src('./node_modules/@fortawesome/fontawesome-free/css/all.*')
         .pipe(gulp.dest('./src/vendor/fontawesome-free/css'));
     let fontAwesome = gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/*.*')
         .pipe(gulp.dest('./src/vendor/fontawesome-free/webfonts'));
     // jQuery
-    let jquery = gulp.src('./node_modules/jquery/dist/*')
+    let jquery = gulp.src(['./node_modules/jquery/dist/*', '!./node_modules/jquery/dist/jquery.slim.*'])
         .pipe(gulp.dest('./src/vendor/jquery'));
     return merge(bootstrapJS, bootstrapSCSS, fontAwesome, fontAwesomeCSS, jquery);
 }
