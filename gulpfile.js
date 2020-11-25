@@ -8,6 +8,7 @@ const header = require("gulp-header");
 const merge = require("merge-stream");
 const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
+const replace = require("gulp-replace")
 const terser = require("gulp-terser");
 
 // Load package.json for banner
@@ -57,6 +58,8 @@ function copyDist() {
     let myImg = gulp.src('./src/img/*.*')
         .pipe(gulp.dest('./dist/img'));
     let myHTML = gulp.src('./src/*.html')
+        .pipe(replace('.css', '.min.css'))
+        .pipe(replace('.js', '.min.js'))
         .pipe(gulp.dest('./dist'));
     // Bootstrap
     let bootstrapJS = gulp.src('./src/vendor/bootstrap/js/*.min.js')
