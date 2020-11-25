@@ -88,7 +88,7 @@ function copyDist() {
     // jQuery
     let jquery = gulp.src('./src/vendor/jquery/*.min.*')
         .pipe(gulp.dest('./dist/vendor/jquery'));
-    return merge(mySrc, myImg, myHTML, bootstrapJS, bootstrapCSS, fontAwesome, fontAwesomeCSS, jquery)
+    return merge(mySrc, myImg, myHTML, bootstrapJS, bootstrapCSS, bootstrapTableJS, bootstrapTableCSS, fontAwesome, fontAwesomeCSS, jquery)
 }
 
 // Minify CSS task
