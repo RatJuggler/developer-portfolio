@@ -35,12 +35,21 @@ function cleanModules() {
 
 // Bring third party dependencies from node_modules into vendor directory
 function copyModules() {
-    // Bootstrap JS
+    // Bootstrap
     let bootstrapJS = gulp.src(['./node_modules/bootstrap/dist/js/bootstrap.*', '!./node_modules/bootstrap/dist/js/bootstrap.bundle.*'])
         .pipe(gulp.dest('./src/vendor/bootstrap/js'));
-    // Bootstrap CSS
-    let bootstrapSCSS = gulp.src('./node_modules/bootstrap/dist/css/bootstrap.*')
+    let bootstrapCSS = gulp.src('./node_modules/bootstrap/dist/css/bootstrap.*')
         .pipe(gulp.dest('./src/vendor/bootstrap/css'));
+    // Bootstrap-table
+    let bootstrapTableJS = gulp.src('./node_modules/bootstrap-table/dist/bootstrap-table.*js')
+        .pipe(gulp.dest('./src/vendor/bootstrap-table/js'));
+    let bootstrapTableCSS = gulp.src('./node_modules/bootstrap-table/dist/bootstrap-table.*css')
+        .pipe(gulp.dest('./src/vendor/bootstrap-table/css'));
+    // Bootstrap-table filer control
+    let bootstrapTableFilterJS = gulp.src('./node_modules/bootstrap-table/dist/extensions/filter-control/bootstrap-table-filter-control*.js')
+        .pipe(gulp.dest('./src/vendor/bootstrap-table/js'));
+    let bootstrapTableFilerCSS = gulp.src('./node_modules/bootstrap-table/dist/extensions/filter-control/bootstrap-table-filter-control*.css')
+        .pipe(gulp.dest('./src/vendor/bootstrap-table/css'));
     // Font Awesome
     let fontAwesomeCSS = gulp.src('./node_modules/@fortawesome/fontawesome-free/css/all.*')
         .pipe(gulp.dest('./src/vendor/fontawesome-free/css'));
@@ -49,7 +58,7 @@ function copyModules() {
     // jQuery
     let jquery = gulp.src(['./node_modules/jquery/dist/*', '!./node_modules/jquery/dist/jquery.slim.*'])
         .pipe(gulp.dest('./src/vendor/jquery'));
-    return merge(bootstrapJS, bootstrapSCSS, fontAwesome, fontAwesomeCSS, jquery);
+    return merge(bootstrapJS, bootstrapCSS, bootstrapTableJS, bootstrapTableCSS, bootstrapTableFilterJS, bootstrapTableFilerCSS, fontAwesome, fontAwesomeCSS, jquery);
 }
 
 function copyDist() {
@@ -66,6 +75,11 @@ function copyDist() {
         .pipe(gulp.dest('./dist/vendor/bootstrap/js'));
     let bootstrapCSS = gulp.src('./src/vendor/bootstrap/css/*.min.css')
         .pipe(gulp.dest('./dist/vendor/bootstrap/css'));
+    // Bootstrap-table & filter control
+    let bootstrapTableJS = gulp.src('./src/vendor/bootstrap-table/js/*.min.js')
+        .pipe(gulp.dest('./dist/vendor/bootstrap-table/js'));
+    let bootstrapTableCSS = gulp.src('./src/vendor/bootstrap-table/css/*.min.css')
+        .pipe(gulp.dest('./dist/vendor/bootstrap-table/css'));
     // Font Awesome
     let fontAwesomeCSS = gulp.src('./src/vendor/fontawesome-free/css/*.min.css')
         .pipe(gulp.dest('./dist/vendor/fontawesome-free/css'));
