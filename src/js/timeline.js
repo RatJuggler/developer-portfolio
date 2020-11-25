@@ -1,3 +1,5 @@
+/* Arrows to scroll to the bottom, and back to the top, of the timeline. */
+
 const s2b = document.getElementById("scroll2Bottom");
 const s2t = document.getElementById("scroll2Top");
 
