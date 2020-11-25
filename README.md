@@ -22,6 +22,9 @@ Content for the site will include:
 
 **Attributions:**
 
-- Table - Taken [from here](https://bootstrap-table.com/).
-- Timeline - Taken [from here](https://bootsnipp.com/snippets/Q0ppE). I don't believe this is the original but I can't find a definitive source.
+- HTML5 Boilerplate - Front-end template [from here](https://html5boilerplate.com/).
+- Boostrap - Front-end development toolkit [from here](https://getbootstrap.com/).
+- Table - Uses the Bootstrap table extension [from here](https://bootstrap-table.com/).
+- Timeline - Based on code [from here](https://bootsnipp.com/snippets/Q0ppE). I don't believe this is the original, but I can't find a definitive source.
 - Carousel - Original code from [this company](http://iatek.com/) via [this article](https://azmind.com/bootstrap-carousel-multiple-items/).
+- Cookie Banner - Based on code [from here](https://github.com/kolappannathan/bootstrap-cookie-banner).
