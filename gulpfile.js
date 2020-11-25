@@ -56,9 +56,13 @@ function copyModules() {
     let fontAwesome = gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/*.*')
         .pipe(gulp.dest('./src/vendor/fontawesome-free/webfonts'));
     // jQuery
-    let jquery = gulp.src(['./node_modules/jquery/dist/*', '!./node_modules/jquery/dist/jquery.slim.*'])
+    let jquery = gulp.src(['./node_modules/jquery/dist/jquery.*', '!./node_modules/jquery/dist/jquery.slim.*'])
         .pipe(gulp.dest('./src/vendor/jquery'));
-    return merge(bootstrapJS, bootstrapCSS, bootstrapTableJS, bootstrapTableCSS, bootstrapTableFilterJS, bootstrapTableFilerCSS, fontAwesome, fontAwesomeCSS, jquery);
+    // Popper
+    let popper = gulp.src('./node_modules/popper.js/dist/umd/popper.*')
+        .pipe(gulp.dest('./src/vendor/popper'));
+    return merge(bootstrapJS, bootstrapCSS, bootstrapTableJS, bootstrapTableCSS, bootstrapTableFilterJS, bootstrapTableFilerCSS,
+        fontAwesome, fontAwesomeCSS, jquery, popper);
 }
 
 function copyDist() {
@@ -88,7 +92,11 @@ function copyDist() {
     // jQuery
     let jquery = gulp.src('./src/vendor/jquery/*.min.*')
         .pipe(gulp.dest('./dist/vendor/jquery'));
-    return merge(mySrc, myImg, myHTML, bootstrapJS, bootstrapCSS, bootstrapTableJS, bootstrapTableCSS, fontAwesome, fontAwesomeCSS, jquery)
+    // Popper
+    let popper = gulp.src('./src/vendor/popper/*.min.*')
+        .pipe(gulp.dest('./dist/vendor/popper'));
+    return merge(mySrc, myImg, myHTML, bootstrapJS, bootstrapCSS, bootstrapTableJS, bootstrapTableCSS,
+        fontAwesome, fontAwesomeCSS, jquery, popper)
 }
 
 // Minify CSS task
