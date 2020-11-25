@@ -66,7 +66,7 @@ function copyModules() {
 }
 
 function copyDist() {
-    let mySrc = gulp.src(['./src/**/*.*', '!./src/vendor/**', '!./src/*.html'])
+    let mySrc = gulp.src(['./src/*.*', './src/**/vendor/*', '!./src/*.html'])
         .pipe(gulp.dest('./dist'));
     let myImg = gulp.src('./src/img/*.*')
         .pipe(gulp.dest('./dist/img'));
