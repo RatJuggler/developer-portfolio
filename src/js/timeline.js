@@ -1,25 +1,17 @@
-$(window).scroll(function() {
-    let height = $(window).scrollTop();
-    if (height > 100) {
-        $('#scroll2Top').fadeIn();
-        $('#scroll2Bottom').fadeOut();
-    } else {
-        $('#scroll2Top').fadeOut();
-        $('#scroll2Bottom').fadeIn();
-    }
+const s2b = document.getElementById("scroll2Bottom");
+const s2t = document.getElementById("scroll2Top");
+
+window.addEventListener("scroll", () => {
+    s2t.style.opacity = window.scrollY > 800 ? "1" : "0";
+    s2b.style.opacity = window.scrollY > 800 ? "0" : "1";
 });
 
-$(document).ready(function() {
+s2b.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.scrollTo(0, document.body.scrollHeight);
+});
 
-    $("#scroll2Bottom").click(function(event) {
-        event.preventDefault();
-        $("html, body").animate({ scrollTop: document.body.scrollHeight }, "slow");
-        return false;
-    });
-    $("#scroll2Top").click(function(event) {
-        event.preventDefault();
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-        return false;
-    });
-
+s2t.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.scrollTo(0, 0);
 });

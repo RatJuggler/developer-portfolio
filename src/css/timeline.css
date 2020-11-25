@@ -291,11 +291,13 @@
   position: fixed;
   right: 0;
   font-size: 64px;
+  transition: opacity 400ms ease-in-out;
 }
 #scroll2Bottom {
 }
 #scroll2Top {
-  display: none;
+  /*display: none;*/
+  opacity: 0;
   bottom: 50px;
 }
 .scroll2:hover {
