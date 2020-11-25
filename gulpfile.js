@@ -9,6 +9,9 @@ const merge = require("merge-stream");
 const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const replace = require("gulp-replace")
+const rev = require('gulp-rev');
+const revdel = require('gulp-rev-delete-original');
+const revRewrite = require('gulp-rev-rewrite');
 const terser = require("gulp-terser");
 
 // Load package.json for banner
@@ -129,10 +132,21 @@ function minjs() {
         .pipe(gulp.dest('./dist/js'));
 }
 
+// Cache busting
+function revision() {
+    return gulp
+        .src('dist/**/*.{css,js}')
+        .pipe(rev())
+        .pipe(revdel())
+        .pipe(gulp.src('dist/**/*.html'))
+        .pipe(revRewrite())
+        .pipe(gulp.dest('dist'));
+}
+
 // Define complex tasks
 const cleanAll = gulp.parallel(cleanDist, cleanModules, cleanVendor);
 const vendor = gulp.series(cleanVendor, copyModules);
-const build = gulp.series(vendor, cleanDist, copyDist, gulp.parallel(mincss, minjs));
+const build = gulp.series(vendor, cleanDist, copyDist, gulp.parallel(mincss, minjs), revision);
 
 // Document tasks
 mincss.description = "Minify CSS files.";
@@ -140,6 +154,7 @@ minjs.description = "Minify JS files.";
 cleanDist.description = "Clear down the dist folder.";
 cleanAll.description = "Clear down the dist, vendor and node_modules folders.";
 vendor.description = "Refresh the vendor dependencies from node_modules.";
+revision.description = "Add cache busting content hashes to static assets.";
 build.description = "Build a distribution ready version of the site.";
 
 // Export tasks
@@ -148,5 +163,6 @@ exports.minjs = minjs;
 exports.cleandist = cleanDist;
 exports.cleanall = cleanAll;
 exports.vendor = vendor;
+exports.revision = revision;
 exports.build = build;
 exports.default = build;
