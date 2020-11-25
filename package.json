@@ -1,15 +1,16 @@
 {
-  "title": "Developer Portfolio website",
+  "title": "John Chase - Developer Portfolio",
   "name": "developer-portfolio",
   "version": "0.0.4",
   "private": true,
-  "description": "Developer Portfolio website for John Chase.",
+  "description": "Developer portfolio website for John Chase.",
   "keywords": [],
   "homepage": "https://github.com/RatJuggler/developer-portfolio#readme",
   "license": "MIT",
   "author": "John Chase",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node_modules/.bin/gulp build",
     "start": "browser-sync start --server \"src\" --files \"src\""
   },
   "repository": {
@@ -30,6 +31,14 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.13"
+    "browser-sync": "^2.26.13",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-header": "^2.0.9",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-terser": "^2.0.0",
+    "merge-stream": "^2.0.0"
   }
 }
