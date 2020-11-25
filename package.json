@@ -2,13 +2,15 @@
   "title": "Developer Portfolio website",
   "name": "developer-portfolio",
   "version": "0.0.4",
+  "private": true,
   "description": "Developer Portfolio website for John Chase.",
+  "keywords": [],
+  "homepage": "https://github.com/RatJuggler/developer-portfolio#readme",
   "license": "MIT",
   "author": "John Chase",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "browser-sync start --server \"src\" --files \"src\"",
-    "build": "parcel build src/index.html --public-url ."
+    "start": "browser-sync start --server \"src\" --files \"src\""
   },
   "repository": {
     "type": "git",
@@ -20,13 +22,14 @@
   "browserslist": [
     "defaults"
   ],
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "5.15.1",
     "bootstrap": "^4.5.3",
     "bootstrap-table": "^1.18.0",
-    "browser-sync": "^2.26.13",
     "jquery": "^3.5.1",
-    "parcel-bundler": "^1.12.4",
     "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.13"
   }
 }
