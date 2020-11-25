@@ -1,0 +1,12 @@
+# humanstxt.org/
+# Robots keep out!
+
+# TEAM
+  John Chase -- Bodger of Code -- @ratjuggler -- https://github.com/RatJuggler
+
+# THANKS
+  To everyone that knows me.
+
+# TECHNOLOGY COLOPHON
+  IDE: JetBrains WebStorm
+  Technology: HTML5, CSS3
