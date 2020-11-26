@@ -31,7 +31,7 @@
     <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
       <a class="navbar-brand" href="#">
         <img src="img/Rat-Profile.svg" width="30" height="30" class="d-inline-block align-top" alt="My profile avatar">
-        RatJuggler
+        Portfolio
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -77,15 +77,42 @@
         </ul>
       </div>
     </nav>
+  </header>
+
+  <section>
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <div class="row">
-          <span class="spotlight"><img src="img/Photo.png" alt="John Chase" /></span>
-          <h1 class="my-auto">John Chase</h1>
-        </div>
+        <form>
+          <fieldset disabled>
+            <div class="row">
+              <div class="col-md-3">
+                <span class="spotlight"><img src="img/Photo.png" alt="John Chase" /></span>
+              </div>
+              <div class="col-md-9">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control form-control-lg" id="name" placeholder="John Chase">
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-8">
+                    <label for="location">Location</label>
+                    <input type="text" class="form-control" id="location" placeholder="Gatwick, Surrey">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="status">Status</label>
+                    <select class="form-control" id="status">
+                      <option>Available</option>
+                      <option>Engaged</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
       </div>
     </div>
-  </header>
+  </section>
 
   <main>
     <div class="container">

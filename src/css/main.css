@@ -35,15 +35,12 @@ body {
   margin-bottom: 1rem;
 }
 /* Photo */
-.spotlight {
-  padding: 0.65em;
-  margin-right: 1em;
-  border-radius: 100%;
-  border: solid 1px;
-}
 .spotlight img {
-  border-radius: 100%;
+  padding: 0.65rem;
+  margin-right: 1rem;
+  border-radius: 50%;
   width: 6rem;
+  border: solid 1px;
 }
 /* Cookies */
 #cookie-banner {
