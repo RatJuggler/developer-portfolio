@@ -17,10 +17,9 @@ html {
   line-height: 1.4;
   scroll-behavior: smooth;
 }
-/* Pad content to avoid navbar and footer. */
+/* Pad content to avoid navbar. */
 body {
   padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
 }
 /* Increase highlighting on navigation and menu items. */
 .nav-item:hover {
