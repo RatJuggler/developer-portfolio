@@ -31,7 +31,8 @@ body {
 }
 /* Make Jumbotron smaller by default. */
 .jumbotron {
-  padding: 1rem 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   margin-bottom: 1rem;
 }
 /* Photo */
@@ -63,10 +64,9 @@ body {
   .spotlight img {
     width: 10rem;
   }
-}
-@media (min-width: 1200px) {
   .jumbotron {
-    padding: 2rem 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
   }
 }
 

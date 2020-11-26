@@ -296,9 +296,8 @@
 #scroll2Bottom {
 }
 #scroll2Top {
-  /*display: none;*/
   opacity: 0;
-  bottom: 50px;
+  bottom: 0;
 }
 .scroll2:hover {
   background-color: #DDF;

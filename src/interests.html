@@ -88,6 +88,30 @@
             <div class="row">
               <div class="col-md-3">
                 <span class="spotlight"><img src="img/Photo.png" alt="John Chase" /></span>
+                <nav class="navbar navbar-expand navbar-light">
+                  <ul class="navbar-nav" id="contactMenu2">
+                    <li class="nav-item">
+                      <a class="nav-link" href="mailto:john.chase3@outlook.com?subject=Developer%20Profile" target="_blank" rel="noopener noreferrer" title="E-mail">
+                        <span class="fas fa-at" aria-hidden="true"></span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://www.linkedin.com/in/john-chase-57973b12/" title="LinkedIn">
+                        <span class="fab fa-linkedin" aria-hidden="true"></span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://github.com/RatJuggler" title="Github">
+                        <span class="fab fa-github-square" aria-hidden="true"></span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://twitter.com/ratjuggler" title="Twitter">
+                        <span class="fab fa-twitter-square" aria-hidden="true"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
               <div class="col-md-9">
                 <div class="form-group">
@@ -115,119 +139,92 @@
     </div>
   </section>
 
-  <main>
-    <div class="container">
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="skills.html">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="career.html">Career</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Interests</a>
-        </li>
-      </ul>
-      <div id="interestsCarousel" class="carousel slide mt-3" data-ride="carousel">
-        <div class="carousel-inner row w-100 mx-auto" role="listbox">
-          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
-            <div class="card">
-              <img  class="card-img-top img-fluid" src="img/Dinosaurs.jpg" alt="Dinosaurs">
-              <div class="card-body">
-                <h4 class="card-title">Dinosaurs</h4>
-                <p class="card-text">I always wanted to be a paleontologist and though I ended up in IT they continue to fascinate
-                  me, I even built my own <a href="https://twitter.com/dinosauria_bot">DinosaurOfTheDay</a> bot. Just don't
-                  mention Jurassic Park.</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-              <img  class="card-img-top img-fluid" src="img/VideoGames.jpg" alt="Video Games">
-              <div class="card-body">
-                <h4 class="card-title">Video Games</h4>
-                <p class="card-text">My first steps in programing involved a copy of David H, Ahl's "BASIC Computer Games"
-                  (I still have it) and a teletype attached to a PDP-11/70 and now we have 4K screens and VR.</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-              <img  class="card-img-top img-fluid" src="img/History.jpg" alt="History">
-              <div class="card-body">
-                <h4 class="card-title">History</h4>
-                <p class="card-text">I love reading about history, from Ancient Egypt and the Romans to the Medieval Ages, the
-                  English Civil War through to the Georgian era and the start of the industrial revolution.</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-              <img  class="card-img-top img-fluid" src="img/MakerPi.jpg" alt="Maker Culture">
-              <div class="card-body">
-                <h4 class="card-title">Maker Culture</h4>
-                <p class="card-text">Nothing more fun than fiddling with a Raspberry Pi, a soldering iron and some LEDs or trying
-                  to make a tensegrity structure. I have so far resisted the temptations of a 3D printer.</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-              <img  class="card-img-top img-fluid" src="img/Space.jpg" alt="Space">
-              <div class="card-body">
-                <h4 class="card-title">Space</h4>
-                <p class="card-text">"Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean,
-                  you may think it's a long way down the road to the chemist's, but that's just peanuts to space”.</p>
-              </div>
+  <main class="container">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="skills.html">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="career.html">Career</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Interests</a>
+      </li>
+    </ul>
+    <div id="interestsCarousel" class="carousel slide mt-3" data-ride="carousel">
+      <div class="carousel-inner row w-100 mx-auto" role="listbox">
+        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+          <div class="card">
+            <img  class="card-img-top img-fluid" src="img/Dinosaurs.jpg" alt="Dinosaurs">
+            <div class="card-body">
+              <h4 class="card-title">Dinosaurs</h4>
+              <p class="card-text">I always wanted to be a paleontologist and though I ended up in IT they continue to fascinate
+                me, I even built my own <a href="https://twitter.com/dinosauria_bot">DinosaurOfTheDay</a> bot. Just don't
+                mention Jurassic Park.</p>
             </div>
           </div>
         </div>
-        <a class="carousel-control-prev w-auto" href="#interestsCarousel" role="button" data-slide="prev">
-          <span class="fas fa-angle-left text-dark display-4" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next w-auto" href="#interestsCarousel" role="button" data-slide="next">
-          <span class="fas fa-angle-right text-dark display-4" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card">
+            <img  class="card-img-top img-fluid" src="img/VideoGames.jpg" alt="Video Games">
+            <div class="card-body">
+              <h4 class="card-title">Video Games</h4>
+              <p class="card-text">My first steps in programing involved a copy of David H, Ahl's "BASIC Computer Games"
+                (I still have it) and a teletype attached to a PDP-11/70 and now we have 4K screens and VR.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card">
+            <img  class="card-img-top img-fluid" src="img/History.jpg" alt="History">
+            <div class="card-body">
+              <h4 class="card-title">History</h4>
+              <p class="card-text">I love reading about history, from Ancient Egypt and the Romans to the Medieval Ages, the
+                English Civil War through to the Georgian era and the start of the industrial revolution.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card">
+            <img  class="card-img-top img-fluid" src="img/MakerPi.jpg" alt="Maker Culture">
+            <div class="card-body">
+              <h4 class="card-title">Maker Culture</h4>
+              <p class="card-text">Nothing more fun than fiddling with a Raspberry Pi, a soldering iron and some LEDs or trying
+                to make a tensegrity structure. I have so far resisted the temptations of a 3D printer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card">
+            <img  class="card-img-top img-fluid" src="img/Space.jpg" alt="Space">
+            <div class="card-body">
+              <h4 class="card-title">Space</h4>
+              <p class="card-text">"Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean,
+                you may think it's a long way down the road to the chemist's, but that's just peanuts to space”.</p>
+            </div>
+          </div>
+        </div>
       </div>
+      <a class="carousel-control-prev w-auto" href="#interestsCarousel" role="button" data-slide="prev">
+        <span class="fas fa-angle-left text-dark display-4" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next w-auto" href="#interestsCarousel" role="button" data-slide="next">
+        <span class="fas fa-angle-right text-dark display-4" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </main>
 
   <footer>
-    <nav class="navbar fixed-bottom navbar-expand navbar-light bg-light">
-      <ul class="navbar-nav" id="contactMenu">
-        <li class="nav-item">
-          <a class="nav-link" href="mailto:john.chase3@outlook.com?subject=Developer%20Profile" target="_blank" rel="noopener noreferrer" title="E-mail">
-            <span class="fas fa-at" aria-hidden="true"></span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.linkedin.com/in/john-chase-57973b12/" title="LinkedIn">
-            <span class="fab fa-linkedin" aria-hidden="true"></span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/RatJuggler" title="Github">
-            <span class="fab fa-github-square" aria-hidden="true"></span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://twitter.com/ratjuggler" title="Twitter">
-            <span class="fab fa-twitter-square" aria-hidden="true"></span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <div id="cookie-banner" class="alert alert-dark text-center mb-0" role="alert">
+      🍪 This website doesn't use cookies but uses local storage to track if you've been told it doesn't use cookies.
+      <button id="acceptCookieNotification" type="button" class="btn btn-primary btn-sm ml-3">Um, OK</button>
+    </div>
   </footer>
-
-  <div id="cookie-banner" class="alert alert-dark text-center mb-0" role="alert">
-    🍪 This website doesn't use cookies but uses local storage to track if you've been told it doesn't use cookies.
-    <button id="acceptCookieNotification" type="button" class="btn btn-primary btn-sm ml-3">Um, OK</button>
-  </div>
 
   <div class="modal fade" id="signOutConfirmation" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="signOutConfirmationLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">

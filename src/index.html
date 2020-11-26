@@ -87,6 +87,30 @@
             <div class="row">
               <div class="col-md-3">
                 <span class="spotlight"><img src="img/Photo.png" alt="John Chase" /></span>
+                <nav class="navbar navbar-expand navbar-light">
+                  <ul class="navbar-nav" id="contactMenu2">
+                    <li class="nav-item">
+                      <a class="nav-link" href="mailto:john.chase3@outlook.com?subject=Developer%20Profile" target="_blank" rel="noopener noreferrer" title="E-mail">
+                        <span class="fas fa-at" aria-hidden="true"></span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://www.linkedin.com/in/john-chase-57973b12/" title="LinkedIn">
+                        <span class="fab fa-linkedin" aria-hidden="true"></span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://github.com/RatJuggler" title="Github">
+                        <span class="fab fa-github-square" aria-hidden="true"></span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://twitter.com/ratjuggler" title="Twitter">
+                        <span class="fab fa-twitter-square" aria-hidden="true"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
               <div class="col-md-9">
                 <div class="form-group">
@@ -114,73 +138,46 @@
     </div>
   </section>
 
-  <main>
-    <div class="container">
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="skills.html">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="career.html">Career</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="interests.html">Interests</a>
-        </li>
-      </ul>
-      <form>
-        <fieldset disabled>
-          <div class="form-group mt-3">
-            <label for="about">Description</label>
-            <textarea class="form-control form-control-lg" id="about" rows="6">I am a Full Stack Application Developer with over 20 years experience. I have a proven track record of delivering bespoke solutions to meet demanding customer needs and growing those solutions to keep up with a changing market. I enjoy collaborating with a diverse team to build and promote a good working environment geared at delivering high-quality solutions.
+  <main class="container">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="skills.html">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="career.html">Career</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="interests.html">Interests</a>
+      </li>
+    </ul>
+    <form>
+      <fieldset disabled>
+        <div class="form-group mt-3">
+          <label for="about">Description</label>
+          <textarea class="form-control form-control-lg" id="about" rows="6">I am a Full Stack Application Developer with over 20 years experience. I have a proven track record of delivering bespoke solutions to meet demanding customer needs and growing those solutions to keep up with a changing market. I enjoy collaborating with a diverse team to build and promote a good working environment geared at delivering high-quality solutions.
 
 Select one of the tabs to find out more about me.</textarea>
+        </div>
+        <div class="form-group row">
+          <label for="email" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="email" value="john.chase3@outlook.com">
           </div>
-          <div class="form-group row">
-            <label for="email" class="col-sm-2 col-form-label">Email</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="email" value="john.chase3@outlook.com">
-            </div>
-          </div>
-          <p>See the <a href="https://github.com/RatJuggler/developer-portfolio">Github project page</a> for more about this site.</p>
-        </fieldset>
-      </form>
-    </div>
+        </div>
+        <p>See the <a href="https://github.com/RatJuggler/developer-portfolio">Github project page</a> for more about this site.</p>
+      </fieldset>
+    </form>
   </main>
 
   <footer>
-    <nav class="navbar fixed-bottom navbar-expand navbar-light bg-light">
-      <ul class="navbar-nav" id="contactMenu">
-        <li class="nav-item">
-          <a class="nav-link" href="mailto:john.chase3@outlook.com?subject=Developer%20Profile" target="_blank" rel="noopener noreferrer" title="E-mail">
-            <span class="fas fa-at" aria-hidden="true"></span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.linkedin.com/in/john-chase-57973b12/" title="LinkedIn">
-            <span class="fab fa-linkedin" aria-hidden="true"></span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/RatJuggler" title="Github">
-            <span class="fab fa-github-square" aria-hidden="true"></span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://twitter.com/ratjuggler" title="Twitter">
-            <span class="fab fa-twitter-square" aria-hidden="true"></span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <div id="cookie-banner" class="alert alert-dark text-center mb-0" role="alert">
+      🍪 This website doesn't use cookies but uses local storage to track if you've been told it doesn't use cookies.
+      <button id="acceptCookieNotification" type="button" class="btn btn-primary btn-sm ml-3">Um, OK</button>
+    </div>
   </footer>
-
-  <div id="cookie-banner" class="alert alert-dark text-center mb-0" role="alert">
-    🍪 This website doesn't use cookies but uses local storage to track if you've been told it doesn't use cookies.
-    <button id="acceptCookieNotification" type="button" class="btn btn-primary btn-sm ml-3">Um, OK</button>
-  </div>
 
   <div class="modal fade" id="signOutConfirmation" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="signOutConfirmationLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
