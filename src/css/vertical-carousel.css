@@ -1,7 +1,5 @@
 .vertical .carousel-control-prev {
-  left: auto;
-  right: 0;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 .vertical .carousel-control-next {
