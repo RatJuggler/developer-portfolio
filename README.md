@@ -18,7 +18,7 @@ Content for the site will include:
 
 - About - Short introductory paragraph about myself.
 - Skills - Table highlighting my hard & soft skills with option to sort, filter and mark items.
-- Career - Rough timeline showing from when I started with the dinosaurs to the present day space age.
+- Career - Rough timeline from when I started with the dinosaurs to the present day space age.
 - Interests - Brief details on my outside interests. 
 
 **Attributions:**
@@ -26,7 +26,7 @@ Content for the site will include:
 - HTML5 Boilerplate - Front-end template [from here](https://html5boilerplate.com/).
 - Boostrap - Front-end development toolkit [from here](https://getbootstrap.com/).
 - Table - Uses the Bootstrap table extension [from here](https://bootstrap-table.com/).
-- Carousel - Based on original code from [this company](http://iatek.com/) via [this article](https://azmind.com/bootstrap-carousel-multiple-items/).
+- Vertical Carousel - Based on code [from here](https://www.codeply.com/p/JxZ8htyOFN).
 - Cookie Banner - Based on code [from here](https://github.com/kolappannathan/bootstrap-cookie-banner).
 
-Where the use is "based" on I have taken the initial code and rewritten it, removing jQuery and adding my own tweaks.
+Where the use is "based" on I have taken the initial code and rewritten it, removing any jQuery and adding my own tweaks.
