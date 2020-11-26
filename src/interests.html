@@ -21,7 +21,6 @@
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="vendor/fontawesome-free/css/all.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/carousel.css">
 
   <meta name="theme-color" content="#b833c0">
 </head>
@@ -154,65 +153,184 @@
         <a class="nav-link active" href="#">Interests</a>
       </li>
     </ul>
-    <div id="interestsCarousel" class="carousel slide mt-3" data-ride="carousel">
-      <div class="carousel-inner row w-100 mx-auto" role="listbox">
-        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+    <div id="careerCarousel" class="carousel slide mt-4">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
           <div class="card">
-            <img  class="card-img-top img-fluid" src="img/Dinosaurs.jpg" alt="Dinosaurs">
             <div class="card-body">
-              <h4 class="card-title">Dinosaurs</h4>
-              <p class="card-text">I always wanted to be a paleontologist and though I ended up in IT they continue to fascinate
-                me, I even built my own <a href="https://twitter.com/dinosauria_bot">DinosaurOfTheDay</a> bot. Just don't
-                mention Jurassic Park.</p>
+              <form>
+                <fieldset disabled>
+                  <div class="row">
+                    <div class="col-md-2">
+                      <img class="card-img-top img-fluid" src="img/Dinosaurs.jpg" alt="Dinosaurs">
+                    </div>
+                    <div class="col-md-9">
+                      <div class="form-group">
+                        <label for="interest1">Interest</label>
+                        <input type="text" class="form-control form-control-lg" id="interest1" value="Dinosaurs">
+                      </div>
+                      <div class="form-group">
+                        <label>Image</label>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="image1">
+                          <label class="custom-file-label" for="image1">filename</label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="description1">Description</label>
+                        <textarea class="form-control form-control-lg" id="description1" rows="3">
+I always wanted to be a paleontologist and though I ended up in IT they continue to fascinate me, I even built my own "Dinosaur Of The Day" twitter bot (@dinosauria_bot). Just don't mention Jurassic Park.
+                        </textarea>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
             </div>
           </div>
         </div>
-        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="carousel-item">
           <div class="card">
-            <img  class="card-img-top img-fluid" src="img/VideoGames.jpg" alt="Video Games">
             <div class="card-body">
-              <h4 class="card-title">Video Games</h4>
-              <p class="card-text">My first steps in programing involved a copy of David H, Ahl's "BASIC Computer Games"
-                (I still have it) and a teletype attached to a PDP-11/70 and now we have 4K screens and VR.</p>
+              <form>
+                <fieldset disabled>
+                  <div class="row">
+                    <div class="col-md-2">
+                      <img  class="card-img-top img-fluid" src="img/VideoGames.jpg" alt="Video Games">
+                    </div>
+                    <div class="col-md-9">
+                      <div class="form-group">
+                        <label for="interest2">Interest</label>
+                        <input type="text" class="form-control form-control-lg" id="interest2" value="Video Games">
+                      </div>
+                      <div class="form-group">
+                        <label>Image</label>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="image2">
+                          <label class="custom-file-label" for="image2">filename</label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="description2">Description</label>
+                        <textarea class="form-control form-control-lg" id="description2" rows="3">
+My first steps in programing involved a copy of David H, Ahl's "BASIC Computer Games" (I still have it) and a teletype attached to a PDP-11/70 and now we have 4K screens and VR.
+                        </textarea>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
             </div>
           </div>
         </div>
-        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="carousel-item">
           <div class="card">
-            <img  class="card-img-top img-fluid" src="img/History.jpg" alt="History">
             <div class="card-body">
-              <h4 class="card-title">History</h4>
-              <p class="card-text">I love reading about history, from Ancient Egypt and the Romans to the Medieval Ages, the
-                English Civil War through to the Georgian era and the start of the industrial revolution.</p>
+              <form>
+                <fieldset disabled>
+                  <div class="row">
+                    <div class="col-md-2">
+                      <img  class="card-img-top img-fluid" src="img/History.jpg" alt="History">
+                    </div>
+                    <div class="col-md-9">
+                      <div class="form-group">
+                        <label for="interest3">Interest</label>
+                        <input type="text" class="form-control form-control-lg" id="interest3" value="History">
+                      </div>
+                      <div class="form-group">
+                        <label>Image</label>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="image3">
+                          <label class="custom-file-label" for="image3">filename</label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="description3">Description</label>
+                        <textarea class="form-control form-control-lg" id="description3" rows="3">
+I love reading about history, from Ancient Egypt and the Romans to the Medieval Ages, the English Civil War through to the Georgian era and the start of the industrial revolution.
+                        </textarea>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
             </div>
           </div>
         </div>
-        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="carousel-item">
           <div class="card">
-            <img  class="card-img-top img-fluid" src="img/MakerPi.jpg" alt="Maker Culture">
             <div class="card-body">
-              <h4 class="card-title">Maker Culture</h4>
-              <p class="card-text">Nothing more fun than fiddling with a Raspberry Pi, a soldering iron and some LEDs or trying
-                to make a tensegrity structure. I have so far resisted the temptations of a 3D printer.</p>
+              <form>
+                <fieldset disabled>
+                  <div class="row">
+                    <div class="col-md-2">
+                      <img  class="card-img-top img-fluid" src="img/MakerPi.jpg" alt="Maker Culture">
+                    </div>
+                    <div class="col-md-9">
+                      <div class="form-group">
+                        <label for="interest4">Interest</label>
+                        <input type="text" class="form-control form-control-lg" id="interest4" value="Maker Culture">
+                      </div>
+                      <div class="form-group">
+                        <label>Image</label>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="image4">
+                          <label class="custom-file-label" for="image4">filename</label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="description5">Description</label>
+                        <textarea class="form-control form-control-lg" id="description5" rows="3">
+Nothing more fun than fiddling with a Raspberry Pi, a soldering iron and some LEDs or trying to make a tensegrity structure. I have so far resisted the temptations of a 3D printer.
+                        </textarea>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
             </div>
           </div>
         </div>
-        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="carousel-item">
           <div class="card">
-            <img  class="card-img-top img-fluid" src="img/Space.jpg" alt="Space">
             <div class="card-body">
-              <h4 class="card-title">Space</h4>
-              <p class="card-text">"Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean,
-                you may think it's a long way down the road to the chemist's, but that's just peanuts to space”.</p>
+              <form>
+                <fieldset disabled>
+                  <div class="row">
+                    <div class="col-md-2">
+                      <img  class="card-img-top img-fluid" src="img/Space.jpg" alt="Space">
+                    </div>
+                    <div class="col-md-9">
+                      <div class="form-group">
+                        <label for="interest6">Interest</label>
+                        <input type="text" class="form-control form-control-lg" id="interest6" value="Space">
+                      </div>
+                      <div class="form-group">
+                        <label>Image</label>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="image5">
+                          <label class="custom-file-label" for="image5">filename</label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="description6">Description</label>
+                        <textarea class="form-control form-control-lg" id="description6" rows="3">
+Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean, you may think it's a long way down the road to the chemist's, but that's just peanuts to space”.
+                        </textarea>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
             </div>
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev w-auto" href="#interestsCarousel" role="button" data-slide="prev">
+      <a class="carousel-control-prev w-auto" href="#careerCarousel" role="button" data-slide="prev">
         <span class="fas fa-angle-left text-dark display-4" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="carousel-control-next w-auto" href="#interestsCarousel" role="button" data-slide="next">
+      <a class="carousel-control-next w-auto" href="#careerCarousel" role="button" data-slide="next">
         <span class="fas fa-angle-right text-dark display-4" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
@@ -252,7 +370,6 @@
   <script src="vendor/bootstrap/js/bootstrap.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/carousel.js"></script>
 
 </body>
 
