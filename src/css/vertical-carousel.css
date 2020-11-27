@@ -1,9 +1,11 @@
 .vertical .carousel-control-prev {
-  align-items: flex-end;
+  position: relative;
+  font-size: xx-large;
 }
 
 .vertical .carousel-control-next {
-  align-items: flex-end;
+  position: relative;
+  font-size: xx-large;
 }
 
 .vertical .carousel-item-next.carousel-item-left,

@@ -1,3 +1,9 @@
+/* Enable tooltips. */
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+
 /* Show and hide a cookie banner using a local storage flag. */
 
 const cookieBanner = document.getElementById("cookie-banner");
