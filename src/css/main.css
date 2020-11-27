@@ -31,7 +31,7 @@ body {
 /* Make Jumbotron smaller by default. */
 .jumbotron {
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0;
   margin-bottom: 1rem;
 }
 /* Photo */
@@ -41,6 +41,13 @@ body {
   border-radius: 50%;
   width: 6rem;
   border: solid 1px;
+}
+/* Contact icons position and size. */
+#contactList {
+  display: inline-block;
+}
+#contactList .nav-item {
+  font-size: x-large;
 }
 /* Cookies */
 #cookie-banner {
@@ -69,7 +76,7 @@ body {
   }
   .jumbotron {
     padding-top: 2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0;
   }
 }
 
