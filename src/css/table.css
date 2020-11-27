@@ -12,3 +12,9 @@
 .bootstrap-table .table td {
   padding: .25rem;
 }
+/* Make some elements bigger for larger screens. */
+@media (min-width: 768px) {
+  .bootstrap-table {
+    font-size: 1.1rem;
+  }
+}
