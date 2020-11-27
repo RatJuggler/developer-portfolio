@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -20,8 +20,8 @@
 
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-023b3876bb.min.css">
   <link rel="stylesheet" href="vendor/fontawesome-free/css/all-b227b1617a.min.css">
-  <link rel="stylesheet" href="css/main-8318eb45b7.min.css">
-  <link rel="stylesheet" href="css/vertical-carousel-e8ed0ef7c9.min.css">
+  <link rel="stylesheet" href="css/main-aa7c66678b.min.css">
+  <link rel="stylesheet" href="css/vertical-carousel-63e5d75906.min.css">
 
   <meta name="theme-color" content="#b833c0">
 </head>
@@ -47,6 +47,7 @@
             <div class="dropdown-menu" aria-labelledby="projectMenu">
               <a class="dropdown-item" href="https://ratjuggler.github.io/great-pyramid-puzzle/">The Great Pyramid Puzzle</a>
               <a class="dropdown-item" href="https://github.com/RatJuggler/jhipster-microservices-dinosaurs">JHipster Microservices</a>
+              <a class="dropdown-item" href="https://github.com/RatJuggler/developer-portfolio">Developer Portfolio (this site)</a>
               <a class="dropdown-item" href="https://github.com/RatJuggler/guinea-bot">Guinea Pig Twitter Bot</a>
             </div>
           </li>
@@ -83,45 +84,45 @@
   <section>
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <form>
-          <fieldset disabled>
-            <div class="row">
-              <div class="col-md-3">
-                <span class="spotlight"><img src="img/Photo.png" alt="John Chase" /></span>
-                <nav class="navbar navbar-expand navbar-light">
-                  <ul class="navbar-nav" id="contactMenu2">
-                    <li class="nav-item">
-                      <a class="nav-link" href="mailto:john.chase3@outlook.com?subject=Developer%20Profile" target="_blank" rel="noopener noreferrer" title="E-mail">
-                        <span class="fas fa-at" aria-hidden="true"></span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="https://www.linkedin.com/in/john-chase-57973b12/" title="LinkedIn">
-                        <span class="fab fa-linkedin" aria-hidden="true"></span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="https://github.com/RatJuggler" title="Github">
-                        <span class="fab fa-github-square" aria-hidden="true"></span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="https://twitter.com/ratjuggler" title="Twitter">
-                        <span class="fab fa-twitter-square" aria-hidden="true"></span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-              <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <span class="spotlight"><img src="img/Photo.png" alt="John Chase" /></span>
+            <nav id="contactList" class="navbar-expand navbar-light">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="mailto:john.chase3@outlook.com?subject=Developer%20Profile" target="_blank" rel="noopener noreferrer" title="E-mail">
+                    <span class="fas fa-at" aria-hidden="true"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.linkedin.com/in/john-chase-57973b12/" title="LinkedIn">
+                    <span class="fab fa-linkedin" aria-hidden="true"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/RatJuggler" title="Github">
+                    <span class="fab fa-github-square" aria-hidden="true"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://twitter.com/ratjuggler" title="Twitter">
+                    <span class="fab fa-twitter-square" aria-hidden="true"></span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-9">
+            <form>
+              <fieldset disabled>
                 <div class="form-group">
                   <label for="name">Name</label>
-                  <input type="text" class="form-control form-control-lg" id="name" value="John Chase">
+                  <input type="text" class="form-control" id="name" value="John Chase">
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-8">
                     <label for="location">Location</label>
-                    <input type="text" class="form-control" id="location" value="Gatwick, Surrey">
+                    <input type="text" class="form-control" id="location" value="Smallfield, Surrey, England">
                   </div>
                   <div class="form-group col-md-4">
                     <label for="status">Status</label>
@@ -131,10 +132,10 @@
                     </select>
                   </div>
                 </div>
-              </div>
-            </div>
-          </fieldset>
-        </form>
+              </fieldset>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -154,21 +155,38 @@
         <a class="nav-link active" href="#">Interests</a>
       </li>
     </ul>
-    <div id="interestsCarousel" class="vertical carousel slide mt-4">
+    <div id="interestsCarousel" class="vertical carousel slide" data-ride="carousel">
+      <a class="carousel-control-prev w-auto" href="#interestsCarousel" role="button" data-slide="prev">
+        <span class="fas fa-angle-up text-dark" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="card">
+            <div class="card-header">
+              <div class="btn-group float-right">
+                <button type="button" class="btn btn-link" title="Add a new interest">
+                  <span class="fas fa-plus"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Edit this interest">
+                  <span class="far fa-edit"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Delete this interest">
+                  <span class="far fa-trash-alt"></span>
+                </button>
+              </div>
+            </div>
             <div class="card-body">
               <form>
                 <fieldset disabled>
                   <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                       <img class="card-img-top img-fluid" src="img/Dinosaurs.jpg" alt="Dinosaurs">
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-8">
                       <div class="form-group">
                         <label for="interest1">Interest</label>
-                        <input type="text" class="form-control form-control-lg" id="interest1" value="Dinosaurs">
+                        <input type="text" class="form-control" id="interest1" value="Dinosaurs">
                       </div>
                       <div class="form-group">
                         <label>Image</label>
@@ -177,13 +195,13 @@
                           <label class="custom-file-label" for="image1">filename</label>
                         </div>
                       </div>
-                      <div class="form-group">
-                        <label for="description1">Description</label>
-                        <textarea class="form-control form-control-lg" id="description1" rows="3">
-I always wanted to be a paleontologist and though I ended up in IT they continue to fascinate me, I even built my own "Dinosaur Of The Day" twitter bot (@dinosauria_bot). Just don't mention Jurassic Park.
-                        </textarea>
-                      </div>
                     </div>
+                  </div>
+                  <div class="mt-3">
+                    <label for="description1">Description</label>
+                    <textarea class="form-control" id="description1" rows="3">
+I always wanted to be a paleontologist and though I ended up in IT they continue to fascinate me, I even built my own "Dinosaur Of The Day" twitter bot (@dinosauria_bot). Just don't mention Jurassic Park.
+                    </textarea>
                   </div>
                 </fieldset>
               </form>
@@ -192,17 +210,30 @@ I always wanted to be a paleontologist and though I ended up in IT they continue
         </div>
         <div class="carousel-item">
           <div class="card">
+            <div class="card-header">
+              <div class="btn-group float-right">
+                <button type="button" class="btn btn-link" title="Add a new interest">
+                  <span class="fas fa-plus"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Edit this interest">
+                  <span class="far fa-edit"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Delete this interest">
+                  <span class="far fa-trash-alt"></span>
+                </button>
+              </div>
+            </div>
             <div class="card-body">
               <form>
                 <fieldset disabled>
                   <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                       <img  class="card-img-top img-fluid" src="img/VideoGames.jpg" alt="Video Games">
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-8">
                       <div class="form-group">
                         <label for="interest2">Interest</label>
-                        <input type="text" class="form-control form-control-lg" id="interest2" value="Video Games">
+                        <input type="text" class="form-control" id="interest2" value="Video Games">
                       </div>
                       <div class="form-group">
                         <label>Image</label>
@@ -211,13 +242,13 @@ I always wanted to be a paleontologist and though I ended up in IT they continue
                           <label class="custom-file-label" for="image2">filename</label>
                         </div>
                       </div>
-                      <div class="form-group">
-                        <label for="description2">Description</label>
-                        <textarea class="form-control form-control-lg" id="description2" rows="3">
-My first steps in programing involved a copy of David H, Ahl's "BASIC Computer Games" (I still have it) and a teletype attached to a PDP-11/70 and now we have 4K screens and VR.
-                        </textarea>
-                      </div>
                     </div>
+                  </div>
+                  <div class="mt-3">
+                    <label for="description2">Description</label>
+                    <textarea class="form-control" id="description2" rows="3">
+My first steps in programing involved a copy of David H, Ahl's "BASIC Computer Games" (I still have it) and a teletype attached to a PDP-11/70 and now we have 4K screens and VR.
+                    </textarea>
                   </div>
                 </fieldset>
               </form>
@@ -226,17 +257,30 @@ My first steps in programing involved a copy of David H, Ahl's "BASIC Computer G
         </div>
         <div class="carousel-item">
           <div class="card">
+            <div class="card-header">
+              <div class="btn-group float-right">
+                <button type="button" class="btn btn-link" title="Add a new interest">
+                  <span class="fas fa-plus"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Edit this interest">
+                  <span class="far fa-edit"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Delete this interest">
+                  <span class="far fa-trash-alt"></span>
+                </button>
+              </div>
+            </div>
             <div class="card-body">
               <form>
                 <fieldset disabled>
                   <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                       <img  class="card-img-top img-fluid" src="img/History.jpg" alt="History">
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-8">
                       <div class="form-group">
                         <label for="interest3">Interest</label>
-                        <input type="text" class="form-control form-control-lg" id="interest3" value="History">
+                        <input type="text" class="form-control" id="interest3" value="History">
                       </div>
                       <div class="form-group">
                         <label>Image</label>
@@ -245,13 +289,13 @@ My first steps in programing involved a copy of David H, Ahl's "BASIC Computer G
                           <label class="custom-file-label" for="image3">filename</label>
                         </div>
                       </div>
-                      <div class="form-group">
-                        <label for="description3">Description</label>
-                        <textarea class="form-control form-control-lg" id="description3" rows="3">
-I love reading about history, from Ancient Egypt and the Romans to the Medieval Ages, the English Civil War through to the Georgian era and the start of the industrial revolution.
-                        </textarea>
-                      </div>
                     </div>
+                  </div>
+                  <div class="mt-3">
+                    <label for="description3">Description</label>
+                    <textarea class="form-control" id="description3" rows="3">
+I love reading about history, from Ancient Egypt and the Romans to the Medieval Ages, the English Civil War through to the Georgian era and the start of the industrial revolution.
+                    </textarea>
                   </div>
                 </fieldset>
               </form>
@@ -260,17 +304,30 @@ I love reading about history, from Ancient Egypt and the Romans to the Medieval 
         </div>
         <div class="carousel-item">
           <div class="card">
+            <div class="card-header">
+              <div class="btn-group float-right">
+                <button type="button" class="btn btn-link" title="Add a new interest">
+                  <span class="fas fa-plus"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Edit this interest">
+                  <span class="far fa-edit"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Delete this interest">
+                  <span class="far fa-trash-alt"></span>
+                </button>
+              </div>
+            </div>
             <div class="card-body">
               <form>
                 <fieldset disabled>
                   <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                       <img  class="card-img-top img-fluid" src="img/MakerPi.jpg" alt="Maker Culture">
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-8">
                       <div class="form-group">
                         <label for="interest4">Interest</label>
-                        <input type="text" class="form-control form-control-lg" id="interest4" value="Maker Culture">
+                        <input type="text" class="form-control" id="interest4" value="Maker Culture">
                       </div>
                       <div class="form-group">
                         <label>Image</label>
@@ -279,13 +336,13 @@ I love reading about history, from Ancient Egypt and the Romans to the Medieval 
                           <label class="custom-file-label" for="image4">filename</label>
                         </div>
                       </div>
-                      <div class="form-group">
-                        <label for="description5">Description</label>
-                        <textarea class="form-control form-control-lg" id="description5" rows="3">
-Nothing more fun than fiddling with a Raspberry Pi, a soldering iron and some LEDs or trying to make a tensegrity structure. I have so far resisted the temptations of a 3D printer.
-                        </textarea>
-                      </div>
                     </div>
+                  </div>
+                  <div class="mt-3">
+                    <label for="description5">Description</label>
+                    <textarea class="form-control" id="description5" rows="3">
+Nothing more fun than fiddling with a Raspberry Pi, a soldering iron and some LEDs or trying to make a tensegrity structure. I have so far resisted the temptations of a 3D printer.
+                    </textarea>
                   </div>
                 </fieldset>
               </form>
@@ -294,17 +351,30 @@ Nothing more fun than fiddling with a Raspberry Pi, a soldering iron and some LE
         </div>
         <div class="carousel-item">
           <div class="card">
+            <div class="card-header">
+              <div class="btn-group float-right">
+                <button type="button" class="btn btn-link" title="Add a new interest">
+                  <span class="fas fa-plus"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Edit this interest">
+                  <span class="far fa-edit"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Delete this interest">
+                  <span class="far fa-trash-alt"></span>
+                </button>
+              </div>
+            </div>
             <div class="card-body">
               <form>
                 <fieldset disabled>
                   <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                       <img  class="card-img-top img-fluid" src="img/Space.jpg" alt="Space">
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-8">
                       <div class="form-group">
                         <label for="interest6">Interest</label>
-                        <input type="text" class="form-control form-control-lg" id="interest6" value="Space">
+                        <input type="text" class="form-control" id="interest6" value="Space">
                       </div>
                       <div class="form-group">
                         <label>Image</label>
@@ -313,13 +383,13 @@ Nothing more fun than fiddling with a Raspberry Pi, a soldering iron and some LE
                           <label class="custom-file-label" for="image5">filename</label>
                         </div>
                       </div>
-                      <div class="form-group">
-                        <label for="description6">Description</label>
-                        <textarea class="form-control form-control-lg" id="description6" rows="3">
-Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean, you may think it's a long way down the road to the chemist's, but that's just peanuts to space”.
-                        </textarea>
-                      </div>
                     </div>
+                  </div>
+                  <div class="mt-3">
+                    <label for="description6">Description</label>
+                      <textarea class="form-control" id="description6" rows="3">
+Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean, you may think it's a long way down the road to the chemist's, but that's just peanuts to space”.
+                      </textarea>
                   </div>
                 </fieldset>
               </form>
@@ -327,12 +397,8 @@ Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it 
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev w-auto" href="#interestsCarousel" role="button" data-slide="prev">
-        <span class="fas fa-angle-up text-dark display-4" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
       <a class="carousel-control-next w-auto" href="#interestsCarousel" role="button" data-slide="next">
-        <span class="fas fa-angle-down text-dark display-4" aria-hidden="true"></span>
+        <span class="fas fa-angle-down text-dark" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
     </div>
@@ -369,8 +435,8 @@ Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it 
   <script src="vendor/jquery/jquery-dc5e7f18c8.min.js"></script>
   <script src="vendor/popper/popper-1022eaf388.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap-f20fa8b102.min.js"></script>
-  <script src="js/plugins-477f5aae56.min.js"></script>
-  <script src="js/main-c19725a28c.min.js"></script>
+  <script src="js/plugins-256d72032a.min.js"></script>
+  <script src="js/main-217facfe68.min.js"></script>
 
 </body>
 

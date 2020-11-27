@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -20,7 +20,8 @@
 
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-023b3876bb.min.css">
   <link rel="stylesheet" href="vendor/fontawesome-free/css/all-b227b1617a.min.css">
-  <link rel="stylesheet" href="css/main-8318eb45b7.min.css">
+  <link rel="stylesheet" href="css/main-aa7c66678b.min.css">
+  <link rel="stylesheet" href="css/horizontal-carousel-bc3cbe6c25.min.css">
 
   <meta name="theme-color" content="#b833c0">
 </head>
@@ -46,6 +47,7 @@
             <div class="dropdown-menu" aria-labelledby="projectMenu">
               <a class="dropdown-item" href="https://ratjuggler.github.io/great-pyramid-puzzle/">The Great Pyramid Puzzle</a>
               <a class="dropdown-item" href="https://github.com/RatJuggler/jhipster-microservices-dinosaurs">JHipster Microservices</a>
+              <a class="dropdown-item" href="https://github.com/RatJuggler/developer-portfolio">Developer Portfolio (this site)</a>
               <a class="dropdown-item" href="https://github.com/RatJuggler/guinea-bot">Guinea Pig Twitter Bot</a>
             </div>
           </li>
@@ -82,45 +84,45 @@
   <section>
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <form>
-          <fieldset disabled>
-            <div class="row">
-              <div class="col-md-3">
-                <span class="spotlight"><img src="img/Photo.png" alt="John Chase" /></span>
-                <nav class="navbar navbar-expand navbar-light">
-                  <ul class="navbar-nav" id="contactMenu2">
-                    <li class="nav-item">
-                      <a class="nav-link" href="mailto:john.chase3@outlook.com?subject=Developer%20Profile" target="_blank" rel="noopener noreferrer" title="E-mail">
-                        <span class="fas fa-at" aria-hidden="true"></span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="https://www.linkedin.com/in/john-chase-57973b12/" title="LinkedIn">
-                        <span class="fab fa-linkedin" aria-hidden="true"></span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="https://github.com/RatJuggler" title="Github">
-                        <span class="fab fa-github-square" aria-hidden="true"></span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="https://twitter.com/ratjuggler" title="Twitter">
-                        <span class="fab fa-twitter-square" aria-hidden="true"></span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-              <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <span class="spotlight"><img src="img/Photo.png" alt="John Chase" /></span>
+            <nav id="contactList" class="navbar-expand navbar-light">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="mailto:john.chase3@outlook.com?subject=Developer%20Profile" target="_blank" rel="noopener noreferrer" title="E-mail">
+                    <span class="fas fa-at" aria-hidden="true"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.linkedin.com/in/john-chase-57973b12/" title="LinkedIn">
+                    <span class="fab fa-linkedin" aria-hidden="true"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/RatJuggler" title="Github">
+                    <span class="fab fa-github-square" aria-hidden="true"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://twitter.com/ratjuggler" title="Twitter">
+                    <span class="fab fa-twitter-square" aria-hidden="true"></span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-9">
+            <form>
+              <fieldset disabled>
                 <div class="form-group">
                   <label for="name">Name</label>
-                  <input type="text" class="form-control form-control-lg" id="name" value="John Chase">
+                  <input type="text" class="form-control" id="name" value="John Chase">
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-8">
                     <label for="location">Location</label>
-                    <input type="text" class="form-control" id="location" value="Gatwick, Surrey">
+                    <input type="text" class="form-control" id="location" value="Smallfield, Surrey, England">
                   </div>
                   <div class="form-group col-md-4">
                     <label for="status">Status</label>
@@ -130,10 +132,10 @@
                     </select>
                   </div>
                 </div>
-              </div>
-            </div>
-          </fieldset>
-        </form>
+              </fieldset>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -153,10 +155,23 @@
         <a class="nav-link" href="interests.html">Interests</a>
       </li>
     </ul>
-    <div id="careerCarousel" class="carousel slide mt-4">
+    <div id="careerCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="card">
+            <div class="card-header">
+              <div class="btn-group float-right">
+                <button type="button" class="btn btn-link" title="Add a new career period">
+                  <span class="fas fa-plus"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Edit this career period">
+                  <span class="far fa-edit"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Delete this career period">
+                  <span class="far fa-trash-alt"></span>
+                </button>
+              </div>
+            </div>
             <div class="card-body">
               <form>
                 <fieldset disabled>
@@ -164,10 +179,16 @@
                     <div class="col-md-2 text-center">
                       <div class="display-1"><span aria-hidden="true">🦕</span></div>
                     </div>
-                    <div class="col-md-9">
-                      <div class="form-group">
-                        <label for="period1">Period</label>
-                        <input type="text" class="form-control form-control-lg" id="period1" value="Dinosaurs">
+                    <div class="col-md-10">
+                      <div class="row">
+                        <div class="form-group col-md-2">
+                          <label for="sequence1">Sequence</label>
+                          <input type="text" class="form-control" id="sequence1" value="1">
+                        </div>
+                        <div class="form-group col-md-10">
+                          <label for="period1">Period</label>
+                          <input type="text" class="form-control" id="period1" value="Dinosaurs">
+                        </div>
                       </div>
                       <div class="form-group">
                         <label>Image</label>
@@ -176,9 +197,9 @@
                           <label class="custom-file-label" for="image1">filename</label>
                         </div>
                       </div>
-                      <div class="form-group">
+                      <div>
                         <label for="synopsis1">Synopsis</label>
-                        <textarea class="form-control form-control-lg" id="synopsis1" rows="3">
+                        <textarea class="form-control" id="synopsis1" rows="3">
 65 million years ago when dinosaurs still roamed the earth. Technically speaking this is the Cretaceous–Paleogene boundary and not the Jurassic.
                         </textarea>
                       </div>
@@ -191,6 +212,19 @@
         </div>
         <div class="carousel-item">
           <div class="card">
+            <div class="card-header">
+              <div class="btn-group float-right">
+                <button type="button" class="btn btn-link" title="Add a new career period">
+                  <span class="fas fa-plus"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Edit this career period">
+                  <span class="far fa-edit"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Delete this career period">
+                  <span class="far fa-trash-alt"></span>
+                </button>
+              </div>
+            </div>
             <div class="card-body">
               <form>
                 <fieldset disabled>
@@ -198,10 +232,16 @@
                     <div class="col-md-2 text-center">
                       <div class="display-1"><span aria-hidden="true">🎓</span></div>
                     </div>
-                    <div class="col-md-9">
-                      <div class="form-group">
-                        <label for="period2">Period</label>
-                        <input type="text" class="form-control form-control-lg" id="period2" value="Graduation">
+                    <div class="col-md-10">
+                      <div class="row">
+                        <div class="form-group col-md-2">
+                          <label for="sequence2">Sequence</label>
+                          <input type="text" class="form-control" id="sequence2" value="2">
+                        </div>
+                        <div class="form-group col-md-10">
+                          <label for="period2">Period</label>
+                          <input type="text" class="form-control" id="period2" value="Graduation">
+                        </div>
                       </div>
                       <div class="form-group">
                         <label>Image</label>
@@ -210,9 +250,9 @@
                           <label class="custom-file-label" for="image2">filename</label>
                         </div>
                       </div>
-                      <div class="form-group">
+                      <div>
                         <label for="synopsis2">Synopsis</label>
-                        <textarea class="form-control form-control-lg" id="synopsis2" rows="3">
+                        <textarea class="form-control" id="synopsis2" rows="3">
 After four years and two industry placements, I emerged from Kingston (Upon Thames) Polytechnic with a BSc.(Hons) in computer science.
                         </textarea>
                       </div>
@@ -225,6 +265,19 @@ After four years and two industry placements, I emerged from Kingston (Upon Tham
         </div>
         <div class="carousel-item">
           <div class="card">
+            <div class="card-header">
+              <div class="btn-group float-right">
+                <button type="button" class="btn btn-link" title="Add a new career period">
+                  <span class="fas fa-plus"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Edit this career period">
+                  <span class="far fa-edit"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Delete this career period">
+                  <span class="far fa-trash-alt"></span>
+                </button>
+              </div>
+            </div>
             <div class="card-body">
               <form>
                 <fieldset disabled>
@@ -232,10 +285,16 @@ After four years and two industry placements, I emerged from Kingston (Upon Tham
                     <div class="col-md-2 text-center">
                       <div class="display-1"><span aria-hidden="true">💊</span></div>
                     </div>
-                    <div class="col-md-9">
-                      <div class="form-group">
-                        <label for="period3">Period</label>
-                        <input type="text" class="form-control form-control-lg" id="period3" value="Eli Lilly and Company">
+                    <div class="col-md-10">
+                      <div class="row">
+                        <div class="form-group col-md-2">
+                          <label for="sequence3">Sequence</label>
+                          <input type="text" class="form-control" id="sequence3" value="3">
+                        </div>
+                        <div class="form-group col-md-10">
+                          <label for="period3">Period</label>
+                          <input type="text" class="form-control" id="period3" value="Eli Lilly and Company">
+                        </div>
                       </div>
                       <div class="form-group">
                         <label>Image</label>
@@ -244,9 +303,9 @@ After four years and two industry placements, I emerged from Kingston (Upon Tham
                           <label class="custom-file-label" for="image3">filename</label>
                         </div>
                       </div>
-                      <div class="form-group">
+                      <div>
                         <label for="synopsis3">Synopsis</label>
-                        <textarea class="form-control form-control-lg" id="synopsis3" rows="3">
+                        <textarea class="form-control" id="synopsis3" rows="3">
 Everything from COBOL/CICS, for financial data entry, to an application for sales representatives laptops, written in Turbo Pascal.
                         </textarea>
                       </div>
@@ -259,6 +318,19 @@ Everything from COBOL/CICS, for financial data entry, to an application for sale
         </div>
         <div class="carousel-item">
           <div class="card">
+            <div class="card-header">
+              <div class="btn-group float-right">
+                <button type="button" class="btn btn-link" title="Add a new career period">
+                  <span class="fas fa-plus"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Edit this career period">
+                  <span class="far fa-edit"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Delete this career period">
+                  <span class="far fa-trash-alt"></span>
+                </button>
+              </div>
+            </div>
             <div class="card-body">
               <form>
                 <fieldset disabled>
@@ -266,10 +338,16 @@ Everything from COBOL/CICS, for financial data entry, to an application for sale
                     <div class="col-md-2 text-center">
                       <div class="display-1"><span aria-hidden="true">🚙</span></div>
                     </div>
-                    <div class="col-md-9">
-                      <div class="form-group">
-                        <label for="period4">Period</label>
-                        <input type="text" class="form-control form-control-lg" id="period4" value="Heron Suzuki GB">
+                    <div class="col-md-10">
+                      <div class="row">
+                        <div class="form-group col-md-2">
+                          <label for="sequence4">Sequence</label>
+                          <input type="text" class="form-control" id="sequence4" value="4">
+                        </div>
+                        <div class="form-group col-md-10">
+                          <label for="period4">Period</label>
+                          <input type="text" class="form-control" id="period4" value="Heron Suzuki GB">
+                        </div>
                       </div>
                       <div class="form-group">
                         <label>Image</label>
@@ -278,9 +356,9 @@ Everything from COBOL/CICS, for financial data entry, to an application for sale
                           <label class="custom-file-label" for="image4">filename</label>
                         </div>
                       </div>
-                      <div class="form-group">
+                      <div>
                         <label for="synopsis4">Synopsis</label>
-                        <textarea class="form-control form-control-lg" id="synopsis4" rows="3">
+                        <textarea class="form-control" id="synopsis4" rows="3">
 Warehousing systems in C & Basic running on VAX/VMS, MS Visual Basic & Access for bespoke applications and a Viewdata system.
                         </textarea>
                       </div>
@@ -293,6 +371,19 @@ Warehousing systems in C & Basic running on VAX/VMS, MS Visual Basic & Access fo
         </div>
         <div class="carousel-item">
           <div class="card">
+            <div class="card-header">
+              <div class="btn-group float-right">
+                <button type="button" class="btn btn-link" title="Add a new career period">
+                  <span class="fas fa-plus"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Edit this career period">
+                  <span class="far fa-edit"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Delete this career period">
+                  <span class="far fa-trash-alt"></span>
+                </button>
+              </div>
+            </div>
             <div class="card-body">
               <form>
                 <fieldset disabled>
@@ -300,10 +391,16 @@ Warehousing systems in C & Basic running on VAX/VMS, MS Visual Basic & Access fo
                     <div class="col-md-2 text-center">
                       <div class="display-1"><span aria-hidden="true">🗂️</span></div>
                     </div>
-                    <div class="col-md-9">
-                      <div class="form-group">
-                        <label for="period5">Period</label>
-                        <input type="text" class="form-control form-control-lg" id="period5" value="Cigna">
+                    <div class="col-md-10">
+                      <div class="row">
+                        <div class="form-group col-md-2">
+                          <label for="sequence5">Sequence</label>
+                          <input type="text" class="form-control" id="sequence5" value="5">
+                        </div>
+                        <div class="form-group col-md-10">
+                          <label for="period5">Period</label>
+                          <input type="text" class="form-control" id="period5" value="Cigna">
+                        </div>
                       </div>
                       <div class="form-group">
                         <label>Image</label>
@@ -312,9 +409,9 @@ Warehousing systems in C & Basic running on VAX/VMS, MS Visual Basic & Access fo
                           <label class="custom-file-label" for="image5">filename</label>
                         </div>
                       </div>
-                      <div class="form-group">
+                      <div>
                         <label for="synopsis5">Synopsis</label>
-                        <textarea class="form-control form-control-lg" id="synopsis5" rows="3">
+                        <textarea class="form-control" id="synopsis5" rows="3">
 My entry into the financial services world and working in London. Bespoke applications for the Energy, Oil & Gas markets in PowerBuilder and Sybase SQL Server.
                         </textarea>
                       </div>
@@ -327,6 +424,19 @@ My entry into the financial services world and working in London. Bespoke applic
         </div>
         <div class="carousel-item">
           <div class="card">
+            <div class="card-header">
+              <div class="btn-group float-right">
+                <button type="button" class="btn btn-link" title="Add a new career period">
+                  <span class="fas fa-plus"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Edit this career period">
+                  <span class="far fa-edit"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Delete this career period">
+                  <span class="far fa-trash-alt"></span>
+                </button>
+              </div>
+            </div>
             <div class="card-body">
               <form>
                 <fieldset disabled>
@@ -334,10 +444,16 @@ My entry into the financial services world and working in London. Bespoke applic
                     <div class="col-md-2 text-center">
                       <div class="display-1"><span aria-hidden="true">🖥️</span></div>
                     </div>
-                    <div class="col-md-9">
-                      <div class="form-group">
-                        <label for="period6">Period</label>
-                        <input type="text" class="form-control form-control-lg" id="period6" value="Contracting">
+                    <div class="col-md-10">
+                      <div class="row">
+                        <div class="form-group col-md-2">
+                          <label for="sequence6">Sequence</label>
+                          <input type="text" class="form-control" id="sequence6" value="6">
+                        </div>
+                        <div class="form-group col-md-10">
+                          <label for="period6">Period</label>
+                          <input type="text" class="form-control" id="period6" value="Contracting">
+                        </div>
                       </div>
                       <div class="form-group">
                         <label>Image</label>
@@ -346,9 +462,9 @@ My entry into the financial services world and working in London. Bespoke applic
                           <label class="custom-file-label" for="image6">filename</label>
                         </div>
                       </div>
-                      <div class="form-group">
+                      <div>
                         <label for="synopsis6">Synopsis</label>
-                        <textarea class="form-control form-control-lg" id="synopsis6" rows="3">
+                        <textarea class="form-control" id="synopsis6" rows="3">
 Working on projects for a variety of clients, in three to twelve month contracts, building PowerBuilder applications with Microsoft or Sybase SQL Server.
                         </textarea>
                       </div>
@@ -361,6 +477,19 @@ Working on projects for a variety of clients, in three to twelve month contracts
         </div>
         <div class="carousel-item">
           <div class="card">
+            <div class="card-header">
+              <div class="btn-group float-right">
+                <button type="button" class="btn btn-link" title="Add a new career period">
+                  <span class="fas fa-plus"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Edit this career period">
+                  <span class="far fa-edit"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Delete this career period">
+                  <span class="far fa-trash-alt"></span>
+                </button>
+              </div>
+            </div>
             <div class="card-body">
               <form>
                 <fieldset disabled>
@@ -368,10 +497,16 @@ Working on projects for a variety of clients, in three to twelve month contracts
                     <div class="col-md-2 text-center">
                       <div class="display-1"><span aria-hidden="true">💻</span></div>
                     </div>
-                    <div class="col-md-9">
-                      <div class="form-group">
-                        <label for="period7">Period</label>
-                        <input type="text" class="form-control form-control-lg" id="period7" value="Chubb">
+                    <div class="col-md-10">
+                      <div class="row">
+                        <div class="form-group col-md-2">
+                          <label for="sequence7">Sequence</label>
+                          <input type="text" class="form-control" id="sequence7" value="7">
+                        </div>
+                        <div class="form-group col-md-10">
+                          <label for="period7">Period</label>
+                          <input type="text" class="form-control" id="period7" value="Chubb">
+                        </div>
                       </div>
                       <div class="form-group">
                         <label>Image</label>
@@ -380,9 +515,9 @@ Working on projects for a variety of clients, in three to twelve month contracts
                           <label class="custom-file-label" for="image7">filename</label>
                         </div>
                       </div>
-                      <div class="form-group">
+                      <div>
                         <label for="synopsis7">Synopsis</label>
-                        <textarea class="form-control form-control-lg" id="synopsis7" rows="3">
+                        <textarea class="form-control" id="synopsis7" rows="3">
 Moving from PowerBuilder desktop applications to creating and evolving browser based applications, for the Claims and High Net Worth business units, using Java and the ecology that surrounds it.
                         </textarea>
                       </div>
@@ -395,6 +530,19 @@ Moving from PowerBuilder desktop applications to creating and evolving browser b
         </div>
         <div class="carousel-item">
           <div class="card">
+            <div class="card-header">
+              <div class="btn-group float-right">
+                <button type="button" class="btn btn-link" title="Add a new career period">
+                  <span class="fas fa-plus"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Edit this career period">
+                  <span class="far fa-edit"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Delete this career period">
+                  <span class="far fa-trash-alt"></span>
+                </button>
+              </div>
+            </div>
             <div class="card-body">
               <form>
                 <fieldset disabled>
@@ -402,10 +550,16 @@ Moving from PowerBuilder desktop applications to creating and evolving browser b
                     <div class="col-md-2 text-center">
                       <div class="display-1"><span aria-hidden="true">🏖️</span></div>
                     </div>
-                    <div class="col-md-9">
-                      <div class="form-group">
-                        <label for="period8">Period</label>
-                        <input type="text" class="form-control form-control-lg" id="period8" value="Career Break">
+                    <div class="col-md-10">
+                      <div class="row">
+                        <div class="form-group col-md-2">
+                          <label for="sequence8">Sequence</label>
+                          <input type="text" class="form-control" id="sequence8" value="8">
+                        </div>
+                        <div class="form-group col-md-10">
+                          <label for="period8">Period</label>
+                          <input type="text" class="form-control" id="period8" value="Career Break">
+                        </div>
                       </div>
                       <div class="form-group">
                         <label>Image</label>
@@ -414,9 +568,9 @@ Moving from PowerBuilder desktop applications to creating and evolving browser b
                           <label class="custom-file-label" for="image1">filename</label>
                         </div>
                       </div>
-                      <div class="form-group">
+                      <div>
                         <label for="synopsis8">Synopsis</label>
-                        <textarea class="form-control form-control-lg" id="synopsis8" rows="3">
+                        <textarea class="form-control" id="synopsis8" rows="3">
 After over 20 years working in the financial services sector in London I decided to take a break to pursue my own interests and catch up on some gardening.
                         </textarea>
                       </div>
@@ -429,6 +583,19 @@ After over 20 years working in the financial services sector in London I decided
         </div>
         <div class="carousel-item">
           <div class="card">
+            <div class="card-header">
+              <div class="btn-group float-right">
+                <button type="button" class="btn btn-link" title="Add a new career period">
+                  <span class="fas fa-plus"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Edit this career period">
+                  <span class="far fa-edit"></span>
+                </button>
+                <button type="button" class="btn btn-link" title="Delete this career period">
+                  <span class="far fa-trash-alt"></span>
+                </button>
+              </div>
+            </div>
             <div class="card-body">
               <form>
                 <fieldset disabled>
@@ -436,10 +603,16 @@ After over 20 years working in the financial services sector in London I decided
                     <div class="col-md-2 text-center">
                       <div class="display-1"><span aria-hidden="true">🚀️</span></div>
                     </div>
-                    <div class="col-md-9">
-                      <div class="form-group">
-                        <label for="period9">Period</label>
-                        <input type="text" class="form-control form-control-lg" id="period9" value="The Future...">
+                    <div class="col-md-10">
+                      <div class="row">
+                        <div class="form-group col-md-2">
+                          <label for="sequence9">Sequence</label>
+                          <input type="text" class="form-control" id="sequence9" value="9">
+                        </div>
+                        <div class="form-group col-md-10">
+                          <label for="period9">Period</label>
+                          <input type="text" class="form-control" id="period9" value="The Future...">
+                        </div>
                       </div>
                       <div class="form-group">
                         <label>Image</label>
@@ -448,9 +621,9 @@ After over 20 years working in the financial services sector in London I decided
                           <label class="custom-file-label" for="image9">filename</label>
                         </div>
                       </div>
-                      <div class="form-group">
+                      <div>
                         <label for="synopsis9">Synopsis</label>
-                        <textarea class="form-control form-control-lg" id="synopsis9" rows="3">
+                        <textarea class="form-control" id="synopsis9" rows="3">
 I’m now looking to return to the world of development and wondering where it might take me next. I feel I still have much to contribute.
                         </textarea>
                       </div>
@@ -462,14 +635,16 @@ I’m now looking to return to the world of development and wondering where it m
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev w-auto" href="#careerCarousel" role="button" data-slide="prev">
-        <span class="fas fa-angle-left text-dark display-4" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next w-auto" href="#careerCarousel" role="button" data-slide="next">
-        <span class="fas fa-angle-right text-dark display-4" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+      <div class="row">
+        <a class="carousel-control-prev col" href="#careerCarousel" role="button" data-slide="prev">
+          <span class="fas fa-angle-left text-dark" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next col" href="#careerCarousel" role="button" data-slide="next">
+          <span class="fas fa-angle-right text-dark" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
   </main>
 
@@ -504,8 +679,8 @@ I’m now looking to return to the world of development and wondering where it m
   <script src="vendor/jquery/jquery-dc5e7f18c8.min.js"></script>
   <script src="vendor/popper/popper-1022eaf388.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap-f20fa8b102.min.js"></script>
-  <script src="js/plugins-477f5aae56.min.js"></script>
-  <script src="js/main-c19725a28c.min.js"></script>
+  <script src="js/plugins-256d72032a.min.js"></script>
+  <script src="js/main-217facfe68.min.js"></script>
 
 </body>
 
