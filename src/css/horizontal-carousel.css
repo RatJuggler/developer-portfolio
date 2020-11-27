@@ -1,0 +1,13 @@
+.carousel-control-prev {
+  position: relative;
+  font-size: xx-large;
+}
+
+.carousel-control-next {
+  position: relative;
+  font-size: xx-large;
+}
+
+.card-header {
+  padding: 0 1rem;
+}
