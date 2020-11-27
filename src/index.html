@@ -154,45 +154,76 @@
         <a class="nav-link" href="interests.html">Interests</a>
       </li>
     </ul>
-    <form>
-      <fieldset disabled>
-        <div class="form-group mt-3">
-          <label for="about">Description</label>
-          <textarea class="form-control form-control-lg" id="about" rows="7">
+    <div class="card">
+      <div class="card-header">
+        <ul class="nav nav-pills card-header-pills float-right">
+          <li class="nav-item">
+            <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="Bottom" title="Add">
+              <span class="fas fa-plus"></span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Edit">
+              <span class="far fa-edit"></span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="Bottom" title="Delete">
+              <span class="far fa-trash-alt"></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body">
+        <form>
+          <fieldset disabled>
+            <div class="form-group">
+              <label for="about">Description</label>
+              <textarea class="form-control form-control-lg" id="about" rows="7">
 I am a Full Stack Application Developer with over 20 years experience. I have a proven track record of delivering bespoke solutions to meet demanding customer needs and growing those solutions to keep up with a changing market. I enjoy collaborating with a diverse team to build and promote a good working environment geared at delivering high-quality solutions.
 
 Select one of the tabs to find out more about me.</textarea>
-        </div>
-        <div class="row">
-          <div class="form-group col-md-6 row">
-            <label for="email" class="col-sm-2 col-form-label">Email</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="email" value="john.chase3@outlook.com">
             </div>
-          </div>
-          <div class="form-group col-md-6 row">
-            <label for="linkedin" class="col-sm-2 col-form-label">LinkedIn</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="linkedin" value="https://www.linkedin.com/in/john-chase-57973b12/">
+            <div class="form-group row">
+              <div class="col-md-6">
+                <div class="row">
+                  <label for="email" class="col-sm-2 col-form-label">Email</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="email" value="john.chase3@outlook.com">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row">
+                  <label for="linkedin" class="col-sm-2 col-form-label">LinkedIn</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="linkedin" value="https://www.linkedin.com/in/john-chase-57973b12/">
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="form-group col-md-6 row">
-            <label for="github" class="col-sm-2 col-form-label">GitHub</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="github" value="https://github.com/RatJuggler">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <label for="github" class="col-sm-2 col-form-label">GitHub</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="github" value="https://github.com/RatJuggler">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row">
+                  <label for="twitter" class="col-sm-2 col-form-label">Twitter</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="twitter" value="https://twitter.com/ratjuggler">
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="form-group col-md-6 row">
-            <label for="twitter" class="col-sm-2 col-form-label">Twitter</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="twitter" value="https://twitter.com/ratjuggler">
-            </div>
-          </div>
-        </div>
-      </fieldset>
-    </form>
+          </fieldset>
+        </form>
+      </div>
+    </div>
   </main>
 
   <footer>

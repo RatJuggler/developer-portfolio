@@ -25,7 +25,3 @@
   -webkit-transform: translate3d(0,-100%, 0);
   transform: translate3d(0,-100%, 0);
 }
-
-.card-header {
-  padding: 0 1rem;
-}
