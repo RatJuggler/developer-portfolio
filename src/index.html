@@ -86,7 +86,7 @@
         <div class="row">
           <div class="col-md-3">
             <span class="spotlight"><img src="img/Photo.png" alt="John Chase" /></span>
-            <nav class="navbar navbar-expand navbar-light">
+            <nav  class="navbar navbar-expand navbar-light">
               <ul class="navbar-nav" id="contactMenu2">
                 <li class="nav-item">
                   <a class="nav-link" href="mailto:john.chase3@outlook.com?subject=Developer%20Profile" target="_blank" rel="noopener noreferrer" title="E-mail">
@@ -156,23 +156,17 @@
     </ul>
     <div class="card">
       <div class="card-header">
-        <ul class="nav nav-pills card-header-pills float-right">
-          <li class="nav-item">
-            <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="Bottom" title="Add">
-              <span class="fas fa-plus"></span>
-            </button>
-          </li>
-          <li class="nav-item">
-            <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Edit">
-              <span class="far fa-edit"></span>
-            </button>
-          </li>
-          <li class="nav-item">
-            <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="Bottom" title="Delete">
-              <span class="far fa-trash-alt"></span>
-            </button>
-          </li>
-        </ul>
+        <div class="btn-group float-right">
+          <button type="button" class="btn btn-link" title="Add a new profile">
+            <span class="fas fa-plus"></span>
+          </button>
+          <button type="button" class="btn btn-link" title="Edit this profile">
+            <span class="far fa-edit"></span>
+          </button>
+          <button type="button" class="btn btn-link" title="Delete this profile">
+            <span class="far fa-trash-alt"></span>
+          </button>
+        </div>
       </div>
       <div class="card-body">
         <form>
