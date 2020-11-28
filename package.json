@@ -31,7 +31,8 @@
     "bootstrap": "^4.5.3",
     "bootstrap-table": "^1.18.0",
     "jquery": "^3.5.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "twig": "^1.15.4"
   },
   "devDependencies": {
     "browser-sync": "^2.26.13",
