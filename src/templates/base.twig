@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
 
-  <title>John Chase - About</title>
-  <meta name="keywords" content="John, Chase, Developer, Portfolio, About" />
+  <title>John Chase - {{ titleContext }}</title>
+  <meta name="keywords" content="John, Chase, Developer, Portfolio, {{ titleContext }}" />
   <meta name="description" content="Developer portfolio website for John Chase">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
@@ -18,9 +18,11 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
+{% block styles %}
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="vendor/fontawesome-free/css/all.css">
   <link rel="stylesheet" href="css/main.css">
+{% endblock %}
 
   <meta name="theme-color" content="#b833c0">
 </head>
@@ -168,12 +170,14 @@
     </div>
   </div>
 
+{% block scripts %}
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="vendor/jquery/jquery.js"></script>
   <script src="vendor/popper/popper.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+{% endblock %}
 
 </body>
 
