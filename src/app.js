@@ -5,12 +5,22 @@ const port = 3000;
 app.set('views', 'src/templates');
 app.set('view engine', 'twig');
 
-app.get('/', (req, res) => {
-    res.render('index.twig', { name: 'World'});
-});
+app.use(express.static('public'));
 
-app.get('/name/:name', (req, res) => {
-    res.render('index.twig', req.params);
+app.get('/', (req, res) => {
+    res.render('index.twig');
+});
+app.get('/index', (req, res) => {
+    res.render('index.twig');
+});
+app.get('/skills', (req, res) => {
+    res.render('skills.twig');
+});
+app.get('/career', (req, res) => {
+    res.render('career.twig');
+});
+app.get('/interests', (req, res) => {
+    res.render('interests.twig');
 });
 
 app.listen(port, () => {
