@@ -37,17 +37,14 @@
           <fieldset disabled>
             <div class="form-group">
               <label for="about">Description</label>
-              <textarea class="form-control" id="about" rows="7">
-I am a Full Stack Application Developer with over 20 years experience. I have a proven track record of delivering bespoke solutions to meet demanding customer needs and growing those solutions to keep up with a changing market. I enjoy collaborating with a diverse team to build and promote a good working environment geared at delivering high-quality solutions.
-
-Select one of the tabs to find out more about me.</textarea>
+              <textarea class="form-control" id="about" rows="7">{{ profile.description }}</textarea>
             </div>
             <div class="row">
               <div class="form-group col-xl-6">
                 <div class="row">
                   <label for="email" class="col-md-2 col-form-label">Email</label>
                   <div class="col-md-10">
-                    <input type="text" class="form-control" id="email" value="john.chase3@outlook.com">
+                    <input type="text" class="form-control" id="email" value="{{ profile.email }}">
                   </div>
                 </div>
               </div>
@@ -55,7 +52,7 @@ Select one of the tabs to find out more about me.</textarea>
                 <div class="row">
                   <label for="linkedin" class="col-md-2 col-form-label">LinkedIn</label>
                   <div class="col-md-10">
-                    <input type="text" class="form-control" id="linkedin" value="https://www.linkedin.com/in/john-chase-57973b12/">
+                    <input type="text" class="form-control" id="linkedin" value="{{ profile.linkedin }}">
                   </div>
                 </div>
               </div>
@@ -65,7 +62,7 @@ Select one of the tabs to find out more about me.</textarea>
                 <div class="row">
                   <label for="github" class="col-md-2 col-form-label">GitHub</label>
                   <div class="col-md-10">
-                    <input type="text" class="form-control" id="github" value="https://github.com/RatJuggler">
+                    <input type="text" class="form-control" id="github" value="{{ profile.github }}">
                   </div>
                 </div>
               </div>
@@ -73,7 +70,7 @@ Select one of the tabs to find out more about me.</textarea>
                 <div class="row">
                   <label for="twitter" class="col-md-2 col-form-label">Twitter</label>
                   <div class="col-md-10">
-                    <input type="text" class="form-control" id="twitter" value="https://twitter.com/ratjuggler">
+                    <input type="text" class="form-control" id="twitter" value="{{ profile.twitter }}">
                   </div>
                 </div>
               </div>
