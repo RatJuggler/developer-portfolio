@@ -12,7 +12,8 @@ The idea is to build a number of different versions of the same site:
 3. Building some sort of back end to serve the content and using that from a further evolved set of templates.
 4. Expanding the back end and building a front end using a web component framework.
 
-Version one is under construction.
+I've completed some outline designs, which you can see [here](https://ratjuggler.github.io/developer-portfolio/), and started 
+building the template version.
 
 Content for the site will include:
 
