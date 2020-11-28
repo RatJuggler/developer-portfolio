@@ -13,13 +13,13 @@ app.get(/(index\.twig)?$/, (req, res) => {
     res.render('index.twig', {profile: readJSON("src/data/profile.json")});
 });
 app.get('/skills.twig', (req, res) => {
-    res.render('skills.twig', {data: readJSON("src/data/skills.json")});
+    res.render('skills.twig', {profile: readJSON("src/data/profile.json"), data: readJSON("src/data/skills.json")});
 });
 app.get('/career.twig', (req, res) => {
-    res.render('career.twig', {data: readJSON("src/data/career.json")});
+    res.render('career.twig', {profile: readJSON("src/data/profile.json"), data: readJSON("src/data/career.json")});
 });
 app.get('/interests.twig', (req, res) => {
-    res.render('interests.twig', {data: readJSON("src/data/interests.json")});
+    res.render('interests.twig', {profile: readJSON("src/data/profile.json"), data: readJSON("src/data/interests.json")});
 });
 
 app.listen(port, () => {
