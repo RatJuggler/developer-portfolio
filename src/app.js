@@ -9,7 +9,7 @@ app.set('view engine', 'twig');
 
 app.use(express.static('public'));
 
-app.get(/(index\.twig)?$/, (req, res) => {
+app.get('/', (req, res) => {
     res.render('index.twig', {profile: readJSON("src/data/profile.json")});
 });
 app.get('/skills.twig', (req, res) => {

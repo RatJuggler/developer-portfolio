@@ -11,20 +11,7 @@
 
 {% block content %}
   <main class="container">
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link" href="index.twig">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Skills</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="career.twig">Career</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="interests.twig">Interests</a>
-      </li>
-    </ul>
+{% include 'tabs.twig' %}
     <div class="card">
     <div id="skillsToolbar">
     </div>

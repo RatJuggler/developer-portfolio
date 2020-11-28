@@ -1,0 +1,14 @@
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link{% if titleContext == "About" %} active{% endif %}" href="{% if titleContext == "About" %}#{% else %}/{% endif %}">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link{% if titleContext == "Skills" %} active{% endif %}" href="{% if titleContext == "Skills" %}#{% else %}skills.twig{% endif %}">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link{% if titleContext == "Career" %} active{% endif %}" href="{% if titleContext == "Career" %}#{% else %}career.twig{% endif %}">Career</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link{% if titleContext == "Interests" %} active{% endif %}" href="{% if titleContext == "Interests" %}#{% else %}interests.twig{% endif %}">Interests</a>
+      </li>
+    </ul>
