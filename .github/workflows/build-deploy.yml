@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies and run build
         run: |
           npm ci
-          npm run build
+          npm run static-build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
