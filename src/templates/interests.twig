@@ -29,7 +29,8 @@
         <span class="sr-only">Previous</span>
       </a>
       <div class="carousel-inner">
-        <div class="carousel-item active">
+      {% for interest in data.interests %}
+        <div class="carousel-item{% if interest.id == 1 %} active{% endif %}">
           <div class="card">
             <div class="card-header">
               <div class="btn-group float-right">
@@ -49,221 +50,32 @@
                 <fieldset disabled>
                   <div class="row">
                     <div class="col-md-4">
-                      <img class="card-img-top img-fluid" src="img/Dinosaurs.jpg" alt="Dinosaurs">
+                      <img class="card-img-top img-fluid" src="{{ interest.image }}" alt="{{ interest.interest }}">
                     </div>
                     <div class="col-md-8">
                       <div class="form-group">
-                        <label for="interest1">Interest</label>
-                        <input type="text" class="form-control" id="interest1" value="Dinosaurs">
+                        <label for="interest{{ interest.id }}">Interest</label>
+                        <input type="text" class="form-control" id="interest{{ interest.id }}" value="{{ interest.interest }}">
                       </div>
                       <div class="form-group">
                         <label>Image</label>
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image1">
-                          <label class="custom-file-label" for="image1">filename</label>
+                          <input type="file" class="custom-file-input" id="image{{ interest.id }}">
+                          <label class="custom-file-label" for="image{{ interest.id }}">filename</label>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="mt-3">
-                    <label for="description1">Description</label>
-                    <textarea class="form-control" id="description1" rows="3">
-I always wanted to be a paleontologist and though I ended up in IT they continue to fascinate me, I even built my own "Dinosaur Of The Day" twitter bot (@dinosauria_bot). Just don't mention Jurassic Park.
-                    </textarea>
+                    <label for="description{{ interest.id }}">Description</label>
+                    <textarea class="form-control" id="description{{ interest.id }}" rows="3">{{ interest.description }}</textarea>
                   </div>
                 </fieldset>
               </form>
             </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <div class="card">
-            <div class="card-header">
-              <div class="btn-group float-right">
-                <button type="button" class="btn btn-link" title="Add a new interest">
-                  <span class="fas fa-plus"></span>
-                </button>
-                <button type="button" class="btn btn-link" title="Edit this interest">
-                  <span class="far fa-edit"></span>
-                </button>
-                <button type="button" class="btn btn-link" title="Delete this interest">
-                  <span class="far fa-trash-alt"></span>
-                </button>
-              </div>
-            </div>
-            <div class="card-body">
-              <form>
-                <fieldset disabled>
-                  <div class="row">
-                    <div class="col-md-4">
-                      <img class="card-img-top img-fluid" src="img/VideoGames.jpg" alt="Video Games">
-                    </div>
-                    <div class="col-md-8">
-                      <div class="form-group">
-                        <label for="interest2">Interest</label>
-                        <input type="text" class="form-control" id="interest2" value="Video Games">
-                      </div>
-                      <div class="form-group">
-                        <label>Image</label>
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image2">
-                          <label class="custom-file-label" for="image2">filename</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mt-3">
-                    <label for="description2">Description</label>
-                    <textarea class="form-control" id="description2" rows="3">
-My first steps in programing involved a copy of David H, Ahl's "BASIC Computer Games" (I still have it) and a teletype attached to a PDP-11/70 and now we have 4K screens and VR.
-                    </textarea>
-                  </div>
-                </fieldset>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="card">
-            <div class="card-header">
-              <div class="btn-group float-right">
-                <button type="button" class="btn btn-link" title="Add a new interest">
-                  <span class="fas fa-plus"></span>
-                </button>
-                <button type="button" class="btn btn-link" title="Edit this interest">
-                  <span class="far fa-edit"></span>
-                </button>
-                <button type="button" class="btn btn-link" title="Delete this interest">
-                  <span class="far fa-trash-alt"></span>
-                </button>
-              </div>
-            </div>
-            <div class="card-body">
-              <form>
-                <fieldset disabled>
-                  <div class="row">
-                    <div class="col-md-4">
-                      <img class="card-img-top img-fluid" src="img/History.jpg" alt="History">
-                    </div>
-                    <div class="col-md-8">
-                      <div class="form-group">
-                        <label for="interest3">Interest</label>
-                        <input type="text" class="form-control" id="interest3" value="History">
-                      </div>
-                      <div class="form-group">
-                        <label>Image</label>
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image3">
-                          <label class="custom-file-label" for="image3">filename</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mt-3">
-                    <label for="description3">Description</label>
-                    <textarea class="form-control" id="description3" rows="3">
-I love reading about history, from Ancient Egypt and the Romans to the Medieval Ages, the English Civil War through to the Georgian era and the start of the industrial revolution.
-                    </textarea>
-                  </div>
-                </fieldset>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="card">
-            <div class="card-header">
-              <div class="btn-group float-right">
-                <button type="button" class="btn btn-link" title="Add a new interest">
-                  <span class="fas fa-plus"></span>
-                </button>
-                <button type="button" class="btn btn-link" title="Edit this interest">
-                  <span class="far fa-edit"></span>
-                </button>
-                <button type="button" class="btn btn-link" title="Delete this interest">
-                  <span class="far fa-trash-alt"></span>
-                </button>
-              </div>
-            </div>
-            <div class="card-body">
-              <form>
-                <fieldset disabled>
-                  <div class="row">
-                    <div class="col-md-4">
-                      <img class="card-img-top img-fluid" src="img/MakerPi.jpg" alt="Maker Culture">
-                    </div>
-                    <div class="col-md-8">
-                      <div class="form-group">
-                        <label for="interest4">Interest</label>
-                        <input type="text" class="form-control" id="interest4" value="Maker Culture">
-                      </div>
-                      <div class="form-group">
-                        <label>Image</label>
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image4">
-                          <label class="custom-file-label" for="image4">filename</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mt-3">
-                    <label for="description5">Description</label>
-                    <textarea class="form-control" id="description5" rows="3">
-Nothing more fun than fiddling with a Raspberry Pi, a soldering iron and some LEDs or trying to make a tensegrity structure. I have so far resisted the temptations of a 3D printer.
-                    </textarea>
-                  </div>
-                </fieldset>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="card">
-            <div class="card-header">
-              <div class="btn-group float-right">
-                <button type="button" class="btn btn-link" title="Add a new interest">
-                  <span class="fas fa-plus"></span>
-                </button>
-                <button type="button" class="btn btn-link" title="Edit this interest">
-                  <span class="far fa-edit"></span>
-                </button>
-                <button type="button" class="btn btn-link" title="Delete this interest">
-                  <span class="far fa-trash-alt"></span>
-                </button>
-              </div>
-            </div>
-            <div class="card-body">
-              <form>
-                <fieldset disabled>
-                  <div class="row">
-                    <div class="col-md-4">
-                      <img class="card-img-top img-fluid" src="img/Space.jpg" alt="Space">
-                    </div>
-                    <div class="col-md-8">
-                      <div class="form-group">
-                        <label for="interest6">Interest</label>
-                        <input type="text" class="form-control" id="interest6" value="Space">
-                      </div>
-                      <div class="form-group">
-                        <label>Image</label>
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image5">
-                          <label class="custom-file-label" for="image5">filename</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mt-3">
-                    <label for="description6">Description</label>
-                      <textarea class="form-control" id="description6" rows="3">
-Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean, you may think it's a long way down the road to the chemist's, but that's just peanuts to space”.
-                      </textarea>
-                  </div>
-                </fieldset>
-              </form>
-            </div>
-          </div>
-        </div>
+      {% endfor %}
       </div>
       <a class="carousel-control-next w-auto" href="#interestsCarousel" role="button" data-slide="next">
         <span class="fas fa-angle-down text-dark" aria-hidden="true"></span>
