@@ -1,0 +1,34 @@
+{
+  "interests": [
+    {
+      "id": 1,
+      "interest": "Dinosaurs",
+      "image": "img/Dinosaurs.jpg",
+      "description": "I always wanted to be a paleontologist and though I ended up in IT they continue to fascinate me, I even built my own \"Dinosaur Of The Day\" twitter bot (@dinosauria_bot). Just don't mention Jurassic Park."
+    },
+    {
+      "id": 2,
+      "interest": "Video Games",
+      "image": "img/VideoGames.jpg",
+      "description": "My first steps in programing involved a copy of David H, Ahl's \"BASIC Computer Games\" (I still have it) and a teletype attached to a PDP-11/70 and now we have 4K screens and VR."
+    },
+    {
+      "id": 3,
+      "interest": "History",
+      "image": "img/History.jpg",
+      "description": "I love reading about history, from Ancient Egypt and the Romans to the Medieval Ages, the English Civil War through to the Georgian era and the start of the industrial revolution."
+    },
+    {
+      "id": 4,
+      "interest": "Maker Culture",
+      "image": "img/MakerPi.jpg",
+      "description": "Nothing more fun than fiddling with a Raspberry Pi, a soldering iron and some LEDs or trying to make a tensegrity structure. I have so far resisted the temptations of a 3D printer."
+    },
+    {
+      "id": 5,
+      "interest": "Space",
+      "image": "img/Space.jpg",
+      "description": "Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean, you may think it's a long way down the road to the chemist's, but that's just peanuts to space”."
+    }
+  ]
+}
