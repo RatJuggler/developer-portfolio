@@ -25,7 +25,7 @@ const banner = ['/*!\n',
 ].join('');
 
 function cleanVendor() {
-    return del(["./src/vendor/"]);
+    return del(["./public/vendor/"]);
 }
 
 function cleanDist() {
@@ -40,65 +40,65 @@ function cleanModules() {
 function copyModules() {
     // Bootstrap
     let bootstrapJS = gulp.src(['./node_modules/bootstrap/dist/js/bootstrap.*', '!./node_modules/bootstrap/dist/js/bootstrap.bundle.*'])
-        .pipe(gulp.dest('./src/vendor/bootstrap/js'));
+        .pipe(gulp.dest('./public/vendor/bootstrap/js'));
     let bootstrapCSS = gulp.src('./node_modules/bootstrap/dist/css/bootstrap.*')
-        .pipe(gulp.dest('./src/vendor/bootstrap/css'));
+        .pipe(gulp.dest('./public/vendor/bootstrap/css'));
     // Bootstrap-table
     let bootstrapTableJS = gulp.src('./node_modules/bootstrap-table/dist/bootstrap-table.*js')
-        .pipe(gulp.dest('./src/vendor/bootstrap-table/js'));
+        .pipe(gulp.dest('./public/vendor/bootstrap-table/js'));
     let bootstrapTableCSS = gulp.src('./node_modules/bootstrap-table/dist/bootstrap-table.*css')
-        .pipe(gulp.dest('./src/vendor/bootstrap-table/css'));
+        .pipe(gulp.dest('./public/vendor/bootstrap-table/css'));
     // Bootstrap-table filer control
     let bootstrapTableFilterJS = gulp.src('./node_modules/bootstrap-table/dist/extensions/filter-control/bootstrap-table-filter-control*.js')
-        .pipe(gulp.dest('./src/vendor/bootstrap-table/js'));
+        .pipe(gulp.dest('./public/vendor/bootstrap-table/js'));
     let bootstrapTableFilerCSS = gulp.src('./node_modules/bootstrap-table/dist/extensions/filter-control/bootstrap-table-filter-control*.css')
-        .pipe(gulp.dest('./src/vendor/bootstrap-table/css'));
+        .pipe(gulp.dest('./public/vendor/bootstrap-table/css'));
     // Font Awesome
     let fontAwesomeCSS = gulp.src('./node_modules/@fortawesome/fontawesome-free/css/all.*')
-        .pipe(gulp.dest('./src/vendor/fontawesome-free/css'));
+        .pipe(gulp.dest('./public/vendor/fontawesome-free/css'));
     let fontAwesome = gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/*.*')
-        .pipe(gulp.dest('./src/vendor/fontawesome-free/webfonts'));
+        .pipe(gulp.dest('./public/vendor/fontawesome-free/webfonts'));
     // jQuery
     let jquery = gulp.src(['./node_modules/jquery/dist/jquery.*', '!./node_modules/jquery/dist/jquery.slim.*'])
-        .pipe(gulp.dest('./src/vendor/jquery'));
+        .pipe(gulp.dest('./public/vendor/jquery'));
     // Popper
     let popper = gulp.src('./node_modules/popper.js/dist/umd/popper.*')
-        .pipe(gulp.dest('./src/vendor/popper'));
+        .pipe(gulp.dest('./public/vendor/popper'));
     return merge(bootstrapJS, bootstrapCSS, bootstrapTableJS, bootstrapTableCSS, bootstrapTableFilterJS, bootstrapTableFilerCSS,
         fontAwesome, fontAwesomeCSS, jquery, popper);
 }
 
 function copyDist() {
-    let mySrc = gulp.src(['./src/*.*', './src/**/vendor/*'])
+    let mySrc = gulp.src(['./public/*.*', './public/**/vendor/*'])
         .pipe(gulp.dest('./dist'));
-    let myImg = gulp.src('./src/img/*.*')
+    let myImg = gulp.src('./public/img/*.*')
         .pipe(gulp.dest('./dist/img'));
-    let myHTML = gulp.src('./src/static/*.html')
+    let myHTML = gulp.src('./public/static/*.html')
         .pipe(replace('.min.js', '.js'))
         .pipe(replace('.css', '.min.css'))
         .pipe(replace('.js', '.min.js'))
         .pipe(replace('../', ''))
         .pipe(gulp.dest('./dist'));
     // Bootstrap
-    let bootstrapJS = gulp.src('./src/vendor/bootstrap/js/*.min.js')
+    let bootstrapJS = gulp.src('./public/vendor/bootstrap/js/*.min.js')
         .pipe(gulp.dest('./dist/vendor/bootstrap/js'));
-    let bootstrapCSS = gulp.src('./src/vendor/bootstrap/css/*.min.css')
+    let bootstrapCSS = gulp.src('./public/vendor/bootstrap/css/*.min.css')
         .pipe(gulp.dest('./dist/vendor/bootstrap/css'));
     // Bootstrap-table & filter control
-    let bootstrapTableJS = gulp.src('./src/vendor/bootstrap-table/js/*.min.js')
+    let bootstrapTableJS = gulp.src('./public/vendor/bootstrap-table/js/*.min.js')
         .pipe(gulp.dest('./dist/vendor/bootstrap-table/js'));
-    let bootstrapTableCSS = gulp.src('./src/vendor/bootstrap-table/css/*.min.css')
+    let bootstrapTableCSS = gulp.src('./public/vendor/bootstrap-table/css/*.min.css')
         .pipe(gulp.dest('./dist/vendor/bootstrap-table/css'));
     // Font Awesome
-    let fontAwesomeCSS = gulp.src('./src/vendor/fontawesome-free/css/*.min.css')
+    let fontAwesomeCSS = gulp.src('./public/vendor/fontawesome-free/css/*.min.css')
         .pipe(gulp.dest('./dist/vendor/fontawesome-free/css'));
-    let fontAwesome = gulp.src('./src/vendor/fontawesome-free/webfonts/*.*')
+    let fontAwesome = gulp.src('./public/vendor/fontawesome-free/webfonts/*.*')
         .pipe(gulp.dest('./dist/vendor/fontawesome-free/webfonts'));
     // jQuery
-    let jquery = gulp.src('./src/vendor/jquery/*.min.*')
+    let jquery = gulp.src('./public/vendor/jquery/*.min.*')
         .pipe(gulp.dest('./dist/vendor/jquery'));
     // Popper
-    let popper = gulp.src('./src/vendor/popper/*.min.*')
+    let popper = gulp.src('./public/vendor/popper/*.min.*')
         .pipe(gulp.dest('./dist/vendor/popper'));
     return merge(mySrc, myImg, myHTML, bootstrapJS, bootstrapCSS, bootstrapTableJS, bootstrapTableCSS,
         fontAwesome, fontAwesomeCSS, jquery, popper)
@@ -107,7 +107,7 @@ function copyDist() {
 // Minify CSS task
 function mincss() {
     return gulp
-        .src("./src/css/*.css")
+        .src("./public/css/*.css")
         .pipe(plumber())
         .pipe(header(banner, {
             pkg: pkg
@@ -122,7 +122,7 @@ function mincss() {
 // Minify JS task
 function minjs() {
     return gulp
-        .src('./src/js/*.js')
+        .src('./public/js/*.js')
         .pipe(terser())
         .pipe(header(banner, {
             pkg: pkg

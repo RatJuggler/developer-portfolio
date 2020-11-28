@@ -11,7 +11,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "static-build": "node_modules/.bin/gulp build",
-    "static-start": "browser-sync start --server 'src' --files 'src' --startPath 'static/index.html'"
+    "static-start": "browser-sync start --server 'public' --files 'public' --startPath 'static/index.html'"
   },
   "repository": {
     "type": "git",
