@@ -16,7 +16,7 @@ app.get('/index.twig', (req, res) => {
     res.render('index.twig');
 });
 app.get('/skills.twig', (req, res) => {
-    res.render('skills.twig');
+    res.render('skills.twig', {data: readJSON("src/data/skills.json")});
 });
 app.get('/career.twig', (req, res) => {
     res.render('career.twig', {data: readJSON("src/data/career.json")});
