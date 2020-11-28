@@ -10,16 +10,16 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
     res.render('index.twig');
 });
-app.get('/index', (req, res) => {
+app.get('/index.twig', (req, res) => {
     res.render('index.twig');
 });
-app.get('/skills', (req, res) => {
+app.get('/skills.twig', (req, res) => {
     res.render('skills.twig');
 });
-app.get('/career', (req, res) => {
+app.get('/career.twig', (req, res) => {
     res.render('career.twig');
 });
-app.get('/interests', (req, res) => {
+app.get('/interests.twig', (req, res) => {
     res.render('interests.twig');
 });
 
