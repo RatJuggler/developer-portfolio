@@ -10,8 +10,8 @@
   "author": "John Chase",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node_modules/.bin/gulp build",
-    "start": "browser-sync start --server \"src\" --files \"src\""
+    "static-build": "node_modules/.bin/gulp build",
+    "static-start": "browser-sync start --server 'src' --files 'src' --startPath 'static/index.html'"
   },
   "repository": {
     "type": "git",

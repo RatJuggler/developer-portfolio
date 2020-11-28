@@ -69,14 +69,15 @@ function copyModules() {
 }
 
 function copyDist() {
-    let mySrc = gulp.src(['./src/*.*', './src/**/vendor/*', '!./src/*.html'])
+    let mySrc = gulp.src(['./src/*.*', './src/**/vendor/*'])
         .pipe(gulp.dest('./dist'));
     let myImg = gulp.src('./src/img/*.*')
         .pipe(gulp.dest('./dist/img'));
-    let myHTML = gulp.src('./src/*.html')
+    let myHTML = gulp.src('./src/static/*.html')
         .pipe(replace('.min.js', '.js'))
         .pipe(replace('.css', '.min.css'))
         .pipe(replace('.js', '.min.js'))
+        .pipe(replace('../', ''))
         .pipe(gulp.dest('./dist'));
     // Bootstrap
     let bootstrapJS = gulp.src('./src/vendor/bootstrap/js/*.min.js')
