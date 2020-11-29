@@ -8,8 +8,6 @@
 {% endblock %}
 
 {% block content %}
-  <main class="container">
-{% include 'tabs.twig' %}
     <div id="careerCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
       {% for period in data.career %}
@@ -77,5 +75,4 @@
         </a>
       </div>
     </div>
-  </main>
 {% endblock %}
