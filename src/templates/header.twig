@@ -15,9 +15,9 @@
               <span>Projects</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="projectMenu">
-              {% for project in profile.projects %}
-                <a class="dropdown-item" href="{{ project.url }}">{{ project.name }}</a>
-              {% endfor %}
+{% for project in profile.projects %}
+              <a class="dropdown-item" href="{{ project.url }}">{{ project.name }}</a>
+{% endfor %}
             </div>
           </li>
         </ul>
