@@ -13,6 +13,7 @@ const rev = require('gulp-rev');
 const revdel = require('gulp-rev-delete-original');
 const revRewrite = require('gulp-rev-rewrite');
 const terser = require("gulp-terser");
+const fs = require("fs");
 
 // Load package.json for banner
 const pkg = require('./package.json');
@@ -70,38 +71,43 @@ function copyModules() {
 
 function copyDist() {
     let mySrc = gulp.src(['./public/*.*', './public/**/vendor/*'])
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist/public'));
     let myImg = gulp.src('./public/img/*.*')
-        .pipe(gulp.dest('./dist/img'));
+        .pipe(gulp.dest('./dist/public/img'));
     let myHTML = gulp.src('./public/static/*.html')
         .pipe(replace('.min.js', '.js'))
         .pipe(replace('.css', '.min.css'))
         .pipe(replace('.js', '.min.js'))
         .pipe(replace('../', ''))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist/public'));
     // Bootstrap
     let bootstrapJS = gulp.src('./public/vendor/bootstrap/js/*.min.js')
-        .pipe(gulp.dest('./dist/vendor/bootstrap/js'));
+        .pipe(gulp.dest('./dist/public/vendor/bootstrap/js'));
     let bootstrapCSS = gulp.src('./public/vendor/bootstrap/css/*.min.css')
-        .pipe(gulp.dest('./dist/vendor/bootstrap/css'));
+        .pipe(gulp.dest('./dist/public/vendor/bootstrap/css'));
     // Bootstrap-table & filter control
     let bootstrapTableJS = gulp.src('./public/vendor/bootstrap-table/js/*.min.js')
-        .pipe(gulp.dest('./dist/vendor/bootstrap-table/js'));
+        .pipe(gulp.dest('./dist/public/vendor/bootstrap-table/js'));
     let bootstrapTableCSS = gulp.src('./public/vendor/bootstrap-table/css/*.min.css')
-        .pipe(gulp.dest('./dist/vendor/bootstrap-table/css'));
+        .pipe(gulp.dest('./dist/public/vendor/bootstrap-table/css'));
     // Font Awesome
     let fontAwesomeCSS = gulp.src('./public/vendor/fontawesome-free/css/*.min.css')
-        .pipe(gulp.dest('./dist/vendor/fontawesome-free/css'));
+        .pipe(gulp.dest('./dist/public/vendor/fontawesome-free/css'));
     let fontAwesome = gulp.src('./public/vendor/fontawesome-free/webfonts/*.*')
-        .pipe(gulp.dest('./dist/vendor/fontawesome-free/webfonts'));
+        .pipe(gulp.dest('./dist/public/vendor/fontawesome-free/webfonts'));
     // jQuery
     let jquery = gulp.src('./public/vendor/jquery/*.min.*')
-        .pipe(gulp.dest('./dist/vendor/jquery'));
+        .pipe(gulp.dest('./dist/public/vendor/jquery'));
     // Popper
     let popper = gulp.src('./public/vendor/popper/*.min.*')
-        .pipe(gulp.dest('./dist/vendor/popper'));
+        .pipe(gulp.dest('./dist/public/vendor/popper'));
+    let templateApp = gulp.src('./src/**/*')
+        .pipe(replace('.min.js', '.js'))
+        .pipe(replace('.css', '.min.css'))
+        .pipe(replace('.js', '.min.js'))
+        .pipe(gulp.dest('dist/app'));
     return merge(mySrc, myImg, myHTML, bootstrapJS, bootstrapCSS, bootstrapTableJS, bootstrapTableCSS,
-        fontAwesome, fontAwesomeCSS, jquery, popper)
+        fontAwesome, fontAwesomeCSS, jquery, popper, templateApp);
 }
 
 // Minify CSS task
@@ -116,13 +122,12 @@ function mincss() {
             suffix: ".min"
         }))
         .pipe(cleanCSS())
-        .pipe(gulp.dest("./dist/css"));
+        .pipe(gulp.dest("./dist/public/css"));
 }
 
 // Minify JS task
 function minjs() {
-    return gulp
-        .src('./public/js/*.js')
+    return gulp.src('./public/js/*.js')
         .pipe(terser())
         .pipe(header(banner, {
             pkg: pkg
@@ -130,30 +135,40 @@ function minjs() {
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./dist/js'));
+        .pipe(gulp.dest('./dist/public/js'));
 }
 
-// Cache busting
+// Cache busting.
 function revision() {
-    return gulp
-        .src('dist/**/*.{css,js}')
+    return gulp.src('dist/public/**/*.{css,js}')
         .pipe(rev())
         .pipe(revdel())
-        .pipe(gulp.src('dist/**/*.html'))
-        .pipe(revRewrite())
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist/public'))
+        .pipe(rev.manifest())
+        .pipe(gulp.dest('dist/public'));
+}
+// Use cache busting.
+function rewrite() {
+    const manifest = fs.readFileSync('dist/public/rev-manifest.json');
+    let staticHTML = gulp.src('dist/public/**/*.html')
+        .pipe(revRewrite({ manifest }))
+        .pipe(gulp.dest('dist/public'));
+    let staticTwig = gulp.src('dist/app/**/*.twig')
+        .pipe(revRewrite({ manifest }))
+        .pipe(gulp.dest('dist/app'));
+    return merge(staticHTML, staticTwig);
 }
 
 // Define complex tasks
 const cleanAll = gulp.parallel(cleanDist, cleanModules, cleanVendor);
 const vendor = gulp.series(cleanVendor, copyModules);
-const build = gulp.series(vendor, cleanDist, copyDist, gulp.parallel(mincss, minjs), revision);
+const build = gulp.series(vendor, cleanDist, copyDist, gulp.parallel(mincss, minjs), revision, rewrite);
 
 // Document tasks
 mincss.description = "Minify CSS files.";
 minjs.description = "Minify JS files.";
-cleanDist.description = "Clear down the dist folder.";
-cleanAll.description = "Clear down the dist, vendor and node_modules folders.";
+cleanDist.description = "Clear down the distribution folder.";
+cleanAll.description = "Clear down the distribution, vendor and node_modules folders.";
 vendor.description = "Refresh the vendor dependencies from node_modules.";
 revision.description = "Add cache busting content hashes to static assets.";
 build.description = "Build a distribution ready version of the site.";
