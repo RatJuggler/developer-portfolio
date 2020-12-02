@@ -8,8 +8,8 @@ only adapting random bits off the internet that I can understand and modify, lik
 The idea is to build a number of different versions of the same site:
 
 1. Using static pages only to act as an outline of the design. 
-2. Breaking down the static pages and using a templating engine to serve the markup and content.
-3. Building some sort of back end to serve the content and using that from a further evolved set of templates.
+2. Breaking down the static pages and using a templating engine with data files to generate the content.
+3. Building some sort of back end to serve the data and using that from a further evolved set of templates.
 4. Expanding the back end and building a front end using a web component framework.
 
 I've completed some outline designs, which you can see [here](https://ratjuggler.github.io/developer-portfolio/), and started 
