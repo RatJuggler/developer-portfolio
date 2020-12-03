@@ -37,8 +37,8 @@ function cleanModules() {
     return del(["./node_modules/"]);
 }
 
-// Bring third party dependencies from node_modules into vendor directory
-function copyModules() {
+// Bring third party dependencies from node_modules into the vendor directory.
+function createVendor() {
     // Bootstrap
     let bootstrapJS = gulp.src(['./node_modules/bootstrap/dist/js/bootstrap.*', '!./node_modules/bootstrap/dist/js/bootstrap.bundle.*'])
         .pipe(gulp.dest('./public/vendor/bootstrap/js'));
@@ -69,17 +69,7 @@ function copyModules() {
         fontAwesome, fontAwesomeCSS, jquery, popper);
 }
 
-function copyPublicDist() {
-    let myWebRoot = gulp.src(['./public/*.*', './public/**/vendor/*'])
-        .pipe(gulp.dest('./dist/public'));
-    let myImages = gulp.src('./public/img/*.*')
-        .pipe(gulp.dest('./dist/public/img'));
-    let myHTML = gulp.src('./public/static/*.html')
-        .pipe(replace('.min.js', '.js'))
-        .pipe(replace('.css', '.min.css'))
-        .pipe(replace('.js', '.min.js'))
-        .pipe(replace('../', ''))
-        .pipe(gulp.dest('./dist/public'));
+function copyModuleDist() {
     // Bootstrap
     let bootstrapJS = gulp.src('./public/vendor/bootstrap/js/*.min.js')
         .pipe(gulp.dest('./dist/public/vendor/bootstrap/js'));
@@ -101,8 +91,24 @@ function copyPublicDist() {
     // Popper
     let popper = gulp.src('./public/vendor/popper/*.min.*')
         .pipe(gulp.dest('./dist/public/vendor/popper'));
-    return merge(myWebRoot, myImages, myHTML, bootstrapJS, bootstrapCSS, bootstrapTableJS, bootstrapTableCSS,
-        fontAwesome, fontAwesomeCSS, jquery, popper);
+    return merge(bootstrapJS, bootstrapCSS, bootstrapTableJS, bootstrapTableCSS, fontAwesome, fontAwesomeCSS, jquery, popper);
+}
+
+function copyStaticDist() {
+    // General webroot files
+    let webRoot = gulp.src(['./public/*.*', './public/**/vendor/*'])
+        .pipe(gulp.dest('./dist/public'));
+    // Images
+    let images = gulp.src('./public/img/*.*')
+        .pipe(gulp.dest('./dist/public/img'));
+    // Static HTML
+    let html = gulp.src('./public/static/*.html')
+        .pipe(replace('.min.js', '.js'))
+        .pipe(replace('.css', '.min.css'))
+        .pipe(replace('.js', '.min.js'))
+        .pipe(replace('../', ''))
+        .pipe(gulp.dest('./dist/public'));
+    return merge(webRoot, images, html);
 }
 
 function copyAppDist() {
@@ -175,8 +181,8 @@ function rewrite() {
 
 // Define complex tasks
 const cleanAll = gulp.parallel(cleanDist, cleanModules, cleanVendor);
-const vendor = gulp.series(cleanVendor, copyModules);
-const build = gulp.series(vendor, cleanDist, copyPublicDist, copyAppDist, gulp.parallel(mincss, minjs), revision, rewrite);
+const vendor = gulp.series(cleanVendor, createVendor);
+const build = gulp.series(vendor, cleanDist, copyModuleDist, copyStaticDist, copyAppDist, gulp.parallel(mincss, minjs), revision, rewrite);
 
 // Document tasks
 cleanDist.description = "Clear down the distribution folder.";
