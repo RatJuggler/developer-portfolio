@@ -27,15 +27,13 @@
   "main": "app.js",
   "dependencies": {
     "express": "^4.17.1",
-    "@fortawesome/fontawesome-free": "5.15.1",
-    "bootstrap": "^4.5.3",
-    "bootstrap-table": "^1.18.0",
-    "jquery": "^3.5.1",
-    "popper.js": "^1.16.1",
     "twig": "^1.15.4"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "browser-sync": "^2.26.13",
+    "bootstrap": "^4.5.3",
+    "bootstrap-table": "^1.18.0",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
@@ -47,6 +45,8 @@
     "gulp-rev-delete-original": "^0.2.3",
     "gulp-rev-rewrite": "^4.0.0",
     "gulp-terser": "^2.0.0",
-    "merge-stream": "^2.0.0"
+    "jquery": "^3.5.1",
+    "merge-stream": "^2.0.0",
+    "popper.js": "^1.16.1"
   }
 }
