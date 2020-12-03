@@ -69,10 +69,10 @@ function copyModules() {
         fontAwesome, fontAwesomeCSS, jquery, popper);
 }
 
-function copyDist() {
-    let mySrc = gulp.src(['./public/*.*', './public/**/vendor/*'])
+function copyPublicDist() {
+    let myWebRoot = gulp.src(['./public/*.*', './public/**/vendor/*'])
         .pipe(gulp.dest('./dist/public'));
-    let myImg = gulp.src('./public/img/*.*')
+    let myImages = gulp.src('./public/img/*.*')
         .pipe(gulp.dest('./dist/public/img'));
     let myHTML = gulp.src('./public/static/*.html')
         .pipe(replace('.min.js', '.js'))
@@ -101,6 +101,11 @@ function copyDist() {
     // Popper
     let popper = gulp.src('./public/vendor/popper/*.min.*')
         .pipe(gulp.dest('./dist/public/vendor/popper'));
+    return merge(myWebRoot, myImages, myHTML, bootstrapJS, bootstrapCSS, bootstrapTableJS, bootstrapTableCSS,
+        fontAwesome, fontAwesomeCSS, jquery, popper);
+}
+
+function copyAppDist() {
     // Application JS
     let appJS = gulp.src('./src/*.js')
         .pipe(gulp.dest('dist/app'));
@@ -116,8 +121,7 @@ function copyDist() {
     // Application Build
     let appBuild = gulp.src('./package.json')
         .pipe(gulp.dest('dist'));
-    return merge(mySrc, myImg, myHTML, bootstrapJS, bootstrapCSS, bootstrapTableJS, bootstrapTableCSS,
-        fontAwesome, fontAwesomeCSS, jquery, popper, appJS, appTemplates, appData, appBuild);
+    return merge(appJS, appTemplates, appData, appBuild);
 }
 
 // Minify CSS task
@@ -172,7 +176,7 @@ function rewrite() {
 // Define complex tasks
 const cleanAll = gulp.parallel(cleanDist, cleanModules, cleanVendor);
 const vendor = gulp.series(cleanVendor, copyModules);
-const build = gulp.series(vendor, cleanDist, copyDist, gulp.parallel(mincss, minjs), revision, rewrite);
+const build = gulp.series(vendor, cleanDist, copyPublicDist, copyAppDist, gulp.parallel(mincss, minjs), revision, rewrite);
 
 // Document tasks
 mincss.description = "Minify CSS files.";
@@ -180,7 +184,8 @@ minjs.description = "Minify JS files.";
 cleanDist.description = "Clear down the distribution folder.";
 cleanAll.description = "Clear down the distribution, vendor and node_modules folders.";
 vendor.description = "Refresh the vendor dependencies from node_modules.";
-revision.description = "Add cache busting content hashes to static assets.";
+revision.description = "Add cache busting content hashes to static assets and create a revisions manifest.";
+rewrite.description = "Use the revision manifest to update links to assets.";
 build.description = "Build a distribution ready version of the site.";
 
 // Export tasks
