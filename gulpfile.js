@@ -19,11 +19,7 @@ const fs = require("fs");
 const pkg = require('./package.json');
 
 // Set the banner content
-const banner = ['/*!\n',
-    ' * <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-    ' */\n',
-    '\n'
-].join('');
+const banner = '/*!\n * <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n */\n';
 
 function cleanVendor() {
     return del(["./public/vendor/"]);
@@ -132,8 +128,7 @@ function copyAppDist() {
 
 // Minify CSS task
 function mincss() {
-    return gulp
-        .src("./public/css/*.css")
+    return gulp.src("./public/css/*.css")
         .pipe(plumber())
         .pipe(header(banner, {
             pkg: pkg
@@ -182,7 +177,7 @@ function rewrite() {
 // Define complex tasks
 const cleanAll = gulp.parallel(cleanDist, cleanModules, cleanVendor);
 const vendor = gulp.series(cleanVendor, createVendor);
-const build = gulp.series(vendor, cleanDist, copyModuleDist, copyStaticDist, copyAppDist, gulp.parallel(mincss, minjs), revision, rewrite);
+const build = gulp.series(vendor, cleanDist, gulp.parallel(copyModuleDist, copyStaticDist, copyAppDist), gulp.parallel(mincss, minjs), revision, rewrite);
 
 // Document tasks
 cleanDist.description = "Clear down the distribution folder.";
