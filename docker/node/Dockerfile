@@ -12,7 +12,7 @@ FROM node:12.20.0
 
 ENV NODE_ENV=production
 
-EXPOSE 80
+EXPOSE 3000
 CMD ["node", "./app/app.js", "app/"]
 
 WORKDIR /srv
