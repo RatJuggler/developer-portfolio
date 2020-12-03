@@ -179,21 +179,14 @@ const vendor = gulp.series(cleanVendor, copyModules);
 const build = gulp.series(vendor, cleanDist, copyPublicDist, copyAppDist, gulp.parallel(mincss, minjs), revision, rewrite);
 
 // Document tasks
-mincss.description = "Minify CSS files.";
-minjs.description = "Minify JS files.";
 cleanDist.description = "Clear down the distribution folder.";
 cleanAll.description = "Clear down the distribution, vendor and node_modules folders.";
 vendor.description = "Refresh the vendor dependencies from node_modules.";
-revision.description = "Add cache busting content hashes to static assets and create a revisions manifest.";
-rewrite.description = "Use the revision manifest to update links to assets.";
 build.description = "Build a distribution ready version of the site.";
 
 // Export tasks
-exports.mincss = mincss;
-exports.minjs = minjs;
 exports.cleandist = cleanDist;
 exports.cleanall = cleanAll;
 exports.vendor = vendor;
-exports.revision = revision;
 exports.build = build;
 exports.default = build;
