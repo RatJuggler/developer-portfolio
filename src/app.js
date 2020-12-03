@@ -25,7 +25,7 @@ app.get('/interests.twig', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+    console.log(`developer-portfolio app listening at http://localhost:${port}`)
 });
 
 function readJSON(filepath) {
