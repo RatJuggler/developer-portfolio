@@ -101,13 +101,20 @@ function copyDist() {
     // Popper
     let popper = gulp.src('./public/vendor/popper/*.min.*')
         .pipe(gulp.dest('./dist/public/vendor/popper'));
-    let templateApp = gulp.src('./src/**/*')
+    // Application JS
+    let appJS = gulp.src('./src/*.js')
+        .pipe(gulp.dest('dist/app'));
+    // Application Templates
+    let appTemplates = gulp.src('./src/templates/*.twig')
         .pipe(replace('.min.js', '.js'))
         .pipe(replace('.css', '.min.css'))
         .pipe(replace('.js', '.min.js'))
-        .pipe(gulp.dest('dist/app'));
+        .pipe(gulp.dest('dist/app/templates'));
+    // Application Data
+    let appData = gulp.src('./src/data/*.json')
+        .pipe(gulp.dest('dist/app/data'));
     return merge(mySrc, myImg, myHTML, bootstrapJS, bootstrapCSS, bootstrapTableJS, bootstrapTableCSS,
-        fontAwesome, fontAwesomeCSS, jquery, popper, templateApp);
+        fontAwesome, fontAwesomeCSS, jquery, popper, appJS, appTemplates, appData);
 }
 
 // Minify CSS task
