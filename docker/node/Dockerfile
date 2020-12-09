@@ -1,5 +1,5 @@
 # Build the application.
-FROM node:12.20.0 AS builder
+FROM node:12-alpine AS builder
 
 # Location of source code.
 WORKDIR /build
@@ -12,7 +12,7 @@ RUN node_modules/.bin/gulp build
 
 
 # Create the Node application image.
-FROM node:12.20.0
+FROM node:12-alpine
 
 ENV NODE_ENV=production
 
