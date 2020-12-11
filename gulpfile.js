@@ -121,10 +121,7 @@ function copyAppDist() {
     // Application Data
     let appData = gulp.src('./src/data/*.json')
         .pipe(gulp.dest('dist/app/data'));
-    // Application Build
-    let appBuild = gulp.src('./package.json')
-        .pipe(gulp.dest('dist'));
-    return merge(appJS, appTemplates, appData, appBuild);
+    return merge(appJS, appTemplates, appData);
 }
 
 // Minify CSS task
