@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  mynginx:
+    image: mynginx
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    ports:
+      - "8080:80"
+    networks:
+      - portfolio
+
+  mynode:
+    image: mynode
+    build:
+      context: .
+      dockerfile: ./docker/node/Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - portfolio
+
+networks:
+  portfolio:
