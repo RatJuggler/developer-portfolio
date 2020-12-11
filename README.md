@@ -1,6 +1,6 @@
 # developer-portfolio
 
-My developer portfolio website.
+My developer portfolio website. See the latest version [here](https://ratjuggler.github.io/developer-portfolio/).
 
 Rather than copying a random template off the internet I'm trying to create something a bit different from scratch (or at least 
 only adapting random bits off the internet that I can understand and modify, like all good projects do 😄).
@@ -12,8 +12,7 @@ The idea is to build a number of different versions of the same site:
 3. Building some sort of back end to serve the data and using that from a further evolved set of templates.
 4. Expanding the back end and building a front end using a web component framework.
 
-I've completed some outline designs, which you can see [here](https://ratjuggler.github.io/developer-portfolio/), and started 
-building the template version.
+I've completed some outline designs and started building the template version.
 
 Content for the site will include:
 
@@ -22,7 +21,27 @@ Content for the site will include:
 - Career - Rough timeline from when I started with the dinosaurs to the present day space age.
 - Interests - Brief details on my outside interests. 
 
-**Attributions:**
+### Development
+
+There are three `npm` targets which can be used during development:
+
+- static-build - should be run at least once after `npm install` to make the 3rd party vendor dependency files available.
+- static-start - runs [browser-sync](https://browsersync.io/) so you can see changes to static files as they are made.
+- template-start - runs the template Node application in development.
+
+### Testing
+
+Several Docker file are available to create images for testing:
+ 
+1. docker/nginx - The public static files served from an [Nginx](https://www.nginx.com/) instance. 
+   
+    Create an image with: `docker build -f docker/nginx/Dockerfile -t mynginx .`
+   
+    Then run with: `docker run -d -p 8080:80 mynginx`
+
+    Content will be availble at: `http://localhost:8080`
+
+### Attributions:
 
 - HTML5 Boilerplate - Front-end template [from here](https://html5boilerplate.com/).
 - Boostrap - Front-end development toolkit [from here](https://getbootstrap.com/).
