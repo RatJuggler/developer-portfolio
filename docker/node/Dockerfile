@@ -1,9 +1,9 @@
-# Build the application.
-FROM node:12-alpine AS builder
+# Build the public files and application.
+FROM node:12-alpine AS test-builder
 
-# Location of source code.
+# Location of the source code.
 WORKDIR /build
-# Install build dependencies.
+# Install the build dependencies.
 COPY package.json .
 RUN npm install
 # Copy the sources and run the build.
@@ -11,8 +11,8 @@ COPY ./ .
 RUN node_modules/.bin/gulp build
 
 
-# Create the Node application image.
-FROM node:12-alpine
+# Create a Node application image.
+FROM node:12-alpine AS test-node-application
 
 ENV NODE_ENV=production
 
@@ -21,9 +21,9 @@ CMD ["node", "./app/app.js", "app/"]
 
 # Create a folder to serve the application from.
 WORKDIR /srv
-# Install dependencies.
+# Install the runtime dependencies.
 COPY package.json .
 RUN npm install
 
-# Copy distribution files.
-COPY --from=builder /build/dist/ .
+# Copy the distribution files.
+COPY --from=test-builder /build/dist/ .
