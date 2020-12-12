@@ -33,7 +33,7 @@
     "@fortawesome/fontawesome-free": "^5.15.1",
     "browser-sync": "^2.26.13",
     "bootstrap": "^4.5.3",
-    "bootstrap-table": "^1.18.0",
+    "bootstrap-table": "^1.18.1",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
