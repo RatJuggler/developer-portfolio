@@ -51,9 +51,11 @@ Two Docker file are available to create individual images for testing:
 
 ### Production Example
 
-A combined Docker file with a reverse proxy is available as a production example:
+A combined Docker file with a docker-compose configuration is available as a production example (further Nginx security 
+configuration required):
 
-- docker / combined - A reverse proxy to the Node application which also serves a copy of the public static files.
+- docker / combined - The public static files are served from Nginx whilst requests for template pages are proxied to the Node 
+  application.
   
   Create and run the images with: `docker-compose up`
 
