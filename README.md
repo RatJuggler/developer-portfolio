@@ -33,13 +33,21 @@ There are three `npm` targets which can be used during development:
 
 Several Docker file are available to create images for testing:
  
-1. docker/nginx - The public static files served from an [Nginx](https://www.nginx.com/) instance. 
+1. docker / nginx - The public static files served from an [Nginx](https://www.nginx.com/) instance. 
    
     Create an image with: `docker build -f docker/nginx/Dockerfile -t mynginx .`
    
     Then run with: `docker run -d -p 8080:80 mynginx`
 
-    Content will be availble at: `http://localhost:8080`
+    Content will be available at: `http://localhost:8080`
+
+2. docker / node - The Node application, which also serves a copy of the public static files.
+
+   Create an image with: `docker build -f docker/node/Dockerfile -t mynode .`
+
+   Then run with: `docker run -d -p 3000:3000 mynode`
+
+   Content will be available at: `http://localhost:3000`
 
 ### Attributions:
 
