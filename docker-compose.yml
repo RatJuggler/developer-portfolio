@@ -1,23 +1,25 @@
 version: '3.8'
 
 services:
-  mynginx:
-    image: mynginx
+  nginx-public-files:
+    image: nginx-public-files
     build:
       context: .
-      dockerfile: ./docker/nginx/Dockerfile
+      dockerfile: ./docker/combined/Dockerfile
+      target: nginx-public-files
     ports:
       - "8080:80"
     networks:
       - portfolio
 
-  mynode:
-    image: mynode
+  node-application:
+    image: node-application
     build:
       context: .
-      dockerfile: ./docker/node/Dockerfile
+      dockerfile: ./docker/combined/Dockerfile
+      target: node-application
     ports:
-      - "3000:3000"
+      - "3000"
     networks:
       - portfolio
 
