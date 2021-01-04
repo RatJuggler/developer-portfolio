@@ -12,7 +12,7 @@ RUN node_modules/.bin/gulp build
 
 
 # Create a Nginx image.
-FROM nginx:alpine AS test-nginx-public-files
+FROM nginx:stable-alpine AS test-nginx-public-files
 
 EXPOSE 80
 
