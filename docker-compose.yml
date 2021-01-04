@@ -11,6 +11,7 @@ services:
       - "8080:80"
     networks:
       - portfolio
+    restart: unless-stopped
 
   node-application:
     image: node-application
@@ -19,9 +20,10 @@ services:
       dockerfile: ./docker/combined/Dockerfile
       target: node-application
     ports:
-      - "3000"
+      - "3000:3000"
     networks:
       - portfolio
+    restart: unless-stopped
 
 networks:
   portfolio:
