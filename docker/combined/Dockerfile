@@ -1,5 +1,5 @@
 # Build the public files and application.
-FROM node:12-alpine AS builder
+FROM node:lts-alpine AS builder
 
 # Location of the source code.
 WORKDIR /build
@@ -25,7 +25,7 @@ COPY --from=builder /build/dist/public ./public
 
 
 # Create the Node application image.
-FROM node:12-alpine AS node-application
+FROM node:lts-alpine AS node-application
 
 ENV NODE_ENV=production
 

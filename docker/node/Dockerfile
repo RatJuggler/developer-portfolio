@@ -1,5 +1,5 @@
 # Build the public files and application.
-FROM node:12-alpine AS test-builder
+FROM node:lts-alpine AS test-builder
 
 # Location of the source code.
 WORKDIR /build
@@ -12,7 +12,7 @@ RUN node_modules/.bin/gulp build
 
 
 # Create a Node application image.
-FROM node:12-alpine AS test-node-application
+FROM node:lts-alpine AS test-node-application
 
 ENV NODE_ENV=production
 

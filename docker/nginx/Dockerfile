@@ -1,5 +1,5 @@
 # Build the public files.
-FROM node:12-alpine AS test-builder
+FROM node:lts-alpine AS test-builder
 
 # Location of the source code.
 WORKDIR /build
