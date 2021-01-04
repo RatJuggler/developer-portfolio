@@ -14,6 +14,8 @@ RUN node_modules/.bin/gulp build
 # Create the Nginx image.
 FROM nginx:alpine AS nginx-public-files
 
+EXPOSE 80
+
 # Use a custom Nginx configuration.
 COPY docker/combined/nginx.conf /etc/nginx/conf.d/default.conf
 # Create a folder to serve the public files from.
