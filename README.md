@@ -57,7 +57,7 @@ configuration required):
 - docker / combined - The public static files are served from Nginx whilst requests for template pages are proxied to the Node 
   application.
   
-  Create and run the images with: `docker-compose up`
+  Create and run the images with: `docker-compose up -d`
 
   Content will be available at: `http://localhost:8080`
 
