@@ -11,19 +11,6 @@ COPY ./ .
 RUN node_modules/.bin/gulp build
 
 
-# Create the Nginx image.
-FROM nginx:stable-alpine AS nginx-public-files
-
-EXPOSE 80
-
-# Use a custom Nginx configuration.
-COPY docker/combined/nginx.conf /etc/nginx/conf.d/default.conf
-# Create a folder to serve the public files from.
-WORKDIR /srv
-# Copy the distribution files.
-COPY --from=builder /build/dist/public ./public
-
-
 # Create the Node application image.
 FROM node:lts-alpine AS node-application
 
@@ -37,6 +24,19 @@ WORKDIR /srv
 # Install the runtime dependencies.
 COPY package.json .
 RUN npm install
-
-# Copy the distribution files.
+# Copy the application files from the build.
 COPY --from=builder /build/dist/ .
+
+
+# Create the Nginx web server image.
+FROM nginx:stable-alpine AS nginx-public-files
+
+EXPOSE 80
+
+# Use a basic Nginx configuration with a reverse proxy to the application.
+COPY docker/combined/nginx.conf /etc/nginx/conf.d/default.conf
+
+# Create a folder to serve the public files from.
+WORKDIR /srv
+# Copy the static distribution files from the build.
+COPY --from=builder /build/dist/public ./public
