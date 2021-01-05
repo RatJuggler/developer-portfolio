@@ -19,8 +19,6 @@ services:
       context: .
       dockerfile: ./docker/combined/Dockerfile
       target: node-application
-    ports:
-      - "3000:3000"
     networks:
       - portfolio
     restart: unless-stopped
