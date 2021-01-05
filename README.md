@@ -51,8 +51,8 @@ Two Docker file are available to create individual images for testing:
 
 ### Production Example
 
-A combined Docker file with a docker-compose configuration is available as a production example (further Nginx security 
-configuration required):
+A combined Docker file, with a docker-compose configuration, is available which could serve as the basis for a production
+environment but must not be used directly without at least adding some proper Nginx security configuration.
 
 - docker / combined - The public static files are served from Nginx whilst requests for template pages are proxied to the Node 
   application.
@@ -60,6 +60,8 @@ configuration required):
   Create and run the images with: `docker-compose up -d`
 
   Content will be available at: `http://localhost:8080`
+
+For a more complete production implementation see [My Production Docker Build](https://github.com/RatJuggler/my-production-docker-build).
 
 ### Attributions:
 
