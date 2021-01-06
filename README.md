@@ -1,6 +1,7 @@
 # developer-portfolio
 
-My developer portfolio website. See the latest version [here](https://ratjuggler.github.io/developer-portfolio/).
+My developer portfolio website. The full version is deployed [here](https://jurassic-john.site) and in case of problem the static
+only version is available [here](https://ratjuggler.github.io/developer-portfolio/).
 
 Rather than copying a random template off the internet I'm trying to create something a bit different from scratch (or at least 
 only adapting random bits off the internet that I can understand and modify, like all good projects do 😄).
@@ -40,6 +41,7 @@ Two Docker file are available to create individual images for testing:
   Then run with: `docker run -d -p 8080:80 mynginx`
 
   Content will be available at: `http://localhost:8080`
+
 
 - docker / node - The Node application, which also serves a copy of the public static files.
   
