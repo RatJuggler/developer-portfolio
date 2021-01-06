@@ -5,7 +5,7 @@
   <meta charset="utf-8">
 
   <title>John Chase - About</title>
-  <meta name="keywords" content="John, Chase, Developer, Portfolio, About" />
+  <meta name="keywords" content="John Chase, Developer, Portfolio, About" />
   <meta name="description" content="Developer portfolio website for John Chase">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
@@ -20,7 +20,7 @@
 
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-023b3876bb.min.css">
   <link rel="stylesheet" href="vendor/fontawesome-free/css/all-b227b1617a.min.css">
-  <link rel="stylesheet" href="css/main-aa7c66678b.min.css">
+  <link rel="stylesheet" href="css/main-3f6017a099.min.css">
 
   <meta name="theme-color" content="#b833c0">
 </head>
@@ -31,7 +31,7 @@
     <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
       <a class="navbar-brand" href="#">
         <img src="img/Rat-Profile.svg" width="30" height="30" class="d-inline-block align-top" alt="My profile avatar">
-        Portfolio
+        Portfolio - Static Version
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -58,11 +58,17 @@
               <span>Home</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" title="Settings">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="versionMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="fas fa-cog" aria-hidden="true"></span>
               <span>Settings</span>
             </a>
+            <div class="dropdown-menu" aria-labelledby="versionMenu">
+              <span class="dropdown-header">Site Version</span>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Static</a>
+              <a class="dropdown-item" href="index.twig">Template</a>
+            </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="accountMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -251,8 +257,8 @@ Select one of the tabs to find out more about me.</textarea>
   <script src="vendor/jquery/jquery-dc5e7f18c8.min.js"></script>
   <script src="vendor/popper/popper-1022eaf388.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap-f20fa8b102.min.js"></script>
-  <script src="js/plugins-256d72032a.min.js"></script>
-  <script src="js/main-217facfe68.min.js"></script>
+  <script src="js/plugins-a42079fa94.min.js"></script>
+  <script src="js/main-6e32e92e70.min.js"></script>
 
 </body>
 

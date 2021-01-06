@@ -5,7 +5,7 @@
   <meta charset="utf-8">
 
   <title>John Chase - Interests</title>
-  <meta name="keywords" content="John, Chase, Developer, Portfolio, Interests" />
+  <meta name="keywords" content="John Chase, Developer, Portfolio, Interests" />
   <meta name="description" content="Developer portfolio website for John Chase">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
@@ -20,8 +20,9 @@
 
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-023b3876bb.min.css">
   <link rel="stylesheet" href="vendor/fontawesome-free/css/all-b227b1617a.min.css">
-  <link rel="stylesheet" href="css/main-aa7c66678b.min.css">
-  <link rel="stylesheet" href="css/vertical-carousel-63e5d75906.min.css">
+  <link rel="stylesheet" href="css/main-3f6017a099.min.css">
+
+  <link rel="stylesheet" href="css/vertical-carousel-7798fb492c.min.css">
 
   <meta name="theme-color" content="#b833c0">
 </head>
@@ -32,7 +33,7 @@
     <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
       <a class="navbar-brand" href="#">
         <img src="img/Rat-Profile.svg" width="30" height="30" class="d-inline-block align-top" alt="My profile avatar">
-        Portfolio
+        Portfolio - Static Version
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -59,11 +60,17 @@
               <span>Home</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" title="Settings">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="versionMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="fas fa-cog" aria-hidden="true"></span>
               <span>Settings</span>
             </a>
+            <div class="dropdown-menu" aria-labelledby="versionMenu">
+              <span class="dropdown-header">Site Version</span>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Static</a>
+              <a class="dropdown-item" href="interests.twig">Template</a>
+            </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="accountMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -228,7 +235,7 @@ I always wanted to be a paleontologist and though I ended up in IT they continue
                 <fieldset disabled>
                   <div class="row">
                     <div class="col-md-4">
-                      <img  class="card-img-top img-fluid" src="img/VideoGames.jpg" alt="Video Games">
+                      <img class="card-img-top img-fluid" src="img/VideoGames.jpg" alt="Video Games">
                     </div>
                     <div class="col-md-8">
                       <div class="form-group">
@@ -275,7 +282,7 @@ My first steps in programing involved a copy of David H, Ahl's "BASIC Computer G
                 <fieldset disabled>
                   <div class="row">
                     <div class="col-md-4">
-                      <img  class="card-img-top img-fluid" src="img/History.jpg" alt="History">
+                      <img class="card-img-top img-fluid" src="img/History.jpg" alt="History">
                     </div>
                     <div class="col-md-8">
                       <div class="form-group">
@@ -322,7 +329,7 @@ I love reading about history, from Ancient Egypt and the Romans to the Medieval 
                 <fieldset disabled>
                   <div class="row">
                     <div class="col-md-4">
-                      <img  class="card-img-top img-fluid" src="img/MakerPi.jpg" alt="Maker Culture">
+                      <img class="card-img-top img-fluid" src="img/MakerPi.jpg" alt="Maker Culture">
                     </div>
                     <div class="col-md-8">
                       <div class="form-group">
@@ -339,8 +346,8 @@ I love reading about history, from Ancient Egypt and the Romans to the Medieval 
                     </div>
                   </div>
                   <div class="mt-3">
-                    <label for="description5">Description</label>
-                    <textarea class="form-control" id="description5" rows="3">
+                    <label for="description4">Description</label>
+                    <textarea class="form-control" id="description4" rows="3">
 Nothing more fun than fiddling with a Raspberry Pi, a soldering iron and some LEDs or trying to make a tensegrity structure. I have so far resisted the temptations of a 3D printer.
                     </textarea>
                   </div>
@@ -369,12 +376,12 @@ Nothing more fun than fiddling with a Raspberry Pi, a soldering iron and some LE
                 <fieldset disabled>
                   <div class="row">
                     <div class="col-md-4">
-                      <img  class="card-img-top img-fluid" src="img/Space.jpg" alt="Space">
+                      <img class="card-img-top img-fluid" src="img/Space.jpg" alt="Space">
                     </div>
                     <div class="col-md-8">
                       <div class="form-group">
-                        <label for="interest6">Interest</label>
-                        <input type="text" class="form-control" id="interest6" value="Space">
+                        <label for="interest5">Interest</label>
+                        <input type="text" class="form-control" id="interest5" value="Space">
                       </div>
                       <div class="form-group">
                         <label>Image</label>
@@ -386,10 +393,10 @@ Nothing more fun than fiddling with a Raspberry Pi, a soldering iron and some LE
                     </div>
                   </div>
                   <div class="mt-3">
-                    <label for="description6">Description</label>
-                      <textarea class="form-control" id="description6" rows="3">
+                    <label for="description5">Description</label>
+                    <textarea class="form-control" id="description5" rows="3">
 Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean, you may think it's a long way down the road to the chemist's, but that's just peanuts to space”.
-                      </textarea>
+                    </textarea>
                   </div>
                 </fieldset>
               </form>
@@ -435,8 +442,8 @@ Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it 
   <script src="vendor/jquery/jquery-dc5e7f18c8.min.js"></script>
   <script src="vendor/popper/popper-1022eaf388.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap-f20fa8b102.min.js"></script>
-  <script src="js/plugins-256d72032a.min.js"></script>
-  <script src="js/main-217facfe68.min.js"></script>
+  <script src="js/plugins-a42079fa94.min.js"></script>
+  <script src="js/main-6e32e92e70.min.js"></script>
 
 </body>
 
