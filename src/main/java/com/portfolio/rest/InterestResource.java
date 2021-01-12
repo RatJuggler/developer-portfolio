@@ -10,6 +10,6 @@ public class InterestResource {
 
     @GetMapping("/interest")
     public Interest interest() {
-        return new Interest(1, "Interest");
+        return new Interest(1, "Title", "ImagePath", "Description");
     }
 }
