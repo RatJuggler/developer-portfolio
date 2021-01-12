@@ -29,7 +29,7 @@
             "maxLength": 64
           },
           "imagePath": {
-            "description": "URL of an image for this interest.",
+            "description": "Path to an image for this interest.",
             "type": "string",
             "maxLength": 2048
           },
