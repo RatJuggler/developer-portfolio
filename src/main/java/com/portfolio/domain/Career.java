@@ -3,18 +3,36 @@ package com.portfolio.domain;
 public class Career {
 
     private final long id;
-    private final String period;
+    private final int step;
+    private final String description;
+    private final String imagePath;
+    private final String synopsis;
 
-    public Career(final long id, final String period) {
+    public Career(final long id, final int step, final String description, final String imagePath, final String synopsis) {
         this.id = id;
-        this.period = period;
+        this.step = step;
+        this.description = description;
+        this.imagePath = imagePath;
+        this.synopsis = synopsis;
     }
 
     public long getId() {
         return this.id;
     }
 
-    public String getPeriod() {
-        return period;
+    public int getStep() {
+        return this.step;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public String getImagePath() {
+        return this.imagePath;
+    }
+
+    public String getSynopsis() {
+        return this.synopsis;
     }
 }

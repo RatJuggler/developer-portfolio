@@ -10,6 +10,6 @@ public class CareerResource {
 
     @GetMapping("/career")
     public Career skill() {
-        return new Career(1, "Career Period");
+        return new Career(1, 1, "Description", "ImagePath", "Synopsis");
     }
 }
