@@ -119,7 +119,7 @@ function copyAppDist() {
         .pipe(replace('.js', '.min.js'))
         .pipe(gulp.dest('dist/app/templates'));
     // Application Data
-    let appData = gulp.src('./src/data/*.json')
+    let appData = gulp.src('./src/main/weapp/data/*.json')
         .pipe(gulp.dest('dist/app/data'));
     return merge(appJS, appTemplates, appData);
 }
