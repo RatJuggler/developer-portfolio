@@ -36,18 +36,18 @@
                 <fieldset disabled>
                   <div class="row">
                     <div class="col-md-4">
-                      <img class="card-img-top img-fluid" src="{{ interest.image }}" alt="{{ interest.interest }}">
+                      <img class="card-img-top img-fluid" src="{{ interest.imagePath }}" alt="{{ interest.interest }}">
                     </div>
                     <div class="col-md-8">
                       <div class="form-group">
                         <label for="interest{{ interest.id }}">Interest</label>
-                        <input type="text" class="form-control" id="interest{{ interest.id }}" value="{{ interest.interest }}">
+                        <input type="text" class="form-control" id="interest{{ interest.id }}" value="{{ interest.title }}">
                       </div>
                       <div class="form-group">
                         <label>Image</label>
                         <div class="custom-file">
                           <input type="file" class="custom-file-input" id="image{{ interest.id }}">
-                          <label class="custom-file-label" for="image{{ interest.id }}">filename</label>
+                          <label class="custom-file-label" for="image{{ interest.id }}">{{ interest.imagePath }}</label>
                         </div>
                       </div>
                     </div>
