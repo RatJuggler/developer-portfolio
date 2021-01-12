@@ -1,0 +1,49 @@
+{
+  "$id": "https://developer-portfolio/career-data-schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Developer Portfolio Site Career Data",
+  "description": "Define the career history for the developer.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["career"],
+  "properties": {
+    "career": {
+      "description": "The career periods for a developer.",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 99,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "sequence", "period", "image", "synopsis"],
+        "properties": {
+          "id": {
+            "description": "A number to identify the individual career period.",
+            "type": "integer"
+          },
+          "sequence": {
+            "description": "The position of the career period within the history order.",
+            "type": "integer"
+          },
+          "period": {
+            "period": "A brief description of this career period.",
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 64
+          },
+          "image": {
+            "description": "URL of an image for this career period.",
+            "type": "string",
+            "maxLength": 128
+          },
+          "synopsis": {
+            "description": "A more detailed description of this career period.",
+            "type": "string",
+            "maxLength": 512
+          }
+        }
+      }
+    }
+  }
+}
