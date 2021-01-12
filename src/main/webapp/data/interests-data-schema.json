@@ -23,7 +23,7 @@
             "type": "integer"
           },
           "interest": {
-            "period": "A brief description of the interest.",
+            "description": "A brief description of the interest.",
             "type": "string",
             "minLength": 4,
             "maxLength": 64
