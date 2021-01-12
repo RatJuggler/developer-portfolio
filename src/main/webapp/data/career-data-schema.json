@@ -16,24 +16,24 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["id", "sequence", "period", "image", "synopsis"],
+        "required": ["id", "step", "description", "imagePath", "synopsis"],
         "properties": {
           "id": {
             "description": "A number to identify the individual career period.",
             "type": "integer"
           },
-          "sequence": {
-            "description": "The position of the career period within the history order.",
+          "step": {
+            "description": "Order in career history of this period.",
             "type": "integer"
           },
-          "period": {
+          "description": {
             "description": "A brief description of this career period.",
             "type": "string",
             "minLength": 4,
             "maxLength": 64
           },
-          "image": {
-            "description": "URL of an image for this career period.",
+          "imagePath": {
+            "description": "Path to an image for this career period.",
             "type": "string",
             "maxLength": 2048
           },
