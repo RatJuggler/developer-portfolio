@@ -1,0 +1,91 @@
+{
+  "$id": "https://developer-portfolio/interests-data-schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Developer Portfolio Site Profile Data",
+  "description": "Define the profile of the developer.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "location", "status", "avatar", "photo", "description", "email", "linkedin", "github", "twitter", "projects"],
+  "properties": {
+    "id": {
+      "description": "A number to identify the individual developer.",
+      "type": "integer"
+    },
+    "name": {
+      "description": "The developers name.",
+      "type": "string",
+      "minLength": 4,
+      "maxLength": 128
+    },
+    "location": {
+      "description": "The developers general location.",
+      "type": "string",
+      "minLength": 4,
+      "maxLength": 128
+    },
+    "status": {
+      "description": "The developers availability.",
+      "type": "string",
+      "enum": ["Available", "Unavailable"]
+    },
+    "avatar": {
+      "description": "URL of an avatar image.",
+      "type": "string",
+      "maxLength": 128
+    },
+    "photo": {
+      "description": "URL of a photo.",
+      "type": "string",
+      "maxLength": 128
+    },
+    "description": {
+      "description": "Short bio of the developer.",
+      "type": "string",
+      "maxLength": 512
+    },
+    "email": {
+      "description": "URL of an image for this interest.",
+      "type": "string",
+      "maxLength": 128
+    },
+    "linkedin": {
+      "description": "Linkedin URL.",
+      "type": "string",
+      "maxLength": 128
+    },
+    "github": {
+      "description": "GitHub URL.",
+      "type": "string",
+      "maxLength": 128
+    },
+    "twitter": {
+      "description": "Twitter URL.",
+      "type": "string",
+      "maxLength": 128
+    },
+    "projects": {
+      "description": "List of projects to highlight.",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 9,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "url"],
+        "properties": {
+          "name": {
+            "description": "The project name.",
+            "type": "string",
+            "maxLength": 32
+          },
+          "url": {
+            "description": "A URL for the project.",
+            "type": "string",
+            "maxLength": 128
+          }
+        }
+      }
+    }
+  }
+}
