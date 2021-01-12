@@ -110,10 +110,10 @@ function copyStaticDist() {
 
 function copyAppDist() {
     // Application JS
-    let appJS = gulp.src('./src/*.js')
+    let appJS = gulp.src('./src/main/webapp/*.js')
         .pipe(gulp.dest('dist/app'));
     // Application Templates
-    let appTemplates = gulp.src('./src/templates/*.twig')
+    let appTemplates = gulp.src('./src/main/webapp/templates/*.twig')
         .pipe(replace('.min.js', '.js'))
         .pipe(replace('.css', '.min.css'))
         .pipe(replace('.js', '.min.js'))
