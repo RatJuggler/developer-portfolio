@@ -35,7 +35,7 @@
           "image": {
             "description": "URL of an image for this career period.",
             "type": "string",
-            "maxLength": 128
+            "maxLength": 2048
           },
           "synopsis": {
             "description": "A more detailed description of this career period.",

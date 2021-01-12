@@ -8,7 +8,7 @@
   "required": ["id", "name", "location", "status", "avatar", "photo", "description", "email", "linkedin", "github", "twitter", "projects"],
   "properties": {
     "id": {
-      "description": "A number to identify the individual developer.",
+      "description": "A number to identify the individual profile.",
       "type": "integer"
     },
     "name": {
@@ -31,12 +31,12 @@
     "avatar": {
       "description": "URL of an avatar image.",
       "type": "string",
-      "maxLength": 128
+      "maxLength": 2048
     },
     "photo": {
       "description": "URL of a photo.",
       "type": "string",
-      "maxLength": 128
+      "maxLength": 2048
     },
     "description": {
       "description": "Short bio of the developer.",
@@ -44,24 +44,24 @@
       "maxLength": 512
     },
     "email": {
-      "description": "URL of an image for this interest.",
+      "description": "Email address.",
       "type": "string",
-      "maxLength": 128
+      "maxLength": 256
     },
     "linkedin": {
       "description": "Linkedin URL.",
       "type": "string",
-      "maxLength": 128
+      "maxLength": 2048
     },
     "github": {
       "description": "GitHub URL.",
       "type": "string",
-      "maxLength": 128
+      "maxLength": 2048
     },
     "twitter": {
       "description": "Twitter URL.",
       "type": "string",
-      "maxLength": 128
+      "maxLength": 2048
     },
     "projects": {
       "description": "List of projects to highlight.",
@@ -77,12 +77,12 @@
           "name": {
             "description": "The project name.",
             "type": "string",
-            "maxLength": 32
+            "maxLength": 64
           },
           "url": {
             "description": "A URL for the project.",
             "type": "string",
-            "maxLength": 128
+            "maxLength": 2048
           }
         }
       }
