@@ -1,14 +1,24 @@
 package com.portfolio.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.keyvalue.annotation.KeySpace;
+
+@KeySpace("interests")
 public class Career {
 
+    @Id
     private final long id;
     private final int step;
     private final String description;
     private final String imagePath;
     private final String synopsis;
 
-    public Career(final long id, final int step, final String description, final String imagePath, final String synopsis) {
+    public Career(@JsonProperty("id") final long id,
+                  @JsonProperty("step") final int step,
+                  @JsonProperty("description") final String description,
+                  @JsonProperty("imagePath") final String imagePath,
+                  @JsonProperty("synopsis") final String synopsis) {
         this.id = id;
         this.step = step;
         this.description = description;
