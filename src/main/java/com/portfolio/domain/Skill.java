@@ -1,14 +1,24 @@
 package com.portfolio.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.keyvalue.annotation.KeySpace;
+
+@KeySpace("skills")
 public class Skill {
 
+    @Id
     private final long id;
     private final String level;
     private final String category;
     private final String skill;
     private final String description;
 
-    public Skill(final long id, final String level, final String category, final String skill, final String description) {
+    public Skill(@JsonProperty("id") final long id,
+                 @JsonProperty("level") final String level,
+                 @JsonProperty("category") final String category,
+                 @JsonProperty("skill") final String skill,
+                 @JsonProperty("description") final String description) {
         this.id = id;
         this.level = level;
         this.category = category;
