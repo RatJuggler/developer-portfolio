@@ -1,735 +1,735 @@
 [
   {
     "id": 1,
-    "type": "Core",
+    "level": "Core",
     "category": "Server Side",
     "skill": "Java",
     "description": "The Java language up to version 11"
   },
   {
     "id": 2,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Server Side",
     "skill": "Python",
     "description": "The Python language up to version 3.x"
   },
   {
     "id": 3,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Server Side",
     "skill": "JHipster",
     "description": "Application generation"
   },
   {
     "id": 4,
-    "type": "Core",
+    "level": "Core",
     "category": "Server Side",
     "skill": "Java EE",
     "description": "Application framework up to version 8"
   },
   {
     "id": 5,
-    "type": "Core",
+    "level": "Core",
     "category": "Server Side",
     "skill": "JPA",
     "description": "ORM using Hibernate and EclipseLink"
   },
   {
     "id": 6,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Server Side",
     "skill": "EJB 3.x",
     "description": "Session beans with annotations"
   },
   {
     "id": 7,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Server Side",
     "skill": "Servlet",
     "description": "Basic service framework"
   },
   {
     "id": 8,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Server Side",
     "skill": "JAX-RS",
     "description": "RESTful web services"
   },
   {
     "id": 9,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Server Side",
     "skill": "JMS",
     "description": "Java Message Service"
   },
   {
     "id": 10,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Server Side",
     "skill": "JTA",
     "description": "Java Transaction API"
   },
   {
     "id": 11,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Server Side",
     "skill": "CDI",
     "description": "Context and Dependency Injection"
   },
   {
     "id": 12,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Server Side",
     "skill": "Bean Validation",
     "description": "Validation using annotations"
   },
   {
     "id": 13,
-    "type": "Core",
+    "level": "Core",
     "category": "Server Side",
     "skill": "Spring Framework",
     "description": "Application framework"
   },
   {
     "id": 14,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Server Side",
     "skill": "Spring Boot",
     "description": "Create stand-alone Spring applications"
   },
   {
     "id": 15,
-    "type": "Core",
+    "level": "Core",
     "category": "Server Side",
     "skill": "Spring MVC",
     "description": "MVC framework"
   },
   {
     "id": 16,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Server Side",
     "skill": "Spring Web Flow",
     "description": "Stateful business task processing"
   },
   {
     "id": 17,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Server Side",
     "skill": "Spring Data",
     "description": "Data access framework"
   },
   {
     "id": 18,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Server Side",
     "skill": "Spring Security",
     "description": "Authentication and access-control"
   },
   {
     "id": 19,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Server Side",
     "skill": "Spring Session",
     "description": "Container neutral web session"
   },
   {
     "id": 20,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Server Side",
     "skill": "Spring Web Services",
     "description": "XML web services"
   },
   {
     "id": 21,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Server Side",
     "skill": "Spring Roo",
     "description": "Application generation"
   },
   {
     "id": 22,
-    "type": "Core",
+    "level": "Core",
     "category": "Server Side",
     "skill": "Spring Batch",
     "description": "Batch processing"
   },
   {
     "id": 23,
-    "type": "Core",
+    "level": "Core",
     "category": "Server Side",
     "skill": "Spring Integration",
     "description": "Enterprise application integration"
   },
   {
     "id": 24,
-    "type": "Core",
+    "level": "Core",
     "category": "Server Side",
     "skill": "XML",
     "description": "Document markup language"
   },
   {
     "id": 25,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Server Side",
     "skill": "XSD",
     "description": "XML schema definition"
   },
   {
     "id": 26,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Server Side",
     "skill": "XSLT",
     "description": "XML transform language"
   },
   {
     "id": 27,
-    "type": "Core",
+    "level": "Core",
     "category": "Server Side",
     "skill": "JSON",
     "description": "Data interchange format"
   },
   {
     "id": 28,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Server Side",
     "skill": "Thymeleaf",
     "description": "HTML templating engine"
   },
   {
     "id": 29,
-    "type": "Core",
+    "level": "Core",
     "category": "Continuous Integration",
     "skill": "Git",
     "description": "Distributed version control"
   },
   {
     "id": 30,
-    "type": "Core",
+    "level": "Core",
     "category": "Continuous Integration",
     "skill": "Apache Subversion",
     "description": "Centralized version control"
   },
   {
     "id": 31,
-    "type": "Core",
+    "level": "Core",
     "category": "Continuous Integration",
     "skill": "JUnit",
     "description": "Unit testing framework"
   },
   {
     "id": 32,
-    "type": "Core",
+    "level": "Core",
     "category": "Continuous Integration",
     "skill": "Mockito",
     "description": "Mock object testing framework"
   },
   {
     "id": 33,
-    "type": "Core",
+    "level": "Core",
     "category": "Continuous Integration",
     "skill": "Apache Maven",
     "description": "Dependency management build tool"
   },
   {
     "id": 34,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Continuous Integration",
     "skill": "Gradle",
     "description": "Dependency management build tool"
   },
   {
     "id": 35,
-    "type": "Core",
+    "level": "Core",
     "category": "Continuous Integration",
     "skill": "Jenkins",
     "description": "Automated building, testing and deploy"
   },
   {
     "id": 36,
-    "type": "Core",
+    "level": "Core",
     "category": "Continuous Integration",
     "skill": "SonarQube",
     "description": "Code quality control"
   },
   {
     "id": 37,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Continuous Integration",
     "skill": "Nexus",
     "description": "Repository Manager"
   },
   {
     "id": 38,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Continuous Integration",
     "skill": "Liquibase",
     "description": "Database schema change management"
   },
   {
     "id": 39,
-    "type": "Core",
+    "level": "Core",
     "category": "Middleware",
     "skill": "WebSphere",
     "description": "Enterprise Application Server"
   },
   {
     "id": 40,
-    "type": "Core",
+    "level": "Core",
     "category": "Middleware",
     "skill": "WebLogic",
     "description": "Enterprise Application Server"
   },
   {
     "id": 41,
-    "type": "Core",
+    "level": "Core",
     "category": "Middleware",
     "skill": "Apache Tomcat",
     "description": "Servlet container"
   },
   {
     "id": 42,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Middleware",
     "skill": "Apache HTTP Server",
     "description": "Web server"
   },
   {
     "id": 43,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Middleware",
     "skill": "GlassFish",
     "description": "Java EE Reference implementation"
   },
   {
     "id": 44,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Middleware",
     "skill": "Open Liberty",
     "description": "WebSphere lite"
   },
   {
     "id": 45,
-    "type": "Core",
+    "level": "Core",
     "category": "Middleware",
     "skill": "IBM MQ",
     "description": "Message Queues"
   },
   {
     "id": 46,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Middleware",
     "skill": "Docker",
     "description": "PaaS containers"
   },
   {
     "id": 47,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Middleware",
     "skill": "Nginx",
     "description": "Web server, proxy and load balancing"
   },
   {
     "id": 48,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Middleware",
     "skill": "Node.js",
     "description": "Server side JavaScript"
   },
   {
     "id": 49,
-    "type": "Core",
+    "level": "Core",
     "category": "Relational",
     "skill": "SQL",
     "description": "Structured Query Language"
   },
   {
     "id": 50,
-    "type": "Core",
+    "level": "Core",
     "category": "Relational",
     "skill": "DDL",
     "description": "Tables, views and stored procedures"
   },
   {
     "id": 51,
-    "type": "Core",
+    "level": "Core",
     "category": "Relational",
     "skill": "Oracle DB",
     "description": "Oracle Enterprise RDBMS"
   },
   {
     "id": 52,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Relational",
     "skill": "Oracle DB XE",
     "description": "Developer version"
   },
   {
     "id": 53,
-    "type": "Core",
+    "level": "Core",
     "category": "Relational",
     "skill": "MS SQL Server",
     "description": "Microsoft RDBMS"
   },
   {
     "id": 54,
-    "type": "Core",
+    "level": "Core",
     "category": "Relational",
     "skill": "MySQL",
     "description": "Open-source RDBMS"
   },
   {
     "id": 55,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Relational",
     "skill": "PostgreSQL",
     "description": "Open-source RDBMS"
   },
   {
     "id": 56,
-    "type": "Core",
+    "level": "Core",
     "category": "Client Side",
     "skill": "HTML",
     "description": "HTML5 and SVG"
   },
   {
     "id": 57,
-    "type": "Core",
+    "level": "Core",
     "category": "Client Side",
     "skill": "CSS",
     "description": "Cascading Style Sheets"
   },
   {
     "id": 58,
-    "type": "Core",
+    "level": "Core",
     "category": "Client Side",
     "skill": "JavaScript",
     "description": "ECMAScript"
   },
   {
     "id": 59,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Client Side",
     "skill": "Bootstrap",
     "description": "CSS framework"
   },
   {
     "id": 60,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Client Side",
     "skill": "jQuery",
     "description": "JavaScript library"
   },
   {
     "id": 61,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Client Side",
     "skill": "TypeScript",
     "description": "Strictly typed JavaScript"
   },
   {
     "id": 62,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Legacy",
     "skill": "J2EE",
     "description": "Application framework"
   },
   {
     "id": 63,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Legacy",
     "skill": "EJB 2.x",
     "description": "Session beans defined using XML"
   },
   {
     "id": 64,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Legacy",
     "skill": "JSP",
     "description": "Java Server Pages, HTML templating"
   },
   {
     "id": 65,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Legacy",
     "skill": "JSTL",
     "description": "JSP Standard Tag Library"
   },
   {
     "id": 66,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Legacy",
     "skill": "JSF",
     "description": "Java Server Faces"
   },
   {
     "id": 67,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Legacy",
     "skill": "Apache Struts",
     "description": "MVC framework"
   },
   {
     "id": 68,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Legacy",
     "skill": "SOAP Web Services",
     "description": "XML web services"
   },
   {
     "id": 69,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Legacy",
     "skill": "JAX-WS",
     "description": "XML/SOAP web services"
   },
   {
     "id": 70,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Legacy",
     "skill": "Mainframe",
     "description": "Legacy systems"
   },
   {
     "id": 71,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Legacy",
     "skill": "PeopleSoft",
     "description": "Financials management package"
   },
   {
     "id": 72,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Legacy",
     "skill": "Apache Ant",
     "description": "Build tool"
   },
   {
     "id": 73,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Design",
     "skill": "SOA",
     "description": "Service Orientated Architecture"
   },
   {
     "id": 74,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Design",
     "skill": "APIs",
     "description": "System interfaces"
   },
   {
     "id": 75,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Design",
     "skill": "REST",
     "description": "Representational state transfer"
   },
   {
     "id": 76,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Design",
     "skill": "Queues",
     "description": "Message Queues"
   },
   {
     "id": 77,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Design",
     "skill": "Integration Patterns",
     "description": "Enterprise Integration Patterns"
   },
   {
     "id": 78,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Design",
     "skill": "Data models",
     "description": "Complex Data Models"
   },
   {
     "id": 79,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Methodology",
     "skill": "Agile",
     "description": "Scrum & Kanban"
   },
   {
     "id": 80,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Methodology",
     "skill": "Waterfall",
     "description": "Enterprise projects"
   },
   {
     "id": 81,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Soft Skills",
     "skill": "Problem Solving",
     "description": "In general & under pressure"
   },
   {
     "id": 82,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Soft Skills",
     "skill": "Collaboration",
     "description": "Within teams and external"
   },
   {
     "id": 83,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Soft Skills",
     "skill": "Business Engagement",
     "description": "And managing expectations"
   },
   {
     "id": 84,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Soft Skills",
     "skill": "Customer Service",
     "description": "Customer facing"
   },
   {
     "id": 85,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Soft Skills",
     "skill": "Communication",
     "description": "Both written and verbal"
   },
   {
     "id": 86,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Soft Skills",
     "skill": "Project Management",
     "description": "Determine and allocate tasks"
   },
   {
     "id": 87,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Soft Skills",
     "skill": "Time Management",
     "description": "Workload and deadlines"
   },
   {
     "id": 88,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Soft Skills",
     "skill": "Self-starter",
     "description": "Able to take the initiative"
   },
   {
     "id": 89,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Soft Skills",
     "skill": "Mentoring",
     "description": "For all developers"
   },
   {
     "id": 90,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Operational",
     "skill": "Productivity",
     "description": "Developer experience"
   },
   {
     "id": 91,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Operational",
     "skill": "Standards",
     "description": "When developing"
   },
   {
     "id": 92,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Operational",
     "skill": "Performance",
     "description": "In development, test and production"
   },
   {
     "id": 93,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Operational",
     "skill": "Security",
     "description": "Testing and audits"
   },
   {
     "id": 94,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Environments",
     "skill": "Linux",
     "description": "Debian based distros"
   },
   {
     "id": 95,
-    "type": "Proficient",
+    "level": "Proficient",
     "category": "Environments",
     "skill": "Windows",
     "description": "Including WSL"
   },
   {
     "id": 96,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Office",
     "skill": "Microsoft Word",
     "description": "With document macros"
   },
   {
     "id": 97,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Office",
     "skill": "Microsoft Excel",
     "description": "For uploading/downloading data"
   },
   {
     "id": 98,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Office",
     "skill": "Microsoft PowerPoint",
     "description": "Presentations"
   },
   {
     "id": 99,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Tools",
     "skill": "Eclipse IDE",
     "description": "Using numerous plugins"
   },
   {
     "id": 100,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Tools",
     "skill": "JetBrains",
     "description": "IntelliJ, WebStorm and PyCharm"
   },
   {
     "id": 101,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Tools",
     "skill": "Visual Studio Code",
     "description": "Using numerous plugins"
   },
   {
     "id": 102,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Tools",
     "skill": "PL/SQL Developer",
     "description": "For Oracle DB"
   },
   {
     "id": 103,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Tools",
     "skill": "SoapUI",
     "description": "Testing web services"
   },
   {
     "id": 104,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Tools",
     "skill": "Apache JMeter",
     "description": "Performance testing"
   },
   {
     "id": 105,
-    "type": "Familiar",
+    "level": "Familiar",
     "category": "Tools",
     "skill": "Postman",
     "description": "Testing REST APIs"

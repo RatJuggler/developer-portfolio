@@ -28,7 +28,7 @@
           data-toggle="table">
         <thead>
           <tr>
-            <th data-field="type" data-sortable="true" data-filter-control="select">Type</th>
+            <th data-field="level" data-sortable="true" data-filter-control="select">Level</th>
             <th data-field="category" data-sortable="true" data-filter-control="select">Category</th>
             <th data-field="skill" data-sortable="true" data-filter-control="input">Skill</th>
             <th data-field="description" data-sortable="true" data-filter-control="input">Description</th>
@@ -36,14 +36,14 @@
         </thead>
         <tbody>
 {% for skill in data %}
-          <tr><td>{{ skill.type }}</td><td>{{ skill.category }}</td><td>{{ skill.skill }}</td><td>{{ skill.description }}</td></tr>
+          <tr><td>{{ skill.level }}</td><td>{{ skill.category }}</td><td>{{ skill.skill }}</td><td>{{ skill.description }}</td></tr>
 {% endfor %}
         </tbody>
       </table>
     </div>
     <small>
       Please note; this list contains all of the <em>Core</em> technologies and <em>Proficiencies</em> I quote on my CV but also
-      includes an additional <em>Familiar</em> type. This is a more detailed breakdown of some of the technologies and tools
+      includes an additional <em>Familiar</em> level. This is a more detailed breakdown of some of the technologies and tools
       already listed in case of specific requirements.
     </small>
 {% endblock %}

@@ -11,14 +11,14 @@
   "items": {
     "type": "object",
     "additionalProperties": false,
-    "required": ["id", "type", "category", "skill", "description"],
+    "required": ["id", "level", "category", "skill", "description"],
     "properties": {
       "id": {
         "description": "A number to identify the individual interest.",
         "type": "integer"
       },
-      "type": {
-        "description": "The skill type.",
+      "level": {
+        "description": "The skill level.",
         "type": "string",
         "enum": ["Core", "Proficient", "Familiar"]
       },
