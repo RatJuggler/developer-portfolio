@@ -35,7 +35,7 @@
           </tr>
         </thead>
         <tbody>
-{% for skill in data.skills %}
+{% for skill in data %}
           <tr><td>{{ skill.type }}</td><td>{{ skill.category }}</td><td>{{ skill.skill }}</td><td>{{ skill.description }}</td></tr>
 {% endfor %}
         </tbody>
