@@ -13,6 +13,11 @@
     "additionalProperties": false,
     "required": ["id", "step", "description", "imagePath", "synopsis"],
     "properties": {
+      "_class": {
+        "description": "Spring Data deserializer class.",
+        "type": "string",
+        "maxLength": 64
+      },
       "id": {
         "description": "A number to identify the individual career period.",
         "type": "integer"
