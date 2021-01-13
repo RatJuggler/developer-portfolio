@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SkillResource {
 
-    @GetMapping("/skill")
+    @GetMapping("/skills")
     public Skill skill() {
         return new Skill(1, "Level", "Category", "Skill", "Description");
     }

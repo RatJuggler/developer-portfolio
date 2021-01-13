@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class InterestResource {
 
-    @GetMapping("/interest")
+    @GetMapping("/interests")
     public Interest interest() {
         return new Interest(1, "Title", "ImagePath", "Description");
     }
