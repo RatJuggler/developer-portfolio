@@ -15,7 +15,7 @@ app.get('/index.twig', (req, res) => {
     res.render('index.twig', {profile: readJSON(root + "data/profile.json")});
 });
 app.get('/skills.twig', (req, res) => {
-    res.render('skills.twig', {profile: readJSON(root + "data/profile.json"), data: readJSON(root + "data/skills.json")});
+    res.render('skills.twig', {profile: readJSON(root + "data/profile.json"), data: readJSON(root + "../resources/data/skills.json")});
 });
 app.get('/career.twig', (req, res) => {
     res.render('career.twig', {profile: readJSON(root + "data/profile.json"), data: readJSON(root + "../resources/data/career.json")});

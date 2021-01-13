@@ -1,5 +1,6 @@
 [
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 1,
     "level": "Core",
     "category": "Server Side",
@@ -7,6 +8,7 @@
     "description": "The Java language up to version 11"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 2,
     "level": "Proficient",
     "category": "Server Side",
@@ -14,6 +16,7 @@
     "description": "The Python language up to version 3.x"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 3,
     "level": "Familiar",
     "category": "Server Side",
@@ -21,6 +24,7 @@
     "description": "Application generation"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 4,
     "level": "Core",
     "category": "Server Side",
@@ -28,6 +32,7 @@
     "description": "Application framework up to version 8"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 5,
     "level": "Core",
     "category": "Server Side",
@@ -35,6 +40,7 @@
     "description": "ORM using Hibernate and EclipseLink"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 6,
     "level": "Familiar",
     "category": "Server Side",
@@ -42,6 +48,7 @@
     "description": "Session beans with annotations"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 7,
     "level": "Familiar",
     "category": "Server Side",
@@ -49,6 +56,7 @@
     "description": "Basic service framework"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 8,
     "level": "Familiar",
     "category": "Server Side",
@@ -56,6 +64,7 @@
     "description": "RESTful web services"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 9,
     "level": "Familiar",
     "category": "Server Side",
@@ -63,6 +72,7 @@
     "description": "Java Message Service"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 10,
     "level": "Familiar",
     "category": "Server Side",
@@ -70,6 +80,7 @@
     "description": "Java Transaction API"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 11,
     "level": "Familiar",
     "category": "Server Side",
@@ -77,6 +88,7 @@
     "description": "Context and Dependency Injection"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 12,
     "level": "Familiar",
     "category": "Server Side",
@@ -84,6 +96,7 @@
     "description": "Validation using annotations"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 13,
     "level": "Core",
     "category": "Server Side",
@@ -91,6 +104,7 @@
     "description": "Application framework"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 14,
     "level": "Familiar",
     "category": "Server Side",
@@ -98,6 +112,7 @@
     "description": "Create stand-alone Spring applications"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 15,
     "level": "Core",
     "category": "Server Side",
@@ -105,6 +120,7 @@
     "description": "MVC framework"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 16,
     "level": "Familiar",
     "category": "Server Side",
@@ -112,6 +128,7 @@
     "description": "Stateful business task processing"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 17,
     "level": "Familiar",
     "category": "Server Side",
@@ -119,6 +136,7 @@
     "description": "Data access framework"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 18,
     "level": "Familiar",
     "category": "Server Side",
@@ -126,6 +144,7 @@
     "description": "Authentication and access-control"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 19,
     "level": "Familiar",
     "category": "Server Side",
@@ -133,6 +152,7 @@
     "description": "Container neutral web session"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 20,
     "level": "Familiar",
     "category": "Server Side",
@@ -140,6 +160,7 @@
     "description": "XML web services"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 21,
     "level": "Familiar",
     "category": "Server Side",
@@ -147,6 +168,7 @@
     "description": "Application generation"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 22,
     "level": "Core",
     "category": "Server Side",
@@ -154,6 +176,7 @@
     "description": "Batch processing"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 23,
     "level": "Core",
     "category": "Server Side",
@@ -161,6 +184,7 @@
     "description": "Enterprise application integration"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 24,
     "level": "Core",
     "category": "Server Side",
@@ -168,6 +192,7 @@
     "description": "Document markup language"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 25,
     "level": "Familiar",
     "category": "Server Side",
@@ -175,6 +200,7 @@
     "description": "XML schema definition"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 26,
     "level": "Familiar",
     "category": "Server Side",
@@ -182,6 +208,7 @@
     "description": "XML transform language"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 27,
     "level": "Core",
     "category": "Server Side",
@@ -189,6 +216,7 @@
     "description": "Data interchange format"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 28,
     "level": "Familiar",
     "category": "Server Side",
@@ -196,6 +224,7 @@
     "description": "HTML templating engine"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 29,
     "level": "Core",
     "category": "Continuous Integration",
@@ -203,6 +232,7 @@
     "description": "Distributed version control"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 30,
     "level": "Core",
     "category": "Continuous Integration",
@@ -210,6 +240,7 @@
     "description": "Centralized version control"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 31,
     "level": "Core",
     "category": "Continuous Integration",
@@ -217,6 +248,7 @@
     "description": "Unit testing framework"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 32,
     "level": "Core",
     "category": "Continuous Integration",
@@ -224,6 +256,7 @@
     "description": "Mock object testing framework"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 33,
     "level": "Core",
     "category": "Continuous Integration",
@@ -231,6 +264,7 @@
     "description": "Dependency management build tool"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 34,
     "level": "Familiar",
     "category": "Continuous Integration",
@@ -238,6 +272,7 @@
     "description": "Dependency management build tool"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 35,
     "level": "Core",
     "category": "Continuous Integration",
@@ -245,6 +280,7 @@
     "description": "Automated building, testing and deploy"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 36,
     "level": "Core",
     "category": "Continuous Integration",
@@ -252,6 +288,7 @@
     "description": "Code quality control"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 37,
     "level": "Familiar",
     "category": "Continuous Integration",
@@ -259,6 +296,7 @@
     "description": "Repository Manager"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 38,
     "level": "Familiar",
     "category": "Continuous Integration",
@@ -266,6 +304,7 @@
     "description": "Database schema change management"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 39,
     "level": "Core",
     "category": "Middleware",
@@ -273,6 +312,7 @@
     "description": "Enterprise Application Server"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 40,
     "level": "Core",
     "category": "Middleware",
@@ -280,6 +320,7 @@
     "description": "Enterprise Application Server"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 41,
     "level": "Core",
     "category": "Middleware",
@@ -287,6 +328,7 @@
     "description": "Servlet container"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 42,
     "level": "Familiar",
     "category": "Middleware",
@@ -294,6 +336,7 @@
     "description": "Web server"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 43,
     "level": "Familiar",
     "category": "Middleware",
@@ -301,6 +344,7 @@
     "description": "Java EE Reference implementation"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 44,
     "level": "Familiar",
     "category": "Middleware",
@@ -308,6 +352,7 @@
     "description": "WebSphere lite"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 45,
     "level": "Core",
     "category": "Middleware",
@@ -315,6 +360,7 @@
     "description": "Message Queues"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 46,
     "level": "Proficient",
     "category": "Middleware",
@@ -322,6 +368,7 @@
     "description": "PaaS containers"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 47,
     "level": "Proficient",
     "category": "Middleware",
@@ -329,6 +376,7 @@
     "description": "Web server, proxy and load balancing"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 48,
     "level": "Proficient",
     "category": "Middleware",
@@ -336,6 +384,7 @@
     "description": "Server side JavaScript"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 49,
     "level": "Core",
     "category": "Relational",
@@ -343,6 +392,7 @@
     "description": "Structured Query Language"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 50,
     "level": "Core",
     "category": "Relational",
@@ -350,6 +400,7 @@
     "description": "Tables, views and stored procedures"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 51,
     "level": "Core",
     "category": "Relational",
@@ -357,6 +408,7 @@
     "description": "Oracle Enterprise RDBMS"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 52,
     "level": "Familiar",
     "category": "Relational",
@@ -364,6 +416,7 @@
     "description": "Developer version"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 53,
     "level": "Core",
     "category": "Relational",
@@ -371,6 +424,7 @@
     "description": "Microsoft RDBMS"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 54,
     "level": "Core",
     "category": "Relational",
@@ -378,6 +432,7 @@
     "description": "Open-source RDBMS"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 55,
     "level": "Familiar",
     "category": "Relational",
@@ -385,6 +440,7 @@
     "description": "Open-source RDBMS"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 56,
     "level": "Core",
     "category": "Client Side",
@@ -392,6 +448,7 @@
     "description": "HTML5 and SVG"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 57,
     "level": "Core",
     "category": "Client Side",
@@ -399,6 +456,7 @@
     "description": "Cascading Style Sheets"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 58,
     "level": "Core",
     "category": "Client Side",
@@ -406,6 +464,7 @@
     "description": "ECMAScript"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 59,
     "level": "Familiar",
     "category": "Client Side",
@@ -413,6 +472,7 @@
     "description": "CSS framework"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 60,
     "level": "Familiar",
     "category": "Client Side",
@@ -420,6 +480,7 @@
     "description": "JavaScript library"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 61,
     "level": "Proficient",
     "category": "Client Side",
@@ -427,6 +488,7 @@
     "description": "Strictly typed JavaScript"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 62,
     "level": "Proficient",
     "category": "Legacy",
@@ -434,6 +496,7 @@
     "description": "Application framework"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 63,
     "level": "Proficient",
     "category": "Legacy",
@@ -441,6 +504,7 @@
     "description": "Session beans defined using XML"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 64,
     "level": "Familiar",
     "category": "Legacy",
@@ -448,6 +512,7 @@
     "description": "Java Server Pages, HTML templating"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 65,
     "level": "Familiar",
     "category": "Legacy",
@@ -455,6 +520,7 @@
     "description": "JSP Standard Tag Library"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 66,
     "level": "Familiar",
     "category": "Legacy",
@@ -462,6 +528,7 @@
     "description": "Java Server Faces"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 67,
     "level": "Familiar",
     "category": "Legacy",
@@ -469,6 +536,7 @@
     "description": "MVC framework"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 68,
     "level": "Proficient",
     "category": "Legacy",
@@ -476,6 +544,7 @@
     "description": "XML web services"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 69,
     "level": "Familiar",
     "category": "Legacy",
@@ -483,6 +552,7 @@
     "description": "XML/SOAP web services"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 70,
     "level": "Proficient",
     "category": "Legacy",
@@ -490,6 +560,7 @@
     "description": "Legacy systems"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 71,
     "level": "Proficient",
     "category": "Legacy",
@@ -497,6 +568,7 @@
     "description": "Financials management package"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 72,
     "level": "Familiar",
     "category": "Legacy",
@@ -504,6 +576,7 @@
     "description": "Build tool"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 73,
     "level": "Proficient",
     "category": "Design",
@@ -511,6 +584,7 @@
     "description": "Service Orientated Architecture"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 74,
     "level": "Proficient",
     "category": "Design",
@@ -518,6 +592,7 @@
     "description": "System interfaces"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 75,
     "level": "Proficient",
     "category": "Design",
@@ -525,6 +600,7 @@
     "description": "Representational state transfer"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 76,
     "level": "Proficient",
     "category": "Design",
@@ -532,6 +608,7 @@
     "description": "Message Queues"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 77,
     "level": "Proficient",
     "category": "Design",
@@ -539,6 +616,7 @@
     "description": "Enterprise Integration Patterns"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 78,
     "level": "Proficient",
     "category": "Design",
@@ -546,6 +624,7 @@
     "description": "Complex Data Models"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 79,
     "level": "Proficient",
     "category": "Methodology",
@@ -553,6 +632,7 @@
     "description": "Scrum & Kanban"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 80,
     "level": "Proficient",
     "category": "Methodology",
@@ -560,6 +640,7 @@
     "description": "Enterprise projects"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 81,
     "level": "Proficient",
     "category": "Soft Skills",
@@ -567,6 +648,7 @@
     "description": "In general & under pressure"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 82,
     "level": "Familiar",
     "category": "Soft Skills",
@@ -574,6 +656,7 @@
     "description": "Within teams and external"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 83,
     "level": "Familiar",
     "category": "Soft Skills",
@@ -581,6 +664,7 @@
     "description": "And managing expectations"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 84,
     "level": "Familiar",
     "category": "Soft Skills",
@@ -588,6 +672,7 @@
     "description": "Customer facing"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 85,
     "level": "Familiar",
     "category": "Soft Skills",
@@ -595,6 +680,7 @@
     "description": "Both written and verbal"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 86,
     "level": "Familiar",
     "category": "Soft Skills",
@@ -602,6 +688,7 @@
     "description": "Determine and allocate tasks"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 87,
     "level": "Familiar",
     "category": "Soft Skills",
@@ -609,6 +696,7 @@
     "description": "Workload and deadlines"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 88,
     "level": "Familiar",
     "category": "Soft Skills",
@@ -616,6 +704,7 @@
     "description": "Able to take the initiative"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 89,
     "level": "Familiar",
     "category": "Soft Skills",
@@ -623,6 +712,7 @@
     "description": "For all developers"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 90,
     "level": "Proficient",
     "category": "Operational",
@@ -630,6 +720,7 @@
     "description": "Developer experience"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 91,
     "level": "Proficient",
     "category": "Operational",
@@ -637,6 +728,7 @@
     "description": "When developing"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 92,
     "level": "Proficient",
     "category": "Operational",
@@ -644,6 +736,7 @@
     "description": "In development, test and production"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 93,
     "level": "Proficient",
     "category": "Operational",
@@ -651,6 +744,7 @@
     "description": "Testing and audits"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 94,
     "level": "Proficient",
     "category": "Environments",
@@ -658,6 +752,7 @@
     "description": "Debian based distros"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 95,
     "level": "Proficient",
     "category": "Environments",
@@ -665,6 +760,7 @@
     "description": "Including WSL"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 96,
     "level": "Familiar",
     "category": "Office",
@@ -672,6 +768,7 @@
     "description": "With document macros"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 97,
     "level": "Familiar",
     "category": "Office",
@@ -679,6 +776,7 @@
     "description": "For uploading/downloading data"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 98,
     "level": "Familiar",
     "category": "Office",
@@ -686,6 +784,7 @@
     "description": "Presentations"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 99,
     "level": "Familiar",
     "category": "Tools",
@@ -693,6 +792,7 @@
     "description": "Using numerous plugins"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 100,
     "level": "Familiar",
     "category": "Tools",
@@ -700,6 +800,7 @@
     "description": "IntelliJ, WebStorm and PyCharm"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 101,
     "level": "Familiar",
     "category": "Tools",
@@ -707,6 +808,7 @@
     "description": "Using numerous plugins"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 102,
     "level": "Familiar",
     "category": "Tools",
@@ -714,6 +816,7 @@
     "description": "For Oracle DB"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 103,
     "level": "Familiar",
     "category": "Tools",
@@ -721,6 +824,7 @@
     "description": "Testing web services"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 104,
     "level": "Familiar",
     "category": "Tools",
@@ -728,6 +832,7 @@
     "description": "Performance testing"
   },
   {
+    "_class": "com.portfolio.domain.Skill",
     "id": 105,
     "level": "Familiar",
     "category": "Tools",

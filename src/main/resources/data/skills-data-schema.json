@@ -13,6 +13,11 @@
     "additionalProperties": false,
     "required": ["id", "level", "category", "skill", "description"],
     "properties": {
+      "_class": {
+        "description": "Spring Data deserializer class.",
+        "type": "string",
+        "maxLength": 64
+      },
       "id": {
         "description": "A number to identify the individual interest.",
         "type": "integer"
