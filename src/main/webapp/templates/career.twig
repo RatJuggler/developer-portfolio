@@ -11,7 +11,7 @@
 {% block content %}
     <div id="careerCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
-{% for period in data.career %}
+{% for period in data %}
         <div class="carousel-item{% if period.step == 1 %} active{% endif %}">
           <div class="card">
             <div class="card-header">
