@@ -10,6 +10,7 @@ public class ProfileResource {
 
     @GetMapping("/profile")
     public Profile profile() {
-        return new Profile(1, "Developer Name");
+        return new Profile(1, "Developer Name", "Location", "Status", "AvatarPath",
+                "PhotoPath", "Description", "Email", "LinkedIn", "GitHub", "Twitter");
     }
 }
