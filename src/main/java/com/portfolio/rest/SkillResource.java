@@ -10,6 +10,6 @@ public class SkillResource {
 
     @GetMapping("/skill")
     public Skill skill() {
-        return new Skill(1, "Skill");
+        return new Skill(1, "Level", "Category", "Skill", "Description");
     }
 }
