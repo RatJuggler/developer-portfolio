@@ -5,7 +5,7 @@
   "description": "Define the profile of the developer.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "name", "location", "status", "avatar", "photo", "description", "email", "linkedin", "github", "twitter", "projects"],
+  "required": ["id", "name", "location", "status", "avatarPath", "photoPath", "description", "email", "linkedin", "github", "twitter", "projects"],
   "properties": {
     "id": {
       "description": "A number to identify the individual profile.",
@@ -28,15 +28,15 @@
       "type": "string",
       "enum": ["Available", "Unavailable"]
     },
-    "avatar": {
-      "description": "URL of an avatar image.",
+    "avatarPath": {
+      "description": "Path to an avatar image.",
       "type": "string",
-      "maxLength": 2048
+      "maxLength": 128
     },
-    "photo": {
-      "description": "URL of a photo.",
+    "photoPath": {
+      "description": "Path to a photo.",
       "type": "string",
-      "maxLength": 2048
+      "maxLength": 128
     },
     "description": {
       "description": "Short bio of the developer.",
