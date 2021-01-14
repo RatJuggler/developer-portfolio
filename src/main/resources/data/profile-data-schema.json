@@ -7,6 +7,11 @@
   "additionalProperties": false,
   "required": ["id", "name", "location", "status", "avatarPath", "photoPath", "description", "email", "linkedin", "github", "twitter", "projects"],
   "properties": {
+    "_class": {
+      "description": "Spring Data deserializer class.",
+      "type": "string",
+      "maxLength": 64
+    },
     "id": {
       "description": "A number to identify the individual profile.",
       "type": "integer"

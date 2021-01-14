@@ -12,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "static-build": "node_modules/.bin/gulp build",
     "static-start": "browser-sync start --server 'public' --files 'public' --startPath 'static/index.html'",
-    "template-start": "nodemon -w src/main/webapp -e js,json,twig src/main/webapp/app.js src/main/webapp/"
+    "template-start": "nodemon -w src/main/webapp -e js,json,twig src/main/webapp/app.js src/main/webapp/templates src/main/resources/data"
   },
   "repository": {
     "type": "git",

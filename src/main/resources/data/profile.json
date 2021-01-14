@@ -1,4 +1,5 @@
 {
+  "_class": "com.portfolio.domain.Profile",
   "id": 1,
   "name": "John Chase",
   "location": "Smallfield, Surrey, England",
