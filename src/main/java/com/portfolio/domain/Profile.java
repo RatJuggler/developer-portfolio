@@ -1,15 +1,21 @@
 package com.portfolio.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.keyvalue.annotation.KeySpace;
+
 import java.util.ArrayList;
 import java.util.List;
 
-
+@KeySpace("profile")
 public class Profile {
 
     private static class Project {
 
-        private final String name;
-        private final String url;
+        private String name;
+        private String url;
+
+        public Project() {}
 
         public Project(final String name, final String url) {
             this.name = name;
@@ -25,18 +31,21 @@ public class Profile {
         }
     }
 
-    private final long id;
-    private final String name;
-    private final String location;
-    private final String status;
-    private final String avatarPath;
-    private final String photoPath;
-    private final String description;
-    private final String email;
-    private final String linkedin;
-    private final String github;
-    private final String twitter;
+    @Id
+    private long id;
+    private String name;
+    private String location;
+    private String status;
+    private String avatarPath;
+    private String photoPath;
+    private String description;
+    private String email;
+    private String linkedin;
+    private String github;
+    private String twitter;
     private final List<Project> projects = new ArrayList<>();
+
+    public Profile() {}
 
     public Profile(final long id, final String name, final String location, final String status, final String avatarPath,
                    final String photoPath, final String description, final String email, final String linkedin,

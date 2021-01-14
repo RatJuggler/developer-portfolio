@@ -17,6 +17,6 @@ public class ProfileResource {
 
     @GetMapping("/profile")
     public Profile profile() {
-        return this.repository.findById(1).orElseThrow();
+        return this.repository.findAll().iterator().next();
     }
 }
