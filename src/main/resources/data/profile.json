@@ -13,18 +13,22 @@
   "twitter": "https://twitter.com/ratjuggler",
   "projects": [
     {
+      "id": 1,
       "name": "The Great Pyramid Puzzle",
       "url": "https://ratjuggler.github.io/great-pyramid-puzzle/"
     },
     {
+      "id": 2,
       "name": "JHipster Microservices",
       "url": "https://github.com/RatJuggler/jhipster-microservices-dinosaurs"
     },
     {
+      "id": 3,
       "name": "Developer Portfolio (this site)",
       "url": "https://github.com/RatJuggler/developer-portfolio"
     },
     {
+      "id": 4,
       "name": "Guinea Pig Twitter Bot",
       "url": "https://github.com/RatJuggler/guinea-bot"
     }

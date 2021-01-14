@@ -77,8 +77,12 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["name", "url"],
+        "required": ["id", "name", "url"],
         "properties": {
+          "id": {
+            "description": "A number to identify the individual project.",
+            "type": "integer"
+          },
           "name": {
             "description": "The project name.",
             "type": "string",
