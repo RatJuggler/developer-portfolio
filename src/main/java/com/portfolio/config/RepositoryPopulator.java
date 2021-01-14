@@ -12,7 +12,11 @@ public class RepositoryPopulator {
     @Bean
     public Jackson2RepositoryPopulatorFactoryBean getRespositoryPopulator() {
         Jackson2RepositoryPopulatorFactoryBean factory = new Jackson2RepositoryPopulatorFactoryBean();
-        factory.setResources(new Resource[] { new ClassPathResource("data/interests.json") });
+        factory.setResources(new Resource[] {
+                new ClassPathResource("data/skills.json"),
+                new ClassPathResource("data/career.json"),
+                new ClassPathResource("data/interests.json")
+        });
         return factory;
     }
 }
