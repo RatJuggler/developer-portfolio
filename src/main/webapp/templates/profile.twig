@@ -1,7 +1,7 @@
 {% extends 'base.twig' %}
 
 {% set pageName = 'index' %}
-{% set titleContext = 'About' %}
+{% set titleContext = 'Profile' %}
 
 {% block content %}
     <div class="card">
@@ -22,8 +22,8 @@
         <form>
           <fieldset disabled>
             <div class="form-group">
-              <label for="about">Description</label>
-              <textarea class="form-control" id="about" rows="7">
+              <label for="description">Description</label>
+              <textarea class="form-control" id="description" rows="7">
 {{ profile.description }}
               </textarea>
             </div>

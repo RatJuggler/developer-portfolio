@@ -12,8 +12,8 @@ app.set('view engine', 'twig');
 
 app.use(express.static('public'));
 
-app.get('/index.twig', (req, res) => {
-    res.render('index.twig', {profile: readJSON(dataPath + "/profile.json")});
+app.get('/profile.twig', (req, res) => {
+    res.render('profile.twig', {profile: readJSON(dataPath + "/profile.json")});
 });
 app.get('/skills.twig', (req, res) => {
     res.render('skills.twig', {profile: readJSON(dataPath + "/profile.json"), data: readJSON(dataPath + "/skills.json")});
