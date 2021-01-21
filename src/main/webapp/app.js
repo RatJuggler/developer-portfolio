@@ -1,11 +1,13 @@
 const templatePath = process.argv[2];
 const dataPath = process.argv[3];
-
-const fs = require("fs");
+const javaURL = process.argv[4];
 
 const express = require('express');
 const app = express();
 const port = 3000;
+
+const fs = require('fs');
+const got = require('got');
 
 app.set('views', templatePath);
 app.set('view engine', 'twig');
@@ -33,7 +35,14 @@ function readJSON(filepath) {
 }
 
 function getDataFrom(aspect, dataFrom) {
-    return readJSON(dataPath + '/' + aspect + '.json');
+    switch (dataFrom) {
+        case 'json':
+            return readJSON(dataPath + '/' + aspect + '.json');
+        case 'java':
+            return {};
+        default:
+            return {};
+    }
 }
 
 function getTemplateVersion(dataFrom) {
