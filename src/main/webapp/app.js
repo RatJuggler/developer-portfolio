@@ -12,16 +12,14 @@ app.set('view engine', 'twig');
 
 app.use(express.static('public'));
 
-const templateStatic = 'Template Version with Static JSON Data Files';
-const templateDynamic = 'Template Version with Static Data from Java Services';
-
-app.get('/*.twig', (req, res) => {
-    let aspect = req.params["0"];
+app.get('/:dataFrom/*.twig', (req, res) => {
+    let aspect = req.params['0'];
+    let dataFrom = req.params['dataFrom'];
     res.render(aspect + '.twig',
         {
-            version: templateStatic,
-            profile: readJSON(dataPath + '/profile.json'),
-            data: readJSON(dataPath + '/' + aspect + '.json')
+            version: getTemplateVersion(dataFrom),
+            profile: getDataFrom('profile', dataFrom),
+            data: getDataFrom(aspect, dataFrom)
         });
 });
 
@@ -32,4 +30,19 @@ app.listen(port, () => {
 function readJSON(filepath) {
     let contents = fs.readFileSync(filepath);
     return JSON.parse(contents);
+}
+
+function getDataFrom(aspect, dataFrom) {
+    return readJSON(dataPath + '/' + aspect + '.json');
+}
+
+function getTemplateVersion(dataFrom) {
+    switch (dataFrom) {
+        case 'json':
+            return 'Template Version with Static JSON Data Files';
+        case 'java':
+            return  'Template Version with Static Data from Java Services';
+        default:
+            return 'Unknown data source: ' + dataFrom;
+    }
 }
