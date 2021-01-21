@@ -34,9 +34,9 @@
     "twig": "^1.15.4"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@fortawesome/fontawesome-free": "^5.15.2",
     "browser-sync": "^2.26.13",
-    "bootstrap": "^4.5.3",
+    "bootstrap": "^4.6.0",
     "bootstrap-table": "^1.18.1",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -48,7 +48,7 @@
     "gulp-rev": "^9.0.0",
     "gulp-rev-delete-original": "^0.2.3",
     "gulp-rev-rewrite": "^4.0.0",
-    "gulp-terser": "^2.0.0",
+    "gulp-terser": "^2.0.1",
     "jquery": "^3.5.1",
     "nodemon": "^2.0.7",
     "merge-stream": "^2.0.0",
