@@ -4,38 +4,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.keyvalue.annotation.KeySpace;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @KeySpace("profile")
 public class Profile {
-
-    public static class Project {
-
-        private long id;
-        private String name;
-        private String url;
-
-        public Project() {}
-
-        public Project(final long id, final String name, final String url) {
-            this.id = id;
-            this.name = name;
-            this.url = url;
-        }
-
-        public long getId() {
-            return this.id;
-        }
-
-        public String getName() {
-            return this.name;
-        }
-
-        public String getUrl() {
-            return this.url;
-        }
-    }
 
     @Id
     private long id;
@@ -49,7 +19,6 @@ public class Profile {
     private String linkedin;
     private String github;
     private String twitter;
-    private final List<Project> projects = new ArrayList<>();
 
     public Profile() {}
 
@@ -111,9 +80,5 @@ public class Profile {
 
     public String getTwitter() {
         return this.twitter;
-    }
-
-    public List<Project> getProjects() {
-        return this.projects;
     }
 }

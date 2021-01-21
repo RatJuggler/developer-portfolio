@@ -5,7 +5,7 @@
   "description": "Define the profile of the developer.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "name", "location", "status", "avatarPath", "photoPath", "description", "email", "linkedin", "github", "twitter", "projects"],
+  "required": ["id", "name", "location", "status", "avatarPath", "photoPath", "description", "email", "linkedin", "github", "twitter"],
   "properties": {
     "_class": {
       "description": "Spring Data deserializer class.",
@@ -67,34 +67,6 @@
       "description": "Twitter URL.",
       "type": "string",
       "maxLength": 2048
-    },
-    "projects": {
-      "description": "List of projects to highlight.",
-      "type": "array",
-      "minItems": 1,
-      "maxItems": 9,
-      "uniqueItems": true,
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": ["id", "name", "url"],
-        "properties": {
-          "id": {
-            "description": "A number to identify the individual project.",
-            "type": "integer"
-          },
-          "name": {
-            "description": "The project name.",
-            "type": "string",
-            "maxLength": 64
-          },
-          "url": {
-            "description": "A URL for the project.",
-            "type": "string",
-            "maxLength": 2048
-          }
-        }
-      }
     }
   }
 }

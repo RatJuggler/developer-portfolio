@@ -10,27 +10,5 @@
   "email": "john.chase3@outlook.com",
   "linkedin": "https://www.linkedin.com/in/john-chase-57973b12/",
   "github": "https://github.com/RatJuggler",
-  "twitter": "https://twitter.com/ratjuggler",
-  "projects": [
-    {
-      "id": 1,
-      "name": "The Great Pyramid Puzzle",
-      "url": "https://ratjuggler.github.io/great-pyramid-puzzle/"
-    },
-    {
-      "id": 2,
-      "name": "JHipster Microservices",
-      "url": "https://github.com/RatJuggler/jhipster-microservices-dinosaurs"
-    },
-    {
-      "id": 3,
-      "name": "Developer Portfolio (this site)",
-      "url": "https://github.com/RatJuggler/developer-portfolio"
-    },
-    {
-      "id": 4,
-      "name": "Guinea Pig Twitter Bot",
-      "url": "https://github.com/RatJuggler/guinea-bot"
-    }
-  ]
+  "twitter": "https://twitter.com/ratjuggler"
 }
