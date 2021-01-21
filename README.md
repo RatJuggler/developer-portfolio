@@ -17,7 +17,7 @@ I've completed some outline designs and started building the template version.
 
 Content for the site will include:
 
-- About - Short introductory paragraph about myself.
+- Profile - Short introductory paragraph about myself with some social media links.
 - Skills - Table highlighting my hard & soft skills with option to sort, filter and mark items.
 - Career - Rough timeline from when I started with the dinosaurs to the present day space age.
 - Interests - Brief details on my outside interests. 
