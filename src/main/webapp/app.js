@@ -12,17 +12,39 @@ app.set('view engine', 'twig');
 
 app.use(express.static('public'));
 
+const templateStatic = "Template Version with Static JSON Data Files";
+const templateDynamic = "Template Version with Static Data from Java Services";
+
 app.get('/profile.twig', (req, res) => {
-    res.render('profile.twig', {profile: readJSON(dataPath + "/profile.json")});
+    res.render('profile.twig',
+        {
+            version: templateStatic,
+            profile: readJSON(dataPath + "/profile.json")
+        });
 });
 app.get('/skills.twig', (req, res) => {
-    res.render('skills.twig', {profile: readJSON(dataPath + "/profile.json"), data: readJSON(dataPath + "/skills.json")});
+    res.render('skills.twig',
+        {
+            version: templateStatic,
+            profile: readJSON(dataPath + "/profile.json"),
+            data: readJSON(dataPath + "/skills.json")
+        });
 });
 app.get('/career.twig', (req, res) => {
-    res.render('career.twig', {profile: readJSON(dataPath + "/profile.json"), data: readJSON(dataPath + "/career.json")});
+    res.render('career.twig',
+        {
+            version: templateStatic,
+            profile: readJSON(dataPath + "/profile.json"),
+            data: readJSON(dataPath + "/career.json")
+        });
 });
 app.get('/interests.twig', (req, res) => {
-    res.render('interests.twig', {profile: readJSON(dataPath + "/profile.json"), data: readJSON(dataPath + "/interests.json")});
+    res.render('interests.twig',
+        {
+            version: templateStatic,
+            profile: readJSON(dataPath + "/profile.json"),
+            data: readJSON(dataPath + "/interests.json")
+        });
 });
 
 app.listen(port, () => {
