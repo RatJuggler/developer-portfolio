@@ -12,13 +12,13 @@ RUN node_modules/.bin/gulp build
 
 
 # Create a Nginx image.
-FROM nginx:stable-alpine AS test-nginx-public-files
+FROM johnchase/golden-nginx:latest AS test-nginx-public-files
 
-EXPOSE 80
+# Create a folder to serve the public files from.
+WORKDIR /srv
 
 # Use a custom Nginx configuration.
 COPY docker/nginx/nginx.conf /etc/nginx/conf.d/default.conf
-# Create a folder to serve the public files from.
-WORKDIR /srv
+
 # Copy the distribution files.
-COPY --from=test-builder /build/dist/public ./public
+COPY --from=test-builder /build/dist/public /srv/public
