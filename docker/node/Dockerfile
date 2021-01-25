@@ -13,7 +13,7 @@ COPY ./ /build
 RUN node_modules/.bin/gulp build
 
 
-# Create a Node application image.
+# Create the Node application image.
 FROM node:lts-alpine AS portfolio-application
 
 ENV NODE_ENV=production
@@ -28,5 +28,5 @@ WORKDIR /srv
 COPY package.json /srv
 RUN npm install
 
-# Copy the distribution files.
+# Copy the application files from the build.
 COPY --from=builder /build/dist/ /srv
