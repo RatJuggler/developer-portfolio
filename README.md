@@ -45,9 +45,9 @@ Two Docker file are available to create individual images for testing:
 
 - docker / node - The Node application, which also serves a copy of the public static files.
   
-  Create an image with: `docker build -f docker/node/Dockerfile -t mynode .`
+  Create an image with: `docker build -f docker/node/Dockerfile -t portfolio-application .`
 
-  Then run with: `docker run -d -p 3000:3000 mynode`
+  Then run with: `docker run -d -p 3000:3000 portfolio-application`
 
   Content will be available at: `http://localhost:3000`
 
