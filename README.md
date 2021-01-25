@@ -36,9 +36,9 @@ Two Docker file are available to create individual images for testing:
  
 - docker / nginx - The public static files served from an [Nginx](https://www.nginx.com/) instance. 
   
-  Create an image with: `docker build -f docker/nginx/Dockerfile -t mynginx .`
+  Create an image with: `docker build -f docker/nginx/Dockerfile -t portfolio-static .`
    
-  Then run with: `docker run -d -p 8080:80 mynginx`
+  Then run with: `docker run -d -p 8080:80 portfolio-static`
 
   Content will be available at: `http://localhost:8080`
 
