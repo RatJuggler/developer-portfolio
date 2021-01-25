@@ -1,26 +1,39 @@
 version: '3.8'
 
 services:
-  node-application:
-    image: node-application
+  portfolio-application:
+    image: portfolio-application
     build:
       context: .
       dockerfile: ./docker/combined/Dockerfile
-      target: node-application
+      target: portfolio-application
     networks:
       - portfolio
     restart: unless-stopped
 
-  nginx-public-files:
-    image: nginx-public-files
+  portfolio-static:
+    image: portfolio-static
     build:
       context: .
       dockerfile: ./docker/combined/Dockerfile
-      target: nginx-public-files
+      target: portfolio-static
+    ports:
+      - "8080:80"
+    networks:
+      - portfolio
+    restart: unless-stopped
+
+  portfolio-site:
+    image: portfolio-site
+    build:
+      context: .
+      dockerfile: ./docker/combined/Dockerfile
+      target: portfolio-site
     ports:
       - "8080:80"
     depends_on:
-      - node-application
+      - portfolio-application
+      - portfolio-static
     networks:
       - portfolio
     restart: unless-stopped
