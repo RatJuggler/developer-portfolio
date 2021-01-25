@@ -1,18 +1,20 @@
-# Build the public files and application.
-FROM node:lts-alpine AS test-builder
+# Build the node application.
+FROM node:lts-alpine AS builder
 
 # Location of the source code.
 WORKDIR /build
+
 # Install the build dependencies.
-COPY package.json .
+COPY package.json /build
 RUN npm install
+
 # Copy the sources and run the build.
-COPY ./ .
+COPY ./ /build
 RUN node_modules/.bin/gulp build
 
 
 # Create a Node application image.
-FROM node:lts-alpine AS test-node-application
+FROM node:lts-alpine AS portfolio-application
 
 ENV NODE_ENV=production
 
@@ -21,9 +23,10 @@ CMD ["node", "./app/app.js", "app/"]
 
 # Create a folder to serve the application from.
 WORKDIR /srv
+
 # Install the runtime dependencies.
-COPY package.json .
+COPY package.json /srv
 RUN npm install
 
 # Copy the distribution files.
-COPY --from=test-builder /build/dist/ .
+COPY --from=builder /build/dist/ /srv
