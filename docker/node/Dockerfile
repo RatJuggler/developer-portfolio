@@ -19,7 +19,7 @@ FROM node:lts-alpine AS portfolio-application
 ENV NODE_ENV=production
 
 EXPOSE 3000
-CMD ["node", "./app/app.js", "app/"]
+CMD ["node", "app/app.js", "app/templates", "app/data"]
 
 ARG BUILD_TAG=local
 LABEL build_tag=${BUILD_TAG}

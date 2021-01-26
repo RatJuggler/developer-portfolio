@@ -23,7 +23,7 @@ LABEL description="Developer Portfolio Application"
 ENV NODE_ENV=production
 
 EXPOSE 3000
-CMD ["node", "./app/app.js", "app/"]
+CMD ["node", "app/app.js", "app/templates", "app/data"]
 
 # Create a folder to serve the application from.
 WORKDIR /srv
