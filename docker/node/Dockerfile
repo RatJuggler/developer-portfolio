@@ -21,6 +21,10 @@ ENV NODE_ENV=production
 EXPOSE 3000
 CMD ["node", "./app/app.js", "app/"]
 
+ARG BUILD_TAG=local
+LABEL build_tag=${BUILD_TAG}
+LABEL description="Developer Portfolio Application"
+
 # Create a folder to serve the application from.
 WORKDIR /srv
 

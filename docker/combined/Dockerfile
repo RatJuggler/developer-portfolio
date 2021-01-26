@@ -16,6 +16,10 @@ RUN node_modules/.bin/gulp build
 # Create the Node application image.
 FROM node:lts-alpine AS portfolio-application
 
+ARG BUILD_TAG=local
+LABEL build_tag=${BUILD_TAG}
+LABEL description="Developer Portfolio Application"
+
 ENV NODE_ENV=production
 
 EXPOSE 3000
@@ -35,6 +39,10 @@ COPY --from=builder /build/dist/ /srv
 # Create an Nginx image to serve the static files.
 FROM johnchase/golden-nginx:latest AS portfolio-static
 
+ARG BUILD_TAG=local
+LABEL build_tag=${BUILD_TAG}
+LABEL description="Developer Portfolio Static Files"
+
 # Create a folder to serve the static files from.
 WORKDIR /srv
 
@@ -47,6 +55,10 @@ COPY --from=builder /build/dist/public /srv/public
 
 # Create a Nginx image for the reverse proxy front-end.
 FROM johnchase/golden-nginx:latest AS portfolio-site
+
+ARG BUILD_TAG=local
+LABEL build_tag=${BUILD_TAG}
+LABEL description="Developer Portfolio Site Front-End"
 
 # Use a basic Nginx configuration with reverse proxy's to the static files and application.
 COPY docker/combined/nginx.conf /etc/nginx/conf.d/default.conf
