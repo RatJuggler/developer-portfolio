@@ -17,8 +17,6 @@ services:
       context: .
       dockerfile: ./docker/combined/Dockerfile
       target: portfolio-static
-    ports:
-      - "8080:80"
     networks:
       - portfolio
     restart: unless-stopped
