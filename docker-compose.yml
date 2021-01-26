@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   portfolio-application:
-    image: portfolio-application:${BUILD_TAG:-latest}
+    image: ${dockerId:-johnchase}/portfolio-application:${BUILD_TAG:-latest}
     build:
       context: .
       dockerfile: ./docker/combined/Dockerfile
@@ -12,7 +12,7 @@ services:
     restart: unless-stopped
 
   portfolio-static:
-    image: portfolio-static:${BUILD_TAG:-latest}
+    image: ${dockerId:-johnchase}/portfolio-static:${BUILD_TAG:-latest}
     build:
       context: .
       dockerfile: ./docker/combined/Dockerfile
@@ -22,7 +22,7 @@ services:
     restart: unless-stopped
 
   portfolio-site:
-    image: portfolio-site:${BUILD_TAG:-latest}
+    image: ${dockerId:-johnchase}/portfolio-site:${BUILD_TAG:-latest}
     build:
       context: .
       dockerfile: ./docker/combined/Dockerfile
