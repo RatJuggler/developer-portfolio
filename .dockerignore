@@ -1,4 +1,7 @@
 .git
+.github
+.idea
 dist
 node_modules
 public/vendor
+target
