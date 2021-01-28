@@ -46,7 +46,7 @@ LABEL description="Developer Portfolio Static Files"
 # Create a folder to serve the static files from.
 WORKDIR /srv
 
-# Use a custom Nginx configuration.
+# Use a basic Nginx configuration.
 COPY docker/nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy the distribution files.
@@ -60,5 +60,5 @@ ARG BUILD_TAG=local
 LABEL build_tag=${BUILD_TAG}
 LABEL description="Developer Portfolio Site Front-End"
 
-# Use a basic Nginx configuration with reverse proxy's to the static files and application.
+# Use an Nginx configuration with reverse proxy's to the static files and template application.
 COPY docker/combined/nginx.conf /etc/nginx/conf.d/default.conf
