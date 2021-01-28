@@ -13,7 +13,8 @@ The idea is to build a number of different versions of the same site:
 3. Building some sort of back end to serve the data and using that from a further evolved set of templates.
 4. Expanding the back end and building a front end using a web component framework.
 
-I've completed some outline designs and started building the template version.
+I've completed some outline designs using static pages and from those built a template version. I've also built the skeleton of a 
+Java service, and I'm currently integrating this with the templates. 
 
 Content for the site will include:
 
@@ -34,7 +35,7 @@ There are three `npm` targets which can be used during development:
 
 Two Docker file are available to create individual images for testing:
  
-- docker / nginx - The public static files served from an [Nginx](https://www.nginx.com/) instance. 
+- docker / nginx - The public static files served using an instance of my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build). 
   
   Create an image with: `docker build -f docker/nginx/Dockerfile -t portfolio-static .`
    
@@ -55,9 +56,9 @@ Two Docker file are available to create individual images for testing:
 
 A docker-compose configuration, with a multi-stage Docker build, allows the complete application to be built and run. This includes 
 an instance of Nginx to serve the public static files, a Node instance for the template application, and a front-end proxy which 
-routes requests to these two instances as required.
+routes requests to these two instances as required. The proxy is also based on my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build).
 
-  Create and run the images with: `docker-compose up -d`
+  Create and run all the images with: `docker-compose up -d`
 
   Content will be available at: `http://localhost:8080`
 
