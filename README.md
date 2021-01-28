@@ -30,7 +30,7 @@ There are three `npm` targets which can be used during development:
 - static-start - runs [browser-sync](https://browsersync.io/) so you can see changes to static files as they are made.
 - template-start - runs the template Node application in development.
 
-### Testing
+### Test Images
 
 Two Docker file are available to create individual images for testing:
  
@@ -43,7 +43,7 @@ Two Docker file are available to create individual images for testing:
   Content will be available at: `http://localhost:8080`
 
 
-- docker / node - The Node application, which also serves a copy of the public static files.
+- docker / node - A Node instance for the template application, which also serves a copy of the public static files.
   
   Create an image with: `docker build -f docker/node/Dockerfile -t portfolio-application .`
 
@@ -51,19 +51,15 @@ Two Docker file are available to create individual images for testing:
 
   Content will be available at: `http://localhost:3000`
 
-### Production Example
+### Full Application
 
-A combined Docker file, with a docker-compose configuration, is available which could serve as the basis for a production
-environment but must not be used directly without at least adding some proper Nginx security configuration.
+A docker-compose configuration, with a multi-stage Docker build, allows the complete application to be built and run. This includes 
+an instance of Nginx to serve the public static files, a Node instance for the template application, and a front-end proxy which 
+routes requests to these two instances as required.
 
-- docker / combined - The public static files are served from Nginx whilst requests for template pages are proxied to the Node 
-  application.
-  
   Create and run the images with: `docker-compose up -d`
 
   Content will be available at: `http://localhost:8080`
-
-For a more complete production implementation see [My Production Docker Build](https://github.com/RatJuggler/my-production-docker-build).
 
 ### Attributions:
 
