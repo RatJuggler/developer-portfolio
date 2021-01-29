@@ -102,9 +102,9 @@ function copyStaticDist() {
         .pipe(replace('.min.js', '.js'))
         .pipe(replace('.css', '.min.css'))
         .pipe(replace('.js', '.min.js'))
-        .pipe(replace('/src/templates/', ''))
-        .pipe(replace('../', ''))
-        .pipe(gulp.dest('./dist/public'));
+        .pipe(replace('.html', ''))
+        .pipe(replace('../', '/'))
+        .pipe(gulp.dest('./dist/public/static'));
     return merge(webRoot, images, html);
 }
 
