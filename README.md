@@ -37,18 +37,18 @@ Two Docker file are available to create individual images for testing:
  
 - docker / nginx - The public static files served using an instance of my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build). 
   
-  Create an image with: `docker build -f docker/nginx/Dockerfile -t portfolio-static .`
+  Create an image with: `docker build -f docker/nginx/Dockerfile -t portfolio-static:test .`
    
-  Then run with: `docker run -d -p 8080:80 portfolio-static`
+  Then run with: `docker run -p 8080:80 portfolio-static:test -d`
 
   Content will be available at: `http://localhost:8080`
 
 
 - docker / node - A Node instance for the template application, which also serves a copy of the public static files.
   
-  Create an image with: `docker build -f docker/node/Dockerfile -t portfolio-application .`
+  Create an image with: `docker build -f docker/node/Dockerfile -t portfolio-template:test .`
 
-  Then run with: `docker run -d -p 3000:3000 portfolio-application`
+  Then run with: `docker run -p 3000:3000 portfolio-template:test -d`
 
   Content will be available at: `http://localhost:3000`
 
