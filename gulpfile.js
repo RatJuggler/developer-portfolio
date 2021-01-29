@@ -8,7 +8,7 @@ const header = require("gulp-header");
 const merge = require("merge-stream");
 const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
-const replace = require("gulp-replace")
+const replace = require("gulp-replace");
 const rev = require('gulp-rev');
 const revdel = require('gulp-rev-delete-original');
 const revRewrite = require('gulp-rev-rewrite');
@@ -92,19 +92,19 @@ function copyModuleDist() {
 
 function copyStaticDist() {
     // General webroot files
-    let webRoot = gulp.src(['./public/*.*', './public/**/vendor/*'])
+    let webRoot = gulp.src(['./public/*.!(html)*', './public/**/vendor/*'])
         .pipe(gulp.dest('./dist/public'));
     // Images
     let images = gulp.src('./public/img/*.*')
         .pipe(gulp.dest('./dist/public/img'));
     // Static HTML
-    let html = gulp.src('./public/static/*.html')
+    let html = gulp.src('./public/**/*.html')
         .pipe(replace('.min.js', '.js'))
         .pipe(replace('.css', '.min.css'))
         .pipe(replace('.js', '.min.js'))
         .pipe(replace('.html', ''))
-        .pipe(replace('../', '/'))
-        .pipe(gulp.dest('./dist/public/static'));
+        .pipe(replace(/\.\.?\//g, '/'))
+        .pipe(gulp.dest('./dist/public'));
     return merge(webRoot, images, html);
 }
 
