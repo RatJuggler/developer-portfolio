@@ -1,0 +1,124 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>John Chase - Developer Portfolio</title>
+  <meta name="keywords" content="John Chase, Developer, Portfolio" />
+  <meta name="description" content="Developer portfolio website for John Chase">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  <meta name="og:url" content="">
+  <meta name="og:title" content="John Chase">
+  <meta name="og:type" content="website">
+  <meta name="og:description" content="Developer portfolio website for John Chase.">
+  <meta name="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="vendor/fontawesome-free/css/all.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#b833c0">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="img/Rat-Profile.svg" width="30" height="30" class="d-inline-block align-top" alt="My profile avatar">
+        Portfolio - Version Selection
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" target="_blank" title="Open in new tab">
+              <span class="fas fa-home" aria-hidden="true"></span>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="versionMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="fas fa-cog" aria-hidden="true"></span>
+              <span>Settings</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="versionMenu">
+              <span class="dropdown-header">Site Version</span>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="https://jurassic-john.site/static/profile">Static</a>
+              <a class="dropdown-item" href="https://jurassic-john.site/template/profile">Template</a>
+              <a class="dropdown-item" href="https://ratjuggler.github.io/developer-portfolio/">Static (GitHub Pages)</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="accountMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="fas fa-user" aria-hidden="true"></span>
+              <span>My Account</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="accountMenu">
+              <span class="dropdown-header">John Chase</span>
+              <div class="dropdown-divider"></div>
+              <button type="button" class="dropdown-item btn btn-link" data-toggle="modal" data-target="#signOutConfirmation">Sign out</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row">
+      <h1>John Chase - Developer Portfolio Site</h1>
+      <p class="lead">Please select the version of the site you would like to visit. You can changes versions at any time by using the Setting menu.</p>
+      <p class="lead">
+        <a href="https://jurassic-john.site/static/profile" class="btn btn-secondary">Static</a>
+        <a href="https://jurassic-john.site/template/profile" class="btn btn-secondary">Template</a>
+        <a href="https://ratjuggler.github.io/developer-portfolio/" class="btn btn-secondary">Static (GitHub Pages)</a>
+      </p>
+    </div>
+    </div>
+  </main>
+
+  <footer>
+    <div id="cookie-banner" class="alert alert-dark text-center mb-0" role="alert">
+      🍪 This website doesn't use cookies but does use local storage to track if you've been told that it doesn't use cookies.
+      <button id="acceptCookieNotification" type="button" class="btn btn-primary btn-sm ml-3">Um, OK</button>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="signOutConfirmation" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="signOutConfirmationLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signOutConfirmationLabel">Sign Out Confirmation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to sign out?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">No, take me back</button>
+          <a href="/" class="btn btn-primary" role="button" aria-pressed="true">Yes, sign me out</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="vendor/jquery/jquery.js"></script>
+  <script src="vendor/popper/popper.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
