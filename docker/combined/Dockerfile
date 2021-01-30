@@ -1,4 +1,4 @@
-# Build the public static files and the node application.
+# Build the static files and the template application.
 FROM node:lts-alpine AS builder
 
 # Location of the source code.
@@ -13,26 +13,26 @@ COPY ./ /build
 RUN node_modules/.bin/gulp build
 
 
-# Create the Node application image.
-FROM node:lts-alpine AS portfolio-application
+# Create the Node template application image.
+FROM node:lts-alpine AS portfolio-template
 
 ARG BUILD_TAG=local
 LABEL build_tag=${BUILD_TAG}
-LABEL description="Developer Portfolio Application"
+LABEL description="Developer Portfolio - Node Template Application"
 
 ENV NODE_ENV=production
 
 EXPOSE 3000
 CMD ["node", "app/app.js", "app/templates", "app/data"]
 
-# Create a folder to serve the application from.
+# Create a folder to serve the template application from.
 WORKDIR /srv
 
 # Install the runtime dependencies.
 COPY package.json /srv
 RUN npm install
 
-# Copy the application files from the build.
+# Copy the template application files from the build.
 COPY --from=builder /build/dist/ /srv
 
 
@@ -41,7 +41,7 @@ FROM johnchase/golden-nginx:latest AS portfolio-static
 
 ARG BUILD_TAG=local
 LABEL build_tag=${BUILD_TAG}
-LABEL description="Developer Portfolio Static Files"
+LABEL description="Developer Portfolio - Ngninx Static Files"
 
 # Create a folder to serve the static files from.
 WORKDIR /srv
@@ -58,7 +58,7 @@ FROM johnchase/golden-nginx:latest AS portfolio-site
 
 ARG BUILD_TAG=local
 LABEL build_tag=${BUILD_TAG}
-LABEL description="Developer Portfolio Site Front-End"
+LABEL description="Developer Portfolio - Nginx Site Front-End"
 
 # Use an Nginx configuration with reverse proxy's to the static files and template application.
 COPY docker/combined/nginx.conf /etc/nginx/conf.d/default.conf

@@ -1,4 +1,4 @@
-# Build the public static files.
+# Build the static files.
 FROM node:lts-alpine AS builder
 
 # Location of the source code.
@@ -18,12 +18,12 @@ FROM johnchase/golden-nginx:latest AS portfolio-static
 
 ARG BUILD_TAG=local
 LABEL build_tag=${BUILD_TAG}
-LABEL description="Developer Portfolio Static Files"
+LABEL description="Developer Portfolio - Ngninx Static Files"
 
 # Create a folder to serve the static files from.
 WORKDIR /srv
 
-# Use a custom Nginx configuration.
+# Use a basic Nginx configuration.
 COPY docker/nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy the distribution files.
