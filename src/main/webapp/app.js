@@ -1,5 +1,6 @@
 const templatePath = process.argv[2];
 const dataPath = process.argv[3];
+const publicPath = process.argv[4];
 
 const path = require('path');
 const fs = require('fs').promises;
@@ -38,7 +39,7 @@ app.get('/template/*', async (req, res) => {
 
 // Static file or Template not found.
 app.use(async (req, res) => {
-    res.status(404).sendFile(path.join('public', '404.html'));
+    res.status(404).sendFile(path.join(__dirname, publicPath, '404.html'));
 });
 
 // Start the server.
