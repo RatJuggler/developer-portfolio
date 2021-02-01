@@ -15,6 +15,7 @@ app.set('views', templatePath);
 app.set('view engine', 'twig');
 
 const templates = ['profile', 'skills', 'career', 'interests'];
+const dataSources = ['json', 'spring'];
 
 // Static files.
 app.use(express.static('public'));
@@ -24,31 +25,17 @@ app.get('/', async (req, res) => {
     res.redirect('/template/' + templates[0]);
 });
 
-// Template rendering using static JSON data files.
-app.get('/template/json/*', async (req, res) => {
+// Template rendering using requested data source.
+app.get('/template/:dataFrom/*', async (req, res) => {
+    let dataFrom = req.params['dataFrom'];
+    if (!dataSources.includes(dataFrom)) dataFrom = dataSources[0];
     let aspect = req.params["0"];
     if (!templates.includes(aspect)) aspect = templates[0];
-    const profile = await readStaticJsonFile(dataPath, templates[0]);
-    const data = await readStaticJsonFile(dataPath, aspect);
+    const [profile, data] = await Promise.all([getDataFrom(dataFrom, templates[0]), getDataFrom(dataFrom, aspect)]);
     res.render(aspect + '.twig',
         {
-            version: 'Template Version with Static JSON Data Files',
-            dataFrom: 'json',
-            profile: profile,
-            data: data
-        });
-});
-
-// Template rendering using static data from Spring services.
-app.get('/template/spring/*', async (req, res) => {
-    let aspect = req.params["0"];
-    if (!templates.includes(aspect)) aspect = templates[0];
-    const profile = await requestJsonFromUrl(springUrl, templates[0]);
-    const data = await requestJsonFromUrl(springUrl, aspect);
-    res.render(aspect + '.twig',
-        {
-            version: 'Template Version with Static Data from Spring Services',
-            dataFrom: 'spring',
+            version: getTemplateVersion(dataFrom),
+            dataFrom: dataFrom,
             profile: profile,
             data: data
         });
@@ -63,6 +50,31 @@ app.use(async (req, res) => {
 app.listen(port, () => {
     console.log(`developer-portfolio Node application listening on port: ${port}`)
 });
+
+function getTemplateVersion(dataFrom) {
+    switch (dataFrom) {
+        case 'json':
+            return 'Template Version with Static JSON Data Files';
+        case 'spring':
+            return  'Template Version with Static Data from Spring Services';
+        default:
+            console.error('Unexpected data source: ' + dataFrom);
+            return 'Unknown data source: ' + dataFrom;
+    }
+}
+
+function getDataFrom(dataFrom, aspect) {
+    switch (dataFrom) {
+        case 'json':
+            return readStaticJsonFile(dataPath, aspect);
+        case 'spring':
+            return requestJsonFromUrl(springUrl, aspect);
+        default:
+            console.error('Unexpected data source: ' + dataFrom);
+            return {};
+    }
+
+}
 
 function readStaticJsonFile(dataPath, aspect) {
     const filepath = path.join(dataPath, aspect + '.json');
