@@ -23,7 +23,7 @@ LABEL description="Developer Portfolio - Node Template Application"
 ENV NODE_ENV=production
 
 EXPOSE 3000
-CMD ["node", "app/app.js", "app/templates", "app/data"]
+CMD ["node", "app/app.js", "app/templates", "app/data", "http://portfolio-spring:8001"]
 
 # Create a folder to serve the template application from.
 WORKDIR /srv
