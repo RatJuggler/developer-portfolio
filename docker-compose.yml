@@ -17,6 +17,8 @@ services:
       context: .
       dockerfile: ./docker/combined/Dockerfile
       target: portfolio-template
+    depends_on:
+      - portfolio-spring
     networks:
       - portfolio
     restart: unless-stopped
