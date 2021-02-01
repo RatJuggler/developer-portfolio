@@ -1,6 +1,16 @@
 version: '3.8'
 
 services:
+  portfolio-spring:
+    image: ${dockerId:-johnchase}/portfolio-spring:${BUILD_TAG:-local}
+    build:
+      context: .
+      dockerfile: ./docker/spring/Dockerfile
+      target: portfolio-spring
+    networks:
+      - portfolio
+    restart: unless-stopped
+
   portfolio-template:
     image: ${dockerId:-johnchase}/portfolio-template:${BUILD_TAG:-local}
     build:
