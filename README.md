@@ -14,7 +14,7 @@ The idea is to build a number of different versions of the same site:
 4. Expanding the back end and building a front end using a web component framework.
 
 I've completed some outline designs using static pages and from those built a template version. I've also built the skeleton of a 
-Java service, and I'm currently integrating this with the templates. 
+Java service using Spring, and I'm currently integrating this with the templates. 
 
 Content for the site will include:
 
@@ -29,11 +29,13 @@ There are three `npm` targets which can be used during development:
 
 - static-build - should be run at least once after `npm install` to make the 3rd party vendor dependency files available.
 - static-start - runs [browser-sync](https://browsersync.io/) so you can see changes to static files as they are made.
-- template-start - runs the template Node application in development.
+- template-start - runs the Node template application in development.
+
+The Spring application can be run with: `./mvnw spring-boot:run`
 
 ### Test Images
 
-Two Docker file are available to create individual images for testing:
+Three Docker file are available to create individual images for testing:
  
 - docker / nginx - The public static files served using an instance of my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build). 
   
@@ -52,11 +54,21 @@ Two Docker file are available to create individual images for testing:
 
   Content will be available at: `http://localhost:3000`
 
+
+- docker / spring - A Java instance for the Spring application.
+
+  Create an image with: `docker build -f docker/spring/Dockerfile -t portfolio-spring:test .`
+
+  Then run with: `docker run -p 8001:8001 portfolio-static:spring -d`
+
+  Content will be available at: `http://localhost:8001/(profile|skills|career|interests)`
+
+
 ### Full Application
 
 A docker-compose configuration, with a multi-stage Docker build, allows the complete application to be built and run. This includes 
-an instance of Nginx to serve the public static files, a Node instance for the template application, and a front-end proxy which 
-routes requests to these two instances as required. The proxy is also based on my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build).
+an instance of Nginx to serve the public static files, a Node instance for the template application, a Java instance for the Spring 
+application and a front-end proxy which routes requests to these two instances as required. The proxy is also based on my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build).
 
   Create and run all the images with: `docker-compose up -d`
 
