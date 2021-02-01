@@ -33,6 +33,7 @@ app.get('/template/json/*', async (req, res) => {
     res.render(aspect + '.twig',
         {
             version: 'Template Version with Static JSON Data Files',
+            dataFrom: 'json',
             profile: profile,
             data: data
         });
@@ -47,6 +48,7 @@ app.get('/template/spring/*', async (req, res) => {
     res.render(aspect + '.twig',
         {
             version: 'Template Version with Static Data from Spring Services',
+            dataFrom: 'spring',
             profile: profile,
             data: data
         });
