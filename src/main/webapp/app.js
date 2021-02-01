@@ -17,16 +17,24 @@ app.set('view engine', 'twig');
 const templates = ['profile', 'skills', 'career', 'interests'];
 const dataSources = ['json', 'spring'];
 
+// Express Async Handler, see: https://zellwk.com/blog/async-await-express/
+const asyncHandler = fn =>
+    function asyncUtilWrap(...args) {
+        const fnReturn = fn(...args)
+        const next = args[args.length-1]
+        return Promise.resolve(fnReturn).catch(next)
+    }
+
 // Static files.
 app.use(express.static('public'));
 
 // Default landing page.
-app.get('/', async (req, res) => {
+app.get('/', asyncHandler(async (req, res, next) => {
     res.redirect('/template/' + templates[0]);
-});
+}));
 
 // Template rendering using requested data source.
-app.get('/template/:dataFrom/*', async (req, res) => {
+app.get('/template/:dataFrom/*', asyncHandler(async (req, res, next) => {
     let dataFrom = req.params['dataFrom'];
     if (!dataSources.includes(dataFrom)) dataFrom = dataSources[0];
     let aspect = req.params["0"];
@@ -39,16 +47,16 @@ app.get('/template/:dataFrom/*', async (req, res) => {
             profile: profile,
             data: data
         });
-});
+}));
 
 // Static file or Template not found.
-app.use(async (req, res) => {
+app.use(asyncHandler(async (req, res, next) => {
     res.status(404).sendFile(path.join(__dirname, publicPath, '404.html'));
-});
+}));
 
 // Start the server.
 app.listen(port, () => {
-    console.log(`developer-portfolio Node application listening on port: ${port}`)
+    console.log(`developer-portfolio template application listening on port: ${port}`)
 });
 
 function getTemplateVersion(dataFrom) {
@@ -58,8 +66,7 @@ function getTemplateVersion(dataFrom) {
         case 'spring':
             return  'Template Version with Static Data from Spring Services';
         default:
-            console.error('Unexpected data source: ' + dataFrom);
-            return 'Unknown data source: ' + dataFrom;
+            throw new Error('Unknown data source: ' + dataFrom);
     }
 }
 
@@ -70,10 +77,8 @@ function getDataFrom(dataFrom, aspect) {
         case 'spring':
             return requestJsonFromUrl(springUrl, aspect);
         default:
-            console.error('Unexpected data source: ' + dataFrom);
-            return {};
+            throw new Error('Unknown data source: ' + dataFrom);
     }
-
 }
 
 function readStaticJsonFile(dataPath, aspect) {
