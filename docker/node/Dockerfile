@@ -5,11 +5,11 @@ FROM node:lts-alpine AS builder
 WORKDIR /build
 
 # Install the build dependencies.
-COPY package.json /build
+COPY package.json .
 RUN npm install
 
 # Copy the sources and run the build.
-COPY ./ /build
+COPY . .
 RUN node_modules/.bin/gulp build
 
 
@@ -29,8 +29,8 @@ CMD ["node", "app/app.js", "app/templates", "app/data", "http://localhost:8001"]
 WORKDIR /srv
 
 # Install the runtime dependencies.
-COPY package.json /srv
+COPY package.json .
 RUN npm install
 
 # Copy the template application files from the build.
-COPY --from=builder /build/dist/ /srv
+COPY --from=builder /build/dist/ .

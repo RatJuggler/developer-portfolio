@@ -5,11 +5,11 @@ FROM node:lts-alpine AS builder
 WORKDIR /build
 
 # Install the build dependencies.
-COPY package.json /build
+COPY package.json .
 RUN npm install
 
 # Copy the sources and run the build.
-COPY ./ /build
+COPY . .
 RUN node_modules/.bin/gulp build
 
 
