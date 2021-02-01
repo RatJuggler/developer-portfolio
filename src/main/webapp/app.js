@@ -56,7 +56,11 @@ app.use(asyncHandler(async (req, res, next) => {
 
 // Start the server.
 app.listen(port, () => {
-    console.log(`developer-portfolio template application listening on port: ${port}`)
+    console.log(`templatePath : ${templatePath}`);
+    console.log(`dataPath     : ${dataPath}`);
+    console.log(`publicPath   : ${publicPath}`);
+    console.log(`springUrl    : ${springUrl}`);
+    console.log(`developer-portfolio template application listening on port: ${port}`);
 });
 
 function getTemplateVersion(dataFrom) {
