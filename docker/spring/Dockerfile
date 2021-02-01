@@ -9,7 +9,8 @@ COPY pom.xml .
 RUN mvn dependency:go-offline
 
 # Copy the sources and run the build but skip tests.
-# Can't use '--offline' option, missing some dependecies.
+# Can't use '--offline' option, missing some dependecies(!?).
+# Need a way to only skip tests for Pi build.
 COPY . .
 RUN mvn package -Dmaven.test.skip=true
 
