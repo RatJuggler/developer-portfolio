@@ -1,5 +1,5 @@
 # Build the static files and the template application.
-FROM node:lts-alpine AS builder
+FROM node:lts-alpine3.11 AS builder
 
 # Location of the source code.
 WORKDIR /build
@@ -14,7 +14,7 @@ RUN node_modules/.bin/gulp build
 
 
 # Create the Node template application image.
-FROM node:lts-alpine AS portfolio-template
+FROM node:lts-alpine3.11 AS portfolio-template
 
 ARG BUILD_TAG=local
 LABEL build_tag=${BUILD_TAG}
