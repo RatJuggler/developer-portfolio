@@ -6,7 +6,7 @@ WORKDIR /build
 
 # Install the build dependencies.
 COPY pom.xml .
-RUN mvn dependency:go-offline
+RUN mvn dependency:go-offline -B
 
 # Copy the sources and run the build but skip tests.
 # Can't use '--offline' option, missing some dependecies(!?).
