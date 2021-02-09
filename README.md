@@ -74,6 +74,8 @@ application and a front-end proxy which routes requests to these two instances a
 
   Content will be available at: `http://localhost:8080`
 
+![Image of Deployment](https://github.com/RatJuggler/developer-portfolio/blob/main/deployed-result.jpg)
+
 ### Attributions:
 
 - HTML5 Boilerplate - Front-end template [from here](https://html5boilerplate.com/).
