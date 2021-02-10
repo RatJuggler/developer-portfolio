@@ -11,8 +11,8 @@
 	<groupId>com.portfolio</groupId>
 	<artifactId>simple-service</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
-	<name>Static Service</name>
-	<description>Simple static data service back end for my Developer Portfolio site.</description>
+	<name>Simple Static Data Service</name>
+	<description>Simple static data service backend for my Developer Portfolio site.</description>
 
 	<properties>
 		<java.version>11</java.version>
