@@ -12,5 +12,6 @@
 
     <modules>
         <module>simple-service</module>
+        <module>sql-service</module>
     </modules>
 </project>
