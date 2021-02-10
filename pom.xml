@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.portfolio</groupId>
-    <artifactId>parent-pom</artifactId>
+    <artifactId>developer-portfolio</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
