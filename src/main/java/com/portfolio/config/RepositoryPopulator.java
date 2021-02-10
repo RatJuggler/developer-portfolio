@@ -10,7 +10,7 @@ import org.springframework.data.repository.init.Jackson2RepositoryPopulatorFacto
 public class RepositoryPopulator {
 
     @Bean
-    public Jackson2RepositoryPopulatorFactoryBean getRespositoryPopulator() {
+    public Jackson2RepositoryPopulatorFactoryBean getRepositoryPopulator() {
         Jackson2RepositoryPopulatorFactoryBean factory = new Jackson2RepositoryPopulatorFactoryBean();
         factory.setResources(new Resource[] {
                 new ClassPathResource("data/profile.json"),
