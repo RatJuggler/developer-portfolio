@@ -11,6 +11,6 @@
     <name>parent-project</name>
 
     <modules>
-        <module>static-service</module>
+        <module>simple-service</module>
     </modules>
 </project>
