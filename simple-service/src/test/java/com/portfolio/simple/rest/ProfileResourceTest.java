@@ -1,10 +1,11 @@
-package com.portfolio.rest;
+package com.portfolio.simple.rest;
 
-import com.portfolio.domain.Profile;
-import com.portfolio.repository.ProfileRepository;
+import com.portfolio.simple.domain.Profile;
+import com.portfolio.simple.repository.ProfileRepository;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import com.portfolio.simple.rest.ProfileResource;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;

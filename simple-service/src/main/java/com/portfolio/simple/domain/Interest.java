@@ -1,4 +1,4 @@
-package com.portfolio.domain;
+package com.portfolio.simple.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;

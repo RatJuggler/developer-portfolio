@@ -1,4 +1,4 @@
-package com.portfolio.config;
+package com.portfolio.simple.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

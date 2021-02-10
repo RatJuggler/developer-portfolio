@@ -1,10 +1,11 @@
-package com.portfolio.rest;
+package com.portfolio.simple.rest;
 
-import com.portfolio.domain.Interest;
-import com.portfolio.repository.InterestRepository;
+import com.portfolio.simple.domain.Skill;
+import com.portfolio.simple.repository.SkillRepository;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import com.portfolio.simple.rest.SkillResource;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,25 +23,25 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(InterestResource.class)
-public class InterestResourceTest {
+@WebMvcTest(SkillResource.class)
+public class SkillResourceTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @MockBean
-    private InterestRepository repository;
+    private SkillRepository repository;
 
     @Test
-    public void getInterestsTest() throws Exception {
-        List<Interest> testInterests = new ArrayList<>();
-        testInterests.add(new Interest(1, "Test Title 1", "test/image1", "Test Description 1"));
-        when(repository.findAll()).thenReturn(testInterests);
+    public void getSkillsTest() throws Exception {
+        List<Skill> testSkills = new ArrayList<>();
+        testSkills.add(new Skill(1, "Test Level 1", "Test Category 1", "Test Skill 1", "Test Description 1"));
+        when(repository.findAll()).thenReturn(testSkills);
         ObjectMapper mapper = new ObjectMapper();
-        String expectedInterests = mapper.writeValueAsString(testInterests);
-        this.mockMvc.perform(get("/interests"))
+        String expectedSkills = mapper.writeValueAsString(testSkills);
+        this.mockMvc.perform(get("/skills"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo(expectedInterests)));
+                .andExpect(content().string(equalTo(expectedSkills)));
     }
 }

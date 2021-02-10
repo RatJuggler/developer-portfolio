@@ -1,4 +1,4 @@
-package com.portfolio.rest;
+package com.portfolio.simple.rest;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.mockito.Mockito.when;
@@ -9,9 +9,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import com.portfolio.domain.Career;
-import com.portfolio.repository.CareerRepository;
+import com.portfolio.simple.domain.Career;
+import com.portfolio.simple.repository.CareerRepository;
 
+import com.portfolio.simple.rest.CareerResource;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
