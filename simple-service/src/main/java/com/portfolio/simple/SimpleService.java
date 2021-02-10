@@ -6,9 +6,9 @@ import org.springframework.data.map.repository.config.EnableMapRepositories;
 
 @SpringBootApplication
 @EnableMapRepositories
-public class PortfolioApplication {
+public class SimpleService {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PortfolioApplication.class, args);
+		SpringApplication.run(SimpleService.class, args);
 	}
 }
