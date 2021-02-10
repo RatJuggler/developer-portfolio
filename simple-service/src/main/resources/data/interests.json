@@ -1,34 +1,34 @@
 [
   {
-    "_class": "com.portfolio.domain.Interest",
+    "_class": "com.portfolio.simple.domain.Interest",
     "id": 1,
     "title": "Dinosaurs",
     "imagePath": "/img/Dinosaurs.jpg",
     "description": "I always wanted to be a paleontologist and though I ended up in IT they continue to fascinate me, I even built my own \"Dinosaur Of The Day\" twitter bot (@dinosauria_bot). Just don't mention Jurassic Park."
   },
   {
-    "_class": "com.portfolio.domain.Interest",
+    "_class": "com.portfolio.simple.domain.Interest",
     "id": 2,
     "title": "Video Games",
     "imagePath": "/img/VideoGames.jpg",
     "description": "My first steps in programing involved a copy of David H, Ahl's \"BASIC Computer Games\" (I still have it) and a teletype attached to a PDP-11/70 and now we have 4K screens and VR."
   },
   {
-    "_class": "com.portfolio.domain.Interest",
+    "_class": "com.portfolio.simple.domain.Interest",
     "id": 3,
     "title": "History",
     "imagePath": "/img/History.jpg",
     "description": "I love reading about history, from Ancient Egypt and the Romans to the Medieval Ages, the English Civil War through to the Georgian era and the start of the industrial revolution."
   },
   {
-    "_class": "com.portfolio.domain.Interest",
+    "_class": "com.portfolio.simple.domain.Interest",
     "id": 4,
     "title": "Maker Culture",
     "imagePath": "/img/MakerPi.jpg",
     "description": "Nothing more fun than fiddling with a Raspberry Pi, a soldering iron and some LEDs or trying to make a tensegrity structure. I have so far resisted the temptations of a 3D printer."
   },
   {
-    "_class": "com.portfolio.domain.Interest",
+    "_class": "com.portfolio.simple.domain.Interest",
     "id": 5,
     "title": "Space",
     "imagePath": "/img/Space.jpg",
