@@ -1,6 +1,7 @@
 .git
 .github
 .idea
+*.iml
 dist
 node_modules
 public/vendor
