@@ -6,9 +6,6 @@ import com.portfolio.simple.repository.InterestRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @RestController
 public class InterestResource {
 
@@ -19,9 +16,7 @@ public class InterestResource {
     }
 
     @GetMapping("/interests")
-    public List<Interest> interests() {
-        List<Interest> interests = new ArrayList<>();
-        this.repository.findAll().forEach(interests::add);
-        return interests;
+    public Iterable<Interest> interests() {
+        return this.repository.findAll();
     }
 }

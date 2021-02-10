@@ -6,9 +6,6 @@ import com.portfolio.simple.repository.CareerRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @RestController
 public class CareerResource {
 
@@ -19,9 +16,7 @@ public class CareerResource {
     }
 
     @GetMapping("/career")
-    public List<Career> career() {
-        List<Career> career = new ArrayList<>();
-        this.repository.findAll().forEach(career::add);
-        return career;
+    public Iterable<Career> career() {
+        return this.repository.findAll();
     }
 }
