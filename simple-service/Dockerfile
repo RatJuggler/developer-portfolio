@@ -1,4 +1,4 @@
-# Build the Spring application.
+# Build the service.
 FROM maven:3-adoptopenjdk-11 AS builder
 
 # Location of the source code.
@@ -15,18 +15,18 @@ COPY ../docker/spring .
 RUN mvn package -Dmaven.test.skip=true
 
 
-# Create a Java image to run the Spring application.
-FROM adoptopenjdk:11-jre AS portfolio-spring
+# Create a Java image to run the service.
+FROM adoptopenjdk:11-jre AS portfolio-simple-service
 
 ARG BUILD_TAG=local
 LABEL build_tag=${BUILD_TAG}
-LABEL description="Developer Portfolio - Java Spring Application"
+LABEL description="Developer Portfolio - Java Spring Simple Service"
 
 EXPOSE 8001
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
 
-# Create a folder to run the Spring application from.
+# Create a folder to run the service from.
 WORKDIR /app
 
-# Copy the Spring application from the build.
+# Copy the service from the build.
 COPY --from=builder /build/target/*.jar app.jar

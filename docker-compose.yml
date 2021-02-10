@@ -1,12 +1,12 @@
 version: '3.8'
 
 services:
-  portfolio-spring:
-    image: ${dockerId:-johnchase}/portfolio-spring:${BUILD_TAG:-local}
+  portfolio-simple-service:
+    image: ${dockerId:-johnchase}/portfolio-simple-service:${BUILD_TAG:-local}
     build:
-      context: .
+      context: simple-service
       dockerfile: simple-service/Dockerfile
-      target: portfolio-spring
+      target: portfolio-simple-service
     networks:
       - portfolio
     restart: unless-stopped
@@ -18,7 +18,7 @@ services:
       dockerfile: ./docker/combined/Dockerfile
       target: portfolio-template
     depends_on:
-      - portfolio-spring
+      - portfolio-simple-service
     networks:
       - portfolio
     restart: unless-stopped
