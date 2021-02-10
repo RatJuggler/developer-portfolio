@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.portfolio</groupId>
 	<artifactId>simple-service</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>Simple Static Data Service</name>
 	<description>Simple static data service backend for my Developer Portfolio site.</description>
 
