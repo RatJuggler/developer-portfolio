@@ -1,9 +1,9 @@
 package com.portfolio.simple.rest;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import com.portfolio.simple.domain.Skill;
 import com.portfolio.simple.repository.SkillRepository;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.junit.jupiter.api.Test;
 
