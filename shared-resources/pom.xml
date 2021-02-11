@@ -9,6 +9,10 @@
     <name>Shared Resources</name>
     <description>Shared Resources for my Developer Portfolio site.</description>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <build>
         <resources>
             <resource>
