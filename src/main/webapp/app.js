@@ -70,7 +70,7 @@ function getTemplateVersion(dataFrom) {
         case 'json':
             return 'Template Version with Static JSON Data Files';
         case 'simple':
-            return  'Template Version with Simple Static Data from Spring Service';
+            return  'Template Version with Static Data from Spring Service';
         case 'sql':
             return  'Template Version with SQL Data from Spring Service';
         default:
