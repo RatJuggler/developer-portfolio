@@ -13,8 +13,13 @@
     "additionalProperties": false,
     "required": ["id", "title", "imagePath", "description"],
     "properties": {
-      "_class": {
-        "description": "Spring Data deserializer class.",
+      "_classSimple": {
+        "description": "Spring Data deserializer class for the simple-service.",
+        "type": "string",
+        "maxLength": 64
+      },
+      "_classSQL": {
+        "description": "Spring Data deserializer class for the sql-service.",
         "type": "string",
         "maxLength": 64
       },
