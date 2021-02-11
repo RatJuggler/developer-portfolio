@@ -1,25 +1,57 @@
 version: '3.8'
 
 services:
+  builder-shared-resources:
+    image: builder-shared-resources:local
+    build:
+      context: shared-resources
+      dockerfile: Dockerfile
+      target: builder-shared-resources
+    profiles: ["builders"]
+
+  builder-portfolio-simple:
+    image: builder-portfolio-simple:local
+    build:
+      context: portfolio-simple
+      dockerfile: Dockerfile
+      target: builder-portfolio-simple
+    profiles: ["builders"]
+
   portfolio-simple:
     image: ${dockerId:-johnchase}/portfolio-simple:${BUILD_TAG:-local}
     build:
       context: portfolio-simple
-      dockerfile: portfolio-simple/Dockerfile
+      dockerfile: Dockerfile
       target: portfolio-simple
     networks:
       - portfolio
     restart: unless-stopped
 
+  builder-portfolio-sql:
+    image: builder-portfolio-sql:local
+    build:
+      context: portfolio-sql
+      dockerfile: Dockerfile
+      target: builder-portfolio-sql
+    profiles: ["builders"]
+
   portfolio-sql:
     image: ${dockerId:-johnchase}/portfolio-sql:${BUILD_TAG:-local}
     build:
       context: portfolio-sql
-      dockerfile: portfolio-sql/Dockerfile
+      dockerfile: Dockerfile
       target: portfolio-sql
     networks:
       - portfolio
     restart: unless-stopped
+
+  builder-portfolio-combined:
+    image: builder-portfolio-combined:local
+    build:
+      context: .
+      dockerfile: docker/portfolio-combined/Dockerfile
+      target: builder-portfolio-combined
+    profiles: ["builders"]
 
   portfolio-template:
     image: ${dockerId:-johnchase}/portfolio-template:${BUILD_TAG:-local}
