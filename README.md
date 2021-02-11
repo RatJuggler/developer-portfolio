@@ -3,8 +3,7 @@
 My developer portfolio website. The full version is deployed [here](https://jurassic-john.site) and in case of problem the static
 only version is available [here](https://ratjuggler.github.io/developer-portfolio/).
 
-Rather than copying a random template off the internet I'm trying to create something a bit different from scratch (or at least 
-only adapting random bits off the internet that I can understand and modify, like all good projects do 😄).
+Rather than copying a random template off the internet I'm trying to create something a bit different from scratch.
 
 The idea is to build a number of different versions of the same site:
 
@@ -13,10 +12,10 @@ The idea is to build a number of different versions of the same site:
 3. Building some sort of back end to serve the data and using that from a further evolved set of templates.
 4. Expanding the back end and building a front end using a web component framework.
 
-I've completed some outline designs using static pages and from those built a template version. I've also built the skeleton of a 
-Java service using Spring, and I'm currently integrating this with the templates. 
+I've completed some outline designs using static pages and from those built a template version. I've also built the two Java 
+services using Spring, and I'm currently integrating these with the templates. 
 
-Content for the site will include:
+Content for the site includez:
 
 - Profile - Short introductory paragraph about myself with some social media links.
 - Skills - Table highlighting my hard & soft skills with option to sort, filter and mark items.
@@ -35,7 +34,7 @@ The Spring application can be run with: `./mvnw spring-boot:run`
 
 ### Test Images
 
-Three Docker file are available to create individual images for testing:
+Four Docker file are available to create individual images for testing:
  
 - docker / nginx - The public static files served using an instance of my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build). 
   
@@ -55,13 +54,22 @@ Three Docker file are available to create individual images for testing:
   Content will be available at: `http://localhost:3000`
 
 
-- docker / spring - A Java instance for the Spring application.
+- simple-service - A Java instance for the simple static data Spring application.
 
-  Create an image with: `docker build -f docker/spring/Dockerfile -t portfolio-spring:test .`
+  Create an image with: `docker build -f simple-service/Dockerfile -t portfolio-simple:test .`
 
-  Then run with: `docker run -p 8001:8001 portfolio-static:spring -d`
+  Then run with: `docker run -p 8001:8001 portfolio-simple:test -d`
 
   Content will be available at: `http://localhost:8001/(profile|skills|career|interests)`
+
+
+- sql-service - A Java instance for the SQL data Spring application.
+
+  Create an image with: `docker build -f sql-service/Dockerfile -t portfolio-sql:test .`
+
+  Then run with: `docker run -p 8001:8001 portfolio-sql:test -d`
+
+  Content will be available at: `http://localhost:8002/(profile|skills|career|interests)`
 
 
 ### Full Application
