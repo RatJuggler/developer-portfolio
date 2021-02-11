@@ -5,7 +5,7 @@ services:
     image: ${dockerId:-johnchase}/portfolio-simple:${BUILD_TAG:-local}
     build:
       context: simple-service
-      dockerfile: simple-service/Dockerfile
+      dockerfile: portfolio-simple/Dockerfile
       target: portfolio-simple
     networks:
       - portfolio
@@ -15,7 +15,7 @@ services:
     image: ${dockerId:-johnchase}/portfolio-sql:${BUILD_TAG:-local}
     build:
       context: sql-service
-      dockerfile: sql-service/Dockerfile
+      dockerfile: portfolio-sql/Dockerfile
       target: portfolio-sql
     networks:
       - portfolio
