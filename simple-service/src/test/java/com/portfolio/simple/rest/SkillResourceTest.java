@@ -5,7 +5,6 @@ import com.portfolio.simple.repository.SkillRepository;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import com.portfolio.simple.rest.SkillResource;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
