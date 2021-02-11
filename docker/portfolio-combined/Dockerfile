@@ -33,7 +33,7 @@ COPY package.json .
 RUN npm install
 
 # Copy the template application files from the build.
-COPY --from=builder /build/dist/ .
+COPY --from=builder-portfolio-combined /build/dist/ .
 
 
 # Create an Nginx image to serve the static files.
@@ -47,10 +47,10 @@ LABEL description="Developer Portfolio - Ngninx Static Files"
 WORKDIR /srv
 
 # Use a basic Nginx configuration.
-COPY docker/nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY docker/portfolio-static/nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy the distribution files.
-COPY --from=builder /build/dist/public /srv/public
+COPY --from=builder-portfolio-combined /build/dist/public /srv/public
 
 
 # Create a Nginx image for the reverse proxy front-end.
@@ -61,4 +61,4 @@ LABEL build_tag=${BUILD_TAG}
 LABEL description="Developer Portfolio - Nginx Site Front-End"
 
 # Use an Nginx configuration with reverse proxy's to the static files and template application.
-COPY docker/combined/nginx.conf /etc/nginx/conf.d/default.conf
+COPY docker/portfolio-combined/nginx.conf /etc/nginx/conf.d/default.conf

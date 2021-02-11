@@ -33,4 +33,4 @@ COPY package.json .
 RUN npm install
 
 # Copy the template application files from the build.
-COPY --from=builder /build/dist/ .
+COPY --from=builder-portfolio-template /build/dist/ .

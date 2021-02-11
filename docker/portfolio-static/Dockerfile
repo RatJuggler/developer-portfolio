@@ -24,7 +24,7 @@ LABEL description="Developer Portfolio - Ngninx Static Files"
 WORKDIR /srv
 
 # Use a basic Nginx configuration.
-COPY docker/nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY docker/portfolio-static/nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy the distribution files.
-COPY --from=builder /build/dist/public /srv/public
+COPY --from=builder-portfolio-static /build/dist/public /srv/public
