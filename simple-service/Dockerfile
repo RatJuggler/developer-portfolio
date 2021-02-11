@@ -16,11 +16,11 @@ RUN mvn package -Dmaven.test.skip=true
 
 
 # Create a Java image to run the service.
-FROM adoptopenjdk:11-jre AS portfolio-simple-service
+FROM adoptopenjdk:11-jre AS portfolio-simple
 
 ARG BUILD_TAG=local
 LABEL build_tag=${BUILD_TAG}
-LABEL description="Developer Portfolio - Java Spring Simple Service"
+LABEL description="Developer Portfolio - Java Spring - Simple Static Data Service"
 
 EXPOSE 8001
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
