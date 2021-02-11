@@ -1,5 +1,7 @@
 package com.portfolio.sql.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -12,6 +14,20 @@ public class Skill {
     private String category;
     private String skill;
     private String description;
+
+    public Skill() {}
+
+    public Skill(@JsonProperty("id") final long id,
+                 @JsonProperty("level") final String level,
+                 @JsonProperty("category") final String category,
+                 @JsonProperty("skill") final String skill,
+                 @JsonProperty("description") final String description) {
+        this.id = id;
+        this.level = level;
+        this.category = category;
+        this.skill = skill;
+        this.description = description;
+    }
 
     public long getId() {
         return this.id;
