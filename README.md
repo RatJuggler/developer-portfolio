@@ -76,8 +76,8 @@ A Java instance for the simple static data Spring application.
 
 Create an image with:
   
-    docker build -f simple-service/Dockerfile --target builder-portfolio-simple -t builder-portfolio-simple:local simple-service
-    docker build -f simple-service/Dockerfile --target portfolio-simple -t portfolio-simple:test simple-service
+    docker build -f portfolio-simple/Dockerfile --target builder-portfolio-simple -t builder-portfolio-simple:local simple-service
+    docker build -f portfolio-simple/Dockerfile --target portfolio-simple -t portfolio-simple:test simple-service
 
 Then run with: `docker run -p 8001:8001 portfolio-simple:test -d`
 
@@ -89,8 +89,8 @@ A Java instance for the SQL data Spring application.
 
 Create an image with:
   
-    docker build -f sql-service/Dockerfile --target builder-portfolio-sql -t builder-portfolio-site:local sql-service
-    docker build -f sql-service/Dockerfile --target portfolio-sql -t portfolio-sql:test sql-service
+    docker build -f portfolio-sql/Dockerfile --target builder-portfolio-sql -t builder-portfolio-site:local sql-service
+    docker build -f portfolio-sql/Dockerfile --target portfolio-sql -t portfolio-sql:test sql-service
 
 Then run with: `docker run -p 8001:8001 portfolio-sql:test -d`
 
