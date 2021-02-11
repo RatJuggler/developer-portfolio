@@ -1,5 +1,5 @@
 # Build the service.
-FROM maven:3-adoptopenjdk-11 AS builder-sql
+FROM maven:3-adoptopenjdk-11 AS builder-portfolio-sql
 
 # Location of the source code.
 WORKDIR /build

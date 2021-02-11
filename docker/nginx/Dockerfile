@@ -1,5 +1,5 @@
 # Build the static files.
-FROM node:lts-alpine3.11 AS builder-static
+FROM node:lts-alpine3.11 AS builder-portfolio-static
 
 # Location of the source code.
 WORKDIR /build
