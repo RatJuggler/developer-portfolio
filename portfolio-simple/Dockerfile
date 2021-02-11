@@ -1,5 +1,5 @@
 # Build the service.
-FROM maven:3-adoptopenjdk-11 AS builder-portfolio-simple
+FROM builder-shared-resources:local AS builder-portfolio-simple
 
 # Location of the source code.
 WORKDIR /build
@@ -29,4 +29,4 @@ ENTRYPOINT ["java", "-jar", "/app/app.jar"]
 WORKDIR /app
 
 # Copy the service from the build.
-COPY --from=builder /build/target/*.jar app.jar
+COPY --from=builder-portfolio-simple /build/target/*.jar app.jar
