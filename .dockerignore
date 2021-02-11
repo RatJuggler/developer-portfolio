@@ -5,7 +5,6 @@
 dist
 node_modules
 public/vendor
-target
-shared-resources
-simple-service
-sql-service
+portfolio-simple
+portfolio-sql
+**/target
