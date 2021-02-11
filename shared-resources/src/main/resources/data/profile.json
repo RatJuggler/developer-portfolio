@@ -1,5 +1,6 @@
 {
-  "_class": "com.portfolio.simple.domain.Profile",
+  "_classSimple": "com.portfolio.simple.domain.Profile",
+  "_classSQL": "com.portfolio.sql.domain.Profile",
   "id": 1,
   "name": "John Chase",
   "location": "Smallfield, Surrey, England",
