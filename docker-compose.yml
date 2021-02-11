@@ -25,7 +25,7 @@ services:
     image: ${dockerId:-johnchase}/portfolio-template:${BUILD_TAG:-local}
     build:
       context: .
-      dockerfile: ./docker/combined/Dockerfile
+      dockerfile: docker/portfolio-combined/Dockerfile
       target: portfolio-template
     depends_on:
       - portfolio-simple
@@ -38,7 +38,7 @@ services:
     image: ${dockerId:-johnchase}/portfolio-static:${BUILD_TAG:-local}
     build:
       context: .
-      dockerfile: ./docker/combined/Dockerfile
+      dockerfile: docker/portfolio-combined/Dockerfile
       target: portfolio-static
     networks:
       - portfolio
@@ -48,7 +48,7 @@ services:
     image: ${dockerId:-johnchase}/portfolio-site:${BUILD_TAG:-local}
     build:
       context: .
-      dockerfile: ./docker/combined/Dockerfile
+      dockerfile: docker/portfolio-combined/Dockerfile
       target: portfolio-site
     ports:
       - "8080:80"
