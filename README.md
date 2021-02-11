@@ -15,14 +15,14 @@ The idea is to build a number of different versions of the same site:
 I've completed some outline designs using static pages and from those built a template version. I've also built the two Java 
 services using Spring, and I'm currently integrating these with the templates. 
 
-Content for the site includez:
+Content for the site includes:
 
 - Profile - Short introductory paragraph about myself with some social media links.
 - Skills - Table highlighting my hard & soft skills with option to sort, filter and mark items.
 - Career - Rough timeline from when I started with the dinosaurs to the present day space age.
 - Interests - Brief details on my outside interests. 
 
-### Development
+## Development
 
 There are three `npm` targets which can be used during development:
 
@@ -32,47 +32,63 @@ There are three `npm` targets which can be used during development:
 
 The Spring application can be run with: `./mvnw spring-boot:run`
 
-### Test Images
+## Test Images
 
 Four Docker file are available to create individual images for testing:
  
-- docker / nginx - The public static files served using an instance of my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build). 
+### portfolio-static
+
+The public static files served using an instance of my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build). 
   
-  Create an image with: `docker build -f docker/nginx/Dockerfile -t portfolio-static:test .`
+Create an image with:
+  
+    docker build -f docker/nginx/Dockerfile --target builder-portfolio-static -t builder-portfolio-static:local .
+    docker build -f docker/nginx/Dockerfile --target portfolio-static -t portfolio-static:test .
    
-  Then run with: `docker run -p 8080:80 portfolio-static:test -d`
+Then run with: `docker run -p 8080:80 portfolio-static:test -d`
 
-  Content will be available at: `http://localhost:8080`
+Content will be available at: `http://localhost:8080`
 
+### portfolio-template
 
-- docker / node - A Node instance for the template application, which also serves a copy of the public static files.
+A Node instance for the template application, which also serves a copy of the public static files.
   
-  Create an image with: `docker build -f docker/node/Dockerfile -t portfolio-template:test .`
+Create an image with:
+  
+    docker build -f docker/node/Dockerfile --target builder-portfolio-template -t builder-portfolio-template:local .
+    docker build -f docker/node/Dockerfile --target portfolio-template -t portfolio-template:test .
 
-  Then run with: `docker run -p 3000:3000 portfolio-template:test -d`
+Then run with: `docker run -p 3000:3000 portfolio-template:test -d`
 
-  Content will be available at: `http://localhost:3000`
+Content will be available at: `http://localhost:3000`
 
+### portfolio-simple
 
-- simple-service - A Java instance for the simple static data Spring application.
+A Java instance for the simple static data Spring application.
 
-  Create an image with: `docker build -f simple-service/Dockerfile -t portfolio-simple:test .`
+Create an image with:
+  
+    docker build -f simple-service/Dockerfile --target builder-portfolio-simple -t builder-portfolio-simple:local simple-service
+    docker build -f simple-service/Dockerfile --target portfolio-simple -t portfolio-simple:test simple-service
 
-  Then run with: `docker run -p 8001:8001 portfolio-simple:test -d`
+Then run with: `docker run -p 8001:8001 portfolio-simple:test -d`
 
-  Content will be available at: `http://localhost:8001/(profile|skills|career|interests)`
+Content will be available at: `http://localhost:8001/(profile|skills|career|interests)`
 
+### portfolio-sql
 
-- sql-service - A Java instance for the SQL data Spring application.
+A Java instance for the SQL data Spring application.
 
-  Create an image with: `docker build -f sql-service/Dockerfile -t portfolio-sql:test .`
+Create an image with:
+  
+    docker build -f sql-service/Dockerfile --target builder-portfolio-sql -t builder-portfolio-site:local sql-service
+    docker build -f sql-service/Dockerfile --target portfolio-sql -t portfolio-sql:test sql-service
 
-  Then run with: `docker run -p 8001:8001 portfolio-sql:test -d`
+Then run with: `docker run -p 8001:8001 portfolio-sql:test -d`
 
-  Content will be available at: `http://localhost:8002/(profile|skills|career|interests)`
+Content will be available at: `http://localhost:8002/(profile|skills|career|interests)`
 
-
-### Full Application
+## Full Application
 
 A docker-compose configuration, with a multi-stage Docker build, allows the complete application to be built and run. This includes 
 an instance of Nginx to serve the public static files, a Node instance for the template application, a Java instance for the Spring 
@@ -84,7 +100,7 @@ application and a front-end proxy which routes requests to these two instances a
 
 ![Image of Deployment](https://github.com/RatJuggler/developer-portfolio/blob/main/deployed-result.jpg)
 
-### Attributions:
+## Attributions:
 
 - HTML5 Boilerplate - Front-end template [from here](https://html5boilerplate.com/).
 - Boostrap - Front-end development toolkit [from here](https://getbootstrap.com/).
