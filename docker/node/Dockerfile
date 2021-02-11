@@ -1,5 +1,5 @@
 # Build the template application.
-FROM node:lts-alpine3.11 AS builder
+FROM node:lts-alpine3.11 AS builder-template
 
 # Location of the source code.
 WORKDIR /build

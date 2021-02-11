@@ -1,5 +1,5 @@
 # Build the static files and the template application.
-FROM node:lts-alpine3.11 AS builder
+FROM node:lts-alpine3.11 AS builder-combined
 
 # Location of the source code.
 WORKDIR /build
