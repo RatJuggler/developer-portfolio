@@ -6,7 +6,7 @@
     <groupId>com.portfolio</groupId>
     <artifactId>shared-resources</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Share Resources</name>
+    <name>Shared Resources</name>
     <description>Shared Resources for my Developer Portfolio site.</description>
 
     <build>
