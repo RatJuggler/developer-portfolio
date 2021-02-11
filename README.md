@@ -30,21 +30,29 @@ There are three `npm` targets which can be used during development:
 - static-start - runs [browser-sync](https://browsersync.io/) so you can see changes to static files as they are made.
 - template-start - runs the Node template application in development.
 
-The Spring application can be run with: `./mvnw spring-boot:run`
+The Spring services rely on the shared resources bundle being available to them, so always make sure to update it in the local 
+repository after any changes using using `cd shared-resouces && ./mvnw install`.
+
+The Spring application can then be run with:
+
+- portfolio-simple - `cd simple-service && ./mvnw spring-boot:run`
+- portfolio-sql - `cd sql-service && ./mvnw spring-boot:run`
 
 ## Test Images
 
-Four Docker file are available to create individual images for testing:
- 
+Four Docker file are available to create individual images for deployment to other environments. They all make use of multi-stage
+docker files and at the moment I'm using two build commands for each image so that I can tag the builder. This helps when I'm
+pruning images but want to keep the builders for re-use, especially the Java builders.
+
 ### portfolio-static
 
 The public static files served using an instance of my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build). 
-  
+
 Create an image with:
-  
-    docker build -f docker/nginx/Dockerfile --target builder-portfolio-static -t builder-portfolio-static:local .
-    docker build -f docker/nginx/Dockerfile --target portfolio-static -t portfolio-static:test .
-   
+
+    docker build -f docker/portfolio-static/Dockerfile --target builder-portfolio-static -t builder-portfolio-static:local .
+    docker build -f docker/portfolio-static/Dockerfile --target portfolio-static -t portfolio-static:test .
+
 Then run with: `docker run -p 8080:80 portfolio-static:test -d`
 
 Content will be available at: `http://localhost:8080`
@@ -54,9 +62,9 @@ Content will be available at: `http://localhost:8080`
 A Node instance for the template application, which also serves a copy of the public static files.
   
 Create an image with:
-  
-    docker build -f docker/node/Dockerfile --target builder-portfolio-template -t builder-portfolio-template:local .
-    docker build -f docker/node/Dockerfile --target portfolio-template -t portfolio-template:test .
+
+    docker build -f docker/portfolio-template/Dockerfile --target builder-portfolio-template -t builder-portfolio-template:local .
+    docker build -f docker/portfolio-template/Dockerfile --target portfolio-template -t portfolio-template:test .
 
 Then run with: `docker run -p 3000:3000 portfolio-template:test -d`
 
