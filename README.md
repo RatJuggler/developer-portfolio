@@ -31,18 +31,18 @@ There are three `npm` targets which can be used during development:
 - template-start - runs the Node template application in development.
 
 The Spring services rely on the shared resources bundle being available to them, so always make sure to update it in the local 
-repository after any changes using using `cd shared-resouces && ./mvnw install`.
+repository after any changes by using `cd shared-resouces && ./mvnw install`.
 
 The Spring application can then be run with:
 
-- portfolio-simple - `cd simple-service && ./mvnw spring-boot:run`
-- portfolio-sql - `cd sql-service && ./mvnw spring-boot:run`
+- portfolio-simple - `cd portfolio-simple && ./mvnw spring-boot:run`
+- portfolio-sql - `cd portfolio-sql && ./mvnw spring-boot:run`
 
-## Test Images
+## Docker Images
 
-Four Docker file are available to create individual images for deployment to other environments. They all make use of multi-stage
-docker files and at the moment I'm using two build commands for each image so that I can tag the builder. This helps when I'm
-pruning images but want to keep the builders for re-use, especially the Java builders.
+Docker files are available to create images for deployment to other environments. They all make use of multi-stage docker files and 
+at the moment I'm using two build commands for each image when testing so that I can tag the builders. This helps when I'm pruning 
+images but want to keep the builders for re-use, especially the Java builders.
 
 ### portfolio-static
 
@@ -61,7 +61,7 @@ Content will be available at: `http://localhost:8080`
 
 A Node instance for the template application, which also serves a copy of the public static files.
   
-Create an image with:
+Create the image with:
 
     docker build -f docker/portfolio-template/Dockerfile --target builder-portfolio-template -t builder-portfolio-template:local .
     docker build -f docker/portfolio-template/Dockerfile --target portfolio-template -t portfolio-template:test .
@@ -70,11 +70,20 @@ Then run with: `docker run -p 3000:3000 portfolio-template:test -d`
 
 Content will be available at: `http://localhost:3000`
 
+### shared-resources
+
+This image is for building only. It creates a Maven base image with common dependencies installed along with the shared resources
+which can then used by the other Java image builds.
+
+Create the image with:
+
+    docker build -f shared-resources/Dockerfile -t shared-resources:local shared-resources
+
 ### portfolio-simple
 
-A Java instance for the simple static data Spring application.
+A Java instance for the simple static data Spring application. The shared-resources image is required. 
 
-Create an image with:
+Create the image with:
   
     docker build -f portfolio-simple/Dockerfile --target builder-portfolio-simple -t builder-portfolio-simple:local simple-service
     docker build -f portfolio-simple/Dockerfile --target portfolio-simple -t portfolio-simple:test simple-service
@@ -85,9 +94,9 @@ Content will be available at: `http://localhost:8001/(profile|skills|career|inte
 
 ### portfolio-sql
 
-A Java instance for the SQL data Spring application.
+A Java instance for the SQL data Spring application. The shared-resources image is required.
 
-Create an image with:
+Create the image with:
   
     docker build -f portfolio-sql/Dockerfile --target builder-portfolio-sql -t builder-portfolio-site:local sql-service
     docker build -f portfolio-sql/Dockerfile --target portfolio-sql -t portfolio-sql:test sql-service
@@ -98,12 +107,14 @@ Content will be available at: `http://localhost:8002/(profile|skills|career|inte
 
 ## Full Application
 
-A docker-compose configuration, with a multi-stage Docker build, allows the complete application to be built and run. This includes 
-an instance of Nginx to serve the public static files, a Node instance for the template application, a Java instance for the Spring 
-application and a front-end proxy which routes requests to these two instances as required. The proxy is also based on my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build).
+A docker-compose configuration allows the complete application to be built and run. It uses a combined multi-stage docker build for
+the static and template images to save time and also includes a front-end proxy which routes requests to the static pages or 
+templates as required. The proxy is again based on my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build).
 
-  Create and run all the images with: `docker-compose up -d`
+  Build all the images with: `docker-compose build`
 
+  Run the images with: `docker-compose up -d`
+``
   Content will be available at: `http://localhost:8080`
 
 ![Image of Deployment](https://github.com/RatJuggler/developer-portfolio/blob/main/deployed-result.jpg)
