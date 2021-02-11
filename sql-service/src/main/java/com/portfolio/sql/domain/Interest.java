@@ -1,5 +1,7 @@
 package com.portfolio.sql.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -11,6 +13,18 @@ public class Interest {
     private String title;
     private String imagePath;
     private String description;
+
+    public Interest() {}
+
+    public Interest(@JsonProperty("id") final long id,
+                    @JsonProperty("title") final String title,
+                    @JsonProperty("imagePath") final String imagePath,
+                    @JsonProperty("description") final String description) {
+        this.id = id;
+        this.title = title;
+        this.imagePath = imagePath;
+        this.description = description;
+    }
 
     public long getId() {
         return this.id;
