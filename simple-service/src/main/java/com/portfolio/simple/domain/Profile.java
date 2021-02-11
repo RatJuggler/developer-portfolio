@@ -22,9 +22,17 @@ public class Profile {
 
     public Profile() {}
 
-    public Profile(final long id, final String name, final String location, final String status, final String avatarPath,
-                   final String photoPath, final String description, final String email, final String linkedin,
-                   final String github, final String twitter) {
+    public Profile(@JsonProperty("id") final long id,
+                   @JsonProperty("name") final String name,
+                   @JsonProperty("location") final String location,
+                   @JsonProperty("status") final String status,
+                   @JsonProperty("avatarPath") final String avatarPath,
+                   @JsonProperty("photoPath") final String photoPath,
+                   @JsonProperty("description") final String description,
+                   @JsonProperty("email") final String email,
+                   @JsonProperty("linkedin") final String linkedin,
+                   @JsonProperty("github") final String github,
+                   @JsonProperty("twitter") final String twitter) {
         this.id = id;
         this.name = name;
         this.status = status;

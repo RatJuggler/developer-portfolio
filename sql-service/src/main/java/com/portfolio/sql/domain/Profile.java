@@ -1,7 +1,5 @@
 package com.portfolio.sql.domain;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Lob;
@@ -25,30 +23,6 @@ public class Profile {
 
     public Profile() {}
 
-//    public Profile(@JsonProperty("id") final long id,
-//                   @JsonProperty("name") final String name,
-//                   @JsonProperty("location") final String location,
-//                   @JsonProperty("status") final String status,
-//                   @JsonProperty("avatarPath") final String avatarPath,
-//                   @JsonProperty("photoPath") final String photoPath,
-//                   @JsonProperty("description") final String description,
-//                   @JsonProperty("email") final String email,
-//                   @JsonProperty("linkedin") final String linkedin,
-//                   @JsonProperty("github") final String github,
-//                   @JsonProperty("twitter") final String twitter) {
-//        this.id = id;
-//        this.name = name;
-//        this.status = status;
-//        this.location = location;
-//        this.avatarPath = avatarPath;
-//        this.photoPath = photoPath;
-//        this.description = description;
-//        this.email = email;
-//        this.linkedin = linkedin;
-//        this.github = github;
-//        this.twitter = twitter;
-//    }
-//
     public long getId() {
         return this.id;
     }
