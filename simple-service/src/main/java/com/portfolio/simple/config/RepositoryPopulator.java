@@ -30,7 +30,7 @@ public class RepositoryPopulator {
         factory.setResources(new Resource[] {
                 new ClassPathResource("data/profile.json"),
 //                new ClassPathResource("data/skills.json"),
-//                new ClassPathResource("data/career.json"),
+                new ClassPathResource("data/career.json"),
                 new ClassPathResource("data/interests.json")
         });
         return factory;
