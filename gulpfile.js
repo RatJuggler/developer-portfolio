@@ -99,6 +99,7 @@ function copyStaticDist() {
         .pipe(gulp.dest('./dist/public/img'));
     // Static HTML
     let html = gulp.src('./public/**/*.html')
+        .pipe(replace('http://localhost:3000', 'https://jurassic-john.site'))
         .pipe(replace('.min.js', '.js'))
         .pipe(replace('.css', '.min.css'))
         .pipe(replace('.js', '.min.js'))
