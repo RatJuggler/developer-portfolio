@@ -1,12 +1,22 @@
 version: '3.8'
 
 services:
-  portfolio-simple-service:
-    image: ${dockerId:-johnchase}/portfolio-simple-service:${BUILD_TAG:-local}
+  portfolio-simple:
+    image: ${dockerId:-johnchase}/portfolio-simple:${BUILD_TAG:-local}
     build:
       context: simple-service
       dockerfile: simple-service/Dockerfile
-      target: portfolio-simple-service
+      target: portfolio-simple
+    networks:
+      - portfolio
+    restart: unless-stopped
+
+  portfolio-sql:
+    image: ${dockerId:-johnchase}/portfolio-sql:${BUILD_TAG:-local}
+    build:
+      context: sql-service
+      dockerfile: sql-service/Dockerfile
+      target: portfolio-sql
     networks:
       - portfolio
     restart: unless-stopped
@@ -18,7 +28,8 @@ services:
       dockerfile: ./docker/combined/Dockerfile
       target: portfolio-template
     depends_on:
-      - portfolio-simple-service
+      - portfolio-simple
+      - portfolio-sql
     networks:
       - portfolio
     restart: unless-stopped
