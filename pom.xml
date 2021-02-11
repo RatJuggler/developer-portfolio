@@ -12,7 +12,7 @@
 
     <modules>
         <module>shared-resources</module>
-        <module>simple-service</module>
-        <module>sql-service</module>
+        <module>portfolio-simple</module>
+        <module>portfolio-sql</module>
     </modules>
 </project>
