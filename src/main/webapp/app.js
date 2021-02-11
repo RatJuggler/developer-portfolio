@@ -31,7 +31,7 @@ app.use(express.static('public'));
 
 // Default landing page.
 app.get('/', asyncHandler(async (req, res, next) => {
-    res.redirect('/template/' + templates[0]);
+    res.redirect('/index.html');
 }));
 
 // Template rendering using requested data source.
