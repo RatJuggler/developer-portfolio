@@ -1,7 +1,8 @@
 const templatePath = process.argv[2];
 const dataPath = process.argv[3];
 const publicPath = process.argv[4];
-const springUrl = process.argv[5];
+const simpleUrl = process.argv[5];
+const sqlUrl = process.argv[6];
 
 const path = require('path');
 const fs = require('fs').promises;
@@ -15,7 +16,7 @@ app.set('views', templatePath);
 app.set('view engine', 'twig');
 
 const templates = ['profile', 'skills', 'career', 'interests'];
-const dataSources = ['json', 'spring'];
+const dataSources = ['json', 'simple', 'sql'];
 
 // Express Async Handler, see: https://zellwk.com/blog/async-await-express/
 const asyncHandler = fn =>
@@ -59,7 +60,8 @@ app.listen(port, () => {
     console.log(`templatePath : ${templatePath}`);
     console.log(`dataPath     : ${dataPath}`);
     console.log(`publicPath   : ${publicPath}`);
-    console.log(`springUrl    : ${springUrl}`);
+    console.log(`simpleUrl    : ${simpleUrl}`);
+    console.log(`sqlUrl       : ${sqlUrl}`);
     console.log(`developer-portfolio template application listening on port: ${port}`);
 });
 
@@ -67,8 +69,10 @@ function getTemplateVersion(dataFrom) {
     switch (dataFrom) {
         case 'json':
             return 'Template Version with Static JSON Data Files';
-        case 'spring':
-            return  'Template Version with Static Data from Spring Services';
+        case 'simple':
+            return  'Template Version with Simple Static Data from Spring Service';
+        case 'sql':
+            return  'Template Version with SQL Data from Spring Service';
         default:
             throw new Error('Unknown data source: ' + dataFrom);
     }
@@ -78,8 +82,10 @@ function getDataFrom(dataFrom, aspect) {
     switch (dataFrom) {
         case 'json':
             return readStaticJsonFile(dataPath, aspect);
-        case 'spring':
-            return requestJsonFromUrl(springUrl, aspect);
+        case 'simple':
+            return requestJsonFromUrl(simpleUrl, aspect);
+        case 'sql':
+            return requestJsonFromUrl(sqlUrl, aspect);
         default:
             throw new Error('Unknown data source: ' + dataFrom);
     }
@@ -95,5 +101,5 @@ function readStaticJsonFile(dataPath, aspect) {
 function requestJsonFromUrl(rootUrl, aspect) {
     return got.get(aspect, {prefixUrl: rootUrl})
         .then(res => JSON.parse(res.body))
-        .catch(err => console.error('Request for static JSON data failed!', err));
+        .catch(err => console.error('Request for JSON data from URL failed!', err));
 }
