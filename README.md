@@ -85,8 +85,8 @@ A Java instance for the simple static data Spring application. The shared-resour
 
 Create the image with:
   
-    docker build -f portfolio-simple/Dockerfile --target builder-portfolio-simple -t builder-portfolio-simple:local simple-service
-    docker build -f portfolio-simple/Dockerfile --target portfolio-simple -t portfolio-simple:test simple-service
+    docker build -f portfolio-simple/Dockerfile --target builder-portfolio-simple -t builder-portfolio-simple:local portfolio-simple
+    docker build -f portfolio-simple/Dockerfile --target portfolio-simple -t portfolio-simple:test portfolio-simple
 
 Then run with: `docker run -p 8001:8001 portfolio-simple:test -d`
 
@@ -98,8 +98,8 @@ A Java instance for the SQL data Spring application. The shared-resources image 
 
 Create the image with:
   
-    docker build -f portfolio-sql/Dockerfile --target builder-portfolio-sql -t builder-portfolio-site:local sql-service
-    docker build -f portfolio-sql/Dockerfile --target portfolio-sql -t portfolio-sql:test sql-service
+    docker build -f portfolio-sql/Dockerfile --target builder-portfolio-sql -t builder-portfolio-sql:local portfolio-sql
+    docker build -f portfolio-sql/Dockerfile --target portfolio-sql -t portfolio-sql:test portfolio-sql
 
 Then run with: `docker run -p 8001:8001 portfolio-sql:test -d`
 
@@ -116,6 +116,8 @@ templates as required. The proxy is again based on my [Nginx golden image](https
   Run the images with: `docker-compose up -d`
 ``
   Content will be available at: `http://localhost:8080`
+
+Environment variables can be used to configure image tagging (see the file).
 
 ![Image of Deployment](https://github.com/RatJuggler/developer-portfolio/blob/main/deployed-result.jpg)
 
