@@ -26,8 +26,8 @@ Content for the site includes:
 
 There are three `npm` targets which can be used during development:
 
-- static-build - should be run at least once after `npm install` to make the 3rd party vendor dependency files available.
-- static-start - runs [browser-sync](https://browsersync.io/) so you can see changes to static files as they are made.
+- ui-build - should be run at least once after `npm install` to make the 3rd party vendor dependency files available.
+- html-start - runs [browser-sync](https://browsersync.io/) so you can see changes to static files as they are made.
 - template-start - runs the Node template application in development.
 
 The Spring services rely on the shared resources bundle being available to them, so always make sure to update it in the local 
