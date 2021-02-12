@@ -5,8 +5,8 @@ FROM node:lts-alpine3.11 AS builder-portfolio-static
 WORKDIR /build
 
 # Install the build dependencies.
-COPY package.json .
-RUN npm install
+COPY package*.json ./
+RUN npm ci
 
 # Copy the sources and run the build.
 COPY . .

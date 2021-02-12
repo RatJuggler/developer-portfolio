@@ -5,8 +5,8 @@ FROM node:lts-alpine3.11 AS builder-portfolio-template
 WORKDIR /build
 
 # Install the build dependencies.
-COPY package.json .
-RUN npm install
+COPY package*.json ./
+RUN npm ci
 
 # Copy the sources and run the build.
 COPY . .
@@ -29,8 +29,8 @@ CMD ["node", "app/app.js", "app/templates", "app/data", "../public", "http://loc
 WORKDIR /srv
 
 # Install the runtime dependencies.
-COPY package.json .
-RUN npm install
+COPY package-lock.json .
+RUN npm ci
 
 # Copy the template application files from the build.
 COPY --from=builder-portfolio-template /build/dist/ .
