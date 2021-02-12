@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies and run build 🔧
         run: |
           npm ci
-          npm run static-build
+          npm run gh-pages-build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1

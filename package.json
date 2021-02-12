@@ -10,8 +10,9 @@
   "author": "John Chase",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "static-build": "node_modules/.bin/gulp build",
-    "static-start": "browser-sync start --server 'public' --files 'public'",
+    "ui-build": "node_modules/.bin/gulp rebuild",
+    "gh-pages-build": "node_modules/.bin/gulp ghPagesBuild",
+    "html-start": "browser-sync start --server 'public' --files 'public'",
     "template-start": "nodemon -w src/main/webapp -e js,twig src/main/webapp/app.js src/main/webapp/templates shared-resources/src/main/resources/data ../../../public http://localhost:8001 http://localhost:8002"
   },
   "repository": {
@@ -27,22 +28,23 @@
   "main": "app.js",
   "engines": {
     "node": "^14.x",
-    "npm": "^6.x"
+    "npm": "^7.x"
   },
   "dependencies": {
     "express": "^4.17.1",
-    "twig": "^1.15.4",
-    "got": "^11.8.1"
+    "got": "^11.8.1",
+    "twig": "^1.15.4"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
-    "browser-sync": "^2.26.14",
     "bootstrap": "^4.6.0",
     "bootstrap-table": "^1.18.2",
+    "browser-sync": "^2.26.14",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-header": "^2.0.9",
+    "gulp-if": "^3.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.0.0",
@@ -51,8 +53,8 @@
     "gulp-rev-rewrite": "^4.0.0",
     "gulp-terser": "^2.0.1",
     "jquery": "^3.5.1",
-    "nodemon": "^2.0.7",
     "merge-stream": "^2.0.0",
+    "nodemon": "^2.0.7",
     "popper.js": "^1.16.1"
   }
 }

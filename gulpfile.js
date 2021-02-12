@@ -4,6 +4,7 @@
 const cleanCSS = require("gulp-clean-css");
 const del = require("del");
 const gulp = require("gulp");
+const gulpif = require("gulp-if");
 const header = require("gulp-header");
 const merge = require("merge-stream");
 const plumber = require("gulp-plumber");
@@ -27,10 +28,6 @@ function cleanVendor() {
 
 function cleanDist() {
     return del(["./dist/"]);
-}
-
-function cleanModules() {
-    return del(["./node_modules/"]);
 }
 
 // Bring third party dependencies from node_modules into the vendor directory.
@@ -99,7 +96,7 @@ function copyStaticDist() {
         .pipe(gulp.dest('./dist/public/img'));
     // Static HTML
     let html = gulp.src('./public/**/*.html')
-        .pipe(replace('http://localhost:3000', 'https://jurassic-john.site'))
+        .pipe(gulpif(staticBuild, replace('"/template', '"https://jurassic-john.site/template')))
         .pipe(replace('.min.js', '.js'))
         .pipe(replace('.css', '.min.css'))
         .pipe(replace('.js', '.min.js'))
@@ -173,20 +170,20 @@ function rewrite() {
     return merge(staticHTML, staticTwig);
 }
 
+let staticBuild = false;
+
 // Define complex tasks
-const cleanAll = gulp.parallel(cleanDist, cleanModules, cleanVendor);
-const vendor = gulp.series(cleanVendor, createVendor);
-const build = gulp.series(vendor, cleanDist, gulp.parallel(copyModuleDist, copyStaticDist, copyAppDist), gulp.parallel(mincss, minjs), revision, rewrite);
+const build = gulp.series(createVendor, gulp.parallel(copyModuleDist, copyStaticDist, copyAppDist), gulp.parallel(mincss, minjs), revision, rewrite);
+const rebuild = gulp.series(gulp.parallel(cleanVendor, cleanDist), build);
+const ghPagesBuild = gulp.series(function (cb) { staticBuild = true; cb(); }, build);
 
 // Document tasks
-cleanDist.description = "Clear down the distribution folder.";
-cleanAll.description = "Clear down the distribution, vendor and node_modules folders.";
-vendor.description = "Refresh the vendor dependencies from node_modules.";
-build.description = "Build a distribution ready version of the site.";
+build.description = "Build a distribution ready version of the ui files.";
+rebuild.description = "Clear down vendor and distribution then run a build.";
+ghPagesBuild.description = "Build for GitHub pages including hardcoded links to dynamic site.";
 
 // Export tasks
-exports.cleandist = cleanDist;
-exports.cleanall = cleanAll;
-exports.vendor = vendor;
 exports.build = build;
-exports.default = build;
+exports.rebuild = rebuild;
+exports.ghPagesBuild = ghPagesBuild;
+exports.default = rebuild;
