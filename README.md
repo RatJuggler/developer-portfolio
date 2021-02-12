@@ -111,7 +111,7 @@ A docker-compose configuration allows the complete application to be built and r
 the static and template images to save time and also includes a front-end proxy which routes requests to the static pages or 
 templates as required. The proxy is again based on my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build).
 
-  Build all the images with: `docker-compose build`
+  Build all the images with: `docker-compose --profile="builders" build`
 
   Run the images with: `docker-compose up -d`
 ``
