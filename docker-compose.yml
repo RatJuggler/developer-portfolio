@@ -2,6 +2,8 @@ version: '3.8'
 
 x-args: &args
   args:
+    DOCKER_REGISTRY: ${DOCKER_REGISTRY:-}
+    DOCKER_ID: ${DOCKER_ID:-}
     BUILD_TAG: ${BUILD_TAG:-local}
 
 services:

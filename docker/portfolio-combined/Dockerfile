@@ -37,7 +37,9 @@ COPY --from=builder-portfolio-combined /build/dist/ .
 
 
 # Create an Nginx image to serve the static files.
-FROM johnchase/golden-nginx:latest AS portfolio-static
+ARG DOCKER_REGISTRY=""
+ARG DOCKER_ID=""
+FROM ${DOCKER_REGISTRY}${DOCKER_ID}golden-nginx:latest AS portfolio-static
 
 ARG BUILD_TAG=local
 LABEL build_tag=${BUILD_TAG}
@@ -54,7 +56,9 @@ COPY --from=builder-portfolio-combined /build/dist/public /srv/public
 
 
 # Create a Nginx image for the reverse proxy front-end.
-FROM johnchase/golden-nginx:latest AS portfolio-site
+ARG DOCKER_REGISTRY=""
+ARG DOCKER_ID=""
+FROM ${DOCKER_REGISTRY}${DOCKER_ID}golden-nginx:latest AS portfolio-site
 
 ARG BUILD_TAG=local
 LABEL build_tag=${BUILD_TAG}
