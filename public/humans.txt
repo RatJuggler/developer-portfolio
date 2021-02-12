@@ -8,5 +8,5 @@
   To everyone that knows me.
 
 # TECHNOLOGY COLOPHON
-  IDE: JetBrains WebStorm
-  Technology: HTML5, CSS3
+  IDE: JetBrains Intellij
+  Technology: HTML5, CSS3, Java, Spring
