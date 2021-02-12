@@ -1,8 +1,12 @@
 version: '3.8'
 
+x-args: &args
+  args:
+    BUILD_TAG: ${BUILD_TAG:-local}
+
 services:
   builder-shared-resources:
-    image: builder-shared-resources:local
+    image: ${DOCKER_REGISTRY}${DOCKER_ID}builder-shared-resources:latest
     build:
       context: shared-resources
       dockerfile: Dockerfile
@@ -10,7 +14,7 @@ services:
     profiles: ["builders"]
 
   builder-portfolio-simple:
-    image: builder-portfolio-simple:local
+    image: ${DOCKER_REGISTRY}${DOCKER_ID}builder-portfolio-simple:latest
     build:
       context: portfolio-simple
       dockerfile: Dockerfile
@@ -18,17 +22,18 @@ services:
     profiles: ["builders"]
 
   portfolio-simple:
-    image: ${dockerId:-johnchase}/portfolio-simple:${BUILD_TAG:-local}
+    image: ${DOCKER_REGISTRY}${DOCKER_ID}portfolio-simple:${IMAGE_TAG:-latest}
     build:
       context: portfolio-simple
       dockerfile: Dockerfile
+      <<: *args
       target: portfolio-simple
     networks:
       - portfolio
     restart: unless-stopped
 
   builder-portfolio-sql:
-    image: builder-portfolio-sql:local
+    image: ${DOCKER_REGISTRY}${DOCKER_ID}builder-portfolio-sql:latest
     build:
       context: portfolio-sql
       dockerfile: Dockerfile
@@ -36,17 +41,18 @@ services:
     profiles: ["builders"]
 
   portfolio-sql:
-    image: ${dockerId:-johnchase}/portfolio-sql:${BUILD_TAG:-local}
+    image: ${DOCKER_REGISTRY}${DOCKER_ID}portfolio-sql:${IMAGE_TAG:-latest}
     build:
       context: portfolio-sql
       dockerfile: Dockerfile
+      <<: *args
       target: portfolio-sql
     networks:
       - portfolio
     restart: unless-stopped
 
   builder-portfolio-combined:
-    image: builder-portfolio-combined:local
+    image: ${DOCKER_REGISTRY}${DOCKER_ID}builder-portfolio-combined:latest
     build:
       context: .
       dockerfile: docker/portfolio-combined/Dockerfile
@@ -54,10 +60,11 @@ services:
     profiles: ["builders"]
 
   portfolio-template:
-    image: ${dockerId:-johnchase}/portfolio-template:${BUILD_TAG:-local}
+    image: ${DOCKER_REGISTRY}${DOCKER_ID}portfolio-template:${IMAGE_TAG:-latest}
     build:
       context: .
       dockerfile: docker/portfolio-combined/Dockerfile
+      <<: *args
       target: portfolio-template
     depends_on:
       - portfolio-simple
@@ -67,20 +74,22 @@ services:
     restart: unless-stopped
 
   portfolio-static:
-    image: ${dockerId:-johnchase}/portfolio-static:${BUILD_TAG:-local}
+    image: ${DOCKER_REGISTRY}${DOCKER_ID}portfolio-static:${IMAGE_TAG:-latest}
     build:
       context: .
       dockerfile: docker/portfolio-combined/Dockerfile
+      <<: *args
       target: portfolio-static
     networks:
       - portfolio
     restart: unless-stopped
 
   portfolio-site:
-    image: ${dockerId:-johnchase}/portfolio-site:${BUILD_TAG:-local}
+    image: ${DOCKER_REGISTRY}${DOCKER_ID}portfolio-site:${IMAGE_TAG:-latest}
     build:
       context: .
       dockerfile: docker/portfolio-combined/Dockerfile
+      <<: *args
       target: portfolio-site
     ports:
       - "8080:80"
