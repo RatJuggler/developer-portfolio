@@ -14,9 +14,9 @@ RUN node_modules/.bin/gulp build
 
 
 # Create an Nginx image to serve the static files.
-ARG DOCKER_REGISTRY=""
-ARG DOCKER_ID=""
-FROM ${DOCKER_REGISTRY}${DOCKER_ID}golden-nginx:latest AS portfolio-static
+ARG REGISTRY=""
+ARG REPOSITORY=""
+FROM ${REGISTRY}${REPOSITORY}golden-nginx:latest AS portfolio-static
 
 ARG BUILD_TAG=local
 LABEL build_tag=${BUILD_TAG}

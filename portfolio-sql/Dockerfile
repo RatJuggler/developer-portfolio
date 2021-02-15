@@ -1,7 +1,7 @@
 # Build the service.
-ARG DOCKER_REGISTRY=""
-ARG DOCKER_ID=""
-FROM ${DOCKER_REGISTRY}${DOCKER_ID}builder-shared-resources:latest AS builder-portfolio-sql
+ARG REGISTRY=""
+ARG REPOSITORY=""
+FROM ${REGISTRY}${REPOSITORY}builder-shared-resources:latest AS builder-portfolio-sql
 
 # Location of the source code.
 WORKDIR /build

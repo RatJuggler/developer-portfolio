@@ -2,13 +2,13 @@ version: '3.8'
 
 x-args: &args
   args:
-    DOCKER_REGISTRY: ${DOCKER_REGISTRY:-}
-    DOCKER_ID: ${DOCKER_ID:-}
+    REGISTRY: ${REGISTRY:-}
+    REPOSITORY: ${REPOSITORY:-}
     BUILD_TAG: ${BUILD_TAG:-local}
 
 services:
   builder-shared-resources:
-    image: ${DOCKER_REGISTRY}${DOCKER_ID}builder-shared-resources:latest
+    image: ${REGISTRY}${REPOSITORY}builder-shared-resources:latest
     build:
       context: shared-resources
       dockerfile: Dockerfile
@@ -16,7 +16,7 @@ services:
     profiles: ["builders"]
 
   builder-portfolio-simple:
-    image: ${DOCKER_REGISTRY}${DOCKER_ID}builder-portfolio-simple:latest
+    image: ${REGISTRY}${REPOSITORY}builder-portfolio-simple:latest
     build:
       context: portfolio-simple
       dockerfile: Dockerfile
@@ -24,7 +24,7 @@ services:
     profiles: ["builders"]
 
   portfolio-simple:
-    image: ${DOCKER_REGISTRY}${DOCKER_ID}portfolio-simple:${IMAGE_TAG:-latest}
+    image: ${REGISTRY}${REPOSITORY}portfolio-simple:${IMAGE_TAG:-latest}
     build:
       context: portfolio-simple
       dockerfile: Dockerfile
@@ -35,7 +35,7 @@ services:
     restart: unless-stopped
 
   builder-portfolio-sql:
-    image: ${DOCKER_REGISTRY}${DOCKER_ID}builder-portfolio-sql:latest
+    image: ${REGISTRY}${REPOSITORY}builder-portfolio-sql:latest
     build:
       context: portfolio-sql
       dockerfile: Dockerfile
@@ -43,7 +43,7 @@ services:
     profiles: ["builders"]
 
   portfolio-sql:
-    image: ${DOCKER_REGISTRY}${DOCKER_ID}portfolio-sql:${IMAGE_TAG:-latest}
+    image: ${REGISTRY}${REPOSITORY}portfolio-sql:${IMAGE_TAG:-latest}
     build:
       context: portfolio-sql
       dockerfile: Dockerfile
@@ -54,7 +54,7 @@ services:
     restart: unless-stopped
 
   builder-portfolio-combined:
-    image: ${DOCKER_REGISTRY}${DOCKER_ID}builder-portfolio-combined:latest
+    image: ${REGISTRY}${REPOSITORY}builder-portfolio-combined:latest
     build:
       context: .
       dockerfile: docker/portfolio-combined/Dockerfile
@@ -62,7 +62,7 @@ services:
     profiles: ["builders"]
 
   portfolio-template:
-    image: ${DOCKER_REGISTRY}${DOCKER_ID}portfolio-template:${IMAGE_TAG:-latest}
+    image: ${REGISTRY}${REPOSITORY}portfolio-template:${IMAGE_TAG:-latest}
     build:
       context: .
       dockerfile: docker/portfolio-combined/Dockerfile
@@ -76,7 +76,7 @@ services:
     restart: unless-stopped
 
   portfolio-static:
-    image: ${DOCKER_REGISTRY}${DOCKER_ID}portfolio-static:${IMAGE_TAG:-latest}
+    image: ${REGISTRY}${REPOSITORY}portfolio-static:${IMAGE_TAG:-latest}
     build:
       context: .
       dockerfile: docker/portfolio-combined/Dockerfile
@@ -87,7 +87,7 @@ services:
     restart: unless-stopped
 
   portfolio-site:
-    image: ${DOCKER_REGISTRY}${DOCKER_ID}portfolio-site:${IMAGE_TAG:-latest}
+    image: ${REGISTRY}${REPOSITORY}portfolio-site:${IMAGE_TAG:-latest}
     build:
       context: .
       dockerfile: docker/portfolio-combined/Dockerfile
