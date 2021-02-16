@@ -56,8 +56,8 @@ COPY --from=builder-portfolio-combined /build/dist/public /srv/public
 
 
 # Create a Nginx image for the reverse proxy front-end.
-ARG REGISTRY=""
-ARG REPOSITORY=""
+ARG REGISTRY
+ARG REPOSITORY
 FROM ${REGISTRY}${REPOSITORY}golden-nginx:latest AS portfolio-site
 
 ARG BUILD_TAG=local
