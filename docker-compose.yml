@@ -13,7 +13,6 @@ services:
       context: shared-resources
       dockerfile: Dockerfile
       target: builder-shared-resources
-    profiles: ["builders"]
 
   builder-portfolio-simple:
     image: ${REGISTRY}${REPOSITORY}builder-portfolio-simple:${IMAGE_TAG:-latest}
@@ -21,7 +20,6 @@ services:
       context: portfolio-simple
       dockerfile: Dockerfile
       target: builder-portfolio-simple
-    profiles: ["builders"]
 
   portfolio-simple:
     image: ${REGISTRY}${REPOSITORY}portfolio-simple:${IMAGE_TAG:-latest}
@@ -40,7 +38,6 @@ services:
       context: portfolio-sql
       dockerfile: Dockerfile
       target: builder-portfolio-sql
-    profiles: ["builders"]
 
   portfolio-sql:
     image: ${REGISTRY}${REPOSITORY}portfolio-sql:${IMAGE_TAG:-latest}
