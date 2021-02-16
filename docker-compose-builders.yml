@@ -1,0 +1,36 @@
+version: '3.8'
+
+x-args: &args
+  args:
+    REGISTRY: ${REGISTRY:-}
+    REPOSITORY: ${REPOSITORY:-}
+    BUILD_TAG: ${BUILD_TAG:-local}
+
+services:
+  builder-shared-resources:
+    image: ${REGISTRY}${REPOSITORY}builder-shared-resources:${IMAGE_TAG:-latest}
+    build:
+      context: shared-resources
+      dockerfile: Dockerfile
+      target: builder-shared-resources
+
+  builder-portfolio-simple:
+    image: ${REGISTRY}${REPOSITORY}builder-portfolio-simple:${IMAGE_TAG:-latest}
+    build:
+      context: portfolio-simple
+      dockerfile: Dockerfile
+      target: builder-portfolio-simple
+
+  builder-portfolio-sql:
+    image: ${REGISTRY}${REPOSITORY}builder-portfolio-sql:${IMAGE_TAG:-latest}
+    build:
+      context: portfolio-sql
+      dockerfile: Dockerfile
+      target: builder-portfolio-sql
+
+  builder-portfolio-combined:
+    image: ${REGISTRY}${REPOSITORY}builder-portfolio-combined:${IMAGE_TAG:-latest}
+    build:
+      context: .
+      dockerfile: docker/portfolio-combined/Dockerfile
+      target: builder-portfolio-combined
