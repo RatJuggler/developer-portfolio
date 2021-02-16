@@ -48,12 +48,12 @@ images but want to keep the builders for re-use, especially the Java builders.
 
 The public static files served using an instance of my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build). 
 
-Create an image with:
+Create an image with (repository reference required to access golden Nginx image):
 
     docker build -f docker/portfolio-static/Dockerfile --target builder-portfolio-static -t builder-portfolio-static:local .
-    docker build -f docker/portfolio-static/Dockerfile --target portfolio-static -t portfolio-static:test .
+    docker build -f docker/portfolio-static/Dockerfile --target portfolio-static --build-arg REPOSITORY=johnchase/ -t portfolio-static:test .
 
-Then run with: `docker run -p 8080:80 portfolio-static:test -d`
+Then run with: `docker run -p 8080:80 -d portfolio-static:test`
 
 Content will be available at: `http://localhost:8080`
 
@@ -66,7 +66,7 @@ Create the image with:
     docker build -f docker/portfolio-template/Dockerfile --target builder-portfolio-template -t builder-portfolio-template:local .
     docker build -f docker/portfolio-template/Dockerfile --target portfolio-template -t portfolio-template:test .
 
-Then run with: `docker run -p 3000:3000 portfolio-template:test -d`
+Then run with: `docker run -p 3000:3000 -d portfolio-template:test`
 
 Content will be available at: `http://localhost:3000`
 
@@ -107,14 +107,16 @@ Content will be available at: `http://localhost:8002/(profile|skills|career|inte
 
 ## Full Application
 
-A docker-compose configuration allows the complete application to be built and run. It uses a combined multi-stage docker build for
-the static and template images to save time and also includes a front-end proxy which routes requests to the static pages or 
-templates as required. The proxy is again based on my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build).
+Docker-compose configurations allow the complete application to be built and run. Because the Java build process is so resource 
+intensive I have tried to ensure images layers are kept for re-use, and not discarded by accident (pruned), by tagging intermediate
+parts of the multi-stage docker builds. The build also uses a combined multi-stage docker build for the static and template images 
+to save time. An additional image is built for the front-end proxy which routes requests to the static pages or templates as 
+required. The proxy is again based on my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build).
 
-  Build all the images with: `docker-compose --profile="builders" build`
+  Build the builders with: `docker-compose -f docker-compose-builders.yml build`
 
-  Run the images with: `docker-compose up -d`
-``
+  Build and run the images with: `docker-compose up -d`
+
   Content will be available at: `http://localhost:8080`
 
 Environment variables can be used to configure image tagging (see the file).
