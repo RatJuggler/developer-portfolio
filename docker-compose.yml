@@ -56,7 +56,6 @@ services:
       context: .
       dockerfile: docker/portfolio-combined/Dockerfile
       target: builder-portfolio-combined
-    profiles: ["builders"]
 
   portfolio-template:
     image: ${REGISTRY}${REPOSITORY}portfolio-template:${IMAGE_TAG:-latest}
