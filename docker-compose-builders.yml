@@ -12,6 +12,7 @@ services:
     build:
       context: shared-resources
       dockerfile: Dockerfile
+      <<: *args
       target: builder-shared-resources
 
   builder-portfolio-simple:
@@ -19,6 +20,7 @@ services:
     build:
       context: portfolio-simple
       dockerfile: Dockerfile
+      <<: *args
       target: builder-portfolio-simple
 
   builder-portfolio-sql:
@@ -26,11 +28,5 @@ services:
     build:
       context: portfolio-sql
       dockerfile: Dockerfile
+      <<: *args
       target: builder-portfolio-sql
-
-  builder-portfolio-combined:
-    image: ${REGISTRY}${REPOSITORY}builder-portfolio-combined:${IMAGE_TAG:-latest}
-    build:
-      context: .
-      dockerfile: docker/portfolio-combined/Dockerfile
-      target: builder-portfolio-combined
