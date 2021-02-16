@@ -1,3 +1,8 @@
+# Define gloabl args for multi-stage docker file.
+ARG REGISTRY=""
+ARG REPOSITORY=""
+ARG BUILD_TAG=local
+
 # Build the static files.
 FROM node:lts-alpine3.11 AS builder-portfolio-static
 
@@ -14,11 +19,11 @@ RUN node_modules/.bin/gulp build
 
 
 # Create an Nginx image to serve the static files.
-ARG REGISTRY=""
-ARG REPOSITORY=""
+ARG REGISTRY
+ARG REPOSITORY
 FROM ${REGISTRY}${REPOSITORY}golden-nginx:latest AS portfolio-static
 
-ARG BUILD_TAG=local
+ARG BUILD_TAG
 LABEL build_tag=${BUILD_TAG}
 LABEL description="Developer Portfolio - Ngninx Static Files"
 
