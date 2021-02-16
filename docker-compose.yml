@@ -7,22 +7,6 @@ x-args: &args
     BUILD_TAG: ${BUILD_TAG:-local}
 
 services:
-  builder-shared-resources:
-    image: ${REGISTRY}${REPOSITORY}builder-shared-resources:${IMAGE_TAG:-latest}
-    build:
-      context: shared-resources
-      dockerfile: Dockerfile
-      <<: *args
-      target: builder-shared-resources
-
-  builder-portfolio-simple:
-    image: ${REGISTRY}${REPOSITORY}builder-portfolio-simple:${IMAGE_TAG:-latest}
-    build:
-      context: portfolio-simple
-      dockerfile: Dockerfile
-      <<: *args
-      target: builder-portfolio-simple
-
   portfolio-simple:
     image: ${REGISTRY}${REPOSITORY}portfolio-simple:${IMAGE_TAG:-latest}
     build:
@@ -34,14 +18,6 @@ services:
       - portfolio
     restart: unless-stopped
 
-  builder-portfolio-sql:
-    image: ${REGISTRY}${REPOSITORY}builder-portfolio-sql:${IMAGE_TAG:-latest}
-    build:
-      context: portfolio-sql
-      dockerfile: Dockerfile
-      <<: *args
-      target: builder-portfolio-sql
-
   portfolio-sql:
     image: ${REGISTRY}${REPOSITORY}portfolio-sql:${IMAGE_TAG:-latest}
     build:
@@ -52,14 +28,6 @@ services:
     networks:
       - portfolio
     restart: unless-stopped
-
-  builder-portfolio-combined:
-    image: ${REGISTRY}${REPOSITORY}builder-portfolio-combined:${IMAGE_TAG:-latest}
-    build:
-      context: .
-      dockerfile: docker/portfolio-combined/Dockerfile
-      <<: *args
-      target: builder-portfolio-combined
 
   portfolio-template:
     image: ${REGISTRY}${REPOSITORY}portfolio-template:${IMAGE_TAG:-latest}

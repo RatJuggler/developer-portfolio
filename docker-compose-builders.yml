@@ -30,3 +30,11 @@ services:
       dockerfile: Dockerfile
       <<: *args
       target: builder-portfolio-sql
+
+  builder-portfolio-combined:
+    image: ${REGISTRY}${REPOSITORY}builder-portfolio-combined:${IMAGE_TAG:-latest}
+    build:
+      context: .
+      dockerfile: docker/portfolio-combined/Dockerfile
+      <<: *args
+      target: builder-portfolio-combined
