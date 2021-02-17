@@ -6,7 +6,7 @@
     "step": 1,
     "description": "Dinosaurs",
     "imagePath": "\uD83E\uDD95",
-    "synopsis": "65 million years ago when dinosaurs still roamed the earth. Technically speaking this is the Cretaceous–Paleogene boundary and not the Jurassic."
+    "synopsis": "65 million years ago when dinosaurs still roamed the earth. Technically speaking this is the Cretaceous–Paleogene (k-Pg) boundary and not the Jurassic."
   },
   {
     "_classMap": "com.portfolio.map.domain.Career",
@@ -60,7 +60,7 @@
     "step": 7,
     "description": "Chubb",
     "imagePath": "\uD83D\uDCBB",
-    "synopsis": "Moving from PowerBuilder desktop applications to creating and evolving browser based applications, for the Claims and High Net Worth business units, using Java and the ecology that surrounds it."
+    "synopsis": "Moving from PowerBuilder desktop applications to creating, and evolving, browser based applications for the Claims and High Net Worth business units, using Java and the ecology that surrounds it."
   },
   {
     "_classMap": "com.portfolio.map.domain.Career",

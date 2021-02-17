@@ -5,7 +5,7 @@
     "id": 1,
     "title": "Dinosaurs",
     "imagePath": "/img/Dinosaurs.jpg",
-    "description": "I always wanted to be a paleontologist and though I ended up in IT they continue to fascinate me, I even built my own \"Dinosaur Of The Day\" twitter bot (@dinosauria_bot). Just don't mention Jurassic Park."
+    "description": "I always wanted to be a paleontologist and though I ended up in IT they continue to fascinate me, I even built my own \"Dinosaur Of The Day\" twitter bot (@dinosauria_bot)."
   },
   {
     "_classMap": "com.portfolio.map.domain.Interest",
@@ -13,7 +13,7 @@
     "id": 2,
     "title": "Video Games",
     "imagePath": "/img/VideoGames.jpg",
-    "description": "My first steps in programing involved a copy of David H, Ahl's \"BASIC Computer Games\" (I still have it) and a teletype attached to a PDP-11/70 and now we have 4K screens and VR."
+    "description": "I like playing video games and enjoy the variety and novelty of the environments they are often set it, as well as the ways they try to evolve and tell stories."
   },
   {
     "_classMap": "com.portfolio.map.domain.Interest",
