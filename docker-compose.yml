@@ -7,13 +7,13 @@ x-args: &args
     BUILD_TAG: ${BUILD_TAG:-local}
 
 services:
-  portfolio-simple:
-    image: ${REGISTRY}${REPOSITORY}portfolio-simple:${IMAGE_TAG:-latest}
+  portfolio-map:
+    image: ${REGISTRY}${REPOSITORY}portfolio-map:${IMAGE_TAG:-latest}
     build:
-      context: portfolio-simple
+      context: portfolio-map
       dockerfile: Dockerfile
       <<: *args
-      target: portfolio-simple
+      target: portfolio-map
     networks:
       - portfolio
     restart: unless-stopped
@@ -37,7 +37,7 @@ services:
       <<: *args
       target: portfolio-template
     depends_on:
-      - portfolio-simple
+      - portfolio-map
       - portfolio-sql
     networks:
       - portfolio

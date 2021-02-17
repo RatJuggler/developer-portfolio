@@ -28,7 +28,7 @@ LABEL description="Developer Portfolio - Node Template Application"
 ENV NODE_ENV=production
 
 EXPOSE 3000
-CMD ["node", "app/app.js", "app/templates", "app/data", "../public", "http://portfolio-simple:8001", "http://portfolio-sql:8002"]
+CMD ["node", "app/app.js", "app/templates", "app/data", "../public", "http://portfolio-map:8001", "http://portfolio-sql:8002"]
 
 # Create a folder to serve the template application from.
 WORKDIR /srv

@@ -22,7 +22,7 @@ FROM adoptopenjdk:11-jre AS portfolio-sql
 
 ARG BUILD_TAG=local
 LABEL build_tag=${BUILD_TAG}
-LABEL description="Developer Portfolio - Java Spring - SQL Data Service"
+LABEL description="Developer Portfolio - Java Spring - SQL Repository Service"
 
 EXPOSE 8001
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]

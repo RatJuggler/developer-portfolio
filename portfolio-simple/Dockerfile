@@ -1,7 +1,7 @@
 # Build the service.
 ARG REGISTRY=""
 ARG REPOSITORY=""
-FROM ${REGISTRY}${REPOSITORY}builder-shared-resources:latest AS builder-portfolio-simple
+FROM ${REGISTRY}${REPOSITORY}builder-shared-resources:latest AS builder-portfolio-map
 
 # Location of the source code.
 WORKDIR /build
@@ -18,11 +18,11 @@ RUN mvn package -Dmaven.test.skip=true
 
 
 # Create a Java image to run the service.
-FROM adoptopenjdk:11-jre AS portfolio-simple
+FROM adoptopenjdk:11-jre AS portfolio-map
 
 ARG BUILD_TAG=local
 LABEL build_tag=${BUILD_TAG}
-LABEL description="Developer Portfolio - Java Spring - Simple Static Data Service"
+LABEL description="Developer Portfolio - Java Spring - Map Repository Service"
 
 EXPOSE 8001
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
@@ -31,4 +31,4 @@ ENTRYPOINT ["java", "-jar", "/app/app.jar"]
 WORKDIR /app
 
 # Copy the service from the build.
-COPY --from=builder-portfolio-simple /build/target/*.jar app.jar
+COPY --from=builder-portfolio-map /build/target/*.jar app.jar

@@ -15,13 +15,13 @@ services:
       <<: *args
       target: builder-shared-resources
 
-  builder-portfolio-simple:
-    image: ${REGISTRY}${REPOSITORY}builder-portfolio-simple:${IMAGE_TAG:-latest}
+  builder-portfolio-map:
+    image: ${REGISTRY}${REPOSITORY}builder-portfolio-map:${IMAGE_TAG:-latest}
     build:
-      context: portfolio-simple
+      context: portfolio-map
       dockerfile: Dockerfile
       <<: *args
-      target: builder-portfolio-simple
+      target: builder-portfolio-map
 
   builder-portfolio-sql:
     image: ${REGISTRY}${REPOSITORY}builder-portfolio-sql:${IMAGE_TAG:-latest}
