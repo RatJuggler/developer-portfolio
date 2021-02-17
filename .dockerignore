@@ -5,6 +5,6 @@
 dist
 node_modules
 public/vendor
-portfolio-simple
+portfolio-map
 portfolio-sql
 **/target

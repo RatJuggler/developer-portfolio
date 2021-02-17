@@ -12,7 +12,7 @@
 
     <modules>
         <module>shared-resources</module>
-        <module>portfolio-simple</module>
+        <module>portfolio-map</module>
         <module>portfolio-sql</module>
     </modules>
 </project>
