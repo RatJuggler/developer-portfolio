@@ -1,26 +1,31 @@
 # developer-portfolio
 
-My developer portfolio website. The full version is deployed [here](https://jurassic-john.site) and in case of problem the static
-only version is available [here](https://ratjuggler.github.io/developer-portfolio/).
+My developer portfolio site. The full version is deployed [here](https://jurassic-john.site) in Docker on a 
+[Raspberry Pi farm](https://github.com/RatJuggler/my-production-docker-build) and in case of problem the static only version is 
+available [here](https://ratjuggler.github.io/developer-portfolio/).
 
-Rather than copying a random template off the internet I'm trying to create something a bit different from scratch.
-
-The idea is to build a number of different versions of the same site:
+Rather than copying a random site template off the internet I'm trying to create something a bit different by building a small 
+microservices application using a variety of different technologies. The idea is to build a number of different versions of the 
+same site:
 
 1. Using static pages only to act as an outline of the design. 
 2. Breaking down the static pages and using a templating engine with data files to generate the content.
-3. Building some sort of back end to serve the data and using that from a further evolved set of templates.
-4. Expanding the back end and building a front end using a web component framework.
+3. Building some sort of back-end to serve the data and using that from a further evolved set of templates.
+4. Expanding the back-end and building a front-end using a web component framework.
 
-I've completed some outline designs using static pages and from those built a template version. I've also built the two Java 
-services using Spring, and I'm currently integrating these with the templates. 
+I completed the static pages designs and from those built the template application using [Express](https://expressjs.com/) and 
+[TwigJS](https://github.com/twigjs/twig.js), extracting the data content from each page into separate JSON files. I then built two 
+Java services using Spring, one serves the data from a [map](https://docs.spring.io/spring-data/keyvalue/docs/current/reference/html/#key-value) 
+repository the other serves the data from an in-memory H2 SQL database. These two services cheat somewhat by loading their 
+repository data directly from the JSON files. The template application then pulls data from one of these sources depending on the 
+URL used to access each page. So `.../template/json/profile` use the JSON files directly, `.../template/simple/profile` uses the
+map repository service and `.../template/sql/profile` the SQL service.
 
-Content for the site includes:
+When deployed a front-end proxy is used to route requests for template pages or static pages and resources as required:
 
-- Profile - Short introductory paragraph about myself with some social media links.
-- Skills - Table highlighting my hard & soft skills with option to sort, filter and mark items.
-- Career - Rough timeline from when I started with the dinosaurs to the present day space age.
-- Interests - Brief details on my outside interests. 
+![Image of Deployment](https://github.com/RatJuggler/developer-portfolio/blob/main/deployed-result.jpg)
+
+The next step is to look at building another version of the front-end using React.
 
 ## Development
 
@@ -110,8 +115,7 @@ Content will be available at: `http://localhost:8002/(profile|skills|career|inte
 Docker-compose configurations allow the complete application to be built and run. Because the Java build process is so resource 
 intensive I have tried to ensure images layers are kept for re-use, and not discarded by accident (pruned), by tagging intermediate
 parts of the multi-stage docker builds. The build also uses a combined multi-stage docker build for the static and template images 
-to save time. An additional image is built for the front-end proxy which routes requests to the static pages or templates as 
-required. The proxy is again based on my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build).
+to save time. An additional image is built for the front-end proxy and is again based on my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build).
 
   Build the builders with: `docker-compose -f docker-compose-builders.yml build`
 
@@ -120,8 +124,6 @@ required. The proxy is again based on my [Nginx golden image](https://github.com
   Content will be available at: `http://localhost:8080`
 
 Environment variables can be used to configure image tagging (see the file).
-
-![Image of Deployment](https://github.com/RatJuggler/developer-portfolio/blob/main/deployed-result.jpg)
 
 ## Attributions:
 
