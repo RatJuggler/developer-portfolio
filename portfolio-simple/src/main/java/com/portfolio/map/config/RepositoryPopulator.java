@@ -1,4 +1,4 @@
-package com.portfolio.simple.config;
+package com.portfolio.map.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

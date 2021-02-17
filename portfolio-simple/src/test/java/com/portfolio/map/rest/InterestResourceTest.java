@@ -1,9 +1,9 @@
-package com.portfolio.simple.rest;
+package com.portfolio.map.rest;
+
+import com.portfolio.map.domain.Interest;
+import com.portfolio.map.repository.InterestRepository;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import com.portfolio.simple.domain.Career;
-import com.portfolio.simple.repository.CareerRepository;
 
 import org.junit.jupiter.api.Test;
 
@@ -22,25 +22,25 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(CareerResource.class)
-public class CareerResourceTest {
+@WebMvcTest(InterestResource.class)
+public class InterestResourceTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @MockBean
-    private CareerRepository repository;
+    private InterestRepository repository;
 
     @Test
-    public void getCareerTest() throws Exception {
-        List<Career> testCareer = new ArrayList<>();
-        testCareer.add(new Career(1, 1, "Test Description 1", "test/image1", "Test Synopsis 1"));
-        when(repository.findAll()).thenReturn(testCareer);
+    public void getInterestsTest() throws Exception {
+        List<Interest> testInterests = new ArrayList<>();
+        testInterests.add(new Interest(1, "Test Title 1", "test/image1", "Test Description 1"));
+        when(repository.findAll()).thenReturn(testInterests);
         ObjectMapper mapper = new ObjectMapper();
-        String expectedCareer = mapper.writeValueAsString(testCareer);
-        this.mockMvc.perform(get("/career"))
+        String expectedInterests = mapper.writeValueAsString(testInterests);
+        this.mockMvc.perform(get("/interests"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo(expectedCareer)));
+                .andExpect(content().string(equalTo(expectedInterests)));
     }
 }

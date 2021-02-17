@@ -1,9 +1,9 @@
-package com.portfolio.simple.rest;
+package com.portfolio.map.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import com.portfolio.simple.domain.Profile;
-import com.portfolio.simple.repository.ProfileRepository;
+import com.portfolio.map.domain.Career;
+import com.portfolio.map.repository.CareerRepository;
 
 import org.junit.jupiter.api.Test;
 
@@ -22,27 +22,25 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(ProfileResource.class)
-public class ProfileResourceTest {
+@WebMvcTest(CareerResource.class)
+public class CareerResourceTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @MockBean
-    private ProfileRepository repository;
+    private CareerRepository repository;
 
     @Test
-    public void getProfileTest() throws Exception {
-        List<Profile> testProfile = new ArrayList<>();
-        testProfile.add(new Profile(1, "Test Name 1", "Test Location 1", "Test Status 1",
-                "test/avatar1", "test/photo1", "Test Description 1", "test1@email.com",
-                "https://linkedin.com/test1", "https://github.com/test1", "@test1Twitter"));
-        when(repository.findAll()).thenReturn(testProfile);
+    public void getCareerTest() throws Exception {
+        List<Career> testCareer = new ArrayList<>();
+        testCareer.add(new Career(1, 1, "Test Description 1", "test/image1", "Test Synopsis 1"));
+        when(repository.findAll()).thenReturn(testCareer);
         ObjectMapper mapper = new ObjectMapper();
-        String expectedProfile = mapper.writeValueAsString(testProfile.get(0));
-        this.mockMvc.perform(get("/profile"))
+        String expectedCareer = mapper.writeValueAsString(testCareer);
+        this.mockMvc.perform(get("/career"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo(expectedProfile)));
+                .andExpect(content().string(equalTo(expectedCareer)));
     }
 }

@@ -1,6 +1,6 @@
-package com.portfolio.simple.repository;
+package com.portfolio.map.repository;
 
-import com.portfolio.simple.domain.Skill;
+import com.portfolio.map.domain.Skill;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

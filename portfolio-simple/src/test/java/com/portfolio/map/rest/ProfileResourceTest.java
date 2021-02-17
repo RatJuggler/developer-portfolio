@@ -1,9 +1,9 @@
-package com.portfolio.simple.rest;
+package com.portfolio.map.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import com.portfolio.simple.domain.Skill;
-import com.portfolio.simple.repository.SkillRepository;
+import com.portfolio.map.domain.Profile;
+import com.portfolio.map.repository.ProfileRepository;
 
 import org.junit.jupiter.api.Test;
 
@@ -22,25 +22,27 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(SkillResource.class)
-public class SkillResourceTest {
+@WebMvcTest(ProfileResource.class)
+public class ProfileResourceTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @MockBean
-    private SkillRepository repository;
+    private ProfileRepository repository;
 
     @Test
-    public void getSkillsTest() throws Exception {
-        List<Skill> testSkills = new ArrayList<>();
-        testSkills.add(new Skill(1, "Test Level 1", "Test Category 1", "Test Skill 1", "Test Description 1"));
-        when(repository.findAll()).thenReturn(testSkills);
+    public void getProfileTest() throws Exception {
+        List<Profile> testProfile = new ArrayList<>();
+        testProfile.add(new Profile(1, "Test Name 1", "Test Location 1", "Test Status 1",
+                "test/avatar1", "test/photo1", "Test Description 1", "test1@email.com",
+                "https://linkedin.com/test1", "https://github.com/test1", "@test1Twitter"));
+        when(repository.findAll()).thenReturn(testProfile);
         ObjectMapper mapper = new ObjectMapper();
-        String expectedSkills = mapper.writeValueAsString(testSkills);
-        this.mockMvc.perform(get("/skills"))
+        String expectedProfile = mapper.writeValueAsString(testProfile.get(0));
+        this.mockMvc.perform(get("/profile"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo(expectedSkills)));
+                .andExpect(content().string(equalTo(expectedProfile)));
     }
 }

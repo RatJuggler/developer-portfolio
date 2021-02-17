@@ -1,7 +1,7 @@
-package com.portfolio.simple.rest;
+package com.portfolio.map.rest;
 
-import com.portfolio.simple.domain.Skill;
-import com.portfolio.simple.repository.SkillRepository;
+import com.portfolio.map.domain.Skill;
+import com.portfolio.map.repository.SkillRepository;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

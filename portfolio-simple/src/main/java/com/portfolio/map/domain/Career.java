@@ -1,4 +1,4 @@
-package com.portfolio.simple.domain;
+package com.portfolio.map.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
