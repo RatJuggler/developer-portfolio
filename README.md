@@ -15,10 +15,10 @@ same site:
 
 I completed the static pages designs and from those built the template application using [Express](https://expressjs.com/) and 
 [TwigJS](https://github.com/twigjs/twig.js), extracting the data content from each page into separate JSON files. I then built two 
-Java services using Spring, one serves the data from a [map](https://docs.spring.io/spring-data/keyvalue/docs/current/reference/html/#key-value) 
+Java services using Spring, one serves the data from a [Map](https://docs.spring.io/spring-data/keyvalue/docs/current/reference/html/#key-value) 
 repository the other serves the data from an in-memory H2 SQL database. These two services cheat somewhat by loading their 
 repository data directly from the JSON files. The template application then pulls data from one of these sources depending on the 
-URL used to access each page. So `.../template/json/profile` use the JSON files directly, `.../template/simple/profile` uses the
+URL used to access each page. So `.../template/json/profile` use the JSON files directly, `.../template/map/profile` uses the
 map repository service and `.../template/sql/profile` the SQL service.
 
 When deployed a front-end proxy is used to route requests for template pages or static pages and resources as required:
@@ -40,7 +40,7 @@ repository after any changes by using `cd shared-resouces && ./mvnw install`.
 
 The Spring application can then be run with:
 
-- portfolio-simple - `cd portfolio-simple && ./mvnw spring-boot:run`
+- portfolio-map - `cd portfolio-map && ./mvnw spring-boot:run`
 - portfolio-sql - `cd portfolio-sql && ./mvnw spring-boot:run`
 
 ## Docker Images
@@ -84,22 +84,22 @@ Create the image with:
 
     docker build -f shared-resources/Dockerfile -t shared-resources:local shared-resources
 
-### portfolio-simple
+### portfolio-map
 
-A Java instance for the simple static data Spring application. The shared-resources image is required. 
+A Java instance for the map repository Spring application. The shared-resources image is required. 
 
 Create the image with:
   
-    docker build -f portfolio-simple/Dockerfile --target builder-portfolio-simple -t builder-portfolio-simple:local portfolio-simple
-    docker build -f portfolio-simple/Dockerfile --target portfolio-simple -t portfolio-simple:test portfolio-simple
+    docker build -f portfolio-map/Dockerfile --target builder-portfolio-map -t builder-portfolio-map:local portfolio-map
+    docker build -f portfolio-map/Dockerfile --target portfolio-map -t portfolio-map:test portfolio-map
 
-Then run with: `docker run -p 8001:8001 portfolio-simple:test -d`
+Then run with: `docker run -p 8001:8001 portfolio-map:test -d`
 
 Content will be available at: `http://localhost:8001/(profile|skills|career|interests)`
 
 ### portfolio-sql
 
-A Java instance for the SQL data Spring application. The shared-resources image is required.
+A Java instance for the SQL repository Spring application. The shared-resources image is required.
 
 Create the image with:
   
