@@ -23,7 +23,7 @@ public class RepositoryPopulator {
                 ObjectMapper mapper = new ObjectMapper();
                 mapper.configure(FAIL_ON_UNKNOWN_PROPERTIES, false);
                 Jackson2ResourceReader reader = new Jackson2ResourceReader(mapper);
-                reader.setTypeKey("_classSimple");
+                reader.setTypeKey("_classMap");
                 return reader;
             }
         };

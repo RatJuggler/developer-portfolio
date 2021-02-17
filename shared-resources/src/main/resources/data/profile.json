@@ -1,5 +1,5 @@
 {
-  "_classSimple": "com.portfolio.simple.domain.Profile",
+  "_classMap": "com.portfolio.simple.domain.Profile",
   "_classSQL": "com.portfolio.sql.domain.Profile",
   "id": 1,
   "name": "John Chase",

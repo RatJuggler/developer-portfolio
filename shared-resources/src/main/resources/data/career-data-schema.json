@@ -13,7 +13,7 @@
     "additionalProperties": false,
     "required": ["id", "step", "description", "imagePath", "synopsis"],
     "properties": {
-      "_classSimple": {
+      "_classMap": {
         "description": "Spring Data deserializer class for the simple-service.",
         "type": "string",
         "maxLength": 64
