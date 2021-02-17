@@ -1,3 +1,7 @@
+$('#skillsTable').on('post-footer.bs.table', function () {
+    $('#skillsCard').fadeIn(500);
+})
+
 function buttons () {
     return {
         clearFilters: {
