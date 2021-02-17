@@ -1,7 +1,7 @@
 const templatePath = process.argv[2];
 const dataPath = process.argv[3];
 const publicPath = process.argv[4];
-const simpleUrl = process.argv[5];
+const mapUrl = process.argv[5];
 const sqlUrl = process.argv[6];
 
 const path = require('path');
@@ -16,7 +16,7 @@ app.set('views', templatePath);
 app.set('view engine', 'twig');
 
 const templates = ['profile', 'skills', 'career', 'interests'];
-const dataSources = ['json', 'simple', 'sql'];
+const dataSources = ['json', 'map', 'sql'];
 
 // Express Async Handler, see: https://zellwk.com/blog/async-await-express/
 const asyncHandler = fn =>
@@ -60,7 +60,7 @@ app.listen(port, () => {
     console.log(`templatePath : ${templatePath}`);
     console.log(`dataPath     : ${dataPath}`);
     console.log(`publicPath   : ${publicPath}`);
-    console.log(`simpleUrl    : ${simpleUrl}`);
+    console.log(`mapUrl       : ${mapUrl}`);
     console.log(`sqlUrl       : ${sqlUrl}`);
     console.log(`developer-portfolio template application listening on port: ${port}`);
 });
@@ -68,11 +68,11 @@ app.listen(port, () => {
 function getTemplateVersion(dataFrom) {
     switch (dataFrom) {
         case 'json':
-            return 'Template Version with Static JSON Data Files';
-        case 'simple':
-            return  'Template Version with Static Data from Spring Service';
+            return 'Template Version with data from static JSON files';
+        case 'map':
+            return  'Template Version with data from a Map repository Spring service';
         case 'sql':
-            return  'Template Version with SQL Data from Spring Service';
+            return  'Template Version with data from a SQL repository Spring service';
         default:
             throw new Error('Unknown data source: ' + dataFrom);
     }
@@ -82,8 +82,8 @@ function getDataFrom(dataFrom, aspect) {
     switch (dataFrom) {
         case 'json':
             return readStaticJsonFile(dataPath, aspect);
-        case 'simple':
-            return requestJsonFromUrl(simpleUrl, aspect);
+        case 'map':
+            return requestJsonFromUrl(mapUrl, aspect);
         case 'sql':
             return requestJsonFromUrl(sqlUrl, aspect);
         default:
