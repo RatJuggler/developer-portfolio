@@ -1,6 +1,6 @@
 [
   {
-    "_classMap": "com.portfolio.simple.domain.Career",
+    "_classMap": "com.portfolio.map.domain.Career",
     "_classSQL": "com.portfolio.sql.domain.Career",
     "id": 1,
     "step": 1,
@@ -9,7 +9,7 @@
     "synopsis": "65 million years ago when dinosaurs still roamed the earth. Technically speaking this is the Cretaceous–Paleogene boundary and not the Jurassic."
   },
   {
-    "_classMap": "com.portfolio.simple.domain.Career",
+    "_classMap": "com.portfolio.map.domain.Career",
     "_classSQL": "com.portfolio.sql.domain.Career",
     "id": 2,
     "step": 2,
@@ -18,7 +18,7 @@
     "synopsis": "After four years and two industry placements, I emerged from Kingston (Upon Thames) Polytechnic with a BSc.(Hons) in computer science."
   },
   {
-    "_classMap": "com.portfolio.simple.domain.Career",
+    "_classMap": "com.portfolio.map.domain.Career",
     "_classSQL": "com.portfolio.sql.domain.Career",
     "id": 3,
     "step": 3,
@@ -27,7 +27,7 @@
     "synopsis": "Everything from COBOL/CICS, for financial data entry, to an application for sales representatives laptops, written in Turbo Pascal."
   },
   {
-    "_classMap": "com.portfolio.simple.domain.Career",
+    "_classMap": "com.portfolio.map.domain.Career",
     "_classSQL": "com.portfolio.sql.domain.Career",
     "id": 4,
     "step": 4,
@@ -36,7 +36,7 @@
     "synopsis": "Warehousing systems in C & Basic running on VAX/VMS, MS Visual Basic & Access for bespoke applications and a Viewdata system."
   },
   {
-    "_classMap": "com.portfolio.simple.domain.Career",
+    "_classMap": "com.portfolio.map.domain.Career",
     "_classSQL": "com.portfolio.sql.domain.Career",
     "id": 5,
     "step": 5,
@@ -45,7 +45,7 @@
     "synopsis": "My entry into the financial services world and working in London. Bespoke applications for the Energy, Oil & Gas markets in PowerBuilder and Sybase SQL Server."
   },
   {
-    "_classMap": "com.portfolio.simple.domain.Career",
+    "_classMap": "com.portfolio.map.domain.Career",
     "_classSQL": "com.portfolio.sql.domain.Career",
     "id": 6,
     "step": 6,
@@ -54,7 +54,7 @@
     "synopsis": "Working on projects for a variety of clients, in three to twelve month contracts, building PowerBuilder applications with Microsoft or Sybase SQL Server."
   },
   {
-    "_classMap": "com.portfolio.simple.domain.Career",
+    "_classMap": "com.portfolio.map.domain.Career",
     "_classSQL": "com.portfolio.sql.domain.Career",
     "id": 7,
     "step": 7,
@@ -63,7 +63,7 @@
     "synopsis": "Moving from PowerBuilder desktop applications to creating and evolving browser based applications, for the Claims and High Net Worth business units, using Java and the ecology that surrounds it."
   },
   {
-    "_classMap": "com.portfolio.simple.domain.Career",
+    "_classMap": "com.portfolio.map.domain.Career",
     "_classSQL": "com.portfolio.sql.domain.Career",
     "id": 8,
     "step": 8,
@@ -72,7 +72,7 @@
     "synopsis": "After over 20 years working in the financial services sector in London I decided to take a break to pursue my own interests and catch up on some gardening."
   },
   {
-    "_classMap": "com.portfolio.simple.domain.Career",
+    "_classMap": "com.portfolio.map.domain.Career",
     "_classSQL": "com.portfolio.sql.domain.Career",
     "id": 9,
     "step": 9,

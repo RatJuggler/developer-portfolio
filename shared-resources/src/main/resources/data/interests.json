@@ -1,6 +1,6 @@
 [
   {
-    "_classMap": "com.portfolio.simple.domain.Interest",
+    "_classMap": "com.portfolio.map.domain.Interest",
     "_classSQL": "com.portfolio.sql.domain.Interest",
     "id": 1,
     "title": "Dinosaurs",
@@ -8,7 +8,7 @@
     "description": "I always wanted to be a paleontologist and though I ended up in IT they continue to fascinate me, I even built my own \"Dinosaur Of The Day\" twitter bot (@dinosauria_bot). Just don't mention Jurassic Park."
   },
   {
-    "_classMap": "com.portfolio.simple.domain.Interest",
+    "_classMap": "com.portfolio.map.domain.Interest",
     "_classSQL": "com.portfolio.sql.domain.Interest",
     "id": 2,
     "title": "Video Games",
@@ -16,7 +16,7 @@
     "description": "My first steps in programing involved a copy of David H, Ahl's \"BASIC Computer Games\" (I still have it) and a teletype attached to a PDP-11/70 and now we have 4K screens and VR."
   },
   {
-    "_classMap": "com.portfolio.simple.domain.Interest",
+    "_classMap": "com.portfolio.map.domain.Interest",
     "_classSQL": "com.portfolio.sql.domain.Interest",
     "id": 3,
     "title": "History",
@@ -24,7 +24,7 @@
     "description": "I love reading about history, from Ancient Egypt and the Romans to the Medieval Ages, the English Civil War through to the Georgian era and the start of the industrial revolution."
   },
   {
-    "_classMap": "com.portfolio.simple.domain.Interest",
+    "_classMap": "com.portfolio.map.domain.Interest",
     "_classSQL": "com.portfolio.sql.domain.Interest",
     "id": 4,
     "title": "Maker Culture",
@@ -32,7 +32,7 @@
     "description": "Nothing more fun than fiddling with a Raspberry Pi, a soldering iron and some LEDs or trying to make a tensegrity structure. I have so far resisted the temptations of a 3D printer."
   },
   {
-    "_classMap": "com.portfolio.simple.domain.Interest",
+    "_classMap": "com.portfolio.map.domain.Interest",
     "_classSQL": "com.portfolio.sql.domain.Interest",
     "id": 5,
     "title": "Space",
