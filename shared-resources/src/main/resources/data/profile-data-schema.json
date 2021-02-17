@@ -8,7 +8,7 @@
   "required": ["id", "name", "location", "status", "avatarPath", "photoPath", "description", "email", "linkedin", "github", "twitter"],
   "properties": {
     "_classMap": {
-      "description": "Spring Data deserializer class for the simple-service.",
+      "description": "Spring Data deserializer class for the map-service.",
       "type": "string",
       "maxLength": 64
     },

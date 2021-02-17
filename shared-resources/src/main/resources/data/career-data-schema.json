@@ -14,7 +14,7 @@
     "required": ["id", "step", "description", "imagePath", "synopsis"],
     "properties": {
       "_classMap": {
-        "description": "Spring Data deserializer class for the simple-service.",
+        "description": "Spring Data deserializer class for the map-service.",
         "type": "string",
         "maxLength": 64
       },
