@@ -13,8 +13,8 @@
 	<groupId>com.portfolio</groupId>
 	<artifactId>portfolio-sql</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SQL Data Service</name>
-	<description>SQL data service backend for my Developer Portfolio site.</description>
+	<name>SQL Repository Service</name>
+	<description>SQL repository service backend for my Developer Portfolio site.</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
