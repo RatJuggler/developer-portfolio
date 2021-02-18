@@ -7,14 +7,6 @@ x-args: &args
     BUILD_TAG: ${BUILD_TAG:-local}
 
 services:
-  builder-shared-resources:
-    image: ${REGISTRY}${REPOSITORY}builder-shared-resources:${IMAGE_TAG:-latest}
-    build:
-      context: shared-resources
-      dockerfile: Dockerfile
-      <<: *args
-      target: builder-shared-resources
-
   builder-portfolio-map:
     image: ${REGISTRY}${REPOSITORY}builder-portfolio-map:${IMAGE_TAG:-latest}
     build:

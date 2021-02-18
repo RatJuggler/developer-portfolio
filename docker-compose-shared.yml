@@ -1,0 +1,16 @@
+version: '3.8'
+
+x-args: &args
+  args:
+    REGISTRY: ${REGISTRY:-}
+    REPOSITORY: ${REPOSITORY:-}
+    BUILD_TAG: ${BUILD_TAG:-local}
+
+services:
+  builder-shared-resources:
+    image: ${REGISTRY}${REPOSITORY}builder-shared-resources:${IMAGE_TAG:-latest}
+    build:
+      context: shared-resources
+      dockerfile: Dockerfile
+      <<: *args
+      target: builder-shared-resources
