@@ -52,6 +52,15 @@ Docker files are available to create images for deployment to other environments
 at the moment I'm using two build commands for each image when testing so that I can tag the builders. This helps when I'm pruning 
 images but want to keep the builders for re-use, especially the Java builders.
 
+### shared-resources
+
+This image is for building only. It creates a Maven base image with common dependencies installed along with the shared resources
+which can then used by the other Java image builds.
+
+Create the image with:
+
+    docker build -f shared-resources/Dockerfile -t shared-resources:local shared-resources
+
 ### portfolio-static
 
 The public static files served using an instance of my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build). 
@@ -77,15 +86,6 @@ Create the image with:
 Then run with: `docker run -p 3000:3000 -d portfolio-template:test`
 
 Content will be available at: `http://localhost:3000`
-
-### shared-resources
-
-This image is for building only. It creates a Maven base image with common dependencies installed along with the shared resources
-which can then used by the other Java image builds.
-
-Create the image with:
-
-    docker build -f shared-resources/Dockerfile -t shared-resources:local shared-resources
 
 ### portfolio-map
 
@@ -119,6 +119,8 @@ Docker-compose configurations allow the complete application to be built and run
 intensive I have tried to ensure images layers are kept for re-use, and not discarded by accident (pruned), by tagging intermediate
 parts of the multi-stage docker builds. The build also uses a combined multi-stage docker build for the static and template images 
 to save time. An additional image is built for the front-end proxy and is again based on my [Nginx golden image](https://github.com/RatJuggler/my-production-docker-build).
+
+  Build the shared resources with: `docker-compose -f docker-compose-shared.yml build`
 
   Build the builders with: `docker-compose -f docker-compose-builders.yml build`
 
