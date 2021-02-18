@@ -15,11 +15,20 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  /* Show scroll bars to reduce layout jumps. */
+  overflow: scroll;
   scroll-behavior: smooth;
 }
 /* Pad content to avoid navbar. */
 body {
   padding-top: 3.5rem;
+}
+/* Basic effects. */
+.hide {
+  opacity: 0;
+}
+.show {
+  transition: opacity 500ms;
 }
 /* Increase highlighting on navigation and menu items. */
 .nav-item:hover {

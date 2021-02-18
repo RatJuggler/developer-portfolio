@@ -1,14 +1,18 @@
-$('#skillsTable').on('post-footer.bs.table', function () {
-    $('#skillsCard').fadeIn(500);
-})
+const skillsCard = document.getElementById('skillsCard');
+const skillsTable = $('#skillsTable');
 
-function buttons () {
+skillsTable.on('post-footer.bs.table', function () {
+    skillsCard.classList.add('show');
+    skillsCard.classList.remove('hide');
+});
+
+function skillsButtons () {
     return {
         clearFilters: {
             text: 'Clear filters',
             icon: 'fa-eraser',
             event: function () {
-                $('#skillsTable').bootstrapTable('clearFilterControl');
+                skillsTable.bootstrapTable('clearFilterControl');
             },
             attributes: {
                 title: 'Clear all column filters'
