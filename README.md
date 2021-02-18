@@ -5,13 +5,16 @@ My developer portfolio site. The full version is deployed [here](https://jurassi
 available [here](https://ratjuggler.github.io/developer-portfolio/).
 
 Rather than copying a random site template off the internet I'm trying to create something a bit different by building a small 
-microservices application using a variety of different technologies. The idea is to build a number of different versions of the 
-same site:
+microservices application using a variety of different technologies, just because. The initial idea is to build and evolve a number 
+of different versions of the same site but this might change as the project progresses:
 
-1. Using static pages only to act as an outline of the design. 
-2. Breaking down the static pages and using a templating engine with data files to generate the content.
-3. Building some sort of back-end to serve the data and using that from a further evolved set of templates.
-4. Expanding the back-end and building a front-end using a web component framework.
+1. Using static pages only to act as an outline of the design. ✔️
+2. Breaking down the static pages and using a templating engine with data files to generate the content. ✔️
+3. Building one or more back-ends to serve static data and using them from a further evolved set of templates. ✔️
+4. Building a more dynamic front-end using a UI framework. ⬅️
+5. Extend the back-end services to full CRUD capabilities.
+6. Enhance templates to contain more dynamic web component elements.
+7. Integrate everything into a fully working application.
 
 I completed the static pages designs and from those built the template application using [Express](https://expressjs.com/) and 
 [TwigJS](https://github.com/twigjs/twig.js), extracting the data content from each page into separate JSON files. I then built two 
@@ -25,7 +28,7 @@ When deployed a front-end proxy is used to route requests for template pages or 
 
 ![Image of Deployment](https://github.com/RatJuggler/developer-portfolio/blob/main/deployed-result.jpg)
 
-The next step is to look at building another version of the front-end using React.
+The next step is to look at building another version of the front-end using React or web components.
 
 ## Development
 
@@ -38,7 +41,7 @@ There are three `npm` targets which can be used during development:
 The Spring services rely on the shared resources bundle being available to them, so always make sure to update it in the local 
 repository after any changes by using `cd shared-resouces && ./mvnw install`.
 
-The Spring application can then be run with:
+The Spring applications can then be run with:
 
 - portfolio-map - `cd portfolio-map && ./mvnw spring-boot:run`
 - portfolio-sql - `cd portfolio-sql && ./mvnw spring-boot:run`
