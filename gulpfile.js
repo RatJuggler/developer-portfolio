@@ -23,11 +23,11 @@ const pkg = require('./package.json');
 const banner = '/*!\n * <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n */\n';
 
 function cleanVendor() {
-    return del(["./public/vendor/"]);
+    return del(["public/vendor/"]);
 }
 
 function cleanDist() {
-    return del(["./dist/"]);
+    return del(["dist/"]);
 }
 
 // Bring third party dependencies from node_modules into the vendor directory.
@@ -97,12 +97,12 @@ function copyStaticDist() {
     // Static HTML
     let html = gulp.src('./public/**/*.html')
         .pipe(gulpif(staticBuild, replace('"/template', '"https://jurassic-john.site/template')))
+        .pipe(gulpif(!staticBuild, replace(/\.\.?\//g, '/')))
+        .pipe(gulpif(!staticBuild, replace('.html', '')))
         .pipe(replace('.min.js', '.js'))
         .pipe(replace('.css', '.min.css'))
         .pipe(replace('.js', '.min.js'))
-        .pipe(replace('.html', ''))
-        .pipe(replace(/\.\.?\//g, '/'))
-        .pipe(gulp.dest('./dist/public'));
+        .pipe(gulp.dest('dist/public'));
     return merge(webRoot, images, html);
 }
 
@@ -124,7 +124,7 @@ function copyAppDist() {
 
 // Minify CSS task
 function mincss() {
-    return gulp.src("./public/css/*.css")
+    return gulp.src("public/css/*.css")
         .pipe(plumber())
         .pipe(header(banner, {
             pkg: pkg
@@ -133,7 +133,7 @@ function mincss() {
             suffix: ".min"
         }))
         .pipe(cleanCSS())
-        .pipe(gulp.dest("./dist/public/css"));
+        .pipe(gulp.dest("dist/public/css"));
 }
 
 // Minify JS task
