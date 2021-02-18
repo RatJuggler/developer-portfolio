@@ -1,0 +1,255 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Portfolio - Profile - Static</title>
+  <meta name="keywords" content="John Chase, Developer, Portfolio, Profile" />
+  <meta name="description" content="Developer portfolio website for John Chase. This is the profile page on the static version of the site.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  <meta name="og:url" content="">
+  <meta name="og:title" content="John Chase">
+  <meta name="og:type" content="website">
+  <meta name="og:description" content="Developer portfolio website for John Chase.">
+  <meta name="og:image" content="">
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-d432e42228.min.css">
+  <link rel="stylesheet" href="/vendor/fontawesome-free/css/all-c4af24ce59.min.css">
+  <link rel="stylesheet" href="/css/main-fb7c2d86d3.min.css">
+
+  <meta name="theme-color" content="#b833c0">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="/img/Rat-Profile.svg" width="30" height="30" class="d-inline-block align-top" alt="My profile avatar">
+        Portfolio - Static HTML Version
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" target="_blank" title="Open in new tab">
+              <span class="fas fa-home" aria-hidden="true"></span>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="versionMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="fas fa-cog" aria-hidden="true"></span>
+              <span>Settings</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="versionMenu">
+              <span class="dropdown-header">Site Version</span>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Static HTML</a>
+              <a class="dropdown-item" href="https://jurassic-john.site/template/json/profile">Template / Static JSON Files</a>
+              <a class="dropdown-item" href="https://jurassic-john.site/template/map/profile">Template / Map Spring Service</a>
+              <a class="dropdown-item" href="https://jurassic-john.site/template/sql/profile">Template / SQL Spring Service</a>
+              <a class="dropdown-item" href="https://ratjuggler.github.io/developer-portfolio/static/profile">Static HTML (GitHub Pages)</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="accountMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="fas fa-user" aria-hidden="true"></span>
+              <span>My Account</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="accountMenu">
+              <span class="dropdown-header">John Chase</span>
+              <div class="dropdown-divider"></div>
+              <button type="button" class="dropdown-item btn btn-link" data-toggle="modal" data-target="#signOutConfirmation">Sign out</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <span class="spotlight"><img src="/img/Photo.jpg" alt="John Chase" /></span>
+            <nav id="contactList" class="navbar-expand navbar-light">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="mailto:john.chase3@outlook.com?subject=Developer%20Profile" target="_blank" rel="noopener noreferrer" title="E-mail">
+                    <span class="fas fa-at" aria-hidden="true"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.linkedin.com/in/john-chase-57973b12/" title="LinkedIn">
+                    <span class="fab fa-linkedin" aria-hidden="true"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/RatJuggler" title="Github">
+                    <span class="fab fa-github-square" aria-hidden="true"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://twitter.com/ratjuggler" title="Twitter">
+                    <span class="fab fa-twitter-square" aria-hidden="true"></span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-9">
+            <form>
+              <fieldset disabled>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" value="John Chase">
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-8">
+                    <label for="location">Location</label>
+                    <input type="text" class="form-control" id="location" value="Smallfield, Surrey, England">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="status">Status</label>
+                    <select class="form-control" id="status">
+                      <option selected>Available</option>
+                      <option>Engaged</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="skills">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="career">Career</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="interests">Interests</a>
+      </li>
+    </ul>
+    <div class="card">
+      <div class="card-header">
+        <div class="btn-group float-right">
+          <button type="button" class="btn btn-link" title="Add a new profile">
+            <span class="fas fa-plus"></span>
+          </button>
+          <button type="button" class="btn btn-link" title="Edit this profile">
+            <span class="far fa-edit"></span>
+          </button>
+          <button type="button" class="btn btn-link" title="Delete this profile">
+            <span class="far fa-trash-alt"></span>
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <form>
+          <fieldset disabled>
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea class="form-control" id="description" rows="7">
+I am a Full Stack Application Developer with over 20 years experience. I have a proven track record of delivering bespoke solutions to meet demanding customer needs and growing those solutions to keep up with a changing market. I enjoy collaborating with a diverse team to build and promote a good working environment geared at delivering high-quality solutions.
+
+Select one of the tabs to find out more about me.
+              </textarea>
+            </div>
+            <div class="row">
+              <div class="form-group col-xl-6">
+                <div class="row">
+                  <label for="email" class="col-md-2 col-form-label">Email</label>
+                  <div class="col-md-10">
+                    <input type="text" class="form-control" id="email" value="john.chase3@outlook.com">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-xl-6">
+                <div class="row">
+                  <label for="linkedin" class="col-md-2 col-form-label">LinkedIn</label>
+                  <div class="col-md-10">
+                    <input type="text" class="form-control" id="linkedin" value="https://www.linkedin.com/in/john-chase-57973b12/">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-xl-6">
+                <div class="row">
+                  <label for="github" class="col-md-2 col-form-label">GitHub</label>
+                  <div class="col-md-10">
+                    <input type="text" class="form-control" id="github" value="https://github.com/RatJuggler">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-xl-6">
+                <div class="row">
+                  <label for="twitter" class="col-md-2 col-form-label">Twitter</label>
+                  <div class="col-md-10">
+                    <input type="text" class="form-control" id="twitter" value="https://twitter.com/ratjuggler">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div id="cookie-banner" class="alert alert-dark text-center mb-0" role="alert">
+      🍪 This website uses local storage to track if you've been told that it doesn't use cookies.
+      <button id="acceptCookieNotification" type="button" class="btn btn-primary btn-sm ml-3">Um, OK</button>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="signOutConfirmation" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="signOutConfirmationLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signOutConfirmationLabel">Sign Out Confirmation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to sign out?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">No, take me back</button>
+          <a href="/" class="btn btn-primary" role="button" aria-pressed="true">Yes, sign me out</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/vendor/modernizr-3.11-57b15b0dca.2.min.js"></script>
+  <script src="/vendor/jquery/jquery-dc5e7f18c8.min.js"></script>
+  <script src="/vendor/popper/popper-1022eaf388.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap-f0c2bcf5ef.min.js"></script>
+  <script src="/js/plugins-23842c1b1b.min.js"></script>
+  <script src="/js/main-eef1a5640b.min.js"></script>
+
+</body>
+
+</html>

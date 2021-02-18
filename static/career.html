@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
 
-  <title>John Chase - Career</title>
+  <title>Portfolio - Career - Static</title>
   <meta name="keywords" content="John Chase, Developer, Portfolio, Career" />
-  <meta name="description" content="Developer portfolio website for John Chase">
+  <meta name="description" content="Developer portfolio website for John Chase. This is the careers page on the static version of the site.">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
   <meta name="og:url" content="">
@@ -15,14 +15,14 @@
   <meta name="og:description" content="Developer portfolio website for John Chase.">
   <meta name="og:image" content="">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-023b3876bb.min.css">
-  <link rel="stylesheet" href="vendor/fontawesome-free/css/all-b227b1617a.min.css">
-  <link rel="stylesheet" href="css/main-3f6017a099.min.css">
+  <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-d432e42228.min.css">
+  <link rel="stylesheet" href="/vendor/fontawesome-free/css/all-c4af24ce59.min.css">
+  <link rel="stylesheet" href="/css/main-fb7c2d86d3.min.css">
 
-  <link rel="stylesheet" href="css/horizontal-carousel-06e7337ddd.min.css">
+  <link rel="stylesheet" href="/css/horizontal-carousel-1bb424f41c.min.css">
 
   <meta name="theme-color" content="#b833c0">
 </head>
@@ -32,28 +32,14 @@
   <header>
     <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
       <a class="navbar-brand" href="#">
-        <img src="img/Rat-Profile.svg" width="30" height="30" class="d-inline-block align-top" alt="My profile avatar">
-        Portfolio - Static Version
+        <img src="/img/Rat-Profile.svg" width="30" height="30" class="d-inline-block align-top" alt="My profile avatar">
+        Portfolio - Static HTML Version
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainMenu">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="projectMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="fas fa-file-code" aria-hidden="true"></span>
-              <span>Projects</span>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="projectMenu">
-              <a class="dropdown-item" href="https://ratjuggler.github.io/great-pyramid-puzzle/">The Great Pyramid Puzzle</a>
-              <a class="dropdown-item" href="https://github.com/RatJuggler/jhipster-microservices-dinosaurs">JHipster Microservices</a>
-              <a class="dropdown-item" href="https://github.com/RatJuggler/developer-portfolio">Developer Portfolio (this site)</a>
-              <a class="dropdown-item" href="https://github.com/RatJuggler/guinea-bot">Guinea Pig Twitter Bot</a>
-            </div>
-          </li>
-        </ul>
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="#" target="_blank" title="Open in new tab">
               <span class="fas fa-home" aria-hidden="true"></span>
@@ -68,8 +54,11 @@
             <div class="dropdown-menu" aria-labelledby="versionMenu">
               <span class="dropdown-header">Site Version</span>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Static</a>
-              <a class="dropdown-item" href="career.twig">Template</a>
+              <a class="dropdown-item" href="#">Static HTML</a>
+              <a class="dropdown-item" href="https://jurassic-john.site/template/json/career">Template / Static JSON Files</a>
+              <a class="dropdown-item" href="https://jurassic-john.site/template/map/career">Template / Map Spring Service</a>
+              <a class="dropdown-item" href="https://jurassic-john.site/template/sql/career">Template / SQL Spring Service</a>
+              <a class="dropdown-item" href="https://ratjuggler.github.io/developer-portfolio/static/career">Static HTML (GitHub Pages)</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -93,7 +82,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3 mb-3">
-            <span class="spotlight"><img src="img/Photo.png" alt="John Chase" /></span>
+            <span class="spotlight"><img src="/img/Photo.jpg" alt="John Chase" /></span>
             <nav id="contactList" class="navbar-expand navbar-light">
               <ul class="navbar-nav">
                 <li class="nav-item">
@@ -150,16 +139,16 @@
   <main class="container">
     <ul class="nav nav-tabs">
       <li class="nav-item">
-        <a class="nav-link" href="index.html">About</a>
+        <a class="nav-link" href="profile">Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="skills.html">Skills</a>
+        <a class="nav-link" href="skills">Skills</a>
       </li>
       <li class="nav-item">
         <a class="nav-link active" href="#">Career</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="interests.html">Interests</a>
+        <a class="nav-link" href="interests">Interests</a>
       </li>
     </ul>
     <div id="careerCarousel" class="carousel slide" data-ride="carousel">
@@ -189,25 +178,25 @@
                     <div class="col-md-10">
                       <div class="row">
                         <div class="form-group col-md-2">
-                          <label for="sequence1">Sequence</label>
-                          <input type="text" class="form-control" id="sequence1" value="1">
+                          <label for="step1">Step</label>
+                          <input type="text" class="form-control" id="step1" value="1">
                         </div>
                         <div class="form-group col-md-10">
-                          <label for="period1">Period</label>
-                          <input type="text" class="form-control" id="period1" value="Dinosaurs">
+                          <label for="description1">Description</label>
+                          <input type="text" class="form-control" id="description1" value="Dinosaurs">
                         </div>
                       </div>
                       <div class="form-group">
                         <label>Image</label>
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image1">
-                          <label class="custom-file-label" for="image1">filename</label>
+                          <input type="file" class="custom-file-input" id="imagePath1">
+                          <label class="custom-file-label" for="imagePath1">🦕</label>
                         </div>
                       </div>
                       <div>
                         <label for="synopsis1">Synopsis</label>
                         <textarea class="form-control" id="synopsis1" rows="3">
-65 million years ago when dinosaurs still roamed the earth. Technically speaking this is the Cretaceous–Paleogene boundary and not the Jurassic.
+65 million years ago when dinosaurs still roamed the earth. Technically speaking this is the Cretaceous–Paleogene (k-Pg) boundary and not the Jurassic.
                         </textarea>
                       </div>
                     </div>
@@ -242,19 +231,19 @@
                     <div class="col-md-10">
                       <div class="row">
                         <div class="form-group col-md-2">
-                          <label for="sequence2">Sequence</label>
-                          <input type="text" class="form-control" id="sequence2" value="2">
+                          <label for="step2">Step</label>
+                          <input type="text" class="form-control" id="step2" value="2">
                         </div>
                         <div class="form-group col-md-10">
-                          <label for="period2">Period</label>
-                          <input type="text" class="form-control" id="period2" value="Graduation">
+                          <label for="description2">Description</label>
+                          <input type="text" class="form-control" id="description2" value="Graduation">
                         </div>
                       </div>
                       <div class="form-group">
                         <label>Image</label>
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image2">
-                          <label class="custom-file-label" for="image2">filename</label>
+                          <input type="file" class="custom-file-input" id="imagePath2">
+                          <label class="custom-file-label" for="imagePath2">🎓</label>
                         </div>
                       </div>
                       <div>
@@ -295,19 +284,19 @@ After four years and two industry placements, I emerged from Kingston (Upon Tham
                     <div class="col-md-10">
                       <div class="row">
                         <div class="form-group col-md-2">
-                          <label for="sequence3">Sequence</label>
-                          <input type="text" class="form-control" id="sequence3" value="3">
+                          <label for="step3">Step</label>
+                          <input type="text" class="form-control" id="step3" value="3">
                         </div>
                         <div class="form-group col-md-10">
-                          <label for="period3">Period</label>
-                          <input type="text" class="form-control" id="period3" value="Eli Lilly and Company">
+                          <label for="description3">Description</label>
+                          <input type="text" class="form-control" id="description3" value="Eli Lilly and Company">
                         </div>
                       </div>
                       <div class="form-group">
                         <label>Image</label>
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image3">
-                          <label class="custom-file-label" for="image3">filename</label>
+                          <input type="file" class="custom-file-input" id="imagePath3">
+                          <label class="custom-file-label" for="imagePath3">💊</label>
                         </div>
                       </div>
                       <div>
@@ -348,19 +337,19 @@ Everything from COBOL/CICS, for financial data entry, to an application for sale
                     <div class="col-md-10">
                       <div class="row">
                         <div class="form-group col-md-2">
-                          <label for="sequence4">Sequence</label>
-                          <input type="text" class="form-control" id="sequence4" value="4">
+                          <label for="step4">Step</label>
+                          <input type="text" class="form-control" id="step4" value="4">
                         </div>
                         <div class="form-group col-md-10">
-                          <label for="period4">Period</label>
-                          <input type="text" class="form-control" id="period4" value="Heron Suzuki GB">
+                          <label for="description4">Description</label>
+                          <input type="text" class="form-control" id="description4" value="Heron Suzuki GB">
                         </div>
                       </div>
                       <div class="form-group">
                         <label>Image</label>
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image4">
-                          <label class="custom-file-label" for="image4">filename</label>
+                          <input type="file" class="custom-file-input" id="imagePath4">
+                          <label class="custom-file-label" for="imagePath4">🚙</label>
                         </div>
                       </div>
                       <div>
@@ -401,19 +390,19 @@ Warehousing systems in C & Basic running on VAX/VMS, MS Visual Basic & Access fo
                     <div class="col-md-10">
                       <div class="row">
                         <div class="form-group col-md-2">
-                          <label for="sequence5">Sequence</label>
-                          <input type="text" class="form-control" id="sequence5" value="5">
+                          <label for="step5">Step</label>
+                          <input type="text" class="form-control" id="step5" value="5">
                         </div>
                         <div class="form-group col-md-10">
-                          <label for="period5">Period</label>
-                          <input type="text" class="form-control" id="period5" value="Cigna">
+                          <label for="description5">Description</label>
+                          <input type="text" class="form-control" id="description5" value="Cigna">
                         </div>
                       </div>
                       <div class="form-group">
                         <label>Image</label>
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image5">
-                          <label class="custom-file-label" for="image5">filename</label>
+                          <input type="file" class="custom-file-input" id="imagePath5">
+                          <label class="custom-file-label" for="imagePath5">🗂</label>
                         </div>
                       </div>
                       <div>
@@ -454,19 +443,19 @@ My entry into the financial services world and working in London. Bespoke applic
                     <div class="col-md-10">
                       <div class="row">
                         <div class="form-group col-md-2">
-                          <label for="sequence6">Sequence</label>
-                          <input type="text" class="form-control" id="sequence6" value="6">
+                          <label for="step6">Step</label>
+                          <input type="text" class="form-control" id="step6" value="6">
                         </div>
                         <div class="form-group col-md-10">
-                          <label for="period6">Period</label>
-                          <input type="text" class="form-control" id="period6" value="Contracting">
+                          <label for="description6">Description</label>
+                          <input type="text" class="form-control" id="description6" value="Contracting">
                         </div>
                       </div>
                       <div class="form-group">
                         <label>Image</label>
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image6">
-                          <label class="custom-file-label" for="image6">filename</label>
+                          <input type="file" class="custom-file-input" id="imagePath6">
+                          <label class="custom-file-label" for="imagePath6">🖥</label>
                         </div>
                       </div>
                       <div>
@@ -507,25 +496,25 @@ Working on projects for a variety of clients, in three to twelve month contracts
                     <div class="col-md-10">
                       <div class="row">
                         <div class="form-group col-md-2">
-                          <label for="sequence7">Sequence</label>
-                          <input type="text" class="form-control" id="sequence7" value="7">
+                          <label for="step7">Step</label>
+                          <input type="text" class="form-control" id="step7" value="7">
                         </div>
                         <div class="form-group col-md-10">
-                          <label for="period7">Period</label>
-                          <input type="text" class="form-control" id="period7" value="Chubb">
+                          <label for="description7">Description</label>
+                          <input type="text" class="form-control" id="description7" value="Chubb">
                         </div>
                       </div>
                       <div class="form-group">
                         <label>Image</label>
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image7">
-                          <label class="custom-file-label" for="image7">filename</label>
+                          <input type="file" class="custom-file-input" id="imagePath7">
+                          <label class="custom-file-label" for="imagePath7">💻</label>
                         </div>
                       </div>
                       <div>
                         <label for="synopsis7">Synopsis</label>
                         <textarea class="form-control" id="synopsis7" rows="3">
-Moving from PowerBuilder desktop applications to creating and evolving browser based applications, for the Claims and High Net Worth business units, using Java and the ecology that surrounds it.
+Moving from PowerBuilder desktop applications to creating, and evolving, browser based applications for the Claims and High Net Worth business units, using Java and the ecology that surrounds it.
                         </textarea>
                       </div>
                     </div>
@@ -560,19 +549,19 @@ Moving from PowerBuilder desktop applications to creating and evolving browser b
                     <div class="col-md-10">
                       <div class="row">
                         <div class="form-group col-md-2">
-                          <label for="sequence8">Sequence</label>
-                          <input type="text" class="form-control" id="sequence8" value="8">
+                          <label for="step8">Step</label>
+                          <input type="text" class="form-control" id="step8" value="8">
                         </div>
                         <div class="form-group col-md-10">
-                          <label for="period8">Period</label>
-                          <input type="text" class="form-control" id="period8" value="Career Break">
+                          <label for="description8">Description</label>
+                          <input type="text" class="form-control" id="description8" value="Career Break">
                         </div>
                       </div>
                       <div class="form-group">
                         <label>Image</label>
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image8">
-                          <label class="custom-file-label" for="image8">filename</label>
+                          <input type="file" class="custom-file-input" id="imagePath8">
+                          <label class="custom-file-label" for="imagePath8">🏖</label>
                         </div>
                       </div>
                       <div>
@@ -613,19 +602,19 @@ After over 20 years working in the financial services sector in London I decided
                     <div class="col-md-10">
                       <div class="row">
                         <div class="form-group col-md-2">
-                          <label for="sequence9">Sequence</label>
-                          <input type="text" class="form-control" id="sequence9" value="9">
+                          <label for="step9">Step</label>
+                          <input type="text" class="form-control" id="step9" value="9">
                         </div>
                         <div class="form-group col-md-10">
-                          <label for="period9">Period</label>
-                          <input type="text" class="form-control" id="period9" value="The Future...">
+                          <label for="description9">Description</label>
+                          <input type="text" class="form-control" id="description9" value="The Future...">
                         </div>
                       </div>
                       <div class="form-group">
                         <label>Image</label>
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image9">
-                          <label class="custom-file-label" for="image9">filename</label>
+                          <input type="file" class="custom-file-input" id="imagePath9">
+                          <label class="custom-file-label" for="imagePath9">🚀</label>
                         </div>
                       </div>
                       <div>
@@ -657,7 +646,7 @@ I’m now looking to return to the world of development and wondering where it m
 
   <footer>
     <div id="cookie-banner" class="alert alert-dark text-center mb-0" role="alert">
-      🍪 This website doesn't use cookies but uses local storage to track if you've been told it doesn't use cookies.
+      🍪 This website uses local storage to track if you've been told that it doesn't use cookies.
       <button id="acceptCookieNotification" type="button" class="btn btn-primary btn-sm ml-3">Um, OK</button>
     </div>
   </footer>
@@ -682,12 +671,12 @@ I’m now looking to return to the world of development and wondering where it m
     </div>
   </div>
 
-  <script src="js/vendor/modernizr-3.11-57b15b0dca.2.min.js"></script>
-  <script src="vendor/jquery/jquery-dc5e7f18c8.min.js"></script>
-  <script src="vendor/popper/popper-1022eaf388.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap-f20fa8b102.min.js"></script>
-  <script src="js/plugins-a42079fa94.min.js"></script>
-  <script src="js/main-6e32e92e70.min.js"></script>
+  <script src="/js/vendor/modernizr-3.11-57b15b0dca.2.min.js"></script>
+  <script src="/vendor/jquery/jquery-dc5e7f18c8.min.js"></script>
+  <script src="/vendor/popper/popper-1022eaf388.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap-f0c2bcf5ef.min.js"></script>
+  <script src="/js/plugins-23842c1b1b.min.js"></script>
+  <script src="/js/main-eef1a5640b.min.js"></script>
 
 </body>
 

@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
 
-  <title>John Chase - Interests</title>
+  <title>Portfolio - Interests - Static</title>
   <meta name="keywords" content="John Chase, Developer, Portfolio, Interests" />
-  <meta name="description" content="Developer portfolio website for John Chase">
+  <meta name="description" content="Developer portfolio website for John Chase. This is the interests page on the static version of the site.">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
   <meta name="og:url" content="">
@@ -15,14 +15,14 @@
   <meta name="og:description" content="Developer portfolio website for John Chase.">
   <meta name="og:image" content="">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-023b3876bb.min.css">
-  <link rel="stylesheet" href="vendor/fontawesome-free/css/all-b227b1617a.min.css">
-  <link rel="stylesheet" href="css/main-3f6017a099.min.css">
+  <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-d432e42228.min.css">
+  <link rel="stylesheet" href="/vendor/fontawesome-free/css/all-c4af24ce59.min.css">
+  <link rel="stylesheet" href="/css/main-fb7c2d86d3.min.css">
 
-  <link rel="stylesheet" href="css/vertical-carousel-7798fb492c.min.css">
+  <link rel="stylesheet" href="/css/vertical-carousel-6c596a4eef.min.css">
 
   <meta name="theme-color" content="#b833c0">
 </head>
@@ -32,28 +32,14 @@
   <header>
     <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
       <a class="navbar-brand" href="#">
-        <img src="img/Rat-Profile.svg" width="30" height="30" class="d-inline-block align-top" alt="My profile avatar">
-        Portfolio - Static Version
+        <img src="/img/Rat-Profile.svg" width="30" height="30" class="d-inline-block align-top" alt="My profile avatar">
+        Portfolio - Static HTML Version
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainMenu">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="projectMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="fas fa-file-code" aria-hidden="true"></span>
-              <span>Projects</span>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="projectMenu">
-              <a class="dropdown-item" href="https://ratjuggler.github.io/great-pyramid-puzzle/">The Great Pyramid Puzzle</a>
-              <a class="dropdown-item" href="https://github.com/RatJuggler/jhipster-microservices-dinosaurs">JHipster Microservices</a>
-              <a class="dropdown-item" href="https://github.com/RatJuggler/developer-portfolio">Developer Portfolio (this site)</a>
-              <a class="dropdown-item" href="https://github.com/RatJuggler/guinea-bot">Guinea Pig Twitter Bot</a>
-            </div>
-          </li>
-        </ul>
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="#" target="_blank" title="Open in new tab">
               <span class="fas fa-home" aria-hidden="true"></span>
@@ -68,8 +54,11 @@
             <div class="dropdown-menu" aria-labelledby="versionMenu">
               <span class="dropdown-header">Site Version</span>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Static</a>
-              <a class="dropdown-item" href="interests.twig">Template</a>
+              <a class="dropdown-item" href="#">Static HTML</a>
+              <a class="dropdown-item" href="https://jurassic-john.site/template/json/interests">Template / Static JSON Files</a>
+              <a class="dropdown-item" href="https://jurassic-john.site/template/map/interests">Template / Map Spring Service</a>
+              <a class="dropdown-item" href="https://jurassic-john.site/template/sql/interests">Template / SQL Spring Service</a>
+              <a class="dropdown-item" href="https://ratjuggler.github.io/developer-portfolio/static/interests">Static HTML (GitHub Pages)</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -93,7 +82,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3 mb-3">
-            <span class="spotlight"><img src="img/Photo.png" alt="John Chase" /></span>
+            <span class="spotlight"><img src="/img/Photo.jpg" alt="John Chase" /></span>
             <nav id="contactList" class="navbar-expand navbar-light">
               <ul class="navbar-nav">
                 <li class="nav-item">
@@ -150,13 +139,13 @@
   <main class="container">
     <ul class="nav nav-tabs">
       <li class="nav-item">
-        <a class="nav-link" href="index.html">About</a>
+        <a class="nav-link" href="profile">Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="skills.html">Skills</a>
+        <a class="nav-link" href="skills">Skills</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="career.html">Career</a>
+        <a class="nav-link" href="career">Career</a>
       </li>
       <li class="nav-item">
         <a class="nav-link active" href="#">Interests</a>
@@ -188,18 +177,18 @@
                 <fieldset disabled>
                   <div class="row">
                     <div class="col-md-4">
-                      <img class="card-img-top img-fluid" src="img/Dinosaurs.jpg" alt="Dinosaurs">
+                      <img class="card-img-top img-fluid" src="/img/Dinosaurs.jpg" alt="">
                     </div>
                     <div class="col-md-8">
                       <div class="form-group">
-                        <label for="interest1">Interest</label>
-                        <input type="text" class="form-control" id="interest1" value="Dinosaurs">
+                        <label for="title1">Interest</label>
+                        <input type="text" class="form-control" id="title1" value="Dinosaurs">
                       </div>
                       <div class="form-group">
                         <label>Image</label>
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image1">
-                          <label class="custom-file-label" for="image1">filename</label>
+                          <input type="file" class="custom-file-input" id="imagePath1">
+                          <label class="custom-file-label" for="imagePath1">img/Dinosaurs.jpg</label>
                         </div>
                       </div>
                     </div>
@@ -207,7 +196,7 @@
                   <div class="mt-3">
                     <label for="description1">Description</label>
                     <textarea class="form-control" id="description1" rows="3">
-I always wanted to be a paleontologist and though I ended up in IT they continue to fascinate me, I even built my own "Dinosaur Of The Day" twitter bot (@dinosauria_bot). Just don't mention Jurassic Park.
+I always wanted to be a paleontologist and though I ended up in IT they continue to fascinate me, I even built my own "Dinosaur Of The Day" twitter bot (@dinosauria_bot).
                     </textarea>
                   </div>
                 </fieldset>
@@ -235,18 +224,18 @@ I always wanted to be a paleontologist and though I ended up in IT they continue
                 <fieldset disabled>
                   <div class="row">
                     <div class="col-md-4">
-                      <img class="card-img-top img-fluid" src="img/VideoGames.jpg" alt="Video Games">
+                      <img class="card-img-top img-fluid" src="/img/VideoGames.jpg" alt="">
                     </div>
                     <div class="col-md-8">
                       <div class="form-group">
-                        <label for="interest2">Interest</label>
-                        <input type="text" class="form-control" id="interest2" value="Video Games">
+                        <label for="title2">Interest</label>
+                        <input type="text" class="form-control" id="title2" value="Video Games">
                       </div>
                       <div class="form-group">
                         <label>Image</label>
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image2">
-                          <label class="custom-file-label" for="image2">filename</label>
+                          <input type="file" class="custom-file-input" id="imagePath2">
+                          <label class="custom-file-label" for="imagePath2">img/VideoGames.jpg</label>
                         </div>
                       </div>
                     </div>
@@ -254,7 +243,7 @@ I always wanted to be a paleontologist and though I ended up in IT they continue
                   <div class="mt-3">
                     <label for="description2">Description</label>
                     <textarea class="form-control" id="description2" rows="3">
-My first steps in programing involved a copy of David H, Ahl's "BASIC Computer Games" (I still have it) and a teletype attached to a PDP-11/70 and now we have 4K screens and VR.
+I like playing video games and enjoy the variety and novelty of the environments they are often set in, as well as the ways they try to evolve and tell stories.
                     </textarea>
                   </div>
                 </fieldset>
@@ -282,18 +271,18 @@ My first steps in programing involved a copy of David H, Ahl's "BASIC Computer G
                 <fieldset disabled>
                   <div class="row">
                     <div class="col-md-4">
-                      <img class="card-img-top img-fluid" src="img/History.jpg" alt="History">
+                      <img class="card-img-top img-fluid" src="/img/History.jpg" alt="">
                     </div>
                     <div class="col-md-8">
                       <div class="form-group">
-                        <label for="interest3">Interest</label>
-                        <input type="text" class="form-control" id="interest3" value="History">
+                        <label for="title3">Interest</label>
+                        <input type="text" class="form-control" id="title3" value="History">
                       </div>
                       <div class="form-group">
                         <label>Image</label>
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image3">
-                          <label class="custom-file-label" for="image3">filename</label>
+                          <input type="file" class="custom-file-input" id="imagePath3">
+                          <label class="custom-file-label" for="imagePath3">img/History.jpg</label>
                         </div>
                       </div>
                     </div>
@@ -329,18 +318,18 @@ I love reading about history, from Ancient Egypt and the Romans to the Medieval 
                 <fieldset disabled>
                   <div class="row">
                     <div class="col-md-4">
-                      <img class="card-img-top img-fluid" src="img/MakerPi.jpg" alt="Maker Culture">
+                      <img class="card-img-top img-fluid" src="/img/MakerPi.jpg" alt="">
                     </div>
                     <div class="col-md-8">
                       <div class="form-group">
-                        <label for="interest4">Interest</label>
-                        <input type="text" class="form-control" id="interest4" value="Maker Culture">
+                        <label for="title4">Interest</label>
+                        <input type="text" class="form-control" id="title4" value="Maker Culture">
                       </div>
                       <div class="form-group">
                         <label>Image</label>
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image4">
-                          <label class="custom-file-label" for="image4">filename</label>
+                          <input type="file" class="custom-file-input" id="imagePath4">
+                          <label class="custom-file-label" for="imagePath4">img/MakerPi.jpg</label>
                         </div>
                       </div>
                     </div>
@@ -376,18 +365,18 @@ Nothing more fun than fiddling with a Raspberry Pi, a soldering iron and some LE
                 <fieldset disabled>
                   <div class="row">
                     <div class="col-md-4">
-                      <img class="card-img-top img-fluid" src="img/Space.jpg" alt="Space">
+                      <img class="card-img-top img-fluid" src="/img/Space.jpg" alt="">
                     </div>
                     <div class="col-md-8">
                       <div class="form-group">
-                        <label for="interest5">Interest</label>
-                        <input type="text" class="form-control" id="interest5" value="Space">
+                        <label for="title5">Interest</label>
+                        <input type="text" class="form-control" id="title5" value="Space">
                       </div>
                       <div class="form-group">
                         <label>Image</label>
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="image5">
-                          <label class="custom-file-label" for="image5">filename</label>
+                          <input type="file" class="custom-file-input" id="imagePath5">
+                          <label class="custom-file-label" for="imagePath5">img/Space.jpg</label>
                         </div>
                       </div>
                     </div>
@@ -395,7 +384,7 @@ Nothing more fun than fiddling with a Raspberry Pi, a soldering iron and some LE
                   <div class="mt-3">
                     <label for="description5">Description</label>
                     <textarea class="form-control" id="description5" rows="3">
-Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean, you may think it's a long way down the road to the chemist's, but that's just peanuts to space”.
+Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean, you may think it's a long way down the road to the chemist's, but that's just peanuts to space.
                     </textarea>
                   </div>
                 </fieldset>
@@ -413,7 +402,7 @@ Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it 
 
   <footer>
     <div id="cookie-banner" class="alert alert-dark text-center mb-0" role="alert">
-      🍪 This website doesn't use cookies but uses local storage to track if you've been told it doesn't use cookies.
+      🍪 This website uses local storage to track if you've been told that it doesn't use cookies.
       <button id="acceptCookieNotification" type="button" class="btn btn-primary btn-sm ml-3">Um, OK</button>
     </div>
   </footer>
@@ -438,12 +427,12 @@ Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it 
     </div>
   </div>
 
-  <script src="js/vendor/modernizr-3.11-57b15b0dca.2.min.js"></script>
-  <script src="vendor/jquery/jquery-dc5e7f18c8.min.js"></script>
-  <script src="vendor/popper/popper-1022eaf388.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap-f20fa8b102.min.js"></script>
-  <script src="js/plugins-a42079fa94.min.js"></script>
-  <script src="js/main-6e32e92e70.min.js"></script>
+  <script src="/js/vendor/modernizr-3.11-57b15b0dca.2.min.js"></script>
+  <script src="/vendor/jquery/jquery-dc5e7f18c8.min.js"></script>
+  <script src="/vendor/popper/popper-1022eaf388.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap-f0c2bcf5ef.min.js"></script>
+  <script src="/js/plugins-23842c1b1b.min.js"></script>
+  <script src="/js/main-eef1a5640b.min.js"></script>
 
 </body>
 
