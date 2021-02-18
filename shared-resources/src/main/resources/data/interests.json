@@ -13,7 +13,7 @@
     "id": 2,
     "title": "Video Games",
     "imagePath": "/img/VideoGames.jpg",
-    "description": "I like playing video games and enjoy the variety and novelty of the environments they are often set it, as well as the ways they try to evolve and tell stories."
+    "description": "I like playing video games and enjoy the variety and novelty of the environments they are often set in, as well as the ways they try to evolve and tell stories."
   },
   {
     "_classMap": "com.portfolio.map.domain.Interest",
