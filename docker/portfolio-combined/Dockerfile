@@ -50,6 +50,9 @@ ARG BUILD_TAG
 LABEL build_tag=${BUILD_TAG}
 LABEL description="Developer Portfolio - Ngninx Static Files"
 
+HEALTHCHECK --interval=5m --timeout=30s --start-period=60s --retries=3 \
+    CMD ["curl", "--silent", "--fail", "http://localhost/health"]
+
 # Create a folder to serve the static files from.
 WORKDIR /srv
 
@@ -68,6 +71,9 @@ FROM ${REGISTRY}${REPOSITORY}golden-nginx:latest AS portfolio-site
 ARG BUILD_TAG
 LABEL build_tag=${BUILD_TAG}
 LABEL description="Developer Portfolio - Nginx Site Front-End"
+
+HEALTHCHECK --interval=5m --timeout=30s --start-period=60s --retries=3 \
+    CMD ["curl", "--silent", "--fail", "http://localhost/health"]
 
 # Use an Nginx configuration with reverse proxy's to the static files and template application.
 COPY docker/portfolio-combined/nginx.conf /etc/nginx/conf.d/default.conf

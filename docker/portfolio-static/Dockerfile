@@ -27,6 +27,9 @@ ARG BUILD_TAG
 LABEL build_tag=${BUILD_TAG}
 LABEL description="Developer Portfolio - Ngninx Static Files"
 
+HEALTHCHECK --interval=5m --timeout=30s --start-period=60s --retries=3 \
+    CMD ["curl", "--silent", "--fail", "http://localhost/health"]
+
 # Create a folder to serve the static files from.
 WORKDIR /srv
 
