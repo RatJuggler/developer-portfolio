@@ -8,6 +8,16 @@ const path = require('path');
 const fs = require('fs').promises;
 const got = require('got');
 
+const promBundle = require('express-prom-bundle');
+const metricsMiddleware = promBundle({
+    includePath: true,
+    includeUp: false,
+    metricType: 'summary',
+    promClient: {
+        collectDefaultMetrics: {}
+    }
+});
+
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -25,6 +35,8 @@ const asyncHandler = fn =>
         const next = args[args.length-1]
         return Promise.resolve(fnReturn).catch(next)
     }
+
+app.use(metricsMiddleware);
 
 // Static files.
 app.use(express.static('public'));
