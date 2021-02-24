@@ -50,7 +50,9 @@ The Spring applications can then be run with:
 
 Docker files are available to create images for deployment to other environments. They all make use of multi-stage docker files and 
 at the moment I'm using two build commands for each image when testing so that I can tag the builders. This helps when I'm pruning 
-images but want to keep the builders for re-use, especially the Java builders.
+images but want to keep the builders for re-use when building ARM images on a Raspberry Pi, especially the very large Java builder
+images. Simple health checks have been added (mostly using the convenient `curl` anti-pattern 😒) and metrics exposed for the Java
+and Node applications.
 
 ### shared-resources
 
