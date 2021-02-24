@@ -66,6 +66,14 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<propertiesEncoding>UTF-8</propertiesEncoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-remote-resources-plugin</artifactId>
 				<version>1.7.0</version>
 				<configuration>
