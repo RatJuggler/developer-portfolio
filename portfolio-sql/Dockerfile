@@ -24,7 +24,8 @@ ARG BUILD_TAG=local
 LABEL build_tag=${BUILD_TAG}
 LABEL description="Developer Portfolio - Java Spring - SQL Repository Service"
 
-EXPOSE 8001
+EXPOSE 8002
+
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
 
 # Create a folder to run the service from.
