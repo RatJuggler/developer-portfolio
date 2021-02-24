@@ -8,6 +8,7 @@ const path = require('path');
 const fs = require('fs').promises;
 const got = require('got');
 
+// Configure metrics.
 const promBundle = require('express-prom-bundle');
 const metricsMiddleware = promBundle({
     includePath: true,
@@ -18,6 +19,7 @@ const metricsMiddleware = promBundle({
     }
 });
 
+// Configure Express.
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -25,6 +27,7 @@ const port = 3000;
 app.set('views', templatePath);
 app.set('view engine', 'twig');
 
+// Define valid templates and data sources.
 const templates = ['profile', 'skills', 'career', 'interests'];
 const dataSources = ['json', 'map', 'sql'];
 
@@ -36,6 +39,7 @@ const asyncHandler = fn =>
         return Promise.resolve(fnReturn).catch(next)
     }
 
+// Apply metrics on all routes.
 app.use(metricsMiddleware);
 
 // Static files.
