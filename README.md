@@ -109,7 +109,7 @@ Create the image with:
     docker build -f portfolio-sql/Dockerfile --target builder-portfolio-sql -t builder-portfolio-sql:local portfolio-sql
     docker build -f portfolio-sql/Dockerfile --target portfolio-sql -t portfolio-sql:test portfolio-sql
 
-Then run with: `docker run -p 8001:8001 portfolio-sql:test -d`
+Then run with: `docker run -p 8002:8002 portfolio-sql:test -d`
 
 Content will be available at: `http://localhost:8002/(profile|skills|career|interests)`
 
