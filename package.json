@@ -33,7 +33,9 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "express-prom-bundle": "^6.3.4",
     "got": "^11.8.1",
+    "prom-client": "^13.1.0",
     "twig": "^1.15.4"
   },
   "devDependencies": {
