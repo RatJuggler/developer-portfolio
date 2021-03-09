@@ -8,7 +8,6 @@ import Career from "./Career";
 import Interests from "./Interests";
 import Footer from './layout/footer';
 import SignOut from './layout/sign-out';
-import './App.css';
 
 function App() {
   return (
