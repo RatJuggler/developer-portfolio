@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Hero = () => {
 
@@ -24,22 +25,22 @@ const Hero = () => {
                                     <li className="nav-item">
                                         <a className="nav-link" href="mailto:{{ profile.email }}?subject=Developer%20Profile"
                                            target="_blank" rel="noopener noreferrer" title="E-mail">
-                                            <span className="fas fa-at" aria-hidden="true" />
+                                            <FontAwesomeIcon icon={["fas", "at"]} fixedWidth />
                                         </a>
                                     </li>
                                     <li className="nav-item">
                                         <a className="nav-link" href={ profile.linkedin } title="LinkedIn">
-                                            <span className="fab fa-linkedin" aria-hidden="true" />
+                                            <FontAwesomeIcon icon={["fab", "linkedin"]} fixedWidth />
                                         </a>
                                     </li>
                                     <li className="nav-item">
                                         <a className="nav-link" href={ profile.github } title="Github">
-                                            <span className="fab fa-github-square" aria-hidden="true" />
+                                            <FontAwesomeIcon icon={["fab", "github-square"]} fixedWidth />
                                         </a>
                                     </li>
                                     <li className="nav-item">
                                         <a className="nav-link" href={ profile.twitter } title="Twitter">
-                                            <span className="fab fa-twitter-square" aria-hidden="true" />
+                                            <FontAwesomeIcon icon={["fab", "twitter-square"]} fixedWidth />
                                         </a>
                                     </li>
                                 </ul>

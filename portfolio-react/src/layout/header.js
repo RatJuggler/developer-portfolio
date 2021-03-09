@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = () => {
 
-    const [profile] = useState({ avatarPath: "img/Rat-Profile.svg", name: "John Chase"});
+    const [profile] = useState({
+        avatarPath: "img/Rat-Profile.svg",
+        name: "John Chase"
+    });
     const [version] = useState("0.0.1");
 
     return (
@@ -21,14 +25,14 @@ const Header = () => {
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
                             <a className="nav-link" href="/" target="_blank" title="Open in new tab">
-                                <span className="fas fa-home" aria-hidden="true" />
+                                <FontAwesomeIcon icon={["fas", "home"]} fixedWidth />
                                 <span>Home</span>
                             </a>
                         </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="/" id="versionMenu" role="button" data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">
-                                <span className="fas fa-cog" aria-hidden="true" />
+                                <FontAwesomeIcon icon={["fas", "cog"]} fixedWidth />
                                 <span>Settings</span>
                             </a>
                             <div className="dropdown-menu" aria-labelledby="versionMenu">
@@ -46,7 +50,7 @@ const Header = () => {
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="/" id="accountMenu" role="button" data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">
-                                <span className="fas fa-user" aria-hidden="true" />
+                                <FontAwesomeIcon icon={["fas", "user"]} fixedWidth />
                                 <span>My Account</span>
                             </a>
                             <div className="dropdown-menu" aria-labelledby="accountMenu">
