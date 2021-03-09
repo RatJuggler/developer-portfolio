@@ -1,12 +1,10 @@
-build/
-dist/
-node_modules/
-public/vendor/
-target/
+**/build/
+**/dist/
+**/node_modules/
+**/public/vendor/
+**/target/
 
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
 
 ### STS ###
 .apt_generated
