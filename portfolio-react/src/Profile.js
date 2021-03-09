@@ -1,6 +1,84 @@
+import { useState } from "react";
+
 const Profile = () => {
+
+    const [profile] = useState({
+        name: "John Chase",
+        location: "Smallfield, Surrey, England",
+        status: "Available",
+        avatarPath: "img/Rat-Profile.svg",
+        photoPath: "img/Photo.jpg",
+        description: "I am a Senior Developer with extensive SDLC experience. I have a proven track record of delivering bespoke solutions to meet demanding customer needs and growing those solutions to keep up with a changing market. I enjoy collaborating with a diverse team to build and promote a good working environment geared at delivering high-quality solutions.\n\nSelect one of the tabs to find out more about me.",
+        email: "john.chase3@outlook.com",
+        linkedin: "https://www.linkedin.com/in/john-chase-57973b12/",
+        github: "https://github.com/RatJuggler",
+        twitter: "https://twitter.com/ratjuggler"
+    });
+
     return (
-        <h2>Profile</h2>
+        <div className="card">
+            <div className="card-header">
+                <div className="btn-group float-right">
+                    <button type="button" className="btn btn-link" title="Add a new profile">
+                        <span className="fas fa-plus" />
+                    </button>
+                    <button type="button" className="btn btn-link" title="Edit this profile">
+                        <span className="far fa-edit" />
+                    </button>
+                    <button type="button" className="btn btn-link" title="Delete this profile">
+                        <span className="far fa-trash-alt" />
+                    </button>
+                </div>
+            </div>
+            <div className="card-body">
+                <form>
+                    <fieldset disabled>
+                        <div className="form-group">
+                            <label htmlFor="description">Description</label>
+                            <textarea className="form-control" id="description" rows="7">
+{ profile.description }
+              </textarea>
+                        </div>
+                        <div className="row">
+                            <div className="form-group col-xl-6">
+                                <div className="row">
+                                    <label htmlFor="email" className="col-md-2 col-form-label">Email</label>
+                                    <div className="col-md-10">
+                                        <input type="text" className="form-control" id="email" value={ profile.email } />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="form-group col-xl-6">
+                                <div className="row">
+                                    <label htmlFor="linkedin" className="col-md-2 col-form-label">LinkedIn</label>
+                                    <div className="col-md-10">
+                                        <input type="text" className="form-control" id="linkedin" value={ profile.linkedin } />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="form-group col-xl-6">
+                                <div className="row">
+                                    <label htmlFor="github" className="col-md-2 col-form-label">GitHub</label>
+                                    <div className="col-md-10">
+                                        <input type="text" className="form-control" id="github" value={ profile.github } />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="form-group col-xl-6">
+                                <div className="row">
+                                    <label htmlFor="twitter" className="col-md-2 col-form-label">Twitter</label>
+                                    <div className="col-md-10">
+                                        <input type="text" className="form-control" id="twitter" value={ profile.twitter } />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
     );
 }
 
