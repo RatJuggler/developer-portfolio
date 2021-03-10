@@ -1,21 +1,28 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Header = () => {
+const Header = ({ pageName }) => {
 
     const [profile] = useState({
         avatarPath: "img/Rat-Profile.svg",
         name: "John Chase"
     });
-    const [version] = useState("0.0.1");
+    const [version] = useState("React version with static data");
+
+    const staticHTML = "/static/" + pageName + ".html";
+    const templateJSON = "/template/json/" + pageName;
+    const templateMap = "/template/map/" + pageName;
+    const templateSQL = "/template/sql/" + pageName;
+    const reactJSON = "/react/json/" + pageName;
+    const reactMap = "/react/map/" + pageName;
+    const reactSQL = "/react/sql/" + pageName;
 
     return (
         <header>
             <nav className="navbar fixed-top navbar-expand-md navbar-light bg-light">
                 <a className="navbar-brand" href="/">
-                    <img src={ profile.avatarPath } width="30" height="30" className="d-inline-block align-top"
-                         alt="My profile avatar" />
-                        Portfolio - { version }
+                    <img src={ profile.avatarPath } width="30" height="30" className="d-inline-block align-top" alt="My profile avatar" />
+                    Portfolio - { version }
                 </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu"
                         aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,13 +45,17 @@ const Header = () => {
                             <div className="dropdown-menu" aria-labelledby="versionMenu">
                                 <span className="dropdown-header">Site Version</span>
                                 <div className="dropdown-divider" />
-                                <a className="dropdown-item" href="/">Static HTML</a>
-                                <a className="dropdown-item" href="/">Template / Static JSON Files</a>
-                                <a className="dropdown-item" href="/">Template / Map Spring Service</a>
-                                <a className="dropdown-item" href="/">Template / SQL Spring Service</a>
+                                <a className="dropdown-item" href={ staticHTML }>Static HTML</a>
+                                <a className="dropdown-item" href={ templateJSON }>Template / Static JSON Files</a>
+                                <a className="dropdown-item" href={ templateMap }>Template / Map Spring Service</a>
+                                <a className="dropdown-item" href={ templateSQL }>Template / SQL Spring Service</a>
+                                <a className="dropdown-item" href={ reactJSON }>React / Static JSON Files</a>
+                                <a className="dropdown-item" href={ reactMap }>React / Map Spring Service</a>
+                                <a className="dropdown-item" href={ reactSQL }>React / SQL Spring Service</a>
                                 <a className="dropdown-item"
-                                   href="https://ratjuggler.github.io/developer-portfolio/static/{{ pageName }}.html">Static HTML
-                                    (GitHub Pages)</a>
+                                   href="https://ratjuggler.github.io/developer-portfolio/static/{{ pageName }}.html">
+                                    Static HTML (GitHub Pages)
+                                </a>
                             </div>
                         </li>
                         <li className="nav-item dropdown">
