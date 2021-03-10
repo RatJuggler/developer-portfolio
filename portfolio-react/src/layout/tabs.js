@@ -1,18 +1,20 @@
+import { Link } from "react-router-dom";
+
 const Tabs = () => {
 
     return (
         <ul className="nav nav-tabs">
             <li className="nav-item">
-                <a className="nav-link active" href="/">Profile</a>
+                <Link className="nav-link active" to="/profile">Profile</Link>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="/">Skills</a>
+                <Link className="nav-link" to="/skills">Skills</Link>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="/">Career</a>
+                <Link className="nav-link" to="/career">Career</Link>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="/">Interests</a>
+                <Link className="nav-link" to="/interests">Interests</Link>
             </li>
         </ul>
     );
