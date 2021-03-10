@@ -73,8 +73,14 @@ const Career = () => {
     return (
         <div id="careerCarousel" className="carousel slide" data-ride="carousel">
             <div className="carousel-inner">
-                {data.map(period => (
-                <div className="carousel-item{% if period.step == 1 %} active{% endif %}">
+                {data.map(period => {
+                    const itemClass = period.step === 1 ? "carousel-item active" : "carousel-item";
+                    const stepId = "step" + period.id;
+                    const descriptionId = "description" + period.id;
+                    const imagePathId = "imagePath" + period.id;
+                    const synopsisId = "synopsis" + period.id;
+                    return (
+                <div className={ itemClass }>
                     <div className="card">
                         <div className="card-header">
                             <div className="btn-group float-right">
@@ -99,27 +105,24 @@ const Career = () => {
                                         <div className="col-md-10">
                                             <div className="row">
                                                 <div className="form-group col-md-2">
-                                                    <label htmlFor="step{ period.id }">Step</label>
-                                                    <input type="text" className="form-control" id="step{ period.id }"
-                                                           value={ period.step } />
+                                                    <label htmlFor={ stepId }>Step</label>
+                                                    <input type="text" className="form-control" id={ stepId } value={ period.step } />
                                                 </div>
                                                 <div className="form-group col-md-10">
-                                                    <label htmlFor="description{ period.id }">Description</label>
-                                                    <input type="text" className="form-control" id="description{ period.id }"
-                                                           value={ period.description } />
+                                                    <label htmlFor={ descriptionId }>Description</label>
+                                                    <input type="text" className="form-control" id={ descriptionId } value={ period.description } />
                                                 </div>
                                             </div>
                                             <div className="form-group">
                                                 <label>Image</label>
                                                 <div className="custom-file">
-                                                    <input type="file" className="custom-file-input" id="imagePath{ period.id }" />
-                                                        <label className="custom-file-label"
-                                                               htmlFor="imagePath{ period.id }">{ period.imagePath }</label>
+                                                    <input type="file" className="custom-file-input" id={ imagePathId } />
+                                                    <label className="custom-file-label" htmlFor={ imagePathId }>{ period.imagePath }</label>
                                                 </div>
                                             </div>
                                             <div>
-                                                <label htmlFor="synopsis{ period.id }">Synopsis</label>
-                                                <textarea className="form-control" id="synopsis{ period.id }" rows="3">
+                                                <label htmlFor={ synopsisId }>Synopsis</label>
+                                                <textarea className="form-control" id={ synopsisId } rows="3">
 { period.synopsis }
 </textarea>
                                             </div>
@@ -130,7 +133,8 @@ const Career = () => {
                         </div>
                     </div>
                 </div>
-                ))}
+                    );
+                })}
             </div>
             <div className="row">
                 <a className="carousel-control-prev col" href="#careerCarousel" role="button" data-slide="prev">
