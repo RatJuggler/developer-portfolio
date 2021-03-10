@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Header from './layout/header';
 import Hero from './layout/hero';
 import Tabs from './layout/tabs';
@@ -9,33 +9,33 @@ import Interests from "./Interests";
 import Footer from './layout/footer';
 import SignOut from './layout/sign-out';
 
-function App() {
+
+const App = () => {
+
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <Hero />
-        <main className="container">
-          <Tabs />
-          <Switch>
-            <Route path="/profile">
-              <Profile />
-            </Route>
-            <Route path="/skills">
-              <Skills />
-            </Route>
-            <Route path="/career">
-              <Career />
-            </Route>
-            <Route path="/interests">
-              <Interests />
-            </Route>
-          </Switch>
-        </main>
-        <Footer />
-        <SignOut />
-      </div>
-    </Router>
+    <div className="App">
+      <Header />
+      <Hero />
+      <main className="container">
+        <Tabs />
+        <Switch>
+          <Route path="/profile">
+            <Profile />
+          </Route>
+          <Route path="/skills">
+            <Skills />
+          </Route>
+          <Route path="/career">
+            <Career />
+          </Route>
+          <Route path="/interests">
+            <Interests />
+          </Route>
+        </Switch>
+      </main>
+      <Footer />
+      <SignOut />
+    </div>
   );
 }
 
