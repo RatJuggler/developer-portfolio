@@ -1,7 +1,7 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 import { faEdit, faTrashAlt } from '@fortawesome/free-regular-svg-icons';
-import { faHome, faCog, faUser, faAt, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faCog, faUser, faAt, faPlus, faAngleLeft, faAngleRight, faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithubSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 
 library.add(
@@ -14,5 +14,9 @@ library.add(
     faTwitterSquare,
     faPlus,
     faEdit,
-    faTrashAlt
+    faTrashAlt,
+    faAngleLeft,
+    faAngleRight,
+    faAngleUp,
+    faAngleDown
 );

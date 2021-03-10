@@ -50,7 +50,7 @@ const Interests = () => {
     return (
         <div id="interestsCarousel" className="vertical carousel slide" data-ride="carousel">
             <a className="carousel-control-prev w-auto" href="#interestsCarousel" role="button" data-slide="prev">
-                <span className="fas fa-angle-up text-dark" aria-hidden="true"/>
+                <FontAwesomeIcon icon={["fas", "angle-up"]} className="text-dark" fixedWidth />
                 <span className="sr-only">Previous</span>
             </a>
             <div className="carousel-inner">
@@ -109,7 +109,7 @@ const Interests = () => {
                 ))}
             </div>
             <a className="carousel-control-next w-auto" href="#interestsCarousel" role="button" data-slide="next">
-                <span className="fas fa-angle-down text-dark" aria-hidden="true"/>
+                <FontAwesomeIcon icon={["fas", "angle-down"]} className="text-dark" fixedWidth />
                 <span className="sr-only">Next</span>
             </a>
         </div>
