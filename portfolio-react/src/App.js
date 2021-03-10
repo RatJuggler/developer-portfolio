@@ -19,7 +19,7 @@ const App = () => {
       <Header pageName={ location.pathname } />
       <Hero />
       <main className="container">
-        <Tabs />
+        <Tabs pageName={ location.pathname } />
         <Switch>
           <Route path="/profile">
             <Profile />
