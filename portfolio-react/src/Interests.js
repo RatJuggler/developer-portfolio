@@ -54,8 +54,13 @@ const Interests = () => {
                 <span className="sr-only">Previous</span>
             </a>
             <div className="carousel-inner">
-                {data.map(interest => (
-                <div className="carousel-item{% if interest.id == 1 %} active{% endif %}">
+                {data.map(interest => {
+                    const itemClass = interest.id === 1 ? "carousel-item active" : "carousel-item";
+                    const titleId = "title" + interest.id;
+                    const imagePathId = "imagePath" + interest.id;
+                    const descriptionId = "description" + interest.id;
+                    return (
+                <div className={ itemClass }>
                     <div className="card">
                         <div className="card-header">
                             <div className="btn-group float-right">
@@ -76,28 +81,25 @@ const Interests = () => {
                                     <div className="row">
                                         <div className="col-md-4">
                                             <img className="card-img-top img-fluid" src={ interest.imagePath }
-                                                 alt="{ interest.interest }" />
+                                                 alt={ interest.interest } />
                                         </div>
                                         <div className="col-md-8">
                                             <div className="form-group">
-                                                <label htmlFor="title{ interest.id }">Interest</label>
-                                                <input type="text" className="form-control" id="title{ interest.id }"
-                                                       value={ interest.title } />
+                                                <label htmlFor={ titleId }>Interest</label>
+                                                <input type="text" className="form-control" id={ titleId } value={ interest.title } />
                                             </div>
                                             <div className="form-group">
                                                 <label>Image</label>
                                                 <div className="custom-file">
-                                                    <input type="file" className="custom-file-input"
-                                                           id="imagePath{ interest.id }" />
-                                                        <label className="custom-file-label"
-                                                               htmlFor="imagePath{ interest.id }">{ interest.imagePath }</label>
+                                                    <input type="file" className="custom-file-input" id="imagePath{ interest.id }" />
+                                                    <label className="custom-file-label" htmlFor={ imagePathId }>{ interest.imagePath }</label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="mt-3">
-                                        <label htmlFor="description{ interest.id }">Description</label>
-                                        <textarea className="form-control" id="description{ interest.id }" rows="3">
+                                        <label htmlFor={ descriptionId }>Description</label>
+                                        <textarea className="form-control" id={ descriptionId } rows="3">
 { interest.description }
 </textarea>
                                     </div>
@@ -106,7 +108,8 @@ const Interests = () => {
                         </div>
                     </div>
                 </div>
-                ))}
+                    );
+                })}
             </div>
             <a className="carousel-control-next w-auto" href="#interestsCarousel" role="button" data-slide="next">
                 <FontAwesomeIcon icon={["fas", "angle-down"]} className="text-dark" fixedWidth />
