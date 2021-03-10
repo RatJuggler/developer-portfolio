@@ -16,10 +16,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header pageName={ location.pathname } />
+      <Header pathname={ location.pathname } />
       <Hero />
       <main className="container">
-        <Tabs pageName={ location.pathname } />
+        <Tabs pathname={ location.pathname } />
         <Switch>
           <Route path="/profile">
             <Profile />

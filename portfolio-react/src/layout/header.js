@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-const Header = ({ pageName }) => {
+const Header = ({ pathname }) => {
 
     const [profile] = useState({
         avatarPath: "img/Rat-Profile.svg",
@@ -11,13 +11,13 @@ const Header = ({ pageName }) => {
     });
     const [version] = useState("React version with static data");
 
-    const staticHTML = "/static" + pageName + ".html";
-    const templateJSON = "/template/json" + pageName;
-    const templateMap = "/template/map" + pageName;
-    const templateSQL = "/template/sql" + pageName;
-    const reactJSON = pageName + "/json";
-    const reactMap = pageName + "/map";
-    const reactSQL = pageName + "/sql";
+    const staticHTML = "/static" + pathname + ".html";
+    const templateJSON = "/template/json" + pathname;
+    const templateMap = "/template/map" + pathname;
+    const templateSQL = "/template/sql" + pathname;
+    const reactJSON = pathname + "/json";
+    const reactMap = pathname + "/map";
+    const reactSQL = pathname + "/sql";
 
     return (
         <header>

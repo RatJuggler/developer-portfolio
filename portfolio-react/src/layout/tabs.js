@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
-const Tabs = ({ pageName }) => {
+const Tabs = ({ pathname }) => {
 
-    const profileClass = pageName.endsWith("profile") ? "nav-link active" : "nav-link";
-    const skillsClass = pageName.endsWith("skills") ? "nav-link active" : "nav-link";
-    const careerClass = pageName.endsWith("career") ? "nav-link active" : "nav-link";
-    const interestsClass = pageName.endsWith("interests") ? "nav-link active" : "nav-link";
+    const profileClass = pathname.endsWith("profile") ? "nav-link active" : "nav-link";
+    const skillsClass = pathname.endsWith("skills") ? "nav-link active" : "nav-link";
+    const careerClass = pathname.endsWith("career") ? "nav-link active" : "nav-link";
+    const interestsClass = pathname.endsWith("interests") ? "nav-link active" : "nav-link";
 
     return (
         <ul className="nav nav-tabs">
