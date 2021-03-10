@@ -80,8 +80,7 @@ const Interests = () => {
                                 <fieldset disabled>
                                     <div className="row">
                                         <div className="col-md-4">
-                                            <img className="card-img-top img-fluid" src={ interest.imagePath }
-                                                 alt={ interest.interest } />
+                                            <img className="card-img-top img-fluid" src={ interest.imagePath } alt={ interest.description } />
                                         </div>
                                         <div className="col-md-8">
                                             <div className="form-group">
