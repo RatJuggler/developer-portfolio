@@ -11,13 +11,13 @@ const Header = ({ pageName }) => {
     });
     const [version] = useState("React version with static data");
 
-    const staticHTML = "/static/" + pageName + ".html";
-    const templateJSON = "/template/json/" + pageName;
-    const templateMap = "/template/map/" + pageName;
-    const templateSQL = "/template/sql/" + pageName;
-    const reactJSON = "/" + pageName;
-    const reactMap = "/" + pageName;
-    const reactSQL = "/" + pageName;
+    const staticHTML = "/static" + pageName + ".html";
+    const templateJSON = "/template/json" + pageName;
+    const templateMap = "/template/map" + pageName;
+    const templateSQL = "/template/sql" + pageName;
+    const reactJSON = pageName + "/json";
+    const reactMap = pageName + "/map";
+    const reactSQL = pageName + "/sql";
 
     return (
         <header>
