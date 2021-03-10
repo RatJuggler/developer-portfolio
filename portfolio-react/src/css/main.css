@@ -66,7 +66,6 @@ body {
   width: 100%;
   z-index: 1100;
   border-radius: 0;
-  display: none;
 }
 /* Reduce card header padding. */
 .card-header {
