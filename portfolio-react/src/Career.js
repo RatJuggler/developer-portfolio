@@ -1,6 +1,8 @@
 import { useState } from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
+import "./css/horizontal-carousel.css";
+
 const Career = () => {
 
     const [data] = useState([
