@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const Header = ({ pageName }) => {
 
@@ -13,9 +15,9 @@ const Header = ({ pageName }) => {
     const templateJSON = "/template/json/" + pageName;
     const templateMap = "/template/map/" + pageName;
     const templateSQL = "/template/sql/" + pageName;
-    const reactJSON = "/react/json/" + pageName;
-    const reactMap = "/react/map/" + pageName;
-    const reactSQL = "/react/sql/" + pageName;
+    const reactJSON = "/" + pageName;
+    const reactMap = "/" + pageName;
+    const reactSQL = "/" + pageName;
 
     return (
         <header>
@@ -49,9 +51,9 @@ const Header = ({ pageName }) => {
                                 <a className="dropdown-item" href={ templateJSON }>Template / Static JSON Files</a>
                                 <a className="dropdown-item" href={ templateMap }>Template / Map Spring Service</a>
                                 <a className="dropdown-item" href={ templateSQL }>Template / SQL Spring Service</a>
-                                <a className="dropdown-item" href={ reactJSON }>React / Static JSON Files</a>
-                                <a className="dropdown-item" href={ reactMap }>React / Map Spring Service</a>
-                                <a className="dropdown-item" href={ reactSQL }>React / SQL Spring Service</a>
+                                <Link className="dropdown-item" to={ reactJSON }>React / Static JSON Files</Link>
+                                <Link className="dropdown-item" to={ reactMap }>React / Map Spring Service</Link>
+                                <Link className="dropdown-item" to={ reactSQL }>React / SQL Spring Service</Link>
                                 <a className="dropdown-item"
                                    href="https://ratjuggler.github.io/developer-portfolio/static/{{ pageName }}.html">
                                     Static HTML (GitHub Pages)
