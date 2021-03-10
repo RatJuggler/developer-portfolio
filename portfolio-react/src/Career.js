@@ -124,9 +124,7 @@ const Career = () => {
                                             </div>
                                             <div>
                                                 <label htmlFor={ synopsisId }>Synopsis</label>
-                                                <textarea className="form-control" id={ synopsisId } rows="3">
-{ period.synopsis }
-</textarea>
+                                                <textarea className="form-control" id={ synopsisId } rows="3" value={ period.synopsis } />
                                             </div>
                                         </div>
                                     </div>

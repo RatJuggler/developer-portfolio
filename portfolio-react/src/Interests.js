@@ -100,9 +100,7 @@ const Interests = () => {
                                     </div>
                                     <div className="mt-3">
                                         <label htmlFor={ descriptionId }>Description</label>
-                                        <textarea className="form-control" id={ descriptionId } rows="3">
-{ interest.description }
-</textarea>
+                                        <textarea className="form-control" id={ descriptionId } rows="3" value={ interest.description } />
                                     </div>
                                 </fieldset>
                             </form>
