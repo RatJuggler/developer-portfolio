@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const Interests = () => {
 
@@ -59,13 +60,13 @@ const Interests = () => {
                         <div className="card-header">
                             <div className="btn-group float-right">
                                 <button type="button" className="btn btn-link" title="Add a new interest">
-                                    <span className="fas fa-plus"/>
+                                    <FontAwesomeIcon icon={["fas", "plus"]} fixedWidth />
                                 </button>
                                 <button type="button" className="btn btn-link" title="Edit this interest">
-                                    <span className="far fa-edit"/>
+                                    <FontAwesomeIcon icon={["far", "edit"]} fixedWidth />
                                 </button>
                                 <button type="button" className="btn btn-link" title="Delete this interest">
-                                    <span className="far fa-trash-alt"/>
+                                    <FontAwesomeIcon icon={["far", "trash-alt"]} fixedWidth />
                                 </button>
                             </div>
                         </div>
