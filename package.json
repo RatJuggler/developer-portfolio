@@ -10,11 +10,11 @@
   "author": "John Chase",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ui-build": "node_modules/.bin/gulp rebuild",
+    "dist-build": "node_modules/.bin/gulp rebuild",
     "gh-pages-build": "node_modules/.bin/gulp ghPagesBuild",
-    "dist-start": "browser-sync start --server 'dist/public' --files 'dist/public'",
+    "dist-start": "browser-sync start --port 8000 --server 'dist/public' --files 'dist/public'",
     "html-start": "browser-sync start --server 'public' --files 'public'",
-    "template-start": "nodemon -w src/main/webapp -e js,twig src/main/webapp/app.js src/main/webapp/templates shared-resources/src/main/resources/data ../../../public http://localhost:8001 http://localhost:8002"
+    "template-start": "nodemon -w src/main/webapp -e js,twig src/main/webapp/app.js src/main/webapp/templates ../../../public http://localhost:8000/json http://localhost:8001 http://localhost:8002"
   },
   "repository": {
     "type": "git",

@@ -1,11 +1,10 @@
 const templatePath = process.argv[2];
-const dataPath = process.argv[3];
-const publicPath = process.argv[4];
+const publicPath = process.argv[3];
+const jsonUrl = process.argv[4];
 const mapUrl = process.argv[5];
 const sqlUrl = process.argv[6];
 
 const path = require('path');
-const fs = require('fs').promises;
 const got = require('got');
 
 // Configure metrics.
@@ -74,8 +73,8 @@ app.use(asyncHandler(async (req, res, next) => {
 // Start the server.
 app.listen(port, () => {
     console.log(`templatePath : ${templatePath}`);
-    console.log(`dataPath     : ${dataPath}`);
     console.log(`publicPath   : ${publicPath}`);
+    console.log(`jsonUrl      : ${jsonUrl}`);
     console.log(`mapUrl       : ${mapUrl}`);
     console.log(`sqlUrl       : ${sqlUrl}`);
     console.log(`developer-portfolio template application listening on port: ${port}`);
@@ -97,7 +96,7 @@ function getTemplateVersion(dataFrom) {
 function getDataFrom(dataFrom, aspect) {
     switch (dataFrom) {
         case 'json':
-            return readStaticJsonFile(dataPath, aspect);
+            return requestJsonFromUrl(jsonUrl, aspect + '.json');
         case 'map':
             return requestJsonFromUrl(mapUrl, aspect);
         case 'sql':
@@ -105,13 +104,6 @@ function getDataFrom(dataFrom, aspect) {
         default:
             throw new Error('Unknown data source: ' + dataFrom);
     }
-}
-
-function readStaticJsonFile(dataPath, aspect) {
-    const filepath = path.join(dataPath, aspect + '.json');
-    return fs.readFile(filepath)
-        .then(data => JSON.parse(data.toString()))
-        .catch(err => console.error('Failed to read static JSON file!', err));
 }
 
 function requestJsonFromUrl(rootUrl, aspect) {

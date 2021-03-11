@@ -95,8 +95,8 @@ function copyStaticDist() {
     let images = gulp.src('./public/img/*.*')
         .pipe(gulp.dest('./dist/public/img'));
     // Static Data
-    let appData = gulp.src('./shared-resources/src/main/resources/data/*.json')
-        .pipe(gulp.dest('./dist/public/data'));
+    let json = gulp.src('./shared-resources/src/main/resources/data/*.json')
+        .pipe(gulp.dest('./dist/public/json'));
     // Static HTML
     let html = gulp.src('./public/**/*.html')
         .pipe(gulpif(staticBuild, replace('"/template', '"https://jurassic-john.site/template')))
@@ -106,7 +106,7 @@ function copyStaticDist() {
         .pipe(replace('.css', '.min.css'))
         .pipe(replace('.js', '.min.js'))
         .pipe(gulp.dest('dist/public'));
-    return merge(webRoot, images, html);
+    return merge(webRoot, images, json, html);
 }
 
 function copyAppDist() {
@@ -119,10 +119,7 @@ function copyAppDist() {
         .pipe(replace('.css', '.min.css'))
         .pipe(replace('.js', '.min.js'))
         .pipe(gulp.dest('dist/app/templates'));
-    // Application Static Data
-    let appData = gulp.src('./shared-resources/src/main/resources/data/*.json')
-        .pipe(gulp.dest('dist/app/data'));
-    return merge(appJS, appTemplates, appData);
+    return merge(appJS, appTemplates);
 }
 
 // Minify CSS task
@@ -181,7 +178,7 @@ const rebuild = gulp.series(gulp.parallel(cleanVendor, cleanDist), build);
 const ghPagesBuild = gulp.series(function (cb) { staticBuild = true; cb(); }, build);
 
 // Document tasks
-build.description = "Build a distribution ready version of the ui files.";
+build.description = "Build a distribution ready version of the static and template files.";
 rebuild.description = "Clear down vendor and distribution then run a build.";
 ghPagesBuild.description = "Build for GitHub pages including hardcoded links to dynamic site.";
 
