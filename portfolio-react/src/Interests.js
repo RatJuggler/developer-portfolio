@@ -62,7 +62,7 @@ const Interests = () => {
                     const imagePathId = "imagePath" + interest.id;
                     const descriptionId = "description" + interest.id;
                     return (
-                <div className={ itemClass }>
+                <div className={ itemClass } key={ interest.id }>
                     <div className="card">
                         <div className="card-header">
                             <div className="btn-group float-right">

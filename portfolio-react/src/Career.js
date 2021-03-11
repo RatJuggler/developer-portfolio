@@ -82,7 +82,7 @@ const Career = () => {
                     const imagePathId = "imagePath" + period.id;
                     const synopsisId = "synopsis" + period.id;
                     return (
-                <div className={ itemClass }>
+                <div className={ itemClass } key={ period.id }>
                     <div className="card">
                         <div className="card-header">
                             <div className="btn-group float-right">
