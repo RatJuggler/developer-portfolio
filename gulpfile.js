@@ -94,6 +94,9 @@ function copyStaticDist() {
     // Images
     let images = gulp.src('./public/img/*.*')
         .pipe(gulp.dest('./dist/public/img'));
+    // Static Data
+    let appData = gulp.src('./shared-resources/src/main/resources/data/*.json')
+        .pipe(gulp.dest('./dist/public/data'));
     // Static HTML
     let html = gulp.src('./public/**/*.html')
         .pipe(gulpif(staticBuild, replace('"/template', '"https://jurassic-john.site/template')))
