@@ -39,16 +39,14 @@ const Profile = () => {
                     <fieldset disabled>
                         <div className="form-group">
                             <label htmlFor="description">Description</label>
-                            <textarea className="form-control" id="description" rows="7">
-{ profile.description }
-              </textarea>
+                            <textarea className="form-control" id="description" rows="7" value={profile.description} readOnly />
                         </div>
                         <div className="row">
                             <div className="form-group col-xl-6">
                                 <div className="row">
                                     <label htmlFor="email" className="col-md-2 col-form-label">Email</label>
                                     <div className="col-md-10">
-                                        <input type="text" className="form-control" id="email" value={ profile.email } />
+                                        <input type="text" className="form-control" id="email" value={ profile.email } readOnly />
                                     </div>
                                 </div>
                             </div>
@@ -56,7 +54,7 @@ const Profile = () => {
                                 <div className="row">
                                     <label htmlFor="linkedin" className="col-md-2 col-form-label">LinkedIn</label>
                                     <div className="col-md-10">
-                                        <input type="text" className="form-control" id="linkedin" value={ profile.linkedin } />
+                                        <input type="text" className="form-control" id="linkedin" value={ profile.linkedin } readOnly />
                                     </div>
                                 </div>
                             </div>
@@ -66,7 +64,7 @@ const Profile = () => {
                                 <div className="row">
                                     <label htmlFor="github" className="col-md-2 col-form-label">GitHub</label>
                                     <div className="col-md-10">
-                                        <input type="text" className="form-control" id="github" value={ profile.github } />
+                                        <input type="text" className="form-control" id="github" value={ profile.github } readOnly />
                                     </div>
                                 </div>
                             </div>
@@ -74,7 +72,7 @@ const Profile = () => {
                                 <div className="row">
                                     <label htmlFor="twitter" className="col-md-2 col-form-label">Twitter</label>
                                     <div className="col-md-10">
-                                        <input type="text" className="form-control" id="twitter" value={ profile.twitter } />
+                                        <input type="text" className="form-control" id="twitter" value={ profile.twitter } readOnly />
                                     </div>
                                 </div>
                             </div>
