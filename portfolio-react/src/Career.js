@@ -108,23 +108,23 @@ const Career = () => {
                                             <div className="row">
                                                 <div className="form-group col-md-2">
                                                     <label htmlFor={ stepId }>Step</label>
-                                                    <input type="text" className="form-control" id={ stepId } value={ period.step } />
+                                                    <input type="text" className="form-control" id={ stepId } value={ period.step } readOnly />
                                                 </div>
                                                 <div className="form-group col-md-10">
                                                     <label htmlFor={ descriptionId }>Description</label>
-                                                    <input type="text" className="form-control" id={ descriptionId } value={ period.description } />
+                                                    <input type="text" className="form-control" id={ descriptionId } value={ period.description } readOnly />
                                                 </div>
                                             </div>
                                             <div className="form-group">
                                                 <label>Image</label>
                                                 <div className="custom-file">
-                                                    <input type="file" className="custom-file-input" id={ imagePathId } />
+                                                    <input type="file" className="custom-file-input" id={ imagePathId } readOnly />
                                                     <label className="custom-file-label" htmlFor={ imagePathId }>{ period.imagePath }</label>
                                                 </div>
                                             </div>
                                             <div>
                                                 <label htmlFor={ synopsisId }>Synopsis</label>
-                                                <textarea className="form-control" id={ synopsisId } rows="3" value={ period.synopsis } />
+                                                <textarea className="form-control" id={ synopsisId } rows="3" value={ period.synopsis } readOnly />
                                             </div>
                                         </div>
                                     </div>
