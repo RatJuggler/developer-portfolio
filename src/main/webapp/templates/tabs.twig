@@ -1,14 +1,14 @@
     <ul class="nav nav-tabs">
       <li class="nav-item">
-        <a class="nav-link{% if titleContext == "Profile" %} active{% endif %}" href="{% if titleContext == "Profile" %}#{% else %}/template/{{ dataFrom }}/profile{% endif %}">Profile</a>
+        <a class="nav-link{% if aspect == "profile" %} active{% endif %}" href="{% if aspect == "profile" %}#{% else %}/template/profile/{{ dataFrom }}{% endif %}">Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link{% if titleContext == "Skills" %} active{% endif %}" href="{% if titleContext == "Skills" %}#{% else %}/template/{{ dataFrom }}/skills{% endif %}">Skills</a>
+        <a class="nav-link{% if aspect == "skills" %} active{% endif %}" href="{% if aspect == "skills" %}#{% else %}/template/skills/{{ dataFrom }}{% endif %}">Skills</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link{% if titleContext == "Career" %} active{% endif %}" href="{% if titleContext == "Career" %}#{% else %}/template/{{ dataFrom }}/career{% endif %}">Career</a>
+        <a class="nav-link{% if aspect == "career" %} active{% endif %}" href="{% if aspect == "career" %}#{% else %}/template/career/{{ dataFrom }}{% endif %}">Career</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link{% if titleContext == "Interests" %} active{% endif %}" href="{% if titleContext == "Interests" %}#{% else %}/template/{{ dataFrom }}/interests{% endif %}">Interests</a>
+        <a class="nav-link{% if aspect == "interests" %} active{% endif %}" href="{% if aspect == "interests" %}#{% else %}/template/interests/{{ dataFrom }}{% endif %}">Interests</a>
       </li>
     </ul>

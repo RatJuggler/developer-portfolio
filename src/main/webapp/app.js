@@ -50,14 +50,13 @@ app.get('/', asyncHandler(async (req, res, next) => {
 }));
 
 // Template rendering using requested data source.
-app.get('/template/:dataFrom/*', asyncHandler(async (req, res, next) => {
+app.get('/template/:aspect/:dataFrom', asyncHandler(async (req, res, next) => {
+    let aspect = req.params["aspect"];
+    if (!templates.includes(aspect)) aspect = templates[0];
     let dataFrom = req.params['dataFrom'];
     if (!dataSources.includes(dataFrom)) dataFrom = dataSources[0];
-    let aspect = req.params["0"];
-    if (!templates.includes(aspect)) aspect = templates[0];
     const [profile, data] = await Promise.all([getDataFrom(dataFrom, templates[0]), getDataFrom(dataFrom, aspect)]);
-    res.render(aspect + '.twig',
-        {
+    res.render(aspect + '.twig', {
             version: getTemplateVersion(dataFrom),
             dataFrom: dataFrom,
             profile: profile,
