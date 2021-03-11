@@ -2,18 +2,25 @@ package com.portfolio.map.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
 import org.springframework.data.repository.init.Jackson2RepositoryPopulatorFactoryBean;
 import org.springframework.data.repository.init.Jackson2ResourceReader;
 import org.springframework.data.repository.init.ResourceReader;
+
+import java.net.MalformedURLException;
 
 import static com.fasterxml.jackson.databind.DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES;
 
 @Configuration
 public class RepositoryPopulator {
+
+    @Autowired
+    private ApplicationArguments args;
 
     @Bean
     public Jackson2RepositoryPopulatorFactoryBean getRepositoryPopulator() {
@@ -27,12 +34,17 @@ public class RepositoryPopulator {
                 return reader;
             }
         };
-        factory.setResources(new Resource[] {
-                new ClassPathResource("data/profile.json"),
-                new ClassPathResource("data/skills.json"),
-                new ClassPathResource("data/career.json"),
-                new ClassPathResource("data/interests.json")
-        });
+        String jsonUrl = args.getOptionValues("jsonUrl").get(0);
+        try {
+            factory.setResources(new Resource[] {
+                    new UrlResource(jsonUrl + "/profile.json"),
+                    new UrlResource(jsonUrl + "/skills.json"),
+                    new UrlResource(jsonUrl + "/career.json"),
+                    new UrlResource(jsonUrl + "/interests.json")
+            });
+        } catch (MalformedURLException e) {
+            throw new IllegalArgumentException("Failed to interpret JSON resource URL: " + jsonUrl);
+        }
         return factory;
     }
 }
