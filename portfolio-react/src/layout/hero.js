@@ -57,18 +57,18 @@ const Hero = () => {
                                 <fieldset disabled>
                                     <div className="form-group">
                                         <label htmlFor="name">Name</label>
-                                        <input type="text" className="form-control" id="name" value={ profile.name } />
+                                        <input type="text" className="form-control" id="name" value={ profile.name } readOnly />
                                     </div>
                                     <div className="form-row">
                                         <div className="form-group col-md-8">
                                             <label htmlFor="location">Location</label>
                                             <input type="text" className="form-control" id="location"
-                                                   value={ profile.location } />
+                                                   value={ profile.location } readOnly />
                                         </div>
                                         <div className="form-group col-md-4">
                                             <label htmlFor="status">Status</label>
-                                            <select className="form-control" id="status">
-                                                <option selected>Available</option>
+                                            <select className="form-control" id="status" value="Available" readOnly>
+                                                <option>Available</option>
                                                 <option>Engaged</option>
                                             </select>
                                         </div>
