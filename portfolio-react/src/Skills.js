@@ -952,7 +952,7 @@ const Skills = () => {
     );
 
     return (
-        <div id="skillsCard" className="card hide">
+        <div id="skillsCard" className="card">
             <div id="skillsToolbar">
             </div>
             <table
