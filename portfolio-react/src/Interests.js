@@ -87,12 +87,12 @@ const Interests = () => {
                                         <div className="col-md-8">
                                             <div className="form-group">
                                                 <label htmlFor={ titleId }>Interest</label>
-                                                <input type="text" className="form-control" id={ titleId } value={ interest.title } />
+                                                <input type="text" className="form-control" id={ titleId } value={ interest.title } readOnly />
                                             </div>
                                             <div className="form-group">
                                                 <label>Image</label>
                                                 <div className="custom-file">
-                                                    <input type="file" className="custom-file-input" id="imagePath{ interest.id }" />
+                                                    <input type="file" className="custom-file-input" id={ imagePathId } readOnly />
                                                     <label className="custom-file-label" htmlFor={ imagePathId }>{ interest.imagePath }</label>
                                                 </div>
                                             </div>
@@ -100,7 +100,7 @@ const Interests = () => {
                                     </div>
                                     <div className="mt-3">
                                         <label htmlFor={ descriptionId }>Description</label>
-                                        <textarea className="form-control" id={ descriptionId } rows="3" value={ interest.description } />
+                                        <textarea className="form-control" id={ descriptionId } rows="3" value={ interest.description } readOnly />
                                     </div>
                                 </fieldset>
                             </form>
