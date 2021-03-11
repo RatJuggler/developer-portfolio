@@ -9,7 +9,7 @@ import "./css/main.css";
 
 ReactDOM.render(
   <React.StrictMode>
-      <BrowserRouter>
+      <BrowserRouter basename="/react">
           <App />
       </BrowserRouter>
   </React.StrictMode>,

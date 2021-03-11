@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-const Header = ({ pathname }) => {
+const Header = ({ aspect }) => {
 
     const [profile] = useState({
         "_classMap": "com.portfolio.map.domain.Profile",
@@ -20,15 +20,8 @@ const Header = ({ pathname }) => {
         "github": "https://github.com/RatJuggler",
         "twitter": "https://twitter.com/ratjuggler"
     });
-    const [version] = useState("React version with static data");
 
-    const staticHTML = "/static" + pathname + ".html";
-    const templateJSON = "/template/json" + pathname;
-    const templateMap = "/template/map" + pathname;
-    const templateSQL = "/template/sql" + pathname;
-    const reactJSON = pathname + "/json";
-    const reactMap = pathname + "/map";
-    const reactSQL = pathname + "/sql";
+    const [version] = useState("React version with static data");
 
     return (
         <header>
@@ -58,15 +51,15 @@ const Header = ({ pathname }) => {
                             <div className="dropdown-menu" aria-labelledby="versionMenu">
                                 <span className="dropdown-header">Site Version</span>
                                 <div className="dropdown-divider" />
-                                <a className="dropdown-item" href={ staticHTML }>Static HTML</a>
-                                <a className="dropdown-item" href={ templateJSON }>Template / Static JSON Files</a>
-                                <a className="dropdown-item" href={ templateMap }>Template / Map Spring Service</a>
-                                <a className="dropdown-item" href={ templateSQL }>Template / SQL Spring Service</a>
-                                <Link className="dropdown-item" to={ reactJSON }>React / Static JSON Files</Link>
-                                <Link className="dropdown-item" to={ reactMap }>React / Map Spring Service</Link>
-                                <Link className="dropdown-item" to={ reactSQL }>React / SQL Spring Service</Link>
+                                <a className="dropdown-item" href={ "/static/" + aspect + ".html" }>Static HTML</a>
+                                <a className="dropdown-item" href={ "/template/" + aspect + "/json" }>Template / Static JSON Files</a>
+                                <a className="dropdown-item" href={ "/template/" + aspect + "/map" }>Template / Map Spring Service</a>
+                                <a className="dropdown-item" href={ "/template/" + aspect + "/sql" }>Template / SQL Spring Service</a>
+                                <Link className="dropdown-item" to={ "/react/" + aspect + "/json" }>React / Static JSON Files</Link>
+                                <Link className="dropdown-item" to={ "/react/" + aspect + "/map" }>React / Map Spring Service</Link>
+                                <Link className="dropdown-item" to={ "/react/" + aspect + "/sql" }>React / SQL Spring Service</Link>
                                 <a className="dropdown-item"
-                                   href="https://ratjuggler.github.io/developer-portfolio/static/{{ pageName }}.html">
+                                   href={ "https://ratjuggler.github.io/developer-portfolio/static/" + { aspect } + ".html" }>
                                     Static HTML (GitHub Pages)
                                 </a>
                             </div>
