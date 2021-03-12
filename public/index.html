@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 
 <head>
@@ -15,6 +15,7 @@
   <meta name="og:description" content="Developer portfolio website for John Chase.">
   <meta name="og:image" content="">
 
+  <link rel="icon" href="favicon.ico" />
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
@@ -24,6 +25,7 @@
 
   <meta name="theme-color" content="#b833c0">
 </head>
+
 <body>
 
   <header>
@@ -52,9 +54,12 @@
               <span class="dropdown-header">Site Version</span>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="static/profile.html">Static HTML</a>
-              <a class="dropdown-item" href="/template/json/profile">Template / Static JSON Files</a>
-              <a class="dropdown-item" href="/template/map/profile">Template / Map Spring Service</a>
-              <a class="dropdown-item" href="/template/sql/profile">Template / SQL Spring Service</a>
+              <a class="dropdown-item" href="/template/profile/json">Template / Static JSON Files</a>
+              <a class="dropdown-item" href="/template/profile/map">Template / Map Spring Service</a>
+              <a class="dropdown-item" href="/template/profile/sql">Template / SQL Spring Service</a>
+              <a class="dropdown-item" href="/react/profile/json">React / Static JSON Files</a>
+              <a class="dropdown-item" href="/react/profile/map">React / Map Spring Service</a>
+              <a class="dropdown-item" href="/react/profile/sql">React / SQL Spring Service</a>
               <a class="dropdown-item" href="https://ratjuggler.github.io/developer-portfolio/static/profile.html">Static HTML (GitHub Pages)</a>
             </div>
           </li>
@@ -81,9 +86,12 @@
       <p class="lead">Please select the version of the site you would like to visit. You can changes versions at any time by using the Setting menu.</p>
       <ul class="lead">
         <li><a href="static/profile.html" class="list-group-item-action">Static HTML only</a></li>
-        <li><a href="/template/json/profile" class="list-group-item-action">Template with data from static JSON files</a></li>
-        <li><a href="/template/map/profile" class="list-group-item-action">Template with data from a Map repository Spring service</a></li>
-        <li><a href="/template/sql/profile" class="list-group-item-action">Template with data from a SQL repository Spring service</a></li>
+        <li><a href="/template/profile/json" class="list-group-item-action">Template with data from static JSON files</a></li>
+        <li><a href="/template/profile/map" class="list-group-item-action">Template with data from a Map repository Spring service</a></li>
+        <li><a href="/template/profile/sql" class="list-group-item-action">Template with data from a SQL repository Spring service</a></li>
+        <li><a href="/react/profile/json" class="list-group-item-action">React with data from static JSON files</a></li>
+        <li><a href="/react/profile/map" class="list-group-item-action">React with data from a Map repository Spring service</a></li>
+        <li><a href="/react/profile/sql" class="list-group-item-action">React with data from a SQL repository Spring service</a></li>
         <li><a href="https://ratjuggler.github.io/developer-portfolio/static/profile.html" class="list-group-item-action">Static HTML only (GitHub Pages)</a></li>
       </ul>
     </div>
@@ -117,11 +125,9 @@
     </div>
   </div>
 
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="vendor/jquery/jquery.js"></script>
   <script src="vendor/popper/popper.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.js"></script>
-  <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 </body>
 

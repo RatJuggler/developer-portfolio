@@ -29,6 +29,20 @@ services:
       - portfolio
     restart: unless-stopped
 
+  portfolio-react:
+    image: ${REGISTRY}${REPOSITORY}portfolio-react:${IMAGE_TAG:-latest}
+    build:
+      context: portfolio-react
+      dockerfile: Dockerfile
+      <<: *args
+      target: portfolio-react
+    depends_on:
+      - portfolio-map
+      - portfolio-sql
+    networks:
+      - portfolio
+    restart: unless-stopped
+
   portfolio-template:
     image: ${REGISTRY}${REPOSITORY}portfolio-template:${IMAGE_TAG:-latest}
     build:
@@ -64,6 +78,7 @@ services:
     ports:
       - "8080:80"
     depends_on:
+      - portfolio-react
       - portfolio-template
       - portfolio-static
     networks:

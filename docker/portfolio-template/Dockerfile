@@ -24,7 +24,7 @@ ENV NODE_ENV=production
 
 EXPOSE 3000
 
-CMD ["node", "app/app.js", "app/templates", "app/data", "../public", "http://localhost:8001", "http://localhost:8002"]
+CMD ["node", "app/app.js", "app/templates", "../public", "http://localhost:80/json", "http://localhost:8001", "http://localhost:8002"]
 
 HEALTHCHECK --interval=5m --timeout=30s --start-period=60s --retries=3 \
     CMD ["node", "app/healthcheck.js"]

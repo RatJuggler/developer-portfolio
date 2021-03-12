@@ -7,4 +7,5 @@ node_modules
 public/vendor
 portfolio-map
 portfolio-sql
+portfolio-react
 **/target

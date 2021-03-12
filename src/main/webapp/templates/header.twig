@@ -23,11 +23,14 @@
             <div class="dropdown-menu" aria-labelledby="versionMenu">
               <span class="dropdown-header">Site Version</span>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/static/{{ pageName }}.html">Static HTML</a>
-              <a class="dropdown-item" href="/template/json/{{ pageName }}">Template / Static JSON Files</a>
-              <a class="dropdown-item" href="/template/map/{{ pageName }}">Template / Map Spring Service</a>
-              <a class="dropdown-item" href="/template/sql/{{ pageName }}">Template / SQL Spring Service</a>
-              <a class="dropdown-item" href="https://ratjuggler.github.io/developer-portfolio/static/{{ pageName }}.html">Static HTML (GitHub Pages)</a>
+              <a class="dropdown-item" href="/static/{{ aspect }}.html">Static HTML</a>
+              <a class="dropdown-item" href="/template/{{ aspect }}/json">Template / Static JSON Files</a>
+              <a class="dropdown-item" href="/template/{{ aspect }}/map">Template / Map Spring Service</a>
+              <a class="dropdown-item" href="/template/{{ aspect }}/sql">Template / SQL Spring Service</a>
+              <a class="dropdown-item" href="/react/{{ aspect }}/json">React / Static JSON Files</a>
+              <a class="dropdown-item" href="/react/{{ aspect }}/map">React / Map Spring Service</a>
+              <a class="dropdown-item" href="/react/{{ aspect }}/sql">React / SQL Spring Service</a>
+              <a class="dropdown-item" href="https://ratjuggler.github.io/developer-portfolio/static/{{ aspect }}.html">Static HTML (GitHub Pages)</a>
             </div>
           </li>
           <li class="nav-item dropdown">

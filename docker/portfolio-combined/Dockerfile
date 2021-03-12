@@ -29,7 +29,7 @@ ENV NODE_ENV=production
 
 EXPOSE 3000
 
-CMD ["node", "app/app.js", "app/templates", "app/data", "../public", "http://portfolio-map:8001", "http://portfolio-sql:8002"]
+CMD ["node", "app/app.js", "app/templates", "../public", "http://portfolio-static:80/json", "http://portfolio-map:8001", "http://portfolio-sql:8002"]
 
 HEALTHCHECK --interval=5m --timeout=30s --start-period=60s --retries=3 \
     CMD ["node", "app/healthcheck.js"]

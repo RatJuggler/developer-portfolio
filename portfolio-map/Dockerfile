@@ -26,7 +26,7 @@ LABEL description="Developer Portfolio - Java Spring - Map Repository Service"
 
 EXPOSE 8001
 
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+ENTRYPOINT ["java", "-jar", "/app/app.jar", "--jsonUrl=http://portfolio-static/json"]
 
 HEALTHCHECK --interval=5m --timeout=30s --start-period=60s --retries=3 \
     CMD curl --silent --fail http://localhost:8001/actuator/health \
