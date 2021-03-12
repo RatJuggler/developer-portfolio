@@ -8,9 +8,12 @@ WORKDIR /build
 COPY package*.json ./
 RUN npm ci
 
+# Don't inline scripts to meet CSP requirements.
+ENV INLINE_RUNTIME_CHUNK=false
+
 # Copy the sources and run the build.
 COPY . .
-RUN npm build
+RUN npm run build
 
 
 # Create an Nginx image to serve the react files.
@@ -29,4 +32,4 @@ WORKDIR /srv
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy the distribution files.
-COPY --from=builder-portfolio-react /build /srv
+COPY --from=builder-portfolio-react /build/build /srv/react
