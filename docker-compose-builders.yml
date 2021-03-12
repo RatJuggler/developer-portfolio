@@ -23,6 +23,14 @@ services:
       <<: *args
       target: builder-portfolio-sql
 
+  builder-portfolio-react:
+    image: ${REGISTRY}${REPOSITORY}builder-portfolio-react:${IMAGE_TAG:-latest}
+    build:
+      context: portfolio-react
+      dockerfile: Dockerfile
+      <<: *args
+      target: builder-portfolio-react
+
   builder-portfolio-combined:
     image: ${REGISTRY}${REPOSITORY}builder-portfolio-combined:${IMAGE_TAG:-latest}
     build:
