@@ -7,6 +7,17 @@ x-args: &args
     BUILD_TAG: ${BUILD_TAG:-local}
 
 services:
+  portfolio-static:
+    image: ${REGISTRY}${REPOSITORY}portfolio-static:${IMAGE_TAG:-latest}
+    build:
+      context: .
+      dockerfile: docker/portfolio-combined/Dockerfile
+      <<: *args
+      target: portfolio-static
+    networks:
+      - portfolio
+    restart: unless-stopped
+
   portfolio-map:
     image: ${REGISTRY}${REPOSITORY}portfolio-map:${IMAGE_TAG:-latest}
     build:
@@ -14,6 +25,8 @@ services:
       dockerfile: Dockerfile
       <<: *args
       target: portfolio-map
+    depends_on:
+      - portfolio-static
     networks:
       - portfolio
     restart: unless-stopped
@@ -25,6 +38,8 @@ services:
       dockerfile: Dockerfile
       <<: *args
       target: portfolio-sql
+    depends_on:
+      - portfolio-static
     networks:
       - portfolio
     restart: unless-stopped
@@ -51,19 +66,9 @@ services:
       <<: *args
       target: portfolio-template
     depends_on:
+      - portfolio-static
       - portfolio-map
       - portfolio-sql
-    networks:
-      - portfolio
-    restart: unless-stopped
-
-  portfolio-static:
-    image: ${REGISTRY}${REPOSITORY}portfolio-static:${IMAGE_TAG:-latest}
-    build:
-      context: .
-      dockerfile: docker/portfolio-combined/Dockerfile
-      <<: *args
-      target: portfolio-static
     networks:
       - portfolio
     restart: unless-stopped
@@ -78,9 +83,9 @@ services:
     ports:
       - "8080:80"
     depends_on:
+      - portfolio-static
       - portfolio-react
       - portfolio-template
-      - portfolio-static
     networks:
       - portfolio
     restart: unless-stopped
