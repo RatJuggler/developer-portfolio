@@ -59,7 +59,7 @@ const Header = ({ aspect }) => {
                                 <Link className="dropdown-item" to={ "/" + aspect + "/map" }>React / Map Spring Service</Link>
                                 <Link className="dropdown-item" to={ "/" + aspect + "/sql" }>React / SQL Spring Service</Link>
                                 <a className="dropdown-item"
-                                   href={ "https://ratjuggler.github.io/developer-portfolio/static/" + { aspect } + ".html" }>
+                                   href={ "https://ratjuggler.github.io/developer-portfolio/static/" + aspect + ".html" }>
                                     Static HTML (GitHub Pages)
                                 </a>
                             </div>
