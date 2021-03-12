@@ -955,18 +955,7 @@ const Skills = () => {
         <div id="skillsCard" className="card">
             <div id="skillsToolbar">
             </div>
-            <table
-                id="skillsTable"
-                data-toolbar="#skillsToolbar"
-                data-classes="table table-bordered table-hover table-striped"
-                data-buttons="skillsButtons"
-                data-buttons-class="link"
-                data-filter-control="true"
-                data-pagination="true"
-                data-page-size="10"
-                data-page-list="[10, 20, 30, 40, all]"
-                data-show-footer="true"
-                data-toggle="table">
+            <table id="skillsTable">
                 <thead>
                 <tr>
                     <th data-field="level" data-sortable="true" data-filter-control="select">Level</th>
