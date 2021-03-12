@@ -1,10 +1,7 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
-const Tabs = ({ dataFrom }) => {
-
-    const [aspect, setAspect] = useState("profile");
+const Tabs = ({ setAspect, aspect, dataFrom }) => {
 
     return (
         <ul className="nav nav-tabs">

@@ -8,23 +8,26 @@ import Career from "./Career";
 import Interests from "./Interests";
 import Footer from './layout/footer';
 import SignOut from './layout/sign-out';
+import {useState} from "react";
 
 
 const App = () => {
 
   const location = useLocation();
 
-  const regex = /^\/[a-z]+\/(?<aspect>[a-z]+)\/(?<dataFrom>[a-z]+)$/gm;
+  const regex = /^\/?[a-z]*\/(?<aspect>[a-z]+)\/(?<dataFrom>[a-z]+)$/;
   const found = location.pathname.match(regex);
-  const aspect = found ? found.groups["aspect"] : "profile";
+  const currentAspect = found ? found.groups["aspect"] : "profile";
   const dataFrom = found ? found.groups["dataFrom"] : "json";
+
+  const [aspect, setAspect] = useState(currentAspect);
 
   return (
     <div className="App">
       <Header aspect={ aspect } />
       <Hero />
       <main className="container">
-        <Tabs dataFrom={ dataFrom } />
+        <Tabs setAspect={ setAspect } aspect={ aspect } dataFrom={ dataFrom } />
         <Switch>
           <Route path="/skills">
             <Skills />

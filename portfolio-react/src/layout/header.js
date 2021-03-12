@@ -55,9 +55,9 @@ const Header = ({ aspect }) => {
                                 <a className="dropdown-item" href={ "/template/" + aspect + "/json" }>Template / Static JSON Files</a>
                                 <a className="dropdown-item" href={ "/template/" + aspect + "/map" }>Template / Map Spring Service</a>
                                 <a className="dropdown-item" href={ "/template/" + aspect + "/sql" }>Template / SQL Spring Service</a>
-                                <Link className="dropdown-item" to={ "/react/" + aspect + "/json" }>React / Static JSON Files</Link>
-                                <Link className="dropdown-item" to={ "/react/" + aspect + "/map" }>React / Map Spring Service</Link>
-                                <Link className="dropdown-item" to={ "/react/" + aspect + "/sql" }>React / SQL Spring Service</Link>
+                                <Link className="dropdown-item" to={ "/" + aspect + "/json" }>React / Static JSON Files</Link>
+                                <Link className="dropdown-item" to={ "/" + aspect + "/map" }>React / Map Spring Service</Link>
+                                <Link className="dropdown-item" to={ "/" + aspect + "/sql" }>React / SQL Spring Service</Link>
                                 <a className="dropdown-item"
                                    href={ "https://ratjuggler.github.io/developer-portfolio/static/" + { aspect } + ".html" }>
                                     Static HTML (GitHub Pages)
