@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { useLocation, Route, Switch } from 'react-router-dom';
+import './fontawesome';
 import Header from './layout/header';
 import Hero from './layout/hero';
 import Tabs from './layout/tabs';
@@ -8,7 +10,6 @@ import Career from "./Career";
 import Interests from "./Interests";
 import Footer from './layout/footer';
 import SignOut from './layout/sign-out';
-import {useState} from "react";
 
 
 const App = () => {
