@@ -100,6 +100,7 @@ function copyStaticDist() {
     // Static HTML
     let html = gulp.src('./public/**/*.html')
         .pipe(gulpif(staticBuild, replace('"/template', '"https://jurassic-john.site/template')))
+        .pipe(gulpif(staticBuild, replace('"/react', '"https://jurassic-john.site/react')))
         .pipe(gulpif(!staticBuild, replace(/\.\.?\//g, '/')))
         .pipe(gulpif(!staticBuild, replace('.html', '')))
         .pipe(replace('.min.js', '.js'))
