@@ -24,7 +24,7 @@ const App = () => {
       <Header aspect={ aspect } />
       <Hero />
       <main className="container">
-        <Tabs aspect={ aspect } dataFrom={ dataFrom } />
+        <Tabs dataFrom={ dataFrom } />
         <Switch>
           <Route path="/skills">
             <Skills />

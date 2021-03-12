@@ -1,21 +1,24 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
-const Tabs = ({ aspect, dataFrom }) => {
+const Tabs = ({ dataFrom }) => {
+
+    const [aspect, setAspect] = useState("profile");
 
     return (
         <ul className="nav nav-tabs">
             <li className="nav-item">
-                <Link className={ aspect === "profile" ? "nav-link active" : "nav-link" } to={ "/profile/" + dataFrom }>Profile</Link>
+                <Link onClick={ () => setAspect("profile") } className={ aspect === "profile" ? "nav-link active" : "nav-link" } to={ "/profile/" + dataFrom }>Profile</Link>
             </li>
             <li className="nav-item">
-                <Link className={ aspect === "skills" ? "nav-link active" : "nav-link" } to={ "/skills/" + dataFrom }>Skills</Link>
+                <Link onClick={ () => setAspect("skills") } className={ aspect === "skills" ? "nav-link active" : "nav-link" } to={ "/skills/" + dataFrom }>Skills</Link>
             </li>
             <li className="nav-item">
-                <Link className={ aspect === "career" ? "nav-link active" : "nav-link" } to={ "/career/" + dataFrom }>Career</Link>
+                <Link onClick={ () => setAspect("career") } className={ aspect === "career" ? "nav-link active" : "nav-link" } to={ "/career/" + dataFrom }>Career</Link>
             </li>
             <li className="nav-item">
-                <Link className={ aspect === "interests" ? "nav-link active" : "nav-link" } to={ "/interests/" + dataFrom }>Interests</Link>
+                <Link onClick={ () => setAspect("interests") } className={ aspect === "interests" ? "nav-link active" : "nav-link" } to={ "/interests/" + dataFrom }>Interests</Link>
             </li>
         </ul>
     );
