@@ -1,53 +1,22 @@
-import { useState } from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./css/vertical-carousel.css";
 
 const Interests = () => {
 
-    const [data] = useState([
-            {
-                "_classMap": "com.portfolio.map.domain.Interest",
-                "_classSQL": "com.portfolio.sql.domain.Interest",
-                "id": 1,
-                "title": "Dinosaurs",
-                "imagePath": "/img/Dinosaurs.jpg",
-                "description": "I always wanted to be a paleontologist and though I ended up in IT they continue to fascinate me, I even built my own \"Dinosaur Of The Day\" twitter bot (@dinosauria_bot)."
-            },
-            {
-                "_classMap": "com.portfolio.map.domain.Interest",
-                "_classSQL": "com.portfolio.sql.domain.Interest",
-                "id": 2,
-                "title": "Video Games",
-                "imagePath": "/img/VideoGames.jpg",
-                "description": "I like playing video games and enjoy the variety and novelty of the environments they are often set in, as well as the ways they try to evolve and tell stories."
-            },
-            {
-                "_classMap": "com.portfolio.map.domain.Interest",
-                "_classSQL": "com.portfolio.sql.domain.Interest",
-                "id": 3,
-                "title": "History",
-                "imagePath": "/img/History.jpg",
-                "description": "I love reading about history, from Ancient Egypt and the Romans to the Medieval Ages, the English Civil War through to the Georgian era and the start of the industrial revolution."
-            },
-            {
-                "_classMap": "com.portfolio.map.domain.Interest",
-                "_classSQL": "com.portfolio.sql.domain.Interest",
-                "id": 4,
-                "title": "Maker Culture",
-                "imagePath": "/img/MakerPi.jpg",
-                "description": "Nothing more fun than fiddling with a Raspberry Pi, a soldering iron and some LEDs or trying to make a tensegrity structure. I have so far resisted the temptations of a 3D printer."
-            },
-            {
-                "_classMap": "com.portfolio.map.domain.Interest",
-                "_classSQL": "com.portfolio.sql.domain.Interest",
-                "id": 5,
-                "title": "Space",
-                "imagePath": "/img/Space.jpg",
-                "description": "Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean, you may think it's a long way down the road to the chemist's, but that's just peanuts to space”."
-            }
-        ]
-    );
+    const [interests, setInterests] = useState({ loading: true, data: null });
+
+    useEffect(() => {
+        setInterests({ loading: true })
+        fetch("/json/interests.json")
+            .then((res) => res.json())
+            .then((data) => {
+                setInterests({ loading: false, data: data });
+            });
+    }, [setInterests]);
+
+    if (interests.loading) return (<p>Loading...</p>);
 
     return (
         <div id="interestsCarousel" className="vertical carousel slide" data-ride="carousel">
@@ -56,7 +25,7 @@ const Interests = () => {
                 <span className="sr-only">Previous</span>
             </a>
             <div className="carousel-inner">
-                {data.map(interest => {
+                {interests.data.map(interest => {
                     const itemClass = interest.id === 1 ? "carousel-item active" : "carousel-item";
                     const titleId = "title" + interest.id;
                     const imagePathId = "imagePath" + interest.id;

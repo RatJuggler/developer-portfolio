@@ -1,23 +1,17 @@
-import { useState } from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Profile = () => {
 
-    const [profile] = useState({
-        "_classMap": "com.portfolio.map.domain.Profile",
-        "_classSQL": "com.portfolio.sql.domain.Profile",
-        "id": 1,
-        "name": "John Chase",
-        "location": "Smallfield, Surrey, England",
-        "status": "Available",
-        "avatarPath": "/img/Rat-Profile.svg",
-        "photoPath": "/img/Photo.jpg",
-        "description": "I am a Senior Developer with extensive SDLC experience. I have a proven track record of delivering bespoke solutions to meet demanding customer needs and growing those solutions to keep up with a changing market. I enjoy collaborating with a diverse team to build and promote a good working environment geared at delivering high-quality solutions.\n\nSelect one of the tabs to find out more about me.",
-        "email": "john.chase3@outlook.com",
-        "linkedin": "https://www.linkedin.com/in/john-chase-57973b12/",
-        "github": "https://github.com/RatJuggler",
-        "twitter": "https://twitter.com/ratjuggler"
-    });
+    const [profile, setProfile] = useState(false);
+
+    useEffect(() => {
+        fetch("/json/profile.json")
+            .then((res) => res.json())
+            .then((data) => {
+                setProfile(data);
+            });
+    }, [setProfile]);
 
     return (
         <div className="card">
