@@ -966,7 +966,7 @@ const Skills = () => {
                 </thead>
                 <tbody>
                 {data.map(skill => (
-                <tr>
+                <tr key={ skill.id }>
                     <td>{ skill.level }</td>
                     <td>{ skill.category }</td>
                     <td>{ skill.skill }</td>
