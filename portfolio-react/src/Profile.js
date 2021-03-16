@@ -1,17 +1,7 @@
-import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Profile = () => {
 
-    const [profile, setProfile] = useState(false);
-
-    useEffect(() => {
-        fetch("/json/profile.json")
-            .then((res) => res.json())
-            .then((data) => {
-                setProfile(data);
-            });
-    }, [setProfile]);
+const Profile = ({ profile }) => {
 
     return (
         <div className="card">
