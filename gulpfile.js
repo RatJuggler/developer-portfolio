@@ -26,6 +26,10 @@ function cleanVendor() {
     return del(["public/vendor/"]);
 }
 
+function cleanVendorForReact() {
+    return del(["portfolio-react/public/vendor/"]);
+}
+
 function cleanDist() {
     return del(["dist/"]);
 }
@@ -60,6 +64,11 @@ function createVendor() {
         .pipe(gulp.dest('./public/vendor/popper'));
     return merge(bootstrapJS, bootstrapCSS, bootstrapTableJS, bootstrapTableCSS, bootstrapTableFilterJS, bootstrapTableFilerCSS,
         fontAwesome, fontAwesomeCSS, jquery, popper);
+}
+
+function createVendorForReact() {
+    return gulp.src('./public/vendor/!(bootstrap-table|fontawesome-free)**/*')
+        .pipe(gulp.dest('./portfolio-react/public/vendor/'));
 }
 
 function copyModuleDist() {
@@ -174,8 +183,8 @@ function rewrite() {
 let staticBuild = false;
 
 // Define complex tasks
-const build = gulp.series(createVendor, gulp.parallel(copyModuleDist, copyStaticDist, copyAppDist), gulp.parallel(mincss, minjs), revision, rewrite);
-const rebuild = gulp.series(gulp.parallel(cleanVendor, cleanDist), build);
+const build = gulp.series(createVendor, createVendorForReact, gulp.parallel(copyModuleDist, copyStaticDist, copyAppDist), gulp.parallel(mincss, minjs), revision, rewrite);
+const rebuild = gulp.series(gulp.parallel(cleanVendor, cleanVendorForReact, cleanDist), build);
 const ghPagesBuild = gulp.series(function (cb) { staticBuild = true; cb(); }, build);
 
 // Document tasks
