@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-const Header = ({ profile, aspect }) => {
+const Header = ({ profile, aspect, setDataFrom }) => {
 
     const [version] = useState("React version with static data");
 
@@ -39,9 +39,9 @@ const Header = ({ profile, aspect }) => {
                                 <a className="dropdown-item" href={ "/template/" + aspect + "/json" }>Template / Static JSON Files</a>
                                 <a className="dropdown-item" href={ "/template/" + aspect + "/map" }>Template / Map Spring Service</a>
                                 <a className="dropdown-item" href={ "/template/" + aspect + "/sql" }>Template / SQL Spring Service</a>
-                                <Link className="dropdown-item" to={ "/" + aspect + "/json" }>React / Static JSON Files</Link>
-                                <Link className="dropdown-item" to={ "/" + aspect + "/map" }>React / Map Spring Service</Link>
-                                <Link className="dropdown-item" to={ "/" + aspect + "/sql" }>React / SQL Spring Service</Link>
+                                <Link onClick={ () => setDataFrom("json") } className="dropdown-item" to={ "/" + aspect + "/json" }>React / Static JSON Files</Link>
+                                <Link onClick={ () => setDataFrom("map") } className="dropdown-item" to={ "/" + aspect + "/map" }>React / Map Spring Service</Link>
+                                <Link onClick={ () => setDataFrom("sql") } className="dropdown-item" to={ "/" + aspect + "/sql" }>React / SQL Spring Service</Link>
                                 <a className="dropdown-item"
                                    href={ "https://ratjuggler.github.io/developer-portfolio/static/" + aspect + ".html" }>
                                     Static HTML (GitHub Pages)

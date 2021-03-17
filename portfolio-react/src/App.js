@@ -19,23 +19,25 @@ const App = () => {
     const regex = /^\/?[a-z]*\/(?<aspect>[a-z]+)\/(?<dataFrom>[a-z]+)$/;
     const found = location.pathname.match(regex);
     const currentAspect = found ? found.groups["aspect"] : "profile";
-    const dataFrom = found ? found.groups["dataFrom"] : "json";
+    const currentDataFrom = found ? found.groups["dataFrom"] : "json";
 
     const [aspect, setAspect] = useState(currentAspect);
+    const [dataFrom, setDataFrom] = useState(currentDataFrom);
 
     const [profile, setProfile] = useState(false);
 
     useEffect(() => {
-        fetch("/json/profile.json")
+        const dataUrl = "/" + dataFrom + "/profile" + (dataFrom === "json" ? ".json" : "");
+        fetch(dataUrl)
             .then((res) => res.json())
             .then((data) => {
                 setProfile(data);
             });
-    }, [setProfile]);
+    }, [dataFrom, setProfile]);
 
     return (
         <div className="App">
-            <Header profile={ profile } aspect={ aspect } />
+            <Header profile={ profile } aspect={ aspect } setDataFrom={ setDataFrom } />
             <Hero profile={ profile } />
             <main className="container">
                 <Tabs setAspect={ setAspect } aspect={ aspect } dataFrom={ dataFrom } />
