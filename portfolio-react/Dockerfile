@@ -1,3 +1,8 @@
+# Define gloabl args for multi-stage docker file.
+ARG REGISTRY=""
+ARG REPOSITORY=""
+ARG BUILD_TAG=local
+
 # Build the react application.
 FROM node:lts-alpine3.11 AS builder-portfolio-react
 
