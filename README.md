@@ -1,7 +1,7 @@
 # developer-portfolio
 
 My developer portfolio site. The full version is deployed [here](https://jurassic-john.site) using Docker on a
-[Raspberry Pi farm](https://github.com/RatJuggler/my-production-docker-build) and in case of problem the static only version is
+[Raspberry Pi farm](https://github.com/RatJuggler/my-production-docker-build) and in case of problems the static only version is
 available [here](https://ratjuggler.github.io/developer-portfolio/).
 
 Rather than copying a random site template off the internet I'm trying to create something a bit different by building a small
@@ -26,17 +26,16 @@ The template application pulls data from one of these sources depending on the U
 `/template/profile/json` pulls the JSON files directly, `/template/profile/map` uses the map repository service and
 `/template/profile/sql` the SQL service.
 
-I have now built the skeleton of a React versions of the site using hooks. It does not yet call out to the data services but has
-the JSON state embedded in it. I have also only created React components for the major elements of the site so far, similar to the
-template breakdown.
+I have now built a React versions of the site using hooks. I have only created React components for the major elements of the site 
+so far, similar to the template breakdown, more finely grained components will be needed if crud capabilities are implemented.
 
-When deployed a front-end proxy is used to route requests for the React app, template pages or static pages and resources as
-required:
+When deployed a front-end proxy is used to route requests for the React app, template pages, static pages, data sources and static 
+resources as required:
 
 ![Image of Deployment](https://github.com/RatJuggler/developer-portfolio/blob/main/deployed-result.jpg)
 
-The next step is to look at calling the data services from the React app. The table on the Skills page will also need to be
-revisited as the *bootstrap-table* plugin I used in the static pages does not play well in a React application.
+The next step is to look at the table on the Skills page which needs to be revisited as the *bootstrap-table* plugin I used in the 
+static pages does not play well in a React application.
 
 ## Development
 
@@ -147,7 +146,7 @@ Build the shared resources with: `docker-compose -f docker-compose-shared.yml bu
 
 Build the builders with: `docker-compose -f docker-compose-builders.yml build`
 
-Build and run the images with: `docker-compose up -d`
+Build and run the images with: `docker-compose up --build -d`
 
 Content will be available at: `http://localhost:8080`
 
