@@ -1,6 +1,7 @@
 "use strict";
 
 // Load plugins
+const del = require("del");
 const gulp = require("gulp");
 const merge = require("merge-stream");
 
