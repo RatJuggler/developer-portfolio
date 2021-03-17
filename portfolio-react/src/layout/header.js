@@ -1,18 +1,16 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import getReactVersion from "../utils";
 
 
-const Header = ({ profile, aspect, setDataFrom }) => {
-
-    const [version] = useState("React version with static data");
+const Header = ({ dataFrom, profile, aspect, setDataFrom }) => {
 
     return (
         <header>
             <nav className="navbar fixed-top navbar-expand-md navbar-light bg-light">
                 <a className="navbar-brand" href="/">
                     <img src={ profile.avatarPath } width="30" height="30" className="d-inline-block align-top" alt="My profile avatar" />
-                    Portfolio - { version }
+                    Portfolio - { dataFrom.version }
                 </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu"
                         aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,9 +37,12 @@ const Header = ({ profile, aspect, setDataFrom }) => {
                                 <a className="dropdown-item" href={ "/template/" + aspect + "/json" }>Template / Static JSON Files</a>
                                 <a className="dropdown-item" href={ "/template/" + aspect + "/map" }>Template / Map Spring Service</a>
                                 <a className="dropdown-item" href={ "/template/" + aspect + "/sql" }>Template / SQL Spring Service</a>
-                                <Link onClick={ () => setDataFrom("json") } className="dropdown-item" to={ "/" + aspect + "/json" }>React / Static JSON Files</Link>
-                                <Link onClick={ () => setDataFrom("map") } className="dropdown-item" to={ "/" + aspect + "/map" }>React / Map Spring Service</Link>
-                                <Link onClick={ () => setDataFrom("sql") } className="dropdown-item" to={ "/" + aspect + "/sql" }>React / SQL Spring Service</Link>
+                                <Link onClick={ () => setDataFrom(getReactVersion("json")) }
+                                      className="dropdown-item" to={ "/" + aspect + "/json" }>React / Static JSON Files</Link>
+                                <Link onClick={ () => setDataFrom(getReactVersion("map")) }
+                                      className="dropdown-item" to={ "/" + aspect + "/map" }>React / Map Spring Service</Link>
+                                <Link onClick={ () => setDataFrom(getReactVersion("sql")) }
+                                      className="dropdown-item" to={ "/" + aspect + "/sql" }>React / SQL Spring Service</Link>
                                 <a className="dropdown-item"
                                    href={ "https://ratjuggler.github.io/developer-portfolio/static/" + aspect + ".html" }>
                                     Static HTML (GitHub Pages)

@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 import { useLocation, Route, Switch } from 'react-router-dom';
 import './fontawesome';
+import getReactVersion from './utils';
 import Header from './layout/header';
 import Hero from './layout/hero';
 import Tabs from './layout/tabs';
@@ -19,15 +20,15 @@ const App = () => {
     const regex = /^\/?[a-z]*\/(?<aspect>[a-z]+)\/(?<dataFrom>[a-z]+)$/;
     const found = location.pathname.match(regex);
     const currentAspect = found ? found.groups["aspect"] : "profile";
-    const currentDataFrom = found ? found.groups["dataFrom"] : "json";
+    const currentSource = found ? found.groups["dataFrom"] : "json";
 
     const [aspect, setAspect] = useState(currentAspect);
-    const [dataFrom, setDataFrom] = useState(currentDataFrom);
+    const [dataFrom, setDataFrom] = useState(getReactVersion(currentSource));
 
     const [profile, setProfile] = useState(false);
 
     useEffect(() => {
-        const dataUrl = "/" + dataFrom + "/profile" + (dataFrom === "json" ? ".json" : "");
+        const dataUrl = "/" + dataFrom.source + "/profile" + (dataFrom.source === "json" ? ".json" : "");
         fetch(dataUrl)
             .then((res) => res.json())
             .then((data) => {
@@ -37,7 +38,7 @@ const App = () => {
 
     return (
         <div className="App">
-            <Header profile={ profile } aspect={ aspect } setDataFrom={ setDataFrom } />
+            <Header dataFrom={ dataFrom } profile={ profile } aspect={ aspect } setDataFrom={ setDataFrom } />
             <Hero profile={ profile } />
             <main className="container">
                 <Tabs setAspect={ setAspect } aspect={ aspect } dataFrom={ dataFrom } />
