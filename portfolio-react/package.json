@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "/react",
   "scripts": {
+    "vendor": "node_modules/.bin/gulp vendor",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
