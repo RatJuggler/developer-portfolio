@@ -25,7 +25,11 @@ const App = () => {
     const [aspect, setAspect] = useState(currentAspect);
     const [dataFrom, setDataFrom] = useState(getReactVersion(currentSource));
 
-    const [profile, setProfile] = useState(false);
+    const [profile, setProfile] = useState({
+        avatarPath: "/img/avatar-ph.jpg",
+        photoPath: "/img/photo-ph.jpg",
+        name: "Loading..."
+    });
 
     useEffect(() => {
         const dataUrl = "/" + dataFrom.source + "/profile" + (dataFrom.source === "json" ? ".json" : "");
