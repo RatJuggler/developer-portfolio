@@ -1,34 +1,16 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import getReactVersion from "../utils";
 
 
-const Header = ({ aspect }) => {
-
-    const [profile] = useState({
-        "_classMap": "com.portfolio.map.domain.Profile",
-        "_classSQL": "com.portfolio.sql.domain.Profile",
-        "id": 1,
-        "name": "John Chase",
-        "location": "Smallfield, Surrey, England",
-        "status": "Available",
-        "avatarPath": "/img/Rat-Profile.svg",
-        "photoPath": "/img/Photo.jpg",
-        "description": "I am a Senior Developer with extensive SDLC experience. I have a proven track record of delivering bespoke solutions to meet demanding customer needs and growing those solutions to keep up with a changing market. I enjoy collaborating with a diverse team to build and promote a good working environment geared at delivering high-quality solutions.\n\nSelect one of the tabs to find out more about me.",
-        "email": "john.chase3@outlook.com",
-        "linkedin": "https://www.linkedin.com/in/john-chase-57973b12/",
-        "github": "https://github.com/RatJuggler",
-        "twitter": "https://twitter.com/ratjuggler"
-    });
-
-    const [version] = useState("React version with static data");
+const Header = ({ dataFrom, profile, aspect, setDataFrom }) => {
 
     return (
         <header>
             <nav className="navbar fixed-top navbar-expand-md navbar-light bg-light">
                 <a className="navbar-brand" href="/">
                     <img src={ profile.avatarPath } width="30" height="30" className="d-inline-block align-top" alt="My profile avatar" />
-                    Portfolio - { version }
+                    Portfolio - { dataFrom.version }
                 </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu"
                         aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,9 +37,12 @@ const Header = ({ aspect }) => {
                                 <a className="dropdown-item" href={ "/template/" + aspect + "/json" }>Template / Static JSON Files</a>
                                 <a className="dropdown-item" href={ "/template/" + aspect + "/map" }>Template / Map Spring Service</a>
                                 <a className="dropdown-item" href={ "/template/" + aspect + "/sql" }>Template / SQL Spring Service</a>
-                                <Link className="dropdown-item" to={ "/" + aspect + "/json" }>React / Static JSON Files</Link>
-                                <Link className="dropdown-item" to={ "/" + aspect + "/map" }>React / Map Spring Service</Link>
-                                <Link className="dropdown-item" to={ "/" + aspect + "/sql" }>React / SQL Spring Service</Link>
+                                <Link onClick={ () => setDataFrom(getReactVersion("json")) }
+                                      className="dropdown-item" to={ "/" + aspect + "/json" }>React / Static JSON Files</Link>
+                                <Link onClick={ () => setDataFrom(getReactVersion("map")) }
+                                      className="dropdown-item" to={ "/" + aspect + "/map" }>React / Map Spring Service</Link>
+                                <Link onClick={ () => setDataFrom(getReactVersion("sql")) }
+                                      className="dropdown-item" to={ "/" + aspect + "/sql" }>React / SQL Spring Service</Link>
                                 <a className="dropdown-item"
                                    href={ "https://ratjuggler.github.io/developer-portfolio/static/" + aspect + ".html" }>
                                     Static HTML (GitHub Pages)

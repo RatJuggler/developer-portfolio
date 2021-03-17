@@ -13,6 +13,7 @@ ENV INLINE_RUNTIME_CHUNK=false
 
 # Copy the sources and run the build.
 COPY . .
+RUN npm run vendor
 RUN npm run build
 
 
