@@ -42,7 +42,7 @@
     "@fortawesome/fontawesome-free": "^5.15.2",
     "bootstrap": "^4.6.0",
     "bootstrap-table": "^1.18.2",
-    "browser-sync": "^2.26.14",
+    "browser-sync": "^2.27.10",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
