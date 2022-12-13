@@ -32,7 +32,7 @@
     "npm": "^7.x"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-prom-bundle": "^6.3.4",
     "got": "^11.8.2",
     "prom-client": "^13.1.0",
